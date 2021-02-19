@@ -26,6 +26,9 @@ namespace JiayiLauncher
         public DiscordRpcClient client;
         string discordTime = "";
 
+        [DllImport("user32.dll", SetLastError = true)]
+        internal static extern bool MoveWindow(IntPtr hWnd, int X, int Y, int nWidth, int nHeight, bool bRepaint);
+
         public Jiayi()
         {
             InitializeComponent();
@@ -131,6 +134,11 @@ namespace JiayiLauncher
         }
 
         // Version stuff
+
+        private void Version_Click(object sender, EventArgs e)
+        {
+
+        }
 
         public static void versionFinderForLabel(string script, Label version)
         {
@@ -274,9 +282,7 @@ namespace JiayiLauncher
 
         private void LaunchBtn_Click(object sender, EventArgs e)
         {
-            RPCInGame("Playing Minecraft");
-            Process.Start("minecraft://");
-            timer1.Start();
+            Settings();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -315,11 +321,6 @@ namespace JiayiLauncher
                 
         }
 
-        private void Version_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void VersionComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
             // here, a base for version switching
@@ -332,6 +333,100 @@ namespace JiayiLauncher
             //    Directory.CreateDirectory(@"c:\Jiayi\Minecraft-1.16.40.2");
             //    ZipFile.ExtractToDirectory(@"c:\Jiayi\Minecraft-1.16.40.2.zip", @"c:\Jiayi\Minecraft-1.16.40.2");
             //}
+        }
+
+        // ALL settings functions
+
+        private void Settings()
+        {
+            Process.Start("minecraft://");
+            if (CloseLauncher.Checked == true)
+            {
+                Process[] pname = Process.GetProcessesByName("Minecraft.Windows");
+                if (pname.Length == 0)
+                {
+                    InjectDLL();
+                }
+
+                else
+                {
+                    this.Close();
+                }
+
+            }
+
+            if (HideLauncher.Checked == true)
+            {
+                NotifyIcon.Visible = true;
+                InjectDLL();
+            }
+
+            if (KeepOpen.Checked == true)
+            {
+                InjectDLL();
+            }
+        }
+
+        private void CloseLauncher_Click(object sender, EventArgs e)
+        {
+            CloseLauncher.Checked = true;
+            HideLauncher.Checked = false;
+            KeepOpen.Checked = false;
+        }
+
+        private void HideLauncher_Click(object sender, EventArgs e)
+        {
+            CloseLauncher.Checked = false;
+            HideLauncher.Checked = true;
+            KeepOpen.Checked = false;
+        }
+
+        private void KeepOpen_Click(object sender, EventArgs e)
+        {
+            CloseLauncher.Checked = false;
+            HideLauncher.Checked = false;
+            KeepOpen.Checked = true;
+        }
+
+        //Load Settings At Launch
+
+        public void InjectDLL()
+        {
+            RPCInGame("Playing Minecraft");
+            timer1.Start();
+
+
+            Thread.Sleep(200);
+
+            Process[] processes = Process.GetProcessesByName("Minecraft.Windows");
+            foreach (Process proc in processes)
+            if (ProcessPriorityBox.SelectedItem == "High")
+                {
+                    proc.PriorityClass = ProcessPriorityClass.RealTime;
+                }
+
+            else if (ProcessPriorityBox.SelectedItem == "Medium")
+                {
+                    proc.PriorityClass = ProcessPriorityClass.AboveNormal;
+                }
+            else if (ProcessPriorityBox.SelectedItem == "Low")
+                {
+                    proc.PriorityClass = ProcessPriorityClass.BelowNormal;
+                }
+
+            Process[] MinecraftIndex = Process.GetProcessesByName("Minecraft.Windows");
+            if (MinecraftIndex.Length > 0)
+            {
+                Process Minecraft = Process.GetProcessesByName("Minecraft.Windows")[0];
+                if (ResolutionComboBox.SelectedItem == "1920x1080")
+                {
+                    MoveWindow(Minecraft.MainWindowHandle, 0, 0, 1920, 1080, true);
+                }
+                else if (ResolutionComboBox.SelectedItem == "1280x720")
+                {
+                    MoveWindow(Minecraft.MainWindowHandle, 0, 0, 1280, 720, true);
+                }
+            }
         }
     }
 }

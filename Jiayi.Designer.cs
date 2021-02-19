@@ -41,24 +41,26 @@ namespace JiayiLauncher
             this.MinimizeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ExitBtn = new Guna.UI2.WinForms.Guna2Button();
             this.HomePanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.StatusText = new System.Windows.Forms.Label();
+            this.Status = new System.Windows.Forms.Label();
+            this.ResolutionComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
+            this.VersionComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.LaunchBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SettingsPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
+            this.KeepOpen = new Guna.UI2.WinForms.Guna2Button();
+            this.HideLauncher = new Guna.UI2.WinForms.Guna2Button();
+            this.CloseLauncher = new Guna.UI2.WinForms.Guna2Button();
             this.SettingsTag2 = new System.Windows.Forms.Label();
             this.SettingsDesc2 = new System.Windows.Forms.Label();
             this.SettingsDesc1 = new System.Windows.Forms.Label();
-            this.guna2ComboBox1 = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.ProcessPriorityBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SettingsTag1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.VersionComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.ResolutionComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.Status = new System.Windows.Forms.Label();
+            this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.BtnPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.HomePanel.SuspendLayout();
@@ -245,7 +247,7 @@ namespace JiayiLauncher
             this.Version.ForeColor = System.Drawing.Color.White;
             this.Version.Location = new System.Drawing.Point(180, 519);
             this.Version.Name = "Version";
-            this.Version.Size = new System.Drawing.Size(59, 17);
+            this.Version.Size = new System.Drawing.Size(51, 17);
             this.Version.TabIndex = 2;
             this.Version.Text = "Version:";
             this.Version.Click += new System.EventHandler(this.Version_Click);
@@ -308,6 +310,7 @@ namespace JiayiLauncher
             // 
             // HomePanel
             // 
+            this.HomePanel.Controls.Add(this.StatusText);
             this.HomePanel.Controls.Add(this.Status);
             this.HomePanel.Controls.Add(this.ResolutionComboBox);
             this.HomePanel.Controls.Add(this.label3);
@@ -321,6 +324,126 @@ namespace JiayiLauncher
             this.HomePanel.ShadowDecoration.Parent = this.HomePanel;
             this.HomePanel.Size = new System.Drawing.Size(705, 413);
             this.HomePanel.TabIndex = 7;
+            // 
+            // StatusText
+            // 
+            this.StatusText.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatusText.ForeColor = System.Drawing.Color.White;
+            this.StatusText.Location = new System.Drawing.Point(322, 288);
+            this.StatusText.Name = "StatusText";
+            this.StatusText.Size = new System.Drawing.Size(66, 33);
+            this.StatusText.TabIndex = 10;
+            this.StatusText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Status
+            // 
+            this.Status.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Status.ForeColor = System.Drawing.Color.White;
+            this.Status.Location = new System.Drawing.Point(246, 286);
+            this.Status.Name = "Status";
+            this.Status.Size = new System.Drawing.Size(86, 33);
+            this.Status.TabIndex = 9;
+            this.Status.Text = "Status:";
+            this.Status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ResolutionComboBox
+            // 
+            this.ResolutionComboBox.Animated = true;
+            this.ResolutionComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.ResolutionComboBox.BorderRadius = 15;
+            this.ResolutionComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ResolutionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ResolutionComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.ResolutionComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ResolutionComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ResolutionComboBox.FocusedState.FillColor = System.Drawing.Color.DimGray;
+            this.ResolutionComboBox.FocusedState.ForeColor = System.Drawing.Color.White;
+            this.ResolutionComboBox.FocusedState.Parent = this.ResolutionComboBox;
+            this.ResolutionComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.ResolutionComboBox.ForeColor = System.Drawing.Color.White;
+            this.ResolutionComboBox.HoverState.Parent = this.ResolutionComboBox;
+            this.ResolutionComboBox.ItemHeight = 30;
+            this.ResolutionComboBox.Items.AddRange(new object[] {
+            "1080x1920",
+            "1280x720"});
+            this.ResolutionComboBox.ItemsAppearance.Parent = this.ResolutionComboBox;
+            this.ResolutionComboBox.Location = new System.Drawing.Point(37, 236);
+            this.ResolutionComboBox.Name = "ResolutionComboBox";
+            this.ResolutionComboBox.ShadowDecoration.Parent = this.ResolutionComboBox;
+            this.ResolutionComboBox.Size = new System.Drawing.Size(198, 36);
+            this.ResolutionComboBox.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(37, 185);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(255, 46);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Lowering Minecraft\'s window resolution can increase FPS.";
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(37, 152);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(182, 33);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Resolution";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label2
+            // 
+            this.label2.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(32, 57);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(255, 46);
+            this.label2.TabIndex = 5;
+            this.label2.Text = "You can switch Minecraft versions using Jiayi\'s version changer.";
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(32, 22);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(182, 33);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Version Changer";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // VersionComboBox
+            // 
+            this.VersionComboBox.Animated = true;
+            this.VersionComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.VersionComboBox.BorderRadius = 15;
+            this.VersionComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.VersionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.VersionComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.VersionComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.VersionComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.VersionComboBox.FocusedState.FillColor = System.Drawing.Color.DimGray;
+            this.VersionComboBox.FocusedState.ForeColor = System.Drawing.Color.White;
+            this.VersionComboBox.FocusedState.Parent = this.VersionComboBox;
+            this.VersionComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.VersionComboBox.ForeColor = System.Drawing.Color.White;
+            this.VersionComboBox.HoverState.Parent = this.VersionComboBox;
+            this.VersionComboBox.ItemHeight = 30;
+            this.VersionComboBox.Items.AddRange(new object[] {
+            "1.16.40",
+            "1.16.100",
+            "1.16.200",
+            "1.16.201"});
+            this.VersionComboBox.ItemsAppearance.Parent = this.VersionComboBox;
+            this.VersionComboBox.Location = new System.Drawing.Point(32, 108);
+            this.VersionComboBox.Name = "VersionComboBox";
+            this.VersionComboBox.ShadowDecoration.Parent = this.VersionComboBox;
+            this.VersionComboBox.Size = new System.Drawing.Size(198, 36);
+            this.VersionComboBox.TabIndex = 3;
+            this.VersionComboBox.SelectedIndexChanged += new System.EventHandler(this.VersionComboBox_SelectedIndexChanged);
             // 
             // LaunchBtn
             // 
@@ -347,13 +470,13 @@ namespace JiayiLauncher
             // 
             // SettingsPanel
             // 
-            this.SettingsPanel.Controls.Add(this.guna2Button3);
-            this.SettingsPanel.Controls.Add(this.guna2Button2);
-            this.SettingsPanel.Controls.Add(this.guna2Button1);
+            this.SettingsPanel.Controls.Add(this.KeepOpen);
+            this.SettingsPanel.Controls.Add(this.HideLauncher);
+            this.SettingsPanel.Controls.Add(this.CloseLauncher);
             this.SettingsPanel.Controls.Add(this.SettingsTag2);
             this.SettingsPanel.Controls.Add(this.SettingsDesc2);
             this.SettingsPanel.Controls.Add(this.SettingsDesc1);
-            this.SettingsPanel.Controls.Add(this.guna2ComboBox1);
+            this.SettingsPanel.Controls.Add(this.ProcessPriorityBox);
             this.SettingsPanel.Controls.Add(this.SettingsTag1);
             this.SettingsPanel.Location = new System.Drawing.Point(185, 103);
             this.SettingsPanel.Name = "SettingsPanel";
@@ -362,53 +485,63 @@ namespace JiayiLauncher
             this.SettingsPanel.TabIndex = 8;
             this.SettingsPanel.Visible = false;
             // 
-            // guna2Button3
+            // KeepOpen
             // 
-            this.guna2Button3.Animated = true;
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Raleway Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(47, 274);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button3.TabIndex = 9;
-            this.guna2Button3.Text = "Keep Launcher Open";
+            this.KeepOpen.Animated = true;
+            this.KeepOpen.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.KeepOpen.CheckedState.Parent = this.KeepOpen;
+            this.KeepOpen.CustomBorderThickness = new System.Windows.Forms.Padding(2);
+            this.KeepOpen.CustomImages.Parent = this.KeepOpen;
+            this.KeepOpen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.KeepOpen.Font = new System.Drawing.Font("Raleway Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KeepOpen.ForeColor = System.Drawing.Color.White;
+            this.KeepOpen.HoverState.Parent = this.KeepOpen;
+            this.KeepOpen.Location = new System.Drawing.Point(47, 274);
+            this.KeepOpen.Name = "KeepOpen";
+            this.KeepOpen.ShadowDecoration.Parent = this.KeepOpen;
+            this.KeepOpen.Size = new System.Drawing.Size(180, 45);
+            this.KeepOpen.TabIndex = 9;
+            this.KeepOpen.Text = "Keep Launcher Open";
+            this.KeepOpen.Click += new System.EventHandler(this.KeepOpen_Click);
             // 
-            // guna2Button2
+            // HideLauncher
             // 
-            this.guna2Button2.Animated = true;
-            this.guna2Button2.CheckedState.Parent = this.guna2Button2;
-            this.guna2Button2.CustomImages.Parent = this.guna2Button2;
-            this.guna2Button2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.guna2Button2.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button2.ForeColor = System.Drawing.Color.White;
-            this.guna2Button2.HoverState.Parent = this.guna2Button2;
-            this.guna2Button2.Location = new System.Drawing.Point(47, 216);
-            this.guna2Button2.Name = "guna2Button2";
-            this.guna2Button2.ShadowDecoration.Parent = this.guna2Button2;
-            this.guna2Button2.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button2.TabIndex = 8;
-            this.guna2Button2.Text = "Hide Launcher";
+            this.HideLauncher.Animated = true;
+            this.HideLauncher.Checked = true;
+            this.HideLauncher.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.HideLauncher.CheckedState.Parent = this.HideLauncher;
+            this.HideLauncher.CustomBorderThickness = new System.Windows.Forms.Padding(2);
+            this.HideLauncher.CustomImages.Parent = this.HideLauncher;
+            this.HideLauncher.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.HideLauncher.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HideLauncher.ForeColor = System.Drawing.Color.White;
+            this.HideLauncher.HoverState.Parent = this.HideLauncher;
+            this.HideLauncher.Location = new System.Drawing.Point(47, 216);
+            this.HideLauncher.Name = "HideLauncher";
+            this.HideLauncher.ShadowDecoration.Parent = this.HideLauncher;
+            this.HideLauncher.Size = new System.Drawing.Size(180, 45);
+            this.HideLauncher.TabIndex = 8;
+            this.HideLauncher.Text = "Hide Launcher";
+            this.HideLauncher.Click += new System.EventHandler(this.HideLauncher_Click);
             // 
-            // guna2Button1
+            // CloseLauncher
             // 
-            this.guna2Button1.Animated = true;
-            this.guna2Button1.CheckedState.Parent = this.guna2Button1;
-            this.guna2Button1.CustomImages.Parent = this.guna2Button1;
-            this.guna2Button1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.guna2Button1.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button1.ForeColor = System.Drawing.Color.White;
-            this.guna2Button1.HoverState.Parent = this.guna2Button1;
-            this.guna2Button1.Location = new System.Drawing.Point(47, 157);
-            this.guna2Button1.Name = "guna2Button1";
-            this.guna2Button1.ShadowDecoration.Parent = this.guna2Button1;
-            this.guna2Button1.Size = new System.Drawing.Size(180, 45);
-            this.guna2Button1.TabIndex = 7;
-            this.guna2Button1.Text = "Close Launcher";
+            this.CloseLauncher.Animated = true;
+            this.CloseLauncher.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.CloseLauncher.CheckedState.Parent = this.CloseLauncher;
+            this.CloseLauncher.CustomBorderThickness = new System.Windows.Forms.Padding(2);
+            this.CloseLauncher.CustomImages.Parent = this.CloseLauncher;
+            this.CloseLauncher.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.CloseLauncher.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CloseLauncher.ForeColor = System.Drawing.Color.White;
+            this.CloseLauncher.HoverState.Parent = this.CloseLauncher;
+            this.CloseLauncher.Location = new System.Drawing.Point(47, 157);
+            this.CloseLauncher.Name = "CloseLauncher";
+            this.CloseLauncher.ShadowDecoration.Parent = this.CloseLauncher;
+            this.CloseLauncher.Size = new System.Drawing.Size(180, 45);
+            this.CloseLauncher.TabIndex = 7;
+            this.CloseLauncher.Text = "Close Launcher";
+            this.CloseLauncher.Click += new System.EventHandler(this.CloseLauncher_Click);
             // 
             // SettingsTag2
             // 
@@ -446,33 +579,33 @@ namespace JiayiLauncher
             this.SettingsDesc1.Text = "Raising Minecraft\'s process priority can increase FPS.";
             this.SettingsDesc1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // guna2ComboBox1
+            // ProcessPriorityBox
             // 
-            this.guna2ComboBox1.Animated = true;
-            this.guna2ComboBox1.BackColor = System.Drawing.Color.Transparent;
-            this.guna2ComboBox1.BorderRadius = 15;
-            this.guna2ComboBox1.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.guna2ComboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.guna2ComboBox1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.guna2ComboBox1.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2ComboBox1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.guna2ComboBox1.FocusedState.FillColor = System.Drawing.Color.DimGray;
-            this.guna2ComboBox1.FocusedState.ForeColor = System.Drawing.Color.White;
-            this.guna2ComboBox1.FocusedState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.guna2ComboBox1.ForeColor = System.Drawing.Color.White;
-            this.guna2ComboBox1.HoverState.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.ItemHeight = 30;
-            this.guna2ComboBox1.Items.AddRange(new object[] {
+            this.ProcessPriorityBox.Animated = true;
+            this.ProcessPriorityBox.BackColor = System.Drawing.Color.Transparent;
+            this.ProcessPriorityBox.BorderRadius = 15;
+            this.ProcessPriorityBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ProcessPriorityBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ProcessPriorityBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.ProcessPriorityBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ProcessPriorityBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ProcessPriorityBox.FocusedState.FillColor = System.Drawing.Color.DimGray;
+            this.ProcessPriorityBox.FocusedState.ForeColor = System.Drawing.Color.White;
+            this.ProcessPriorityBox.FocusedState.Parent = this.ProcessPriorityBox;
+            this.ProcessPriorityBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.ProcessPriorityBox.ForeColor = System.Drawing.Color.White;
+            this.ProcessPriorityBox.HoverState.Parent = this.ProcessPriorityBox;
+            this.ProcessPriorityBox.ItemHeight = 30;
+            this.ProcessPriorityBox.Items.AddRange(new object[] {
             "High",
             "Medium",
             "Low"});
-            this.guna2ComboBox1.ItemsAppearance.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Location = new System.Drawing.Point(462, 168);
-            this.guna2ComboBox1.Name = "guna2ComboBox1";
-            this.guna2ComboBox1.ShadowDecoration.Parent = this.guna2ComboBox1;
-            this.guna2ComboBox1.Size = new System.Drawing.Size(198, 36);
-            this.guna2ComboBox1.TabIndex = 2;
+            this.ProcessPriorityBox.ItemsAppearance.Parent = this.ProcessPriorityBox;
+            this.ProcessPriorityBox.Location = new System.Drawing.Point(462, 168);
+            this.ProcessPriorityBox.Name = "ProcessPriorityBox";
+            this.ProcessPriorityBox.ShadowDecoration.Parent = this.ProcessPriorityBox;
+            this.ProcessPriorityBox.Size = new System.Drawing.Size(198, 36);
+            this.ProcessPriorityBox.TabIndex = 2;
             // 
             // SettingsTag1
             // 
@@ -491,116 +624,13 @@ namespace JiayiLauncher
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
-            // VersionComboBox
+            // NotifyIcon
             // 
-            this.VersionComboBox.Animated = true;
-            this.VersionComboBox.BackColor = System.Drawing.Color.Transparent;
-            this.VersionComboBox.BorderRadius = 15;
-            this.VersionComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.VersionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.VersionComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.VersionComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.VersionComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.VersionComboBox.FocusedState.FillColor = System.Drawing.Color.DimGray;
-            this.VersionComboBox.FocusedState.ForeColor = System.Drawing.Color.White;
-            this.VersionComboBox.FocusedState.Parent = this.VersionComboBox;
-            this.VersionComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.VersionComboBox.ForeColor = System.Drawing.Color.White;
-            this.VersionComboBox.HoverState.Parent = this.VersionComboBox;
-            this.VersionComboBox.ItemHeight = 30;
-            this.VersionComboBox.Items.AddRange(new object[] {
-            "1.16.40",
-            "1.16.100",
-            "1.16.200",
-            "1.16.201"});
-            this.VersionComboBox.ItemsAppearance.Parent = this.VersionComboBox;
-            this.VersionComboBox.Location = new System.Drawing.Point(37, 90);
-            this.VersionComboBox.Name = "VersionComboBox";
-            this.VersionComboBox.ShadowDecoration.Parent = this.VersionComboBox;
-            this.VersionComboBox.Size = new System.Drawing.Size(198, 36);
-            this.VersionComboBox.TabIndex = 3;
-            this.VersionComboBox.SelectedIndexChanged += new System.EventHandler(this.VersionComboBox_SelectedIndexChanged);
-            // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(37, 4);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(182, 33);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Version Changer";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label2
-            // 
-            this.label2.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(37, 39);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(255, 46);
-            this.label2.TabIndex = 5;
-            this.label2.Text = "You can switch Minecraft versions using Jiayi\'s version changer.";
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(37, 185);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(255, 46);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Lowering Minecraft\'s window resolution can increase FPS.";
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(37, 152);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(182, 33);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Resolution";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ResolutionComboBox
-            // 
-            this.ResolutionComboBox.Animated = true;
-            this.ResolutionComboBox.BackColor = System.Drawing.Color.Transparent;
-            this.ResolutionComboBox.BorderRadius = 15;
-            this.ResolutionComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ResolutionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ResolutionComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.ResolutionComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ResolutionComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ResolutionComboBox.FocusedState.FillColor = System.Drawing.Color.DimGray;
-            this.ResolutionComboBox.FocusedState.ForeColor = System.Drawing.Color.White;
-            this.ResolutionComboBox.FocusedState.Parent = this.ResolutionComboBox;
-            this.ResolutionComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.ResolutionComboBox.ForeColor = System.Drawing.Color.White;
-            this.ResolutionComboBox.HoverState.Parent = this.ResolutionComboBox;
-            this.ResolutionComboBox.ItemHeight = 30;
-            this.ResolutionComboBox.Items.AddRange(new object[] {
-            "High",
-            "Medium",
-            "Low"});
-            this.ResolutionComboBox.ItemsAppearance.Parent = this.ResolutionComboBox;
-            this.ResolutionComboBox.Location = new System.Drawing.Point(37, 236);
-            this.ResolutionComboBox.Name = "ResolutionComboBox";
-            this.ResolutionComboBox.ShadowDecoration.Parent = this.ResolutionComboBox;
-            this.ResolutionComboBox.Size = new System.Drawing.Size(198, 36);
-            this.ResolutionComboBox.TabIndex = 8;
-            // 
-            // Status
-            // 
-            this.Status.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Status.ForeColor = System.Drawing.Color.White;
-            this.Status.Location = new System.Drawing.Point(260, 285);
-            this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(182, 33);
-            this.Status.TabIndex = 9;
-            this.Status.Text = "Status";
-            this.Status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.NotifyIcon.BalloonTipText = "Double Click To Open Form";
+            this.NotifyIcon.BalloonTipTitle = "Jiayi Client";
+            this.NotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("NotifyIcon.Icon")));
+            this.NotifyIcon.Text = "Jiayi Client";
+            this.NotifyIcon.Visible = true;
             // 
             // Jiayi
             // 
@@ -614,8 +644,8 @@ namespace JiayiLauncher
             this.Controls.Add(this.BtnPanel);
             this.Controls.Add(this.Version);
             this.Controls.Add(this.TopPanel);
-            this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.SettingsPanel);
+            this.Controls.Add(this.HomePanel);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -651,12 +681,12 @@ namespace JiayiLauncher
         private Guna.UI2.WinForms.Guna2Panel SettingsPanel;
         private System.Windows.Forms.Label SettingsTag1;
         private System.Windows.Forms.Label SettingsDesc1;
-        private Guna.UI2.WinForms.Guna2ComboBox guna2ComboBox1;
+        private Guna.UI2.WinForms.Guna2ComboBox ProcessPriorityBox;
         private System.Windows.Forms.Label SettingsDesc2;
         private System.Windows.Forms.Label SettingsTag2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
-        private Guna.UI2.WinForms.Guna2Button guna2Button2;
-        private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private Guna.UI2.WinForms.Guna2Button KeepOpen;
+        private Guna.UI2.WinForms.Guna2Button HideLauncher;
+        private Guna.UI2.WinForms.Guna2Button CloseLauncher;
         private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2ComboBox ResolutionComboBox;
         private System.Windows.Forms.Label label3;
@@ -665,6 +695,8 @@ namespace JiayiLauncher
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ComboBox VersionComboBox;
         private System.Windows.Forms.Label Status;
+        private System.Windows.Forms.Label StatusText;
+        private System.Windows.Forms.NotifyIcon NotifyIcon;
     }
 }
 
