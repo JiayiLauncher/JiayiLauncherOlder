@@ -16,9 +16,11 @@ using System.Linq;
 using System.Xml;
 using System.Drawing;
 using System.Management.Automation;
+using System.IO.Compression;
 
 namespace JiayiLauncher
 {
+    
     public partial class Jiayi : Form
     {
         public DiscordRpcClient client;
@@ -29,6 +31,7 @@ namespace JiayiLauncher
             InitializeComponent();
             InitializeDiscord("In Launcher");
             versionFinderForLabel("Get-AppPackage -name Microsoft.MinecraftUWP | select -expandproperty Version", VersionDisplay);
+            Directory.CreateDirectory(@"c:\Jiayi");
         }
 
         private void Jiayi_Load(object sender, EventArgs e)
@@ -310,6 +313,25 @@ namespace JiayiLauncher
             {
             }
                 
+        }
+
+        private void Version_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VersionComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // here, a base for version switching
+
+            //WebClient Downloader = new WebClient();
+            //if (VersionComboBox.SelectedItem.ToString() == "1.16.40")
+            //{
+            //    Downloader.DownloadFile(new Uri("https://github.com/xarson/JiayiLauncher/releases/download/1.16.40/Minecraft-1.16.40.2.Appx"), 
+            //        @"c:\Jiayi\Minecraft-1.16.40.2.zip");
+            //    Directory.CreateDirectory(@"c:\Jiayi\Minecraft-1.16.40.2");
+            //    ZipFile.ExtractToDirectory(@"c:\Jiayi\Minecraft-1.16.40.2.zip", @"c:\Jiayi\Minecraft-1.16.40.2");
+            //}
         }
     }
 }
