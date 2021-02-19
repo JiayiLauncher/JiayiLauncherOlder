@@ -51,6 +51,7 @@ namespace JiayiLauncher
             this.guna2Button1 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button2 = new Guna.UI2.WinForms.Guna2Button();
             this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.BtnPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.HomePanel.SuspendLayout();
@@ -325,6 +326,7 @@ namespace JiayiLauncher
             this.LaunchBtn.TabIndex = 0;
             this.LaunchBtn.Text = "LAUNCH";
             this.LaunchBtn.UseTransparentBackground = true;
+            this.LaunchBtn.Click += new System.EventHandler(this.LaunchBtn_Click);
             this.LaunchBtn.MouseLeave += new System.EventHandler(this.LaunchBtn_MouseLeave);
             this.LaunchBtn.MouseHover += new System.EventHandler(this.LaunchBtn_MouseHover);
             // 
@@ -469,6 +471,11 @@ namespace JiayiLauncher
             this.guna2Button3.TabIndex = 9;
             this.guna2Button3.Text = "Keep Launcher Open";
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Jiayi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -481,8 +488,8 @@ namespace JiayiLauncher
             this.Controls.Add(this.BtnPanel);
             this.Controls.Add(this.Version);
             this.Controls.Add(this.TopPanel);
-            this.Controls.Add(this.SettingsPanel);
             this.Controls.Add(this.HomePanel);
+            this.Controls.Add(this.SettingsPanel);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -524,6 +531,7 @@ namespace JiayiLauncher
         private Guna.UI2.WinForms.Guna2Button guna2Button3;
         private Guna.UI2.WinForms.Guna2Button guna2Button2;
         private Guna.UI2.WinForms.Guna2Button guna2Button1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

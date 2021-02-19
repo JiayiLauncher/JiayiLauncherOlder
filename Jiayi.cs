@@ -96,6 +96,37 @@ namespace JiayiLauncher
             });
         }
 
+        public void RPCInGame(string status)  // made seperate rpc so that it doesnt initiate a new rpc client
+        {
+            int TimestampStart = 0;
+            int TimestampEnd = 0;
+            dynamic DateTimestampEnd = null;
+
+            if (discordTime != "" && Int32.TryParse(discordTime, out TimestampEnd))
+                DateTimestampEnd = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(TimestampEnd);
+
+            client.SetPresence(new RichPresence()
+            {
+                Details = status,
+                State = "on " + VersionDisplay.Text,
+
+                Assets = new Assets()
+                {
+
+                    LargeImageKey = "logonewdiscord",
+                    LargeImageText = "Jiayi Launcher",
+                    SmallImageKey = "minecraft",
+                    SmallImageText = "Minecraft Bedrock Edition"
+                },
+                Timestamps = new Timestamps()
+                {
+                    Start = discordTime != "" && Int32.TryParse(discordTime, out TimestampStart) ? new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(TimestampStart) : DateTime.UtcNow,
+                    End = DateTimestampEnd
+                }
+
+            });
+        }
+
         // Version stuff
 
         public static void versionFinderForLabel(string script, Label version)
@@ -236,6 +267,49 @@ namespace JiayiLauncher
         {
             LaunchBtn.Size = new Size(333, 74);
             LaunchBtn.Location = new Point(185, 317);
+        }
+
+        private void LaunchBtn_Click(object sender, EventArgs e)
+        {
+            RPCInGame("Playing Minecraft");
+            Process.Start("minecraft://");
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            Process[] pname = Process.GetProcessesByName("Minecraft.Windows");
+            if (pname.Length == 0)
+            {
+                if (HomeBtn.Checked == true)
+                {
+                    RPCForBtns("In Launcher");
+                    timer1.Stop();
+                }
+
+                else if (SettingsBtn.Checked == true)
+                {
+                    RPCForBtns("Configuring Settings");
+                    timer1.Stop();
+                }
+
+                else if (UpdateBtn.Checked == true)
+                {
+                    RPCForBtns("In Launcher");
+                    timer1.Stop();
+                }
+
+                else if (CosmeticsBtn.Checked == true)
+                {
+                    RPCForBtns("In Cosmetics Menu");
+                    timer1.Stop();
+                }
+            }
+                
+            else
+            {
+            }
+                
         }
     }
 }
