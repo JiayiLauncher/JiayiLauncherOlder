@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{E59E386E-67DD-489E-9405-743F92CE17A9}</ProjectGuid>
+    <ProjectGuid>{4FCCA131-C8D2-4845-84BA-40444ECA6841}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Jiayi_Launcher</RootNamespace>
-    <AssemblyName>Jiayi Launcher</AssemblyName>
+    <RootNamespace>JiayiLauncher</RootNamespace>
+    <AssemblyName>JiayiLauncher</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -59,7 +59,6 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Jiayi.resx">
       <DependentUpon>Jiayi.cs</DependentUpon>
-      <SubType>Designer</SubType>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

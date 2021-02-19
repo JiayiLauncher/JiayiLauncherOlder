@@ -1,0 +1,12 @@
+C:\JiayiLauncher\bin\Release\JiayiLauncher.exe.config
+C:\JiayiLauncher\bin\Release\JiayiLauncher.exe
+C:\JiayiLauncher\bin\Release\JiayiLauncher.pdb
+C:\JiayiLauncher\bin\Release\Guna.UI2.dll
+C:\JiayiLauncher\obj\Release\JiayiLauncher.csprojAssemblyReference.cache
+C:\JiayiLauncher\obj\Release\JiayiLauncher.Jiayi.resources
+C:\JiayiLauncher\obj\Release\JiayiLauncher.Properties.Resources.resources
+C:\JiayiLauncher\obj\Release\JiayiLauncher.csproj.GenerateResource.cache
+C:\JiayiLauncher\obj\Release\JiayiLauncher.csproj.CoreCompileInputs.cache
+C:\JiayiLauncher\obj\Release\JiayiLauncher.csproj.CopyComplete
+C:\JiayiLauncher\obj\Release\JiayiLauncher.exe
+C:\JiayiLauncher\obj\Release\JiayiLauncher.pdb

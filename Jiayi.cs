@@ -5,114 +5,62 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
-using System.Threading;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Jiayi_Launcher
+namespace JiayiLauncher
 {
     public partial class Jiayi : Form
     {
-
-        int panelwidth;
-        bool Hidden;
-
         public Jiayi()
         {
             InitializeComponent();
-            int panelwidth = ButtonPanel.Width;
-            bool Hidden = false;
         }
 
-        // Starting Point of all ButtonPanel functions
+        // All Side Panel Functions 
 
-        private void ButtonPanel_Paint(object sender, PaintEventArgs e)
+        private void HomeBtn_Click(object sender, EventArgs e)
         {
+            HomeBtn.Checked = true;
+            SettingsBtn.Checked = false;
+            UpdateBtn.Checked = false;
+            CosmeticsBtn.Checked = false;
+
+            TopPanel.Text = ("Home");
         }
 
-        private void ButtonPanel_MouseHover(object sender, EventArgs e)
+        private void SettingsBtn_Click(object sender, EventArgs e)
         {
-            timer1.Start();
-            
+            HomeBtn.Checked = false;
+            SettingsBtn.Checked = true;
+            UpdateBtn.Checked = false;
+            CosmeticsBtn.Checked = false;
+
+            TopPanel.Text = ("Settings");
         }
 
-        private void ButtonPanel_MouseLeave(object sender, EventArgs e)
+        private void UpdateBtn_Click(object sender, EventArgs e)
         {
-            Hidden = true;
-            timer1.Start();
+            HomeBtn.Checked = false;
+            SettingsBtn.Checked = false;
+            UpdateBtn.Checked = true;
+            CosmeticsBtn.Checked = false;
+
+            TopPanel.Text = ("Updates");
         }
 
-        private void timer1_Tick(object sender, EventArgs e)
+        private void CosmeticsBtn_Click(object sender, EventArgs e)
         {
-            if (Hidden)
-            {
-                ButtonPanel.Width = panelwidth + 10; 
-                if(ButtonPanel.Width >= panelwidth)
-                {
-                    timer1.Stop();
-                    Hidden = false;
-                    this.Refresh();
-                }
-            }
+            HomeBtn.Checked = false;
+            SettingsBtn.Checked = false;
+            UpdateBtn.Checked = false;
+            CosmeticsBtn.Checked = true;
 
-            else
-            {
-                ButtonPanel.Width = ButtonPanel.Width - 10;
-                if(ButtonPanel.Width <= panelwidth)
-                {
-                    timer1.Stop();
-                    Hidden = true;
-                    this.Refresh();
-                }
-            }
+            TopPanel.Text = ("Cosmetics");
         }
 
-        // Ending Point of all ButtonPanel functions
+        // All home screen functions
 
-
-
-        // Starting Point Of All HomeScreenBtn Functions
-
-        private void HomeScreenBtn_Click(object sender, EventArgs e)
-        {
-            HomeScreenBtn.Checked = true;
-            SettingsScreenBtn.Checked = false;
-
-        }
-
-        private void HomeScreenBtn_MouseHover(object sender, EventArgs e)
-        {
-            ButtonPanel_MouseHover(sender, e);
-        }
-
-        private void HomeScreenBtn_MouseLeave(object sender, EventArgs e)
-        {
-            ButtonPanel_MouseLeave(sender, e);
-        }
-
-        // Ending Point Of All HomeScreenBtn Functions
-
-
-
-        // Starting Point Of All SettingsScreenBtn Functions
-
-        private void SettingsScreenBtn_Click(object sender, EventArgs e)
-        {
-            HomeScreenBtn.Checked = false;
-            SettingsScreenBtn.Checked = true; ;
-        }
-
-        private void SettingsScreenBtn_MouseHover(object sender, EventArgs e)
-        {
-            ButtonPanel_MouseHover(sender, e);
-        }
-
-        private void SettingsScreenBtn_MouseLeave(object sender, EventArgs e)
-        {
-            ButtonPanel_MouseLeave(sender, e);
-        }
-
-        // Ending Point Of All SettingsScreenBtn Functions
 
     }
 }

@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Jiayi Launcher")]
+[assembly: AssemblyTitle("JiayiLauncher")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("HP Inc.")]
-[assembly: AssemblyProduct("Jiayi Launcher")]
+[assembly: AssemblyProduct("JiayiLauncher")]
 [assembly: AssemblyCopyright("Copyright © HP Inc. 2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("e59e386e-67dd-489e-9405-743f92ce17a9")]
+[assembly: Guid("4fcca131-c8d2-4845-84ba-40444eca6841")]
 
 // Version information for an assembly consists of the following four values:
 //
