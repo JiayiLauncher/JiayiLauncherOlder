@@ -117,9 +117,17 @@ namespace JiayiLauncher
         private void HomeBtn_Click(object sender, EventArgs e)
         {
             HomeBtn.Checked = true;
+            HomePanel.Visible = true;
+
             SettingsBtn.Checked = false;
+            SettingsPanel.Visible = false;
+
             UpdateBtn.Checked = false;
+
+
             CosmeticsBtn.Checked = false;
+
+
             RPCForBtns("In Launcher");
 
             TopPanel.Text = ("Home");
@@ -128,20 +136,37 @@ namespace JiayiLauncher
         private void SettingsBtn_Click(object sender, EventArgs e)
         {
             HomeBtn.Checked = false;
+            HomePanel.Visible = false;
+
             SettingsBtn.Checked = true;
+            SettingsPanel.Visible = true;
+
             UpdateBtn.Checked = false;
+
+
             CosmeticsBtn.Checked = false;
+
+
             RPCForBtns("Configuring Settings");
 
+            SettingsPanel.Visible = true;
             TopPanel.Text = ("Settings");
         }
 
         private void UpdateBtn_Click(object sender, EventArgs e)
         {
             HomeBtn.Checked = false;
+            HomePanel.Visible = false;
+
             SettingsBtn.Checked = false;
+            SettingsPanel.Visible = false;
+
             UpdateBtn.Checked = true;
+
+
             CosmeticsBtn.Checked = false;
+
+
             RPCForBtns("In Launcher");
 
             TopPanel.Text = ("Updates");
@@ -150,9 +175,17 @@ namespace JiayiLauncher
         private void CosmeticsBtn_Click(object sender, EventArgs e)
         {
             HomeBtn.Checked = false;
+            HomePanel.Visible = false;
+
             SettingsBtn.Checked = false;
+            SettingsPanel.Visible = false;
+
             UpdateBtn.Checked = false;
+
+
             CosmeticsBtn.Checked = true;
+            
+
             RPCForBtns("In Cosmetics Menu");
 
             TopPanel.Text = ("Cosmetics");
@@ -193,6 +226,16 @@ namespace JiayiLauncher
 
         // All home screen functions
 
+        private void LaunchBtn_MouseHover(object sender, EventArgs e) // hover enlarge effect
+        {
+            LaunchBtn.Size = new Size(351, 78);
+            LaunchBtn.Location = new Point(175, 317);
+        }
 
+        private void LaunchBtn_MouseLeave(object sender, EventArgs e) // undo enlarge effect when mouse stops hovering on btn
+        {
+            LaunchBtn.Size = new Size(333, 74);
+            LaunchBtn.Location = new Point(185, 317);
+        }
     }
 }
