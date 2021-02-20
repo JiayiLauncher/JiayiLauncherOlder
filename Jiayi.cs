@@ -160,12 +160,13 @@ namespace JiayiLauncher
         {
             HomeBtn.Checked = true;
             HomePanel.Visible = true;
+            HomePanel.BringToFront();
 
             SettingsBtn.Checked = false;
             SettingsPanel.Visible = false;
 
-            UpdateBtn.Checked = false;
-
+            UpdatePanelBtn.Checked = false;
+            UpdatePanel.Visible = false;
 
             CosmeticsBtn.Checked = false;
 
@@ -182,9 +183,10 @@ namespace JiayiLauncher
 
             SettingsBtn.Checked = true;
             SettingsPanel.Visible = true;
+            SettingsPanel.BringToFront();
 
-            UpdateBtn.Checked = false;
-
+            UpdatePanelBtn.Checked = false;
+            UpdatePanel.Visible = false;
 
             CosmeticsBtn.Checked = false;
 
@@ -203,8 +205,9 @@ namespace JiayiLauncher
             SettingsBtn.Checked = false;
             SettingsPanel.Visible = false;
 
-            UpdateBtn.Checked = true;
-
+            UpdatePanelBtn.Checked = true;
+            UpdatePanel.Visible = true;
+            UpdatePanel.BringToFront();
 
             CosmeticsBtn.Checked = false;
 
@@ -222,8 +225,8 @@ namespace JiayiLauncher
             SettingsBtn.Checked = false;
             SettingsPanel.Visible = false;
 
-            UpdateBtn.Checked = false;
-
+            UpdatePanelBtn.Checked = false;
+            UpdatePanel.Visible = false;
 
             CosmeticsBtn.Checked = true;
             
@@ -268,6 +271,11 @@ namespace JiayiLauncher
 
         // All home screen functions
 
+        private void StatusText_Click(object sender, EventArgs e)
+        {
+
+        }
+
         private void LaunchBtn_MouseHover(object sender, EventArgs e) // hover enlarge effect
         {
             LaunchBtn.Size = new Size(351, 78);
@@ -282,6 +290,8 @@ namespace JiayiLauncher
 
         private void LaunchBtn_Click(object sender, EventArgs e)
         {
+            Status.Visible = true;
+            StatusText.Visible = true;
             Settings();
         }
 
@@ -290,6 +300,8 @@ namespace JiayiLauncher
             Process[] pname = Process.GetProcessesByName("Minecraft.Windows");
             if (pname.Length == 0)
             {
+                Status.Visible = false;
+                StatusText.Visible = false;
                 if (HomeBtn.Checked == true)
                 {
                     RPCForBtns("In Launcher");
@@ -302,7 +314,7 @@ namespace JiayiLauncher
                     timer1.Stop();
                 }
 
-                else if (UpdateBtn.Checked == true)
+                else if (UpdatePanelBtn.Checked == true)
                 {
                     RPCForBtns("In Launcher");
                     timer1.Stop();
@@ -345,7 +357,7 @@ namespace JiayiLauncher
                 Process[] pname = Process.GetProcessesByName("Minecraft.Windows");
                 if (pname.Length == 0)
                 {
-                    InjectDLL();
+                    MoreSettings();
                 }
 
                 else
@@ -358,12 +370,12 @@ namespace JiayiLauncher
             if (HideLauncher.Checked == true)
             {
                 NotifyIcon.Visible = true;
-                InjectDLL();
+                MoreSettings();
             }
 
             if (KeepOpen.Checked == true)
             {
-                InjectDLL();
+                MoreSettings();
             }
         }
 
@@ -390,12 +402,12 @@ namespace JiayiLauncher
 
         //Load Settings At Launch
 
-        public void InjectDLL()
+        public void MoreSettings()
         {
             RPCInGame("Playing Minecraft");
             timer1.Start();
 
-
+            InjectDLL(Directory.GetCurrentDirectory().ToString() + "/JiayiClient.dll");
             Thread.Sleep(200);
 
             Process[] processes = Process.GetProcessesByName("Minecraft.Windows");
@@ -427,6 +439,107 @@ namespace JiayiLauncher
                     MoveWindow(Minecraft.MainWindowHandle, 0, 0, 1280, 720, true);
                 }
             }
+        }
+        
+        //Inject DLL into game
+
+        [DllImport("kernel32.dll")]
+        public static extern IntPtr OpenProcess(int dwDesiredAccess, bool bInheritHandle, int dwProcessId);
+
+        [DllImport("kernel32.dll", CharSet = CharSet.Auto)]
+        public static extern IntPtr GetModuleHandle(string lpModuleName);
+
+        [DllImport("kernel32", CharSet = CharSet.Ansi, ExactSpelling = true, SetLastError = true)]
+        static extern IntPtr GetProcAddress(IntPtr hModule, string procName);
+
+        [DllImport("kernel32.dll", SetLastError = true, ExactSpelling = true)]
+        static extern IntPtr VirtualAllocEx(IntPtr hProcess, IntPtr lpAddress,
+            uint dwSize, uint flAllocationType, uint flProtect);
+
+        [DllImport("kernel32.dll", SetLastError = true)]
+        static extern bool WriteProcessMemory(IntPtr hProcess, IntPtr lpBaseAddress, byte[] lpBuffer, uint nSize, out UIntPtr lpNumberOfBytesWritten);
+
+        [DllImport("kernel32.dll")]
+        static extern IntPtr CreateRemoteThread(IntPtr hProcess,
+            IntPtr lpThreadAttributes, uint dwStackSize, IntPtr lpStartAddress, IntPtr lpParameter, uint dwCreationFlags, IntPtr lpThreadId);
+
+        const int PROCESS_CREATE_THREAD = 0x0002;
+        const int PROCESS_QUERY_INFORMATION = 0x0400;
+        const int PROCESS_VM_OPERATION = 0x0008;
+        const int PROCESS_VM_WRITE = 0x0020;
+        const int PROCESS_VM_READ = 0x0010;
+
+        // used for memory allocation
+        const uint MEM_COMMIT = 0x00001000;
+        const uint MEM_RESERVE = 0x00002000;
+        const uint PAGE_READWRITE = 4;
+
+        public static void InjectDLL(string DLLPath)
+        {
+            Process[] targetProcessIndex = Process.GetProcessesByName("Minecraft.Windows");
+            if (targetProcessIndex.Length > 0)
+            {
+                applyAppPackages(DLLPath);
+
+                Process targetProcess = Process.GetProcessesByName("Minecraft.Windows")[0];
+
+                IntPtr procHandle = OpenProcess(PROCESS_CREATE_THREAD | PROCESS_QUERY_INFORMATION | PROCESS_VM_OPERATION | PROCESS_VM_WRITE | PROCESS_VM_READ, false, targetProcess.Id);
+
+                IntPtr loadLibraryAddr = GetProcAddress(GetModuleHandle("kernel32.dll"), "LoadLibraryA");
+
+                IntPtr allocMemAddress = VirtualAllocEx(procHandle, IntPtr.Zero, (uint)((DLLPath.Length + 1) * Marshal.SizeOf(typeof(char))), MEM_COMMIT | MEM_RESERVE, PAGE_READWRITE);
+
+                UIntPtr bytesWritten;
+                WriteProcessMemory(procHandle, allocMemAddress, Encoding.Default.GetBytes(DLLPath), (uint)((DLLPath.Length + 1) * Marshal.SizeOf(typeof(char))), out bytesWritten);
+                CreateRemoteThread(procHandle, IntPtr.Zero, 0, loadLibraryAddr, allocMemAddress, 0, IntPtr.Zero);
+
+            }
+        }
+
+        public static void applyAppPackages(string DLLPath)
+        {
+            FileInfo InfoFile = new FileInfo(DLLPath);
+            FileSecurity fSecurity = InfoFile.GetAccessControl();
+            fSecurity.AddAccessRule(new FileSystemAccessRule(new SecurityIdentifier("S-1-15-2-1"), FileSystemRights.FullControl, InheritanceFlags.None, PropagationFlags.NoPropagateInherit, AccessControlType.Allow));
+            InfoFile.SetAccessControl(fSecurity);
+        }
+
+        // Update Panel Functions
+
+        private void UpdateBtn_Click_1(object sender, EventArgs e)
+        {
+            UpdateForm updateForm = new UpdateForm();
+            updateForm.Show();
+        }
+
+        private void UpdateBtn_MouseHover(object sender, EventArgs e)
+        {
+            UpdateBtn.Size = new Size(352, 74);
+            UpdateBtn.Location = new Point(175, 317);
+        } // location 175, 322
+
+        private void UpdateBtn_MouseLeave(object sender, EventArgs e)
+        {
+            UpdateBtn.Size = new Size(333, 74);
+            UpdateBtn.Location = new Point(185, 321);
+        } //333, 74 
+
+        private void TopPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void VersionComboBox_MouseHover(object sender, EventArgs e)
+        {
+            label2.Visible = true;
+            label1.Visible = true;
+
+        }
+
+        private void VersionComboBox_MouseLeave(object sender, EventArgs e)
+        {
+            label2.Visible = false;
+            label1.Visible = false;
         }
     }
 }
