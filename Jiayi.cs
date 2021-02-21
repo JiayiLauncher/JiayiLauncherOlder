@@ -35,11 +35,30 @@ namespace JiayiLauncher
             InitializeDiscord("In Launcher");
             versionFinderForLabel("Get-AppPackage -name Microsoft.MinecraftUWP | select -expandproperty Version", VersionDisplay);
             Directory.CreateDirectory(@"c:\Jiayi");
+
         }
 
         private void Jiayi_Load(object sender, EventArgs e)
         {
             NewsfeedLoader(); // gets data for newsfeed
+
+            // launch settings
+            if (Properties.Settings.Default.AfterLaunch == "Hide")
+            {
+                HideLauncher.Checked = true;
+            } else if (Properties.Settings.Default.AfterLaunch == "Close")
+            {
+                CloseLauncher.Checked = true;
+            } else if (Properties.Settings.Default.AfterLaunch == "KeepOpen")
+            {
+                KeepOpen.Checked = true;
+            }
+
+            // resolution settings
+            ResolutionComboBox.SelectedItem = Properties.Settings.Default.Resolution;
+
+            // process priority settings
+            ProcessPriorityBox.SelectedItem = Properties.Settings.Default.Priority;
         }
 
 
@@ -139,15 +158,16 @@ namespace JiayiLauncher
 
         private void VersionComboBox_MouseHover(object sender, EventArgs e)
         {
-            label2.Visible = true;
-            label1.Visible = true;
+            // why
+            //label2.Visible = true;
+            //label1.Visible = true;
 
         }
 
         private void VersionComboBox_MouseLeave(object sender, EventArgs e)
         {
-            label2.Visible = false;
-            label1.Visible = false;
+            //label2.Visible = false;
+            //label1.Visible = false;
         }
 
         private void Version_Click(object sender, EventArgs e)
@@ -296,20 +316,24 @@ namespace JiayiLauncher
 
         private void LaunchBtn_MouseHover(object sender, EventArgs e) // hover enlarge effect
         {
-            LaunchBtn.Size = new Size(351, 78);
-            LaunchBtn.Location = new Point(175, 317);
+            // no
+            //LaunchBtn.Size = new Size(351, 78);
+            //LaunchBtn.Location = new Point(175, 317);
         }
 
         private void LaunchBtn_MouseLeave(object sender, EventArgs e) // undo enlarge effect when mouse stops hovering on btn
         {
-            LaunchBtn.Size = new Size(333, 74);
-            LaunchBtn.Location = new Point(185, 317);
+            //LaunchBtn.Size = new Size(333, 74);
+            //LaunchBtn.Location = new Point(185, 317);
         }
 
         private void LaunchBtn_Click(object sender, EventArgs e)
         {
             Status.Visible = true;
             StatusText.Visible = true;
+            // just gonna leave this here
+            //string mcversion = Version.Text.Remove(0, 8);
+            //Console.WriteLine(mcversion);
             StatusText.Text = ("Preparing Injection Process..");
             Settings();
         }
@@ -319,16 +343,58 @@ namespace JiayiLauncher
 
         private void VersionComboBox_SelectedIndexChanged(object sender, EventArgs e)
         {
-            // here, a base for version switching
-
-            //WebClient Downloader = new WebClient();
-            //if (VersionComboBox.SelectedItem.ToString() == "1.16.40")
-            //{
-            //    Downloader.DownloadFile(new Uri("https://github.com/xarson/JiayiLauncher/releases/download/1.16.40/Minecraft-1.16.40.2.Appx"), 
-            //        @"c:\Jiayi\Minecraft-1.16.40.2.zip");
-            //    Directory.CreateDirectory(@"c:\Jiayi\Minecraft-1.16.40.2");
-            //    ZipFile.ExtractToDirectory(@"c:\Jiayi\Minecraft-1.16.40.2.zip", @"c:\Jiayi\Minecraft-1.16.40.2");
-            //}
+            WebClient Downloader = new WebClient();
+            label2.Text = "Downloading Minecraft " + VersionComboBox.SelectedItem.ToString() + "...";
+            
+            if (VersionComboBox.SelectedItem.ToString() == "1.16.40")
+            {
+                if (Directory.Exists(@"c:\Jiayi\Minecraft-1.16.40.2"))
+                {
+                    label2.Text = "This version of Minecraft has already been installed.";
+                    return;
+                }
+                Downloader.DownloadFile(new Uri("https://github.com/xarson/jiayi/releases/download/1.16.40/Minecraft-1.16.40.2.Appx"),
+                    @"c:\Jiayi\Minecraft-1.16.40.2.zip");
+                Directory.CreateDirectory(@"c:\Jiayi\Minecraft-1.16.40.2");
+                ZipFile.ExtractToDirectory(@"c:\Jiayi\Minecraft-1.16.40.2.zip", @"c:\Jiayi\Minecraft-1.16.40.2");
+            }
+            else if (VersionComboBox.SelectedItem.ToString() == "1.16.100")
+            {
+                if (Directory.Exists(@"c:\Jiayi\Minecraft-1.16.100.4"))
+                {
+                    label2.Text = "This version of Minecraft has already been installed.";
+                    return;
+                }
+                Downloader.DownloadFile(new Uri("https://github.com/xarson/jiayi/releases/download/1.16.100/Minecraft-1.16.100.4.Appx"),
+                    @"c:\Jiayi\Minecraft-1.16.100.4.zip");
+                Directory.CreateDirectory(@"c:\Jiayi\Minecraft-1.16.100.4");
+                ZipFile.ExtractToDirectory(@"c:\Jiayi\Minecraft-1.16.100.4.zip", @"c:\Jiayi\Minecraft-1.16.100.4");
+            }
+            else if (VersionComboBox.SelectedItem.ToString() == "1.16.200")
+            {
+                if (Directory.Exists(@"c:\Jiayi\Minecraft-1.16.200.2"))
+                {
+                    label2.Text = "This version of Minecraft has already been installed.";
+                    return;
+                }
+                Downloader.DownloadFile(new Uri("https://github.com/xarson/jiayi/releases/download/1.16.200/Minecraft-1.16.200.2.Appx"),
+                    @"c:\Jiayi\Minecraft-1.16.200.2.zip");
+                Directory.CreateDirectory(@"c:\Jiayi\Minecraft-1.16.200.2");
+                ZipFile.ExtractToDirectory(@"c:\Jiayi\Minecraft-1.16.200.2.zip", @"c:\Jiayi\Minecraft-1.16.200.2");
+            }
+            else if (VersionComboBox.SelectedItem.ToString() == "1.16.201")
+            {
+                if (Directory.Exists(@"c:\Jiayi\Minecraft-1.16.201.2"))
+                {
+                    label2.Text = "This version of Minecraft has already been installed.";
+                    return;
+                }
+                Downloader.DownloadFile(new Uri("https://github.com/xarson/jiayi/releases/download/1.16.201/Minecraft-1.16.201.2.Appx"),
+                    @"c:\Jiayi\Minecraft-1.16.201.2.zip");
+                Directory.CreateDirectory(@"c:\Jiayi\Minecraft-1.16.201.2");
+                ZipFile.ExtractToDirectory(@"c:\Jiayi\Minecraft-1.16.201.2.zip", @"c:\Jiayi\Minecraft-1.16.201.2");
+            }
+            
         }
 
         // all settings functions
@@ -414,6 +480,8 @@ namespace JiayiLauncher
             CloseLauncher.Checked = true;
             HideLauncher.Checked = false;
             KeepOpen.Checked = false;
+            Properties.Settings.Default.AfterLaunch = "Close";
+            Properties.Settings.Default.Save();
         }
 
         private void HideLauncher_Click(object sender, EventArgs e)
@@ -421,6 +489,8 @@ namespace JiayiLauncher
             CloseLauncher.Checked = false;
             HideLauncher.Checked = true;
             KeepOpen.Checked = false;
+            Properties.Settings.Default.AfterLaunch = "Hide";
+            Properties.Settings.Default.Save();
         }
 
         private void KeepOpen_Click(object sender, EventArgs e)
@@ -428,6 +498,8 @@ namespace JiayiLauncher
             CloseLauncher.Checked = false;
             HideLauncher.Checked = false;
             KeepOpen.Checked = true;
+            Properties.Settings.Default.AfterLaunch = "KeepOpen";
+            Properties.Settings.Default.Save();
         }
 
         public void MoreSettings()
@@ -442,12 +514,12 @@ namespace JiayiLauncher
             foreach (Process proc in processes)
                 if (ProcessPriorityBox.SelectedItem == "High")
                 {
-                    proc.PriorityClass = ProcessPriorityClass.RealTime;
+                    proc.PriorityClass = ProcessPriorityClass.High;
                 }
 
                 else if (ProcessPriorityBox.SelectedItem == "Medium")
                 {
-                    proc.PriorityClass = ProcessPriorityClass.AboveNormal;
+                    proc.PriorityClass = ProcessPriorityClass.Normal;
                 }
                 else if (ProcessPriorityBox.SelectedItem == "Low")
                 {
@@ -465,6 +537,9 @@ namespace JiayiLauncher
                 else if (ResolutionComboBox.SelectedItem == "1280x720")
                 {
                     MoveWindow(Minecraft.MainWindowHandle, 0, 0, 1280, 720, true);
+                } else if (ResolutionComboBox.SelectedItem == "1600x900")
+                {
+                    MoveWindow(Minecraft.MainWindowHandle, 0, 0, 1600, 900, true);
                 }
             }
         }
@@ -550,14 +625,15 @@ namespace JiayiLauncher
 
         private void UpdateBtn_MouseHover(object sender, EventArgs e)
         {
-            UpdateBtn.Size = new Size(352, 74);
-            UpdateBtn.Location = new Point(175, 317);
+            // this sucks, default animations on top
+            //UpdateBtn.Size = new Size(352, 74);
+            //UpdateBtn.Location = new Point(175, 317);
         } // location 175, 322
 
         private void UpdateBtn_MouseLeave(object sender, EventArgs e)
         {
-            UpdateBtn.Size = new Size(333, 74);
-            UpdateBtn.Location = new Point(185, 321);
+            //UpdateBtn.Size = new Size(333, 74);
+            //UpdateBtn.Location = new Point(185, 321);
         } //333, 74 
 
         private void UpdatePanel_Paint(object sender, PaintEventArgs e)
@@ -600,6 +676,18 @@ namespace JiayiLauncher
         private void UpdatePanel_Paint_1(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void ResolutionComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Resolution = ResolutionComboBox.SelectedItem.ToString();
+            Properties.Settings.Default.Save();
+        }
+
+        private void ProcessPriorityBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.Priority = ProcessPriorityBox.SelectedItem.ToString();
+            Properties.Settings.Default.Save();
         }
     }
 }

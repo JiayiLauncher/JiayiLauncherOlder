@@ -51,3 +51,4 @@ C:\Users\Owner\source\repos\JiayiLauncher\obj\Debug\JiayiLauncher.csproj.CopyCom
 C:\Users\Owner\source\repos\JiayiLauncher\obj\Debug\JiayiLauncher.exe
 C:\Users\Owner\source\repos\JiayiLauncher\obj\Debug\JiayiLauncher.pdb
 C:\Jiayi\Launcher\obj\Debug\JiayiLauncher.UpdateForm.resources
+C:\Users\Owner\source\repos\JiayiLauncher\obj\Debug\JiayiLauncher.UpdateForm.resources
