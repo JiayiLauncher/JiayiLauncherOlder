@@ -43,14 +43,16 @@ namespace JiayiLauncher
             this.HomePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.StatusText = new System.Windows.Forms.Label();
             this.Status = new System.Windows.Forms.Label();
-            this.ResolutionComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.VersionComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.LaunchBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.ResolutionComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.UpdatePanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.NewsPanel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.UpdateBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SettingsPanel = new Guna.UI2.WinForms.Guna2Panel();
@@ -64,8 +66,6 @@ namespace JiayiLauncher
             this.SettingsTag1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.BtnPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.HomePanel.SuspendLayout();
@@ -353,55 +353,6 @@ namespace JiayiLauncher
             this.Status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.Status.Visible = false;
             // 
-            // ResolutionComboBox
-            // 
-            this.ResolutionComboBox.Animated = true;
-            this.ResolutionComboBox.BackColor = System.Drawing.Color.Transparent;
-            this.ResolutionComboBox.BorderRadius = 15;
-            this.ResolutionComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
-            this.ResolutionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ResolutionComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.ResolutionComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ResolutionComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ResolutionComboBox.FocusedState.FillColor = System.Drawing.Color.DimGray;
-            this.ResolutionComboBox.FocusedState.ForeColor = System.Drawing.Color.White;
-            this.ResolutionComboBox.FocusedState.Parent = this.ResolutionComboBox;
-            this.ResolutionComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
-            this.ResolutionComboBox.ForeColor = System.Drawing.Color.White;
-            this.ResolutionComboBox.HoverState.Parent = this.ResolutionComboBox;
-            this.ResolutionComboBox.ItemHeight = 30;
-            this.ResolutionComboBox.Items.AddRange(new object[] {
-            "1080x1920",
-            "1280x720"});
-            this.ResolutionComboBox.ItemsAppearance.Parent = this.ResolutionComboBox;
-            this.ResolutionComboBox.Location = new System.Drawing.Point(463, 347);
-            this.ResolutionComboBox.Name = "ResolutionComboBox";
-            this.ResolutionComboBox.ShadowDecoration.Parent = this.ResolutionComboBox;
-            this.ResolutionComboBox.Size = new System.Drawing.Size(198, 36);
-            this.ResolutionComboBox.TabIndex = 8;
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(438, 280);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(255, 46);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Lowering Minecraft\'s window resolution can increase FPS.";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(470, 240);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(182, 33);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Resolution";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // label2
             // 
             this.label2.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -481,6 +432,55 @@ namespace JiayiLauncher
             this.LaunchBtn.MouseLeave += new System.EventHandler(this.LaunchBtn_MouseLeave);
             this.LaunchBtn.MouseHover += new System.EventHandler(this.LaunchBtn_MouseHover);
             // 
+            // ResolutionComboBox
+            // 
+            this.ResolutionComboBox.Animated = true;
+            this.ResolutionComboBox.BackColor = System.Drawing.Color.Transparent;
+            this.ResolutionComboBox.BorderRadius = 15;
+            this.ResolutionComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
+            this.ResolutionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ResolutionComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.ResolutionComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ResolutionComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ResolutionComboBox.FocusedState.FillColor = System.Drawing.Color.DimGray;
+            this.ResolutionComboBox.FocusedState.ForeColor = System.Drawing.Color.White;
+            this.ResolutionComboBox.FocusedState.Parent = this.ResolutionComboBox;
+            this.ResolutionComboBox.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.ResolutionComboBox.ForeColor = System.Drawing.Color.White;
+            this.ResolutionComboBox.HoverState.Parent = this.ResolutionComboBox;
+            this.ResolutionComboBox.ItemHeight = 30;
+            this.ResolutionComboBox.Items.AddRange(new object[] {
+            "1080x1920",
+            "1280x720"});
+            this.ResolutionComboBox.ItemsAppearance.Parent = this.ResolutionComboBox;
+            this.ResolutionComboBox.Location = new System.Drawing.Point(463, 347);
+            this.ResolutionComboBox.Name = "ResolutionComboBox";
+            this.ResolutionComboBox.ShadowDecoration.Parent = this.ResolutionComboBox;
+            this.ResolutionComboBox.Size = new System.Drawing.Size(198, 36);
+            this.ResolutionComboBox.TabIndex = 8;
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(438, 280);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(255, 46);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "Lowering Minecraft\'s window resolution can increase FPS.";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(470, 240);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(182, 33);
+            this.label4.TabIndex = 6;
+            this.label4.Text = "Resolution";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // UpdatePanel
             // 
             this.UpdatePanel.Controls.Add(this.guna2Panel2);
@@ -493,6 +493,22 @@ namespace JiayiLauncher
             this.UpdatePanel.Size = new System.Drawing.Size(705, 413);
             this.UpdatePanel.TabIndex = 11;
             this.UpdatePanel.Visible = false;
+            // 
+            // guna2Panel2
+            // 
+            this.guna2Panel2.Location = new System.Drawing.Point(474, 44);
+            this.guna2Panel2.Name = "guna2Panel2";
+            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
+            this.guna2Panel2.Size = new System.Drawing.Size(200, 228);
+            this.guna2Panel2.TabIndex = 4;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Location = new System.Drawing.Point(255, 45);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.Size = new System.Drawing.Size(200, 228);
+            this.guna2Panel1.TabIndex = 3;
             // 
             // NewsPanel1
             // 
@@ -693,22 +709,7 @@ namespace JiayiLauncher
             this.NotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("NotifyIcon.Icon")));
             this.NotifyIcon.Text = "Jiayi Client";
             this.NotifyIcon.Visible = true;
-            // 
-            // guna2Panel1
-            // 
-            this.guna2Panel1.Location = new System.Drawing.Point(255, 45);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(200, 228);
-            this.guna2Panel1.TabIndex = 3;
-            // 
-            // guna2Panel2
-            // 
-            this.guna2Panel2.Location = new System.Drawing.Point(474, 44);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(200, 228);
-            this.guna2Panel2.TabIndex = 4;
+            this.NotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIcon_MouseDoubleClick);
             // 
             // Jiayi
             // 

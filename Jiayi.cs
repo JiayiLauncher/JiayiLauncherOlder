@@ -302,6 +302,7 @@ namespace JiayiLauncher
             {
                 Status.Visible = false;
                 StatusText.Visible = false;
+                
                 if (HomeBtn.Checked == true)
                 {
                     RPCForBtns("In Launcher");
@@ -370,6 +371,7 @@ namespace JiayiLauncher
             if (HideLauncher.Checked == true)
             {
                 NotifyIcon.Visible = true;
+                this.Hide();
                 MoreSettings();
             }
 
@@ -402,12 +404,18 @@ namespace JiayiLauncher
 
         //Load Settings At Launch
 
+        private void NotifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            NotifyIcon.Visible = false;
+            this.Show();
+        }
+
         public void MoreSettings()
         {
             RPCInGame("Playing Minecraft");
             timer1.Start();
 
-            InjectDLL(Directory.GetCurrentDirectory().ToString() + "/JiayiClient.dll");
+            //InjectDLL(Directory.GetCurrentDirectory().ToString() + "/JiayiClient.dll");
             Thread.Sleep(200);
 
             Process[] processes = Process.GetProcessesByName("Minecraft.Windows");
@@ -541,5 +549,6 @@ namespace JiayiLauncher
             label2.Visible = false;
             label1.Visible = false;
         }
+
     }
 }
