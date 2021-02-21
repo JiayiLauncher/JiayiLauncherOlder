@@ -39,8 +39,9 @@ namespace JiayiLauncher
 
         private void Jiayi_Load(object sender, EventArgs e)
         {
-
+            NewsfeedLoader(); // gets data for newsfeed
         }
+
 
         // RPC Functions
 
@@ -133,7 +134,21 @@ namespace JiayiLauncher
             });
         }
 
+
         // Version stuff
+
+        private void VersionComboBox_MouseHover(object sender, EventArgs e)
+        {
+            label2.Visible = true;
+            label1.Visible = true;
+
+        }
+
+        private void VersionComboBox_MouseLeave(object sender, EventArgs e)
+        {
+            label2.Visible = false;
+            label1.Visible = false;
+        }
 
         private void Version_Click(object sender, EventArgs e)
         {
@@ -153,6 +168,7 @@ namespace JiayiLauncher
                 version.Text = stringBuilder.ToString();
             }
         }
+
 
         // All Side Panel Functions 
 
@@ -236,6 +252,7 @@ namespace JiayiLauncher
             TopPanel.Text = ("Cosmetics");
         }
 
+
         // Minimize and Close Btn Functions
         private void MinimizeBtn_MouseHover(object sender, EventArgs e)
         {
@@ -269,6 +286,7 @@ namespace JiayiLauncher
             this.WindowState = FormWindowState.Minimized;
         }
 
+
         // All home screen functions
 
         private void StatusText_Click(object sender, EventArgs e)
@@ -292,8 +310,28 @@ namespace JiayiLauncher
         {
             Status.Visible = true;
             StatusText.Visible = true;
+            StatusText.Text = ("Preparing Injection Process..");
             Settings();
         }
+
+
+        //version changer function
+
+        private void VersionComboBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            // here, a base for version switching
+
+            //WebClient Downloader = new WebClient();
+            //if (VersionComboBox.SelectedItem.ToString() == "1.16.40")
+            //{
+            //    Downloader.DownloadFile(new Uri("https://github.com/xarson/JiayiLauncher/releases/download/1.16.40/Minecraft-1.16.40.2.Appx"), 
+            //        @"c:\Jiayi\Minecraft-1.16.40.2.zip");
+            //    Directory.CreateDirectory(@"c:\Jiayi\Minecraft-1.16.40.2");
+            //    ZipFile.ExtractToDirectory(@"c:\Jiayi\Minecraft-1.16.40.2.zip", @"c:\Jiayi\Minecraft-1.16.40.2");
+            //}
+        }
+
+        // all settings functions
 
         private void timer1_Tick(object sender, EventArgs e)
         {
@@ -302,7 +340,7 @@ namespace JiayiLauncher
             {
                 Status.Visible = false;
                 StatusText.Visible = false;
-                
+
                 if (HomeBtn.Checked == true)
                 {
                     RPCForBtns("In Launcher");
@@ -327,29 +365,12 @@ namespace JiayiLauncher
                     timer1.Stop();
                 }
             }
-                
+
             else
             {
             }
-                
+
         }
-
-        private void VersionComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            // here, a base for version switching
-
-            //WebClient Downloader = new WebClient();
-            //if (VersionComboBox.SelectedItem.ToString() == "1.16.40")
-            //{
-            //    Downloader.DownloadFile(new Uri("https://github.com/xarson/JiayiLauncher/releases/download/1.16.40/Minecraft-1.16.40.2.Appx"), 
-            //        @"c:\Jiayi\Minecraft-1.16.40.2.zip");
-            //    Directory.CreateDirectory(@"c:\Jiayi\Minecraft-1.16.40.2");
-            //    ZipFile.ExtractToDirectory(@"c:\Jiayi\Minecraft-1.16.40.2.zip", @"c:\Jiayi\Minecraft-1.16.40.2");
-            //}
-        }
-
-        // ALL settings functions
-
         private void Settings()
         {
             Process.Start("minecraft://");
@@ -358,11 +379,17 @@ namespace JiayiLauncher
                 Process[] pname = Process.GetProcessesByName("Minecraft.Windows");
                 if (pname.Length == 0)
                 {
+                    StatusText.Text = ("Preparing Settings");
                     MoreSettings();
+                    
                 }
 
                 else
                 {
+                    StatusText.Text = ("Finalizing Process Before Closing...");
+                    MoreSettings();
+                    Thread.Sleep(500);
+
                     this.Close();
                 }
 
@@ -377,6 +404,7 @@ namespace JiayiLauncher
 
             if (KeepOpen.Checked == true)
             {
+                StatusText.Text = ("Preparing Settings");
                 MoreSettings();
             }
         }
@@ -402,14 +430,6 @@ namespace JiayiLauncher
             KeepOpen.Checked = true;
         }
 
-        //Load Settings At Launch
-
-        private void NotifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
-        {
-            NotifyIcon.Visible = false;
-            this.Show();
-        }
-
         public void MoreSettings()
         {
             RPCInGame("Playing Minecraft");
@@ -420,16 +440,16 @@ namespace JiayiLauncher
 
             Process[] processes = Process.GetProcessesByName("Minecraft.Windows");
             foreach (Process proc in processes)
-            if (ProcessPriorityBox.SelectedItem == "High")
+                if (ProcessPriorityBox.SelectedItem == "High")
                 {
                     proc.PriorityClass = ProcessPriorityClass.RealTime;
                 }
 
-            else if (ProcessPriorityBox.SelectedItem == "Medium")
+                else if (ProcessPriorityBox.SelectedItem == "Medium")
                 {
                     proc.PriorityClass = ProcessPriorityClass.AboveNormal;
                 }
-            else if (ProcessPriorityBox.SelectedItem == "Low")
+                else if (ProcessPriorityBox.SelectedItem == "Low")
                 {
                     proc.PriorityClass = ProcessPriorityClass.BelowNormal;
                 }
@@ -448,6 +468,14 @@ namespace JiayiLauncher
                 }
             }
         }
+
+        private void NotifyIcon_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            NotifyIcon.Visible = false;
+            this.Show();
+        }
+
+
         
         //Inject DLL into game
 
@@ -532,23 +560,46 @@ namespace JiayiLauncher
             UpdateBtn.Location = new Point(185, 321);
         } //333, 74 
 
-        private void TopPanel_Click(object sender, EventArgs e)
+        private void UpdatePanel_Paint(object sender, PaintEventArgs e)
+        {
+            //oops accidently clicked
+        }
+
+        public void NewsfeedLoader()
+        {
+            // get and returns text data
+
+            WebClient webClient = new WebClient();
+            string FeedText1 = webClient.DownloadString("https://raw.githubusercontent.com/xarson/jiayi/master/Feed/FeedData1.txt");
+            FeedData1.Text = FeedText1;
+
+            string FeedText2 = webClient.DownloadString("https://raw.githubusercontent.com/xarson/jiayi/master/Feed/FeedData2.txt");
+            FeedData2.Text = FeedText2;
+
+            string FeedText3 = webClient.DownloadString("https://raw.githubusercontent.com/xarson/jiayi/master/Feed/FeetData3.txt");
+            FeedData3.Text = FeedText3;
+
+            // get and return images for feed 
+
+            WebRequest request1 = WebRequest.Create("https://github.com/xarson/jiayi/raw/master/Images/FeedPic1.png");
+            Stream stream = request1.GetResponse().GetResponseStream();
+            System.Drawing.Image img = System.Drawing.Image.FromStream(stream);
+            this.FeedPic1.Image = img;
+
+            WebRequest request2 = WebRequest.Create("https://github.com/xarson/jiayi/raw/master/Images/FeedPic2.png");
+            Stream stream2 = request2.GetResponse().GetResponseStream();
+            System.Drawing.Image img2 = System.Drawing.Image.FromStream(stream2);
+            this.FeedPic2.Image = img2;
+
+            WebRequest request3 = WebRequest.Create("https://github.com/xarson/jiayi/raw/master/Images/FeedPic3.png");
+            Stream stream3 = request3.GetResponse().GetResponseStream();
+            System.Drawing.Image img3 = System.Drawing.Image.FromStream(stream3);
+            this.FeedPic3.Image = img3;
+        }
+
+        private void UpdatePanel_Paint_1(object sender, PaintEventArgs e)
         {
 
         }
-
-        private void VersionComboBox_MouseHover(object sender, EventArgs e)
-        {
-            label2.Visible = true;
-            label1.Visible = true;
-
-        }
-
-        private void VersionComboBox_MouseLeave(object sender, EventArgs e)
-        {
-            label2.Visible = false;
-            label1.Visible = false;
-        }
-
     }
 }

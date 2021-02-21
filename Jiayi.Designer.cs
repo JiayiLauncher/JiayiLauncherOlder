@@ -51,9 +51,10 @@ namespace JiayiLauncher
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.UpdatePanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel2 = new Guna.UI2.WinForms.Guna2Panel();
-            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.NewsPanel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.NewsPanel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.NewsPanel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.FeedData1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.UpdateBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SettingsPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.KeepOpen = new Guna.UI2.WinForms.Guna2Button();
@@ -66,11 +67,22 @@ namespace JiayiLauncher
             this.SettingsTag1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.FeedData2 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.FeedData3 = new Guna.UI2.WinForms.Guna2TextBox();
+            this.FeedPic1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.FeedPic2 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.FeedPic3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.BtnPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.HomePanel.SuspendLayout();
             this.UpdatePanel.SuspendLayout();
+            this.NewsPanel3.SuspendLayout();
+            this.NewsPanel2.SuspendLayout();
+            this.NewsPanel1.SuspendLayout();
             this.SettingsPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.FeedPic1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FeedPic2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FeedPic3)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -245,7 +257,6 @@ namespace JiayiLauncher
             this.TopPanel.Size = new System.Drawing.Size(723, 98);
             this.TopPanel.TabIndex = 1;
             this.TopPanel.Text = "Home";
-            this.TopPanel.Click += new System.EventHandler(this.TopPanel_Click);
             // 
             // Version
             // 
@@ -483,40 +494,80 @@ namespace JiayiLauncher
             // 
             // UpdatePanel
             // 
-            this.UpdatePanel.Controls.Add(this.guna2Panel2);
-            this.UpdatePanel.Controls.Add(this.guna2Panel1);
+            this.UpdatePanel.Controls.Add(this.NewsPanel3);
+            this.UpdatePanel.Controls.Add(this.NewsPanel2);
             this.UpdatePanel.Controls.Add(this.NewsPanel1);
             this.UpdatePanel.Controls.Add(this.UpdateBtn);
-            this.UpdatePanel.Location = new System.Drawing.Point(183, 103);
+            this.UpdatePanel.Location = new System.Drawing.Point(185, 103);
             this.UpdatePanel.Name = "UpdatePanel";
             this.UpdatePanel.ShadowDecoration.Parent = this.UpdatePanel;
             this.UpdatePanel.Size = new System.Drawing.Size(705, 413);
             this.UpdatePanel.TabIndex = 11;
             this.UpdatePanel.Visible = false;
+            this.UpdatePanel.Paint += new System.Windows.Forms.PaintEventHandler(this.UpdatePanel_Paint_1);
             // 
-            // guna2Panel2
+            // NewsPanel3
             // 
-            this.guna2Panel2.Location = new System.Drawing.Point(474, 44);
-            this.guna2Panel2.Name = "guna2Panel2";
-            this.guna2Panel2.ShadowDecoration.Parent = this.guna2Panel2;
-            this.guna2Panel2.Size = new System.Drawing.Size(200, 228);
-            this.guna2Panel2.TabIndex = 4;
+            this.NewsPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.NewsPanel3.Controls.Add(this.FeedPic3);
+            this.NewsPanel3.Controls.Add(this.FeedData3);
+            this.NewsPanel3.Location = new System.Drawing.Point(474, 44);
+            this.NewsPanel3.Name = "NewsPanel3";
+            this.NewsPanel3.ShadowDecoration.Parent = this.NewsPanel3;
+            this.NewsPanel3.Size = new System.Drawing.Size(200, 228);
+            this.NewsPanel3.TabIndex = 4;
             // 
-            // guna2Panel1
+            // NewsPanel2
             // 
-            this.guna2Panel1.Location = new System.Drawing.Point(255, 45);
-            this.guna2Panel1.Name = "guna2Panel1";
-            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
-            this.guna2Panel1.Size = new System.Drawing.Size(200, 228);
-            this.guna2Panel1.TabIndex = 3;
+            this.NewsPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.NewsPanel2.Controls.Add(this.FeedPic2);
+            this.NewsPanel2.Controls.Add(this.FeedData2);
+            this.NewsPanel2.Location = new System.Drawing.Point(255, 45);
+            this.NewsPanel2.Name = "NewsPanel2";
+            this.NewsPanel2.ShadowDecoration.Parent = this.NewsPanel2;
+            this.NewsPanel2.Size = new System.Drawing.Size(200, 228);
+            this.NewsPanel2.TabIndex = 3;
             // 
             // NewsPanel1
             // 
+            this.NewsPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.NewsPanel1.Controls.Add(this.FeedPic1);
+            this.NewsPanel1.Controls.Add(this.FeedData1);
             this.NewsPanel1.Location = new System.Drawing.Point(28, 45);
             this.NewsPanel1.Name = "NewsPanel1";
             this.NewsPanel1.ShadowDecoration.Parent = this.NewsPanel1;
             this.NewsPanel1.Size = new System.Drawing.Size(200, 228);
             this.NewsPanel1.TabIndex = 2;
+            // 
+            // FeedData1
+            // 
+            this.FeedData1.Animated = true;
+            this.FeedData1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.FeedData1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.FeedData1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FeedData1.DefaultText = "";
+            this.FeedData1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.FeedData1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.FeedData1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.FeedData1.DisabledState.Parent = this.FeedData1;
+            this.FeedData1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.FeedData1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.FeedData1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.FeedData1.FocusedState.Parent = this.FeedData1;
+            this.FeedData1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FeedData1.ForeColor = System.Drawing.Color.White;
+            this.FeedData1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.FeedData1.HoverState.Parent = this.FeedData1;
+            this.FeedData1.Location = new System.Drawing.Point(0, 171);
+            this.FeedData1.Multiline = true;
+            this.FeedData1.Name = "FeedData1";
+            this.FeedData1.PasswordChar = '\0';
+            this.FeedData1.PlaceholderText = "";
+            this.FeedData1.ReadOnly = true;
+            this.FeedData1.SelectedText = "";
+            this.FeedData1.ShadowDecoration.Parent = this.FeedData1;
+            this.FeedData1.Size = new System.Drawing.Size(200, 57);
+            this.FeedData1.TabIndex = 0;
             // 
             // UpdateBtn
             // 
@@ -711,6 +762,96 @@ namespace JiayiLauncher
             this.NotifyIcon.Visible = true;
             this.NotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIcon_MouseDoubleClick);
             // 
+            // FeedData2
+            // 
+            this.FeedData2.Animated = true;
+            this.FeedData2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.FeedData2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.FeedData2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FeedData2.DefaultText = "";
+            this.FeedData2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.FeedData2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.FeedData2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.FeedData2.DisabledState.Parent = this.FeedData2;
+            this.FeedData2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.FeedData2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.FeedData2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.FeedData2.FocusedState.Parent = this.FeedData2;
+            this.FeedData2.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FeedData2.ForeColor = System.Drawing.Color.White;
+            this.FeedData2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.FeedData2.HoverState.Parent = this.FeedData2;
+            this.FeedData2.Location = new System.Drawing.Point(0, 171);
+            this.FeedData2.Multiline = true;
+            this.FeedData2.Name = "FeedData2";
+            this.FeedData2.PasswordChar = '\0';
+            this.FeedData2.PlaceholderText = "";
+            this.FeedData2.ReadOnly = true;
+            this.FeedData2.SelectedText = "";
+            this.FeedData2.ShadowDecoration.Parent = this.FeedData2;
+            this.FeedData2.Size = new System.Drawing.Size(200, 57);
+            this.FeedData2.TabIndex = 1;
+            // 
+            // FeedData3
+            // 
+            this.FeedData3.Animated = true;
+            this.FeedData3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.FeedData3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.FeedData3.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.FeedData3.DefaultText = "";
+            this.FeedData3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
+            this.FeedData3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
+            this.FeedData3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.FeedData3.DisabledState.Parent = this.FeedData3;
+            this.FeedData3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
+            this.FeedData3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.FeedData3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.FeedData3.FocusedState.Parent = this.FeedData3;
+            this.FeedData3.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FeedData3.ForeColor = System.Drawing.Color.White;
+            this.FeedData3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
+            this.FeedData3.HoverState.Parent = this.FeedData3;
+            this.FeedData3.Location = new System.Drawing.Point(0, 172);
+            this.FeedData3.Multiline = true;
+            this.FeedData3.Name = "FeedData3";
+            this.FeedData3.PasswordChar = '\0';
+            this.FeedData3.PlaceholderText = "";
+            this.FeedData3.ReadOnly = true;
+            this.FeedData3.SelectedText = "";
+            this.FeedData3.ShadowDecoration.Parent = this.FeedData3;
+            this.FeedData3.Size = new System.Drawing.Size(200, 57);
+            this.FeedData3.TabIndex = 1;
+            // 
+            // FeedPic1
+            // 
+            this.FeedPic1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("FeedPic1.ErrorImage")));
+            this.FeedPic1.Location = new System.Drawing.Point(0, 0);
+            this.FeedPic1.Name = "FeedPic1";
+            this.FeedPic1.ShadowDecoration.Parent = this.FeedPic1;
+            this.FeedPic1.Size = new System.Drawing.Size(200, 165);
+            this.FeedPic1.TabIndex = 1;
+            this.FeedPic1.TabStop = false;
+            // 
+            // FeedPic2
+            // 
+            this.FeedPic2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("FeedPic2.ErrorImage")));
+            this.FeedPic2.Location = new System.Drawing.Point(0, 0);
+            this.FeedPic2.Name = "FeedPic2";
+            this.FeedPic2.ShadowDecoration.Parent = this.FeedPic2;
+            this.FeedPic2.Size = new System.Drawing.Size(200, 165);
+            this.FeedPic2.TabIndex = 2;
+            this.FeedPic2.TabStop = false;
+            // 
+            // FeedPic3
+            // 
+            this.FeedPic3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("FeedPic3.ErrorImage")));
+            this.FeedPic3.Location = new System.Drawing.Point(0, 0);
+            this.FeedPic3.Name = "FeedPic3";
+            this.FeedPic3.ShadowDecoration.Parent = this.FeedPic3;
+            this.FeedPic3.Size = new System.Drawing.Size(200, 165);
+            this.FeedPic3.TabIndex = 2;
+            this.FeedPic3.TabStop = false;
+            // 
             // Jiayi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -723,9 +864,9 @@ namespace JiayiLauncher
             this.Controls.Add(this.BtnPanel);
             this.Controls.Add(this.Version);
             this.Controls.Add(this.TopPanel);
+            this.Controls.Add(this.UpdatePanel);
             this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.SettingsPanel);
-            this.Controls.Add(this.UpdatePanel);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -737,7 +878,13 @@ namespace JiayiLauncher
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.HomePanel.ResumeLayout(false);
             this.UpdatePanel.ResumeLayout(false);
+            this.NewsPanel3.ResumeLayout(false);
+            this.NewsPanel2.ResumeLayout(false);
+            this.NewsPanel1.ResumeLayout(false);
             this.SettingsPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.FeedPic1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FeedPic2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.FeedPic3)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -781,8 +928,14 @@ namespace JiayiLauncher
         private Guna.UI2.WinForms.Guna2Panel UpdatePanel;
         private Guna.UI2.WinForms.Guna2Button UpdateBtn;
         private Guna.UI2.WinForms.Guna2Panel NewsPanel1;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel2;
-        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private Guna.UI2.WinForms.Guna2Panel NewsPanel3;
+        private Guna.UI2.WinForms.Guna2Panel NewsPanel2;
+        private Guna.UI2.WinForms.Guna2TextBox FeedData1;
+        private Guna.UI2.WinForms.Guna2TextBox FeedData3;
+        private Guna.UI2.WinForms.Guna2TextBox FeedData2;
+        private Guna.UI2.WinForms.Guna2PictureBox FeedPic3;
+        private Guna.UI2.WinForms.Guna2PictureBox FeedPic2;
+        private Guna.UI2.WinForms.Guna2PictureBox FeedPic1;
     }
 }
 
