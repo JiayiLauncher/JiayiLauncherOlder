@@ -58,6 +58,15 @@ namespace JiayiLauncher
 
             // process priority settings
             ProcessPriorityBox.SelectedItem = Properties.Settings.Default.Priority;
+
+            // branch settings
+            if (Properties.Settings.Default.Branch == "Stable")
+            {
+                StableSettingBtn.Checked = true;
+            } else if (Properties.Settings.Default.Branch == "Experimental")
+            {
+                ExpirementalSettingBtn.Checked = true;
+            }
         }
 
 
@@ -406,14 +415,18 @@ namespace JiayiLauncher
 
         private void ExpirementalSettingBtn_Click(object sender, EventArgs e)
         {
-            StableSettingBtn.Checked = true;
-            ExpirementalSettingBtn.Checked = false;
+            StableSettingBtn.Checked = false;
+            ExpirementalSettingBtn.Checked = true;
+            Properties.Settings.Default.Branch = "Experimental";
+            Properties.Settings.Default.Save();
         }
 
         private void StableSettingBtn_Click(object sender, EventArgs e)
         {
             StableSettingBtn.Checked = true;
             ExpirementalSettingBtn.Checked = false;
+            Properties.Settings.Default.Branch = "Stable";
+            Properties.Settings.Default.Save();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
@@ -715,6 +728,24 @@ namespace JiayiLauncher
 
         }
 
+        private void TopPanel_Click(object sender, EventArgs e)
+        {
 
+        }
+
+        public const int WM_NCLBUTTONDOWN = 0xA1;
+        public const int HT_CAPTION = 0x2;
+
+        [DllImport("user32.dll")]
+        public static extern int SendMessage(IntPtr hWnd, int Msg, int wParam, int lParam);
+
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+
+        private void TopPanel_MouseDown(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+        }
     }
 }

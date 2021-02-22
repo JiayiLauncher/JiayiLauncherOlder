@@ -41,10 +41,10 @@ namespace JiayiLauncher
             this.MinimizeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ExitBtn = new Guna.UI2.WinForms.Guna2Button();
             this.HomePanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.StatusText = new System.Windows.Forms.Label();
             this.Status = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label1 = new System.Windows.Forms.Label();
             this.VersionComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.LaunchBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ResolutionComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
@@ -52,13 +52,20 @@ namespace JiayiLauncher
             this.SettingsTag3 = new System.Windows.Forms.Label();
             this.UpdatePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.NewsPanel3 = new Guna.UI2.WinForms.Guna2Panel();
+            this.FeedData3 = new System.Windows.Forms.RichTextBox();
             this.FeedPic3 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.NewsPanel2 = new Guna.UI2.WinForms.Guna2Panel();
+            this.FeedData2 = new System.Windows.Forms.RichTextBox();
             this.FeedPic2 = new Guna.UI2.WinForms.Guna2PictureBox();
             this.NewsPanel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.FeedPic1 = new Guna.UI2.WinForms.Guna2PictureBox();
+            this.FeedData1 = new System.Windows.Forms.RichTextBox();
             this.UpdateBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SettingsPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.ExpirementalSettingBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.StableSettingBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.SettingsDesc4 = new System.Windows.Forms.Label();
+            this.SettingsTag4 = new System.Windows.Forms.Label();
             this.KeepOpen = new Guna.UI2.WinForms.Guna2Button();
             this.HideLauncher = new Guna.UI2.WinForms.Guna2Button();
             this.CloseLauncher = new Guna.UI2.WinForms.Guna2Button();
@@ -69,13 +76,6 @@ namespace JiayiLauncher
             this.SettingsTag1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.SettingsDesc4 = new System.Windows.Forms.Label();
-            this.SettingsTag4 = new System.Windows.Forms.Label();
-            this.StableSettingBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.ExpirementalSettingBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.FeedData1 = new System.Windows.Forms.RichTextBox();
-            this.FeedData2 = new System.Windows.Forms.RichTextBox();
-            this.FeedData3 = new System.Windows.Forms.RichTextBox();
             this.BtnPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.HomePanel.SuspendLayout();
@@ -261,6 +261,8 @@ namespace JiayiLauncher
             this.TopPanel.Size = new System.Drawing.Size(723, 98);
             this.TopPanel.TabIndex = 1;
             this.TopPanel.Text = "Home";
+            this.TopPanel.Click += new System.EventHandler(this.TopPanel_Click);
+            this.TopPanel.MouseDown += new System.Windows.Forms.MouseEventHandler(this.TopPanel_MouseDown);
             // 
             // Version
             // 
@@ -269,7 +271,7 @@ namespace JiayiLauncher
             this.Version.ForeColor = System.Drawing.Color.White;
             this.Version.Location = new System.Drawing.Point(180, 519);
             this.Version.Name = "Version";
-            this.Version.Size = new System.Drawing.Size(51, 17);
+            this.Version.Size = new System.Drawing.Size(59, 17);
             this.Version.TabIndex = 2;
             this.Version.Text = "Version:";
             this.Version.Click += new System.EventHandler(this.Version_Click);
@@ -332,10 +334,10 @@ namespace JiayiLauncher
             // 
             // HomePanel
             // 
+            this.HomePanel.Controls.Add(this.label1);
             this.HomePanel.Controls.Add(this.StatusText);
             this.HomePanel.Controls.Add(this.Status);
             this.HomePanel.Controls.Add(this.label2);
-            this.HomePanel.Controls.Add(this.label1);
             this.HomePanel.Controls.Add(this.VersionComboBox);
             this.HomePanel.Controls.Add(this.LaunchBtn);
             this.HomePanel.Location = new System.Drawing.Point(185, 103);
@@ -343,6 +345,17 @@ namespace JiayiLauncher
             this.HomePanel.ShadowDecoration.Parent = this.HomePanel;
             this.HomePanel.Size = new System.Drawing.Size(705, 413);
             this.HomePanel.TabIndex = 7;
+            // 
+            // label1
+            // 
+            this.label1.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.White;
+            this.label1.Location = new System.Drawing.Point(508, 258);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(200, 33);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "Version Changer";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // StatusText
             // 
@@ -379,17 +392,6 @@ namespace JiayiLauncher
             this.label2.Text = "You can switch Minecraft versions using Jiayi\'s version changer.";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label1
-            // 
-            this.label1.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(504, 258);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(200, 33);
-            this.label1.TabIndex = 4;
-            this.label1.Text = "Version Changer";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // VersionComboBox
             // 
             this.VersionComboBox.Animated = true;
@@ -413,7 +415,7 @@ namespace JiayiLauncher
             "1.16.200",
             "1.16.201"});
             this.VersionComboBox.ItemsAppearance.Parent = this.VersionComboBox;
-            this.VersionComboBox.Location = new System.Drawing.Point(549, 342);
+            this.VersionComboBox.Location = new System.Drawing.Point(553, 342);
             this.VersionComboBox.Name = "VersionComboBox";
             this.VersionComboBox.ShadowDecoration.Parent = this.VersionComboBox;
             this.VersionComboBox.Size = new System.Drawing.Size(111, 36);
@@ -522,6 +524,20 @@ namespace JiayiLauncher
             this.NewsPanel3.Size = new System.Drawing.Size(200, 228);
             this.NewsPanel3.TabIndex = 4;
             // 
+            // FeedData3
+            // 
+            this.FeedData3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.FeedData3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FeedData3.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
+            this.FeedData3.ForeColor = System.Drawing.Color.White;
+            this.FeedData3.Location = new System.Drawing.Point(0, 162);
+            this.FeedData3.Name = "FeedData3";
+            this.FeedData3.ReadOnly = true;
+            this.FeedData3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.FeedData3.Size = new System.Drawing.Size(200, 66);
+            this.FeedData3.TabIndex = 6;
+            this.FeedData3.Text = "";
+            // 
             // FeedPic3
             // 
             this.FeedPic3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("FeedPic3.ErrorImage")));
@@ -542,6 +558,20 @@ namespace JiayiLauncher
             this.NewsPanel2.ShadowDecoration.Parent = this.NewsPanel2;
             this.NewsPanel2.Size = new System.Drawing.Size(200, 228);
             this.NewsPanel2.TabIndex = 3;
+            // 
+            // FeedData2
+            // 
+            this.FeedData2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.FeedData2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FeedData2.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
+            this.FeedData2.ForeColor = System.Drawing.Color.White;
+            this.FeedData2.Location = new System.Drawing.Point(0, 162);
+            this.FeedData2.Name = "FeedData2";
+            this.FeedData2.ReadOnly = true;
+            this.FeedData2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.FeedData2.Size = new System.Drawing.Size(200, 66);
+            this.FeedData2.TabIndex = 6;
+            this.FeedData2.Text = "";
             // 
             // FeedPic2
             // 
@@ -573,6 +603,20 @@ namespace JiayiLauncher
             this.FeedPic1.Size = new System.Drawing.Size(200, 165);
             this.FeedPic1.TabIndex = 1;
             this.FeedPic1.TabStop = false;
+            // 
+            // FeedData1
+            // 
+            this.FeedData1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.FeedData1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FeedData1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
+            this.FeedData1.ForeColor = System.Drawing.Color.White;
+            this.FeedData1.Location = new System.Drawing.Point(0, 162);
+            this.FeedData1.Name = "FeedData1";
+            this.FeedData1.ReadOnly = true;
+            this.FeedData1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.FeedData1.Size = new System.Drawing.Size(200, 66);
+            this.FeedData1.TabIndex = 5;
+            this.FeedData1.Text = "";
             // 
             // UpdateBtn
             // 
@@ -624,6 +668,69 @@ namespace JiayiLauncher
             this.SettingsPanel.TabIndex = 8;
             this.SettingsPanel.Visible = false;
             this.SettingsPanel.Click += new System.EventHandler(this.SettingsPanel_Click);
+            // 
+            // ExpirementalSettingBtn
+            // 
+            this.ExpirementalSettingBtn.Animated = true;
+            this.ExpirementalSettingBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.ExpirementalSettingBtn.CheckedState.Parent = this.ExpirementalSettingBtn;
+            this.ExpirementalSettingBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
+            this.ExpirementalSettingBtn.CustomImages.Parent = this.ExpirementalSettingBtn;
+            this.ExpirementalSettingBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.ExpirementalSettingBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExpirementalSettingBtn.ForeColor = System.Drawing.Color.White;
+            this.ExpirementalSettingBtn.HoverState.Parent = this.ExpirementalSettingBtn;
+            this.ExpirementalSettingBtn.Location = new System.Drawing.Point(262, 298);
+            this.ExpirementalSettingBtn.Name = "ExpirementalSettingBtn";
+            this.ExpirementalSettingBtn.ShadowDecoration.Parent = this.ExpirementalSettingBtn;
+            this.ExpirementalSettingBtn.Size = new System.Drawing.Size(180, 45);
+            this.ExpirementalSettingBtn.TabIndex = 13;
+            this.ExpirementalSettingBtn.Text = "Experimental";
+            this.ExpirementalSettingBtn.Click += new System.EventHandler(this.ExpirementalSettingBtn_Click);
+            // 
+            // StableSettingBtn
+            // 
+            this.StableSettingBtn.Animated = true;
+            this.StableSettingBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.StableSettingBtn.CheckedState.Parent = this.StableSettingBtn;
+            this.StableSettingBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
+            this.StableSettingBtn.CustomImages.Parent = this.StableSettingBtn;
+            this.StableSettingBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.StableSettingBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StableSettingBtn.ForeColor = System.Drawing.Color.White;
+            this.StableSettingBtn.HoverState.Parent = this.StableSettingBtn;
+            this.StableSettingBtn.Location = new System.Drawing.Point(262, 236);
+            this.StableSettingBtn.Name = "StableSettingBtn";
+            this.StableSettingBtn.ShadowDecoration.Parent = this.StableSettingBtn;
+            this.StableSettingBtn.Size = new System.Drawing.Size(180, 45);
+            this.StableSettingBtn.TabIndex = 12;
+            this.StableSettingBtn.Text = "Stable";
+            this.StableSettingBtn.Click += new System.EventHandler(this.StableSettingBtn_Click);
+            // 
+            // SettingsDesc4
+            // 
+            this.SettingsDesc4.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsDesc4.ForeColor = System.Drawing.Color.White;
+            this.SettingsDesc4.Location = new System.Drawing.Point(252, 129);
+            this.SettingsDesc4.Name = "SettingsDesc4";
+            this.SettingsDesc4.Size = new System.Drawing.Size(200, 88);
+            this.SettingsDesc4.TabIndex = 11;
+            this.SettingsDesc4.Tag = "";
+            this.SettingsDesc4.Text = "Try out new features before they release by switching to the Experimental branch." +
+    "";
+            this.SettingsDesc4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SettingsTag4
+            // 
+            this.SettingsTag4.Font = new System.Drawing.Font("Raleway Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsTag4.ForeColor = System.Drawing.Color.White;
+            this.SettingsTag4.Location = new System.Drawing.Point(261, 84);
+            this.SettingsTag4.Name = "SettingsTag4";
+            this.SettingsTag4.Size = new System.Drawing.Size(182, 40);
+            this.SettingsTag4.TabIndex = 10;
+            this.SettingsTag4.Tag = "";
+            this.SettingsTag4.Text = "Branches";
+            this.SettingsTag4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // KeepOpen
             // 
@@ -772,111 +879,6 @@ namespace JiayiLauncher
             this.NotifyIcon.Text = "Jiayi Client";
             this.NotifyIcon.Visible = true;
             this.NotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIcon_MouseDoubleClick);
-            // 
-            // SettingsDesc4
-            // 
-            this.SettingsDesc4.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SettingsDesc4.ForeColor = System.Drawing.Color.White;
-            this.SettingsDesc4.Location = new System.Drawing.Point(255, 129);
-            this.SettingsDesc4.Name = "SettingsDesc4";
-            this.SettingsDesc4.Size = new System.Drawing.Size(200, 88);
-            this.SettingsDesc4.TabIndex = 11;
-            this.SettingsDesc4.Tag = "";
-            this.SettingsDesc4.Text = "Jiayi provides several versions to ensure latest updates keep you away from the c" +
-    "lient";
-            this.SettingsDesc4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // SettingsTag4
-            // 
-            this.SettingsTag4.Font = new System.Drawing.Font("Raleway Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SettingsTag4.ForeColor = System.Drawing.Color.White;
-            this.SettingsTag4.Location = new System.Drawing.Point(262, 89);
-            this.SettingsTag4.Name = "SettingsTag4";
-            this.SettingsTag4.Size = new System.Drawing.Size(182, 40);
-            this.SettingsTag4.TabIndex = 10;
-            this.SettingsTag4.Tag = "";
-            this.SettingsTag4.Text = "Branches";
-            this.SettingsTag4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // StableSettingBtn
-            // 
-            this.StableSettingBtn.Animated = true;
-            this.StableSettingBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.StableSettingBtn.CheckedState.Parent = this.StableSettingBtn;
-            this.StableSettingBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
-            this.StableSettingBtn.CustomImages.Parent = this.StableSettingBtn;
-            this.StableSettingBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.StableSettingBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.StableSettingBtn.ForeColor = System.Drawing.Color.White;
-            this.StableSettingBtn.HoverState.Parent = this.StableSettingBtn;
-            this.StableSettingBtn.Location = new System.Drawing.Point(262, 229);
-            this.StableSettingBtn.Name = "StableSettingBtn";
-            this.StableSettingBtn.ShadowDecoration.Parent = this.StableSettingBtn;
-            this.StableSettingBtn.Size = new System.Drawing.Size(180, 45);
-            this.StableSettingBtn.TabIndex = 12;
-            this.StableSettingBtn.Text = "Stable";
-            this.StableSettingBtn.Click += new System.EventHandler(this.StableSettingBtn_Click);
-            // 
-            // ExpirementalSettingBtn
-            // 
-            this.ExpirementalSettingBtn.Animated = true;
-            this.ExpirementalSettingBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.ExpirementalSettingBtn.CheckedState.Parent = this.ExpirementalSettingBtn;
-            this.ExpirementalSettingBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
-            this.ExpirementalSettingBtn.CustomImages.Parent = this.ExpirementalSettingBtn;
-            this.ExpirementalSettingBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.ExpirementalSettingBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ExpirementalSettingBtn.ForeColor = System.Drawing.Color.White;
-            this.ExpirementalSettingBtn.HoverState.Parent = this.ExpirementalSettingBtn;
-            this.ExpirementalSettingBtn.Location = new System.Drawing.Point(262, 291);
-            this.ExpirementalSettingBtn.Name = "ExpirementalSettingBtn";
-            this.ExpirementalSettingBtn.ShadowDecoration.Parent = this.ExpirementalSettingBtn;
-            this.ExpirementalSettingBtn.Size = new System.Drawing.Size(180, 45);
-            this.ExpirementalSettingBtn.TabIndex = 13;
-            this.ExpirementalSettingBtn.Text = "Experimental";
-            this.ExpirementalSettingBtn.Click += new System.EventHandler(this.ExpirementalSettingBtn_Click);
-            // 
-            // FeedData1
-            // 
-            this.FeedData1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.FeedData1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.FeedData1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
-            this.FeedData1.ForeColor = System.Drawing.Color.White;
-            this.FeedData1.Location = new System.Drawing.Point(0, 162);
-            this.FeedData1.Name = "FeedData1";
-            this.FeedData1.ReadOnly = true;
-            this.FeedData1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.FeedData1.Size = new System.Drawing.Size(200, 66);
-            this.FeedData1.TabIndex = 5;
-            this.FeedData1.Text = "";
-            // 
-            // FeedData2
-            // 
-            this.FeedData2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.FeedData2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.FeedData2.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
-            this.FeedData2.ForeColor = System.Drawing.Color.White;
-            this.FeedData2.Location = new System.Drawing.Point(0, 162);
-            this.FeedData2.Name = "FeedData2";
-            this.FeedData2.ReadOnly = true;
-            this.FeedData2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.FeedData2.Size = new System.Drawing.Size(200, 66);
-            this.FeedData2.TabIndex = 6;
-            this.FeedData2.Text = "";
-            // 
-            // FeedData3
-            // 
-            this.FeedData3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.FeedData3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.FeedData3.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
-            this.FeedData3.ForeColor = System.Drawing.Color.White;
-            this.FeedData3.Location = new System.Drawing.Point(0, 162);
-            this.FeedData3.Name = "FeedData3";
-            this.FeedData3.ReadOnly = true;
-            this.FeedData3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
-            this.FeedData3.Size = new System.Drawing.Size(200, 66);
-            this.FeedData3.TabIndex = 6;
-            this.FeedData3.Text = "";
             // 
             // Jiayi
             // 

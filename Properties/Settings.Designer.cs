@@ -58,5 +58,17 @@ namespace JiayiLauncher.Properties {
                 this["Priority"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Stable")]
+        public string Branch {
+            get {
+                return ((string)(this["Branch"]));
+            }
+            set {
+                this["Branch"] = value;
+            }
+        }
     }
 }

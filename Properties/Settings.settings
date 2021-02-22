@@ -11,5 +11,8 @@
     <Setting Name="Priority" Type="System.String" Scope="User">
       <Value Profile="(Default)">Medium</Value>
     </Setting>
+    <Setting Name="Branch" Type="System.String" Scope="User">
+      <Value Profile="(Default)">Stable</Value>
+    </Setting>
   </Settings>
 </SettingsFile>
