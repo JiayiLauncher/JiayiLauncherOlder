@@ -48,18 +48,15 @@ namespace JiayiLauncher
             this.VersionComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.LaunchBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ResolutionComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
+            this.SettingsDesc3 = new System.Windows.Forms.Label();
+            this.SettingsTag3 = new System.Windows.Forms.Label();
             this.UpdatePanel = new Guna.UI2.WinForms.Guna2Panel();
             this.NewsPanel3 = new Guna.UI2.WinForms.Guna2Panel();
             this.FeedPic3 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.FeedData3 = new Guna.UI2.WinForms.Guna2TextBox();
             this.NewsPanel2 = new Guna.UI2.WinForms.Guna2Panel();
             this.FeedPic2 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.FeedData2 = new Guna.UI2.WinForms.Guna2TextBox();
             this.NewsPanel1 = new Guna.UI2.WinForms.Guna2Panel();
             this.FeedPic1 = new Guna.UI2.WinForms.Guna2PictureBox();
-            this.FeedData1 = new Guna.UI2.WinForms.Guna2TextBox();
             this.UpdateBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SettingsPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.KeepOpen = new Guna.UI2.WinForms.Guna2Button();
@@ -72,6 +69,13 @@ namespace JiayiLauncher
             this.SettingsTag1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
+            this.SettingsDesc4 = new System.Windows.Forms.Label();
+            this.SettingsTag4 = new System.Windows.Forms.Label();
+            this.StableSettingBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.ExpirementalSettingBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.FeedData1 = new System.Windows.Forms.RichTextBox();
+            this.FeedData2 = new System.Windows.Forms.RichTextBox();
+            this.FeedData3 = new System.Windows.Forms.RichTextBox();
             this.BtnPanel.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.HomePanel.SuspendLayout();
@@ -265,7 +269,7 @@ namespace JiayiLauncher
             this.Version.ForeColor = System.Drawing.Color.White;
             this.Version.Location = new System.Drawing.Point(180, 519);
             this.Version.Name = "Version";
-            this.Version.Size = new System.Drawing.Size(59, 17);
+            this.Version.Size = new System.Drawing.Size(51, 17);
             this.Version.TabIndex = 2;
             this.Version.Text = "Version:";
             this.Version.Click += new System.EventHandler(this.Version_Click);
@@ -366,20 +370,20 @@ namespace JiayiLauncher
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Raleway", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(517, 248);
+            this.label2.Location = new System.Drawing.Point(524, 283);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(176, 87);
+            this.label2.Size = new System.Drawing.Size(169, 54);
             this.label2.TabIndex = 5;
             this.label2.Text = "You can switch Minecraft versions using Jiayi\'s version changer.";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(500, 204);
+            this.label1.Location = new System.Drawing.Point(504, 258);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(200, 33);
             this.label1.TabIndex = 4;
@@ -464,34 +468,34 @@ namespace JiayiLauncher
             "1600x900",
             "1280x720"});
             this.ResolutionComboBox.ItemsAppearance.Parent = this.ResolutionComboBox;
-            this.ResolutionComboBox.Location = new System.Drawing.Point(463, 347);
+            this.ResolutionComboBox.Location = new System.Drawing.Point(473, 347);
             this.ResolutionComboBox.Name = "ResolutionComboBox";
             this.ResolutionComboBox.ShadowDecoration.Parent = this.ResolutionComboBox;
             this.ResolutionComboBox.Size = new System.Drawing.Size(198, 36);
             this.ResolutionComboBox.TabIndex = 8;
             this.ResolutionComboBox.SelectedIndexChanged += new System.EventHandler(this.ResolutionComboBox_SelectedIndexChanged);
             // 
-            // label3
+            // SettingsDesc3
             // 
-            this.label3.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(438, 280);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(255, 46);
-            this.label3.TabIndex = 7;
-            this.label3.Text = "Lowering Minecraft\'s window resolution can increase FPS.";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SettingsDesc3.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsDesc3.ForeColor = System.Drawing.Color.White;
+            this.SettingsDesc3.Location = new System.Drawing.Point(448, 280);
+            this.SettingsDesc3.Name = "SettingsDesc3";
+            this.SettingsDesc3.Size = new System.Drawing.Size(255, 46);
+            this.SettingsDesc3.TabIndex = 7;
+            this.SettingsDesc3.Text = "Lowering Minecraft\'s window resolution can increase FPS.";
+            this.SettingsDesc3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
+            // SettingsTag3
             // 
-            this.label4.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(470, 240);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(182, 33);
-            this.label4.TabIndex = 6;
-            this.label4.Text = "Resolution";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.SettingsTag3.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsTag3.ForeColor = System.Drawing.Color.White;
+            this.SettingsTag3.Location = new System.Drawing.Point(480, 240);
+            this.SettingsTag3.Name = "SettingsTag3";
+            this.SettingsTag3.Size = new System.Drawing.Size(182, 33);
+            this.SettingsTag3.TabIndex = 6;
+            this.SettingsTag3.Text = "Resolution";
+            this.SettingsTag3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // UpdatePanel
             // 
@@ -510,8 +514,8 @@ namespace JiayiLauncher
             // NewsPanel3
             // 
             this.NewsPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.NewsPanel3.Controls.Add(this.FeedPic3);
             this.NewsPanel3.Controls.Add(this.FeedData3);
+            this.NewsPanel3.Controls.Add(this.FeedPic3);
             this.NewsPanel3.Location = new System.Drawing.Point(474, 44);
             this.NewsPanel3.Name = "NewsPanel3";
             this.NewsPanel3.ShadowDecoration.Parent = this.NewsPanel3;
@@ -528,42 +532,11 @@ namespace JiayiLauncher
             this.FeedPic3.TabIndex = 2;
             this.FeedPic3.TabStop = false;
             // 
-            // FeedData3
-            // 
-            this.FeedData3.Animated = true;
-            this.FeedData3.AutoScroll = true;
-            this.FeedData3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.FeedData3.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.FeedData3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FeedData3.DefaultText = "";
-            this.FeedData3.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.FeedData3.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.FeedData3.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.FeedData3.DisabledState.Parent = this.FeedData3;
-            this.FeedData3.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.FeedData3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.FeedData3.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.FeedData3.FocusedState.Parent = this.FeedData3;
-            this.FeedData3.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FeedData3.ForeColor = System.Drawing.Color.White;
-            this.FeedData3.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.FeedData3.HoverState.Parent = this.FeedData3;
-            this.FeedData3.Location = new System.Drawing.Point(0, 172);
-            this.FeedData3.Multiline = true;
-            this.FeedData3.Name = "FeedData3";
-            this.FeedData3.PasswordChar = '\0';
-            this.FeedData3.PlaceholderText = "";
-            this.FeedData3.ReadOnly = true;
-            this.FeedData3.SelectedText = "";
-            this.FeedData3.ShadowDecoration.Parent = this.FeedData3;
-            this.FeedData3.Size = new System.Drawing.Size(200, 57);
-            this.FeedData3.TabIndex = 1;
-            // 
             // NewsPanel2
             // 
             this.NewsPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.NewsPanel2.Controls.Add(this.FeedPic2);
             this.NewsPanel2.Controls.Add(this.FeedData2);
+            this.NewsPanel2.Controls.Add(this.FeedPic2);
             this.NewsPanel2.Location = new System.Drawing.Point(255, 45);
             this.NewsPanel2.Name = "NewsPanel2";
             this.NewsPanel2.ShadowDecoration.Parent = this.NewsPanel2;
@@ -579,37 +552,6 @@ namespace JiayiLauncher
             this.FeedPic2.Size = new System.Drawing.Size(200, 165);
             this.FeedPic2.TabIndex = 2;
             this.FeedPic2.TabStop = false;
-            // 
-            // FeedData2
-            // 
-            this.FeedData2.Animated = true;
-            this.FeedData2.AutoScroll = true;
-            this.FeedData2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.FeedData2.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.FeedData2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FeedData2.DefaultText = "";
-            this.FeedData2.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.FeedData2.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.FeedData2.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.FeedData2.DisabledState.Parent = this.FeedData2;
-            this.FeedData2.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.FeedData2.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.FeedData2.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.FeedData2.FocusedState.Parent = this.FeedData2;
-            this.FeedData2.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FeedData2.ForeColor = System.Drawing.Color.White;
-            this.FeedData2.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.FeedData2.HoverState.Parent = this.FeedData2;
-            this.FeedData2.Location = new System.Drawing.Point(0, 171);
-            this.FeedData2.Multiline = true;
-            this.FeedData2.Name = "FeedData2";
-            this.FeedData2.PasswordChar = '\0';
-            this.FeedData2.PlaceholderText = "";
-            this.FeedData2.ReadOnly = true;
-            this.FeedData2.SelectedText = "";
-            this.FeedData2.ShadowDecoration.Parent = this.FeedData2;
-            this.FeedData2.Size = new System.Drawing.Size(200, 57);
-            this.FeedData2.TabIndex = 1;
             // 
             // NewsPanel1
             // 
@@ -631,37 +573,6 @@ namespace JiayiLauncher
             this.FeedPic1.Size = new System.Drawing.Size(200, 165);
             this.FeedPic1.TabIndex = 1;
             this.FeedPic1.TabStop = false;
-            // 
-            // FeedData1
-            // 
-            this.FeedData1.Animated = true;
-            this.FeedData1.AutoScroll = true;
-            this.FeedData1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.FeedData1.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.FeedData1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.FeedData1.DefaultText = "";
-            this.FeedData1.DisabledState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(208)))), ((int)(((byte)(208)))), ((int)(((byte)(208)))));
-            this.FeedData1.DisabledState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(226)))), ((int)(((byte)(226)))), ((int)(((byte)(226)))));
-            this.FeedData1.DisabledState.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.FeedData1.DisabledState.Parent = this.FeedData1;
-            this.FeedData1.DisabledState.PlaceholderForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(138)))), ((int)(((byte)(138)))), ((int)(((byte)(138)))));
-            this.FeedData1.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.FeedData1.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.FeedData1.FocusedState.Parent = this.FeedData1;
-            this.FeedData1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.FeedData1.ForeColor = System.Drawing.Color.White;
-            this.FeedData1.HoverState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(94)))), ((int)(((byte)(148)))), ((int)(((byte)(255)))));
-            this.FeedData1.HoverState.Parent = this.FeedData1;
-            this.FeedData1.Location = new System.Drawing.Point(0, 171);
-            this.FeedData1.Multiline = true;
-            this.FeedData1.Name = "FeedData1";
-            this.FeedData1.PasswordChar = '\0';
-            this.FeedData1.PlaceholderText = "";
-            this.FeedData1.ReadOnly = true;
-            this.FeedData1.SelectedText = "";
-            this.FeedData1.ShadowDecoration.Parent = this.FeedData1;
-            this.FeedData1.Size = new System.Drawing.Size(200, 57);
-            this.FeedData1.TabIndex = 0;
             // 
             // UpdateBtn
             // 
@@ -691,14 +602,18 @@ namespace JiayiLauncher
             // 
             // SettingsPanel
             // 
+            this.SettingsPanel.Controls.Add(this.ExpirementalSettingBtn);
+            this.SettingsPanel.Controls.Add(this.StableSettingBtn);
+            this.SettingsPanel.Controls.Add(this.SettingsDesc4);
+            this.SettingsPanel.Controls.Add(this.SettingsTag4);
             this.SettingsPanel.Controls.Add(this.KeepOpen);
             this.SettingsPanel.Controls.Add(this.HideLauncher);
             this.SettingsPanel.Controls.Add(this.ResolutionComboBox);
             this.SettingsPanel.Controls.Add(this.CloseLauncher);
             this.SettingsPanel.Controls.Add(this.SettingsTag2);
-            this.SettingsPanel.Controls.Add(this.label3);
+            this.SettingsPanel.Controls.Add(this.SettingsDesc3);
             this.SettingsPanel.Controls.Add(this.SettingsDesc2);
-            this.SettingsPanel.Controls.Add(this.label4);
+            this.SettingsPanel.Controls.Add(this.SettingsTag3);
             this.SettingsPanel.Controls.Add(this.SettingsDesc1);
             this.SettingsPanel.Controls.Add(this.ProcessPriorityBox);
             this.SettingsPanel.Controls.Add(this.SettingsTag1);
@@ -708,6 +623,7 @@ namespace JiayiLauncher
             this.SettingsPanel.Size = new System.Drawing.Size(705, 413);
             this.SettingsPanel.TabIndex = 8;
             this.SettingsPanel.Visible = false;
+            this.SettingsPanel.Click += new System.EventHandler(this.SettingsPanel_Click);
             // 
             // KeepOpen
             // 
@@ -720,7 +636,7 @@ namespace JiayiLauncher
             this.KeepOpen.Font = new System.Drawing.Font("Raleway Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.KeepOpen.ForeColor = System.Drawing.Color.White;
             this.KeepOpen.HoverState.Parent = this.KeepOpen;
-            this.KeepOpen.Location = new System.Drawing.Point(47, 274);
+            this.KeepOpen.Location = new System.Drawing.Point(47, 304);
             this.KeepOpen.Name = "KeepOpen";
             this.KeepOpen.ShadowDecoration.Parent = this.KeepOpen;
             this.KeepOpen.Size = new System.Drawing.Size(180, 45);
@@ -739,7 +655,7 @@ namespace JiayiLauncher
             this.HideLauncher.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.HideLauncher.ForeColor = System.Drawing.Color.White;
             this.HideLauncher.HoverState.Parent = this.HideLauncher;
-            this.HideLauncher.Location = new System.Drawing.Point(47, 216);
+            this.HideLauncher.Location = new System.Drawing.Point(47, 246);
             this.HideLauncher.Name = "HideLauncher";
             this.HideLauncher.ShadowDecoration.Parent = this.HideLauncher;
             this.HideLauncher.Size = new System.Drawing.Size(180, 45);
@@ -758,7 +674,7 @@ namespace JiayiLauncher
             this.CloseLauncher.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CloseLauncher.ForeColor = System.Drawing.Color.White;
             this.CloseLauncher.HoverState.Parent = this.CloseLauncher;
-            this.CloseLauncher.Location = new System.Drawing.Point(47, 157);
+            this.CloseLauncher.Location = new System.Drawing.Point(47, 187);
             this.CloseLauncher.Name = "CloseLauncher";
             this.CloseLauncher.ShadowDecoration.Parent = this.CloseLauncher;
             this.CloseLauncher.Size = new System.Drawing.Size(180, 45);
@@ -770,7 +686,7 @@ namespace JiayiLauncher
             // 
             this.SettingsTag2.Font = new System.Drawing.Font("Raleway Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsTag2.ForeColor = System.Drawing.Color.White;
-            this.SettingsTag2.Location = new System.Drawing.Point(46, 45);
+            this.SettingsTag2.Location = new System.Drawing.Point(46, 75);
             this.SettingsTag2.Name = "SettingsTag2";
             this.SettingsTag2.Size = new System.Drawing.Size(182, 40);
             this.SettingsTag2.TabIndex = 4;
@@ -782,7 +698,7 @@ namespace JiayiLauncher
             // 
             this.SettingsDesc2.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsDesc2.ForeColor = System.Drawing.Color.White;
-            this.SettingsDesc2.Location = new System.Drawing.Point(37, 82);
+            this.SettingsDesc2.Location = new System.Drawing.Point(37, 112);
             this.SettingsDesc2.Name = "SettingsDesc2";
             this.SettingsDesc2.Size = new System.Drawing.Size(200, 64);
             this.SettingsDesc2.TabIndex = 6;
@@ -794,7 +710,7 @@ namespace JiayiLauncher
             // 
             this.SettingsDesc1.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsDesc1.ForeColor = System.Drawing.Color.White;
-            this.SettingsDesc1.Location = new System.Drawing.Point(461, 84);
+            this.SettingsDesc1.Location = new System.Drawing.Point(471, 84);
             this.SettingsDesc1.Name = "SettingsDesc1";
             this.SettingsDesc1.Size = new System.Drawing.Size(200, 72);
             this.SettingsDesc1.TabIndex = 3;
@@ -824,7 +740,7 @@ namespace JiayiLauncher
             "Medium",
             "Low"});
             this.ProcessPriorityBox.ItemsAppearance.Parent = this.ProcessPriorityBox;
-            this.ProcessPriorityBox.Location = new System.Drawing.Point(462, 168);
+            this.ProcessPriorityBox.Location = new System.Drawing.Point(472, 168);
             this.ProcessPriorityBox.Name = "ProcessPriorityBox";
             this.ProcessPriorityBox.ShadowDecoration.Parent = this.ProcessPriorityBox;
             this.ProcessPriorityBox.Size = new System.Drawing.Size(198, 36);
@@ -835,7 +751,7 @@ namespace JiayiLauncher
             // 
             this.SettingsTag1.Font = new System.Drawing.Font("Raleway Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsTag1.ForeColor = System.Drawing.Color.White;
-            this.SettingsTag1.Location = new System.Drawing.Point(470, 44);
+            this.SettingsTag1.Location = new System.Drawing.Point(480, 44);
             this.SettingsTag1.Name = "SettingsTag1";
             this.SettingsTag1.Size = new System.Drawing.Size(182, 40);
             this.SettingsTag1.TabIndex = 1;
@@ -857,6 +773,111 @@ namespace JiayiLauncher
             this.NotifyIcon.Visible = true;
             this.NotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIcon_MouseDoubleClick);
             // 
+            // SettingsDesc4
+            // 
+            this.SettingsDesc4.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsDesc4.ForeColor = System.Drawing.Color.White;
+            this.SettingsDesc4.Location = new System.Drawing.Point(255, 129);
+            this.SettingsDesc4.Name = "SettingsDesc4";
+            this.SettingsDesc4.Size = new System.Drawing.Size(200, 88);
+            this.SettingsDesc4.TabIndex = 11;
+            this.SettingsDesc4.Tag = "";
+            this.SettingsDesc4.Text = "Jiayi provides several versions to ensure latest updates keep you away from the c" +
+    "lient";
+            this.SettingsDesc4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // SettingsTag4
+            // 
+            this.SettingsTag4.Font = new System.Drawing.Font("Raleway Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsTag4.ForeColor = System.Drawing.Color.White;
+            this.SettingsTag4.Location = new System.Drawing.Point(262, 89);
+            this.SettingsTag4.Name = "SettingsTag4";
+            this.SettingsTag4.Size = new System.Drawing.Size(182, 40);
+            this.SettingsTag4.TabIndex = 10;
+            this.SettingsTag4.Tag = "";
+            this.SettingsTag4.Text = "Branches";
+            this.SettingsTag4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // StableSettingBtn
+            // 
+            this.StableSettingBtn.Animated = true;
+            this.StableSettingBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.StableSettingBtn.CheckedState.Parent = this.StableSettingBtn;
+            this.StableSettingBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
+            this.StableSettingBtn.CustomImages.Parent = this.StableSettingBtn;
+            this.StableSettingBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.StableSettingBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StableSettingBtn.ForeColor = System.Drawing.Color.White;
+            this.StableSettingBtn.HoverState.Parent = this.StableSettingBtn;
+            this.StableSettingBtn.Location = new System.Drawing.Point(262, 229);
+            this.StableSettingBtn.Name = "StableSettingBtn";
+            this.StableSettingBtn.ShadowDecoration.Parent = this.StableSettingBtn;
+            this.StableSettingBtn.Size = new System.Drawing.Size(180, 45);
+            this.StableSettingBtn.TabIndex = 12;
+            this.StableSettingBtn.Text = "Stable";
+            this.StableSettingBtn.Click += new System.EventHandler(this.StableSettingBtn_Click);
+            // 
+            // ExpirementalSettingBtn
+            // 
+            this.ExpirementalSettingBtn.Animated = true;
+            this.ExpirementalSettingBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.ExpirementalSettingBtn.CheckedState.Parent = this.ExpirementalSettingBtn;
+            this.ExpirementalSettingBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
+            this.ExpirementalSettingBtn.CustomImages.Parent = this.ExpirementalSettingBtn;
+            this.ExpirementalSettingBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.ExpirementalSettingBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExpirementalSettingBtn.ForeColor = System.Drawing.Color.White;
+            this.ExpirementalSettingBtn.HoverState.Parent = this.ExpirementalSettingBtn;
+            this.ExpirementalSettingBtn.Location = new System.Drawing.Point(262, 291);
+            this.ExpirementalSettingBtn.Name = "ExpirementalSettingBtn";
+            this.ExpirementalSettingBtn.ShadowDecoration.Parent = this.ExpirementalSettingBtn;
+            this.ExpirementalSettingBtn.Size = new System.Drawing.Size(180, 45);
+            this.ExpirementalSettingBtn.TabIndex = 13;
+            this.ExpirementalSettingBtn.Text = "Experimental";
+            this.ExpirementalSettingBtn.Click += new System.EventHandler(this.ExpirementalSettingBtn_Click);
+            // 
+            // FeedData1
+            // 
+            this.FeedData1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.FeedData1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FeedData1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
+            this.FeedData1.ForeColor = System.Drawing.Color.White;
+            this.FeedData1.Location = new System.Drawing.Point(0, 162);
+            this.FeedData1.Name = "FeedData1";
+            this.FeedData1.ReadOnly = true;
+            this.FeedData1.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.FeedData1.Size = new System.Drawing.Size(200, 66);
+            this.FeedData1.TabIndex = 5;
+            this.FeedData1.Text = "";
+            // 
+            // FeedData2
+            // 
+            this.FeedData2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.FeedData2.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FeedData2.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
+            this.FeedData2.ForeColor = System.Drawing.Color.White;
+            this.FeedData2.Location = new System.Drawing.Point(0, 162);
+            this.FeedData2.Name = "FeedData2";
+            this.FeedData2.ReadOnly = true;
+            this.FeedData2.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.FeedData2.Size = new System.Drawing.Size(200, 66);
+            this.FeedData2.TabIndex = 6;
+            this.FeedData2.Text = "";
+            // 
+            // FeedData3
+            // 
+            this.FeedData3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.FeedData3.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.FeedData3.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
+            this.FeedData3.ForeColor = System.Drawing.Color.White;
+            this.FeedData3.Location = new System.Drawing.Point(0, 162);
+            this.FeedData3.Name = "FeedData3";
+            this.FeedData3.ReadOnly = true;
+            this.FeedData3.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
+            this.FeedData3.Size = new System.Drawing.Size(200, 66);
+            this.FeedData3.TabIndex = 6;
+            this.FeedData3.Text = "";
+            // 
             // Jiayi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -869,9 +890,9 @@ namespace JiayiLauncher
             this.Controls.Add(this.BtnPanel);
             this.Controls.Add(this.Version);
             this.Controls.Add(this.TopPanel);
+            this.Controls.Add(this.SettingsPanel);
             this.Controls.Add(this.UpdatePanel);
             this.Controls.Add(this.HomePanel);
-            this.Controls.Add(this.SettingsPanel);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -922,8 +943,8 @@ namespace JiayiLauncher
         private Guna.UI2.WinForms.Guna2Button CloseLauncher;
         private System.Windows.Forms.Timer timer1;
         private Guna.UI2.WinForms.Guna2ComboBox ResolutionComboBox;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label SettingsDesc3;
+        private System.Windows.Forms.Label SettingsTag3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private Guna.UI2.WinForms.Guna2ComboBox VersionComboBox;
@@ -935,12 +956,16 @@ namespace JiayiLauncher
         private Guna.UI2.WinForms.Guna2Panel NewsPanel1;
         private Guna.UI2.WinForms.Guna2Panel NewsPanel3;
         private Guna.UI2.WinForms.Guna2Panel NewsPanel2;
-        private Guna.UI2.WinForms.Guna2TextBox FeedData1;
-        private Guna.UI2.WinForms.Guna2TextBox FeedData3;
-        private Guna.UI2.WinForms.Guna2TextBox FeedData2;
         private Guna.UI2.WinForms.Guna2PictureBox FeedPic3;
         private Guna.UI2.WinForms.Guna2PictureBox FeedPic2;
         private Guna.UI2.WinForms.Guna2PictureBox FeedPic1;
+        private System.Windows.Forms.Label SettingsDesc4;
+        private System.Windows.Forms.Label SettingsTag4;
+        private Guna.UI2.WinForms.Guna2Button ExpirementalSettingBtn;
+        private Guna.UI2.WinForms.Guna2Button StableSettingBtn;
+        private System.Windows.Forms.RichTextBox FeedData1;
+        private System.Windows.Forms.RichTextBox FeedData3;
+        private System.Windows.Forms.RichTextBox FeedData2;
     }
 }
 

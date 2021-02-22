@@ -35,7 +35,6 @@ namespace JiayiLauncher
             InitializeDiscord("In Launcher");
             versionFinderForLabel("Get-AppPackage -name Microsoft.MinecraftUWP | select -expandproperty Version", VersionDisplay);
             Directory.CreateDirectory(@"c:\Jiayi");
-
         }
 
         private void Jiayi_Load(object sender, EventArgs e)
@@ -159,6 +158,7 @@ namespace JiayiLauncher
         private void VersionComboBox_MouseHover(object sender, EventArgs e)
         {
             // why
+            // so it doesnt clutter home screen
             //label2.Visible = true;
             //label1.Visible = true;
 
@@ -399,6 +399,23 @@ namespace JiayiLauncher
 
         // all settings functions
 
+        private void SettingsPanel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ExpirementalSettingBtn_Click(object sender, EventArgs e)
+        {
+            StableSettingBtn.Checked = true;
+            ExpirementalSettingBtn.Checked = false;
+        }
+
+        private void StableSettingBtn_Click(object sender, EventArgs e)
+        {
+            StableSettingBtn.Checked = true;
+            ExpirementalSettingBtn.Checked = false;
+        }
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             Process[] pname = Process.GetProcessesByName("Minecraft.Windows");
@@ -437,6 +454,7 @@ namespace JiayiLauncher
             }
 
         }
+
         private void Settings()
         {
             Process.Start("minecraft://");
@@ -643,6 +661,8 @@ namespace JiayiLauncher
 
         public void NewsfeedLoader()
         {
+            
+
             // get and returns text data
 
             WebClient webClient = new WebClient();
@@ -689,5 +709,12 @@ namespace JiayiLauncher
             Properties.Settings.Default.Priority = ProcessPriorityBox.SelectedItem.ToString();
             Properties.Settings.Default.Save();
         }
+
+        private void FeedData1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
     }
 }

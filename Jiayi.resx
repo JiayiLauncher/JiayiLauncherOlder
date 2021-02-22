@@ -124,15 +124,6 @@
     <value>52</value>
   </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="UpdateBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAMRJREFUSEvt
-        lEsKwzAMRH2Jlh4p9y4l9LfppvtcxB1JgxeNlQTspKX1A0EkDXrgRULj64kxnlE92+2AVGG7HfQ28frQ
-        28TrQ+8PiHFr0R9JrYCtCyJHKbY+eg2wTWB0ss0kIwHn8y/DXE58tc0kF8YTnBeJd6iHLvM8UQfGE7Yq
-        EAsYe/KsVLB1oVjA6l3uSgWLVBALWO9Rd9RNvjnOgr3C1oe5+eBCeK6JxzD3EfFg0aoMPO+DUCdBjddB
-        bnU83/gbQngBun1o6SY8/hIAAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="$this.Icon" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         AAABAAEAAAAAAAEAIAAYTwAAFgAAAIlQTkcNChoKAAAADUlIRFIAAAEAAAABAAgCAAAA0xA/MQAATt9J
@@ -7573,6 +7564,15 @@
         kcEV4EoVno1SQ6RqQ7Dr0p1vawqFetnhlwuFVpwfTSgsbfEdCR5i+DAdpU81sAiOwiyivJcgSAVH1ByA
         ehBWGV0gBfNg8tvwQWw0qFMbwtYUCoVC77iO9IKfXCJkQBEchZlDOkCaoIPgEFYcXcNvphS1USgURokL
         Skd861Jz7Nix/x/RNHqdvfq1jgAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="UpdateBtn.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAAB4AAAAeCAYAAAA7MK6iAAAABGdBTUEAALGPC/xhBQAAAMRJREFUSEvt
+        lEsKwzAMRH2Jlh4p9y4l9LfppvtcxB1JgxeNlQTspKX1A0EkDXrgRULj64kxnlE92+2AVGG7HfQ28frQ
+        28TrQ+8PiHFr0R9JrYCtCyJHKbY+eg2wTWB0ss0kIwHn8y/DXE58tc0kF8YTnBeJd6iHLvM8UQfGE7Yq
+        EAsYe/KsVLB1oVjA6l3uSgWLVBALWO9Rd9RNvjnOgr3C1oe5+eBCeK6JxzD3EfFg0aoMPO+DUCdBjddB
+        bnU83/gbQngBun1o6SY8/hIAAAAASUVORK5CYII=
 </value>
   </data>
   <metadata name="timer1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
