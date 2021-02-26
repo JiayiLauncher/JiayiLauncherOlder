@@ -67,6 +67,53 @@ namespace JiayiLauncher
             {
                 ExpirementalSettingBtn.Checked = true;
             }
+
+            // color settings (warning: sucks)
+            TopPanel.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            HomeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            SettingsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            UpdatePanelBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            CosmeticsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            CloseLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            HideLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            KeepOpen.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            StableSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            ExpirementalSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            ThemesButton.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            VersionComboBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
+            ResolutionComboBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
+            ProcessPriorityBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
+            LightThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            DarkThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+
+            AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
+
+            if (Properties.Settings.Default.LightDarkMode == "Light")
+            {
+                LightThemeBtn.Checked = true;
+            } else
+            {
+                DarkThemeBtn.Checked = true;
+            }
+
+            // bg image settings
+            try
+            {
+                BackImageCheckBox.Checked = true;
+                HomePanel.UseTransparentBackground = true;
+                SettingsPanel.UseTransparentBackground = true;
+                ThemesPanel.UseTransparentBackground = true;
+                TopPanel.UseTransparentBackground = true;
+                UpdatePanel.UseTransparentBackground = true;
+                this.BackgroundImage = Image.FromFile(Properties.Settings.Default.BackImagePath);
+            }
+            catch (ArgumentException)
+            {
+                BackImageCheckBox.Checked = false;
+                // shit i guess...
+            }
+
+            VersionDisplay.BackColor = Color.Transparent;
         }
 
 
@@ -215,6 +262,7 @@ namespace JiayiLauncher
 
             CosmeticsBtn.Checked = false;
 
+            ThemesPanel.Visible = false;
 
             RPCForBtns("In Launcher");
 
@@ -235,6 +283,7 @@ namespace JiayiLauncher
 
             CosmeticsBtn.Checked = false;
 
+            ThemesPanel.Visible = false;
 
             RPCForBtns("Configuring Settings");
 
@@ -256,6 +305,7 @@ namespace JiayiLauncher
 
             CosmeticsBtn.Checked = false;
 
+            ThemesPanel.Visible = false;
 
             RPCForBtns("In Launcher");
 
@@ -274,7 +324,8 @@ namespace JiayiLauncher
             UpdatePanel.Visible = false;
 
             CosmeticsBtn.Checked = true;
-            
+
+            ThemesPanel.Visible = false;
 
             RPCForBtns("In Cosmetics Menu");
 
@@ -746,6 +797,171 @@ namespace JiayiLauncher
         {
             ReleaseCapture();
             SendMessage(Handle, WM_NCLBUTTONDOWN, HT_CAPTION, 0);
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label9_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2Button2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label12_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label11_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void guna2ComboBox2_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ThemesButton_Click(object sender, EventArgs e)
+        {
+            SettingsPanel.Visible = false;
+            ThemesPanel.Visible = true;
+        }
+
+        private void AccentColorBtn_Click(object sender, EventArgs e)
+        {
+            colorDialog1.ShowDialog();
+            Properties.Settings.Default.AccentColor = colorDialog1.Color;
+            Properties.Settings.Default.Save();
+
+            TopPanel.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            HomeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            SettingsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            UpdatePanelBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            CosmeticsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            CloseLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            HideLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            KeepOpen.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            StableSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            ExpirementalSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            ThemesButton.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            VersionComboBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
+            ResolutionComboBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
+            ProcessPriorityBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
+            LightThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            DarkThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+
+            AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
+
+            // bg image settings
+            if (Properties.Settings.Default.BackImagePath != "") // aka if the user has a background image set
+            {
+
+            }
+        }
+
+        private void BackToSettings_Click(object sender, EventArgs e)
+        {
+            SettingsPanel.Visible = true;
+            ThemesPanel.Visible = false;
+        }
+
+        private void LightThemeBtn_Click(object sender, EventArgs e)
+        {
+            LightThemeBtn.Checked = true;
+            DarkThemeBtn.Checked = false;
+            Properties.Settings.Default.LightDarkMode = "Light";
+            Properties.Settings.Default.Save();
+        }
+
+        private void DarkThemeBtn_Click(object sender, EventArgs e)
+        {
+            LightThemeBtn.Checked = false;
+            DarkThemeBtn.Checked = true;
+            Properties.Settings.Default.LightDarkMode = "Dark";
+            Properties.Settings.Default.Save();
+        }
+
+        private void BackImageSelectButton_Click(object sender, EventArgs e)
+        {
+            SelectImageDialog.ShowDialog();
+
+            if (SelectImageDialog.FileName == null)
+            {
+                return;
+            }
+
+            Properties.Settings.Default.BackImagePath = SelectImageDialog.FileName;
+            Properties.Settings.Default.Save();
+
+            try
+            {
+                BackImageCheckBox.Checked = true;
+                HomePanel.UseTransparentBackground = true;
+                SettingsPanel.UseTransparentBackground = true;
+                ThemesPanel.UseTransparentBackground = true;
+                UpdatePanel.UseTransparentBackground = true;
+                TopPanel.UseTransparentBackground = true;
+                this.BackgroundImage = Image.FromFile(Properties.Settings.Default.BackImagePath);
+            }
+            catch (ArgumentException)
+            {
+                BackImageCheckBox.Checked = false;
+                // IM SUCH A BAD PROGRAMMER OMG
+            }
+        }
+
+        private void BackImageCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            BackImageSelectButton.Enabled = BackImageCheckBox.Checked;
+            if (!BackImageCheckBox.Checked)
+            {
+                this.BackgroundImage = null;
+                Properties.Settings.Default.BackImagePath = null;
+                Properties.Settings.Default.Save();
+            }
         }
     }
 }

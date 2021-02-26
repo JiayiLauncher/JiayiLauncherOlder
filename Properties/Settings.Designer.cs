@@ -70,5 +70,41 @@ namespace JiayiLauncher.Properties {
                 this["Branch"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Red")]
+        public global::System.Drawing.Color AccentColor {
+            get {
+                return ((global::System.Drawing.Color)(this["AccentColor"]));
+            }
+            set {
+                this["AccentColor"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Dark")]
+        public string LightDarkMode {
+            get {
+                return ((string)(this["LightDarkMode"]));
+            }
+            set {
+                this["LightDarkMode"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string BackImagePath {
+            get {
+                return ((string)(this["BackImagePath"]));
+            }
+            set {
+                this["BackImagePath"] = value;
+            }
+        }
     }
 }
