@@ -25,6 +25,8 @@ namespace JiayiLauncher
     {
         public DiscordRpcClient client;
         string discordTime = "";
+        private string xboxName;
+        private string xboxIconLink;
 
         [DllImport("user32.dll", SetLastError = true)]
         internal static extern bool MoveWindow(IntPtr hWnd, int X, int Y, int nWidth, int nHeight, bool bRepaint);
@@ -35,6 +37,7 @@ namespace JiayiLauncher
             InitializeDiscord("In Launcher");
             versionFinderForLabel("Get-AppPackage -name Microsoft.MinecraftUWP | select -expandproperty Version", VersionDisplay);
             Directory.CreateDirectory(@"c:\Jiayi");
+            XboxInfo();
         }
 
         private void Jiayi_Load(object sender, EventArgs e)
@@ -91,9 +94,11 @@ namespace JiayiLauncher
             if (Properties.Settings.Default.LightDarkMode == "Light")
             {
                 LightThemeBtn.Checked = true;
+                LightTheme();
             } else
             {
                 DarkThemeBtn.Checked = true;
+                DarkTheme();
             }
 
             // bg image settings
@@ -116,6 +121,112 @@ namespace JiayiLauncher
             VersionDisplay.BackColor = Color.Transparent;
         }
 
+        public void XboxInfo()
+        {
+            string localappdata = Environment.GetEnvironmentVariable("LocalAppData");
+
+            if (System.IO.File.Exists("C:\\jiayi\\XboxLiveGamer.xml.txt"))
+                System.IO.File.Delete("C:\\jiayi\\XboxLiveGamer.xml.txt");
+            if (System.IO.File.Exists(localappdata + "\\Packages\\Microsoft.XboxApp_8wekyb3d8bbwe\\LocalState\\XboxLiveGamer.xml"))
+            {
+                PowerShell.Create().AddCommand("Copy-Item").AddParameter("Path", (object)(localappdata + "\\Packages\\Microsoft.XboxApp_8wekyb3d8bbwe\\LocalState\\XboxLiveGamer.xml")).AddParameter("Destination", (object)"C:\\jiayi\\XboxLiveGamer.xml.txt").Invoke();
+                foreach (string readAllLine in System.IO.File.ReadAllLines("C:\\jiayi\\XboxLiveGamer.xml.txt"))
+                {
+                    if (readAllLine.Contains("Gamertag"))
+                        this.xboxName = readAllLine;
+                    else if (readAllLine.Contains("DisplayPic"))
+                        this.xboxIconLink = readAllLine;
+                }
+                this.xboxName = this.xboxName.Replace("\"Gamertag\"", "");
+                this.xboxName = this.xboxName.Replace("\"", "");
+                this.xboxName = this.xboxName.Replace(": ", "");
+                this.xboxName = this.xboxName.Replace(",", "");
+                xboxGamertag.Text = xboxName;
+                this.xboxIconLink = this.xboxIconLink.Replace("\"DisplayPic\"", "");
+                this.xboxIconLink = this.xboxIconLink.Replace("\"", "");
+                this.xboxIconLink = this.xboxIconLink.Replace(": ", "");
+                this.xboxIconLink = this.xboxIconLink.Replace(",", "");
+                WebClient webClient = new WebClient();
+                webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(this.xboxIconCompleted);
+                webClient.DownloadFileAsync(new Uri(this.xboxIconLink), "C:\\jiayi\\icon.png");
+                this.InitializeDiscord(this.xboxName);
+            }
+        }
+
+        private void xboxIconCompleted(object sender, AsyncCompletedEventArgs e)
+        {
+            xboxIcon.Image = (Image)new Bitmap("C:\\jiayi\\icon.png");
+        }
+
+        public void DarkTheme()
+        {
+            BtnPanel.BackColor = Color.FromArgb(25, 24, 26);
+            TopPanel.ForeColor = Color.FromArgb(255,255,255);
+            HomeBtn.BackColor = Color.FromArgb(25, 24, 26);
+            HomeBtn.CustomBorderColor = Color.FromArgb(25, 24, 26);
+            HomeBtn.BorderColor = Color.FromArgb(25, 24, 26);
+            HomeBtn.FillColor = Color.FromArgb(25, 24, 26);
+            HomeBtn.CheckedState.FillColor = Color.FromArgb(23, 23, 23);
+            HomeBtn.CheckedState.BorderColor = Color.FromArgb(34, 35, 32);
+            HomeBtn.ForeColor = Color.FromArgb(255,255,255);
+            SettingsBtn.BackColor = Color.FromArgb(25, 24, 26);
+            SettingsBtn.CustomBorderColor = Color.FromArgb(25, 24, 26);
+            SettingsBtn.BorderColor = Color.FromArgb(25, 24, 26);
+            SettingsBtn.CheckedState.FillColor = Color.FromArgb(23, 23, 23);
+            SettingsBtn.FillColor = Color.FromArgb(25, 24, 26);
+            SettingsBtn.ForeColor = Color.FromArgb(255,255,255);
+            SettingsBtn.CheckedState.BorderColor = Color.FromArgb(34, 35, 32);
+            UpdatePanelBtn.BackColor = Color.FromArgb(25, 24, 26);
+            UpdatePanelBtn.CustomBorderColor = Color.FromArgb(25, 24, 26);
+            UpdatePanelBtn.BorderColor = Color.FromArgb(25, 24, 26);
+            UpdatePanelBtn.CheckedState.FillColor = Color.FromArgb(23, 23, 23);
+            UpdatePanelBtn.ForeColor = Color.FromArgb(255,255,255);
+            UpdatePanelBtn.FillColor = Color.FromArgb(25, 24, 26);
+            UpdatePanelBtn.CheckedState.BorderColor = Color.FromArgb(34, 35, 32);
+            CosmeticsBtn.BackColor = Color.FromArgb(25, 24, 26);
+            CosmeticsBtn.CustomBorderColor = Color.FromArgb(25, 24, 26);
+            CosmeticsBtn.FillColor = Color.FromArgb(25, 24, 26);
+            CosmeticsBtn.ForeColor = Color.FromArgb(255,255,255);
+            CosmeticsBtn.BorderColor = Color.FromArgb(25, 24, 26);
+            CosmeticsBtn.CheckedState.FillColor = Color.FromArgb(23, 23, 23);
+            CosmeticsBtn.CheckedState.BorderColor = Color.FromArgb(34, 35, 32);
+            this.BackColor = Color.FromArgb(15, 15, 15);
+        }
+
+        public void LightTheme()
+        {
+            BtnPanel.BackColor = Color.FromArgb(232,232,232);
+            TopPanel.ForeColor = Color.FromArgb(15, 15, 15);
+            HomeBtn.BackColor = Color.FromArgb(232, 232, 232);
+            HomeBtn.CustomBorderColor = Color.FromArgb(232, 232, 232);
+            HomeBtn.BorderColor = Color.FromArgb(232, 232, 232);
+            HomeBtn.FillColor = Color.FromArgb(232, 232, 232);
+            HomeBtn.CheckedState.FillColor = Color.FromArgb(150,150,150);
+            HomeBtn.CheckedState.BorderColor = Color.FromArgb(190, 190, 190);
+            HomeBtn.ForeColor = Color.FromArgb(15, 15, 15);
+            SettingsBtn.BackColor = Color.FromArgb(232, 232, 232);
+            SettingsBtn.CustomBorderColor = Color.FromArgb(232, 232, 232);
+            SettingsBtn.BorderColor = Color.FromArgb(232, 232, 232);
+            SettingsBtn.CheckedState.FillColor = Color.FromArgb(150, 150, 150);
+            SettingsBtn.FillColor = Color.FromArgb(232, 232, 232);
+            SettingsBtn.ForeColor = Color.FromArgb(15, 15, 15);
+            SettingsBtn.CheckedState.BorderColor = Color.FromArgb(190, 190, 190);
+            UpdatePanelBtn.BackColor = Color.FromArgb(232, 232, 232);
+            UpdatePanelBtn.CustomBorderColor = Color.FromArgb(232, 232, 232);
+            UpdatePanelBtn.BorderColor = Color.FromArgb(232, 232, 232);
+            UpdatePanelBtn.CheckedState.FillColor = Color.FromArgb(150, 150, 150);
+            UpdatePanelBtn.ForeColor = Color.FromArgb(15, 15, 15);
+            UpdatePanelBtn.FillColor = Color.FromArgb(232, 232, 232);
+            UpdatePanelBtn.CheckedState.BorderColor = Color.FromArgb(190, 190, 190);
+            CosmeticsBtn.BackColor = Color.FromArgb(232, 232, 232);
+            CosmeticsBtn.CustomBorderColor = Color.FromArgb(232, 232, 232);
+            CosmeticsBtn.FillColor = Color.FromArgb(232, 232, 232);
+            CosmeticsBtn.ForeColor = Color.FromArgb(15, 15, 15);
+            CosmeticsBtn.BorderColor = Color.FromArgb(232, 232, 232);
+            CosmeticsBtn.CheckedState.FillColor = Color.FromArgb(150, 150, 150);
+            CosmeticsBtn.CheckedState.BorderColor = Color.FromArgb(190, 190, 190);
+            this.BackColor = Color.FromArgb(170,170,170);
+        }
 
         // RPC Functions
 
@@ -123,7 +234,7 @@ namespace JiayiLauncher
         {
             int TimestampStart = 0;
             int TimestampEnd = 0;
-            dynamic DateTimestampEnd = null;
+            dynamic DateTimestampEnd = null;                                                        
 
             if (discordTime != "" && Int32.TryParse(discordTime, out TimestampEnd))
                 DateTimestampEnd = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(TimestampEnd);
@@ -911,6 +1022,7 @@ namespace JiayiLauncher
         private void LightThemeBtn_Click(object sender, EventArgs e)
         {
             LightThemeBtn.Checked = true;
+            LightTheme();
             DarkThemeBtn.Checked = false;
             Properties.Settings.Default.LightDarkMode = "Light";
             Properties.Settings.Default.Save();
@@ -918,6 +1030,7 @@ namespace JiayiLauncher
 
         private void DarkThemeBtn_Click(object sender, EventArgs e)
         {
+            DarkTheme();
             LightThemeBtn.Checked = false;
             DarkThemeBtn.Checked = true;
             Properties.Settings.Default.LightDarkMode = "Dark";

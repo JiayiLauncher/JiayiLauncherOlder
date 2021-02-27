@@ -30,6 +30,8 @@ namespace JiayiLauncher
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Jiayi));
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.BtnPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.xboxGamertag = new System.Windows.Forms.Label();
             this.CosmeticsBtn = new Guna.UI2.WinForms.Guna2Button();
             this.UpdatePanelBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SettingsBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -62,6 +64,8 @@ namespace JiayiLauncher
             this.FeedData1 = new System.Windows.Forms.RichTextBox();
             this.UpdateBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SettingsPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.ThemesButton = new Guna.UI2.WinForms.Guna2Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.ExpirementalSettingBtn = new Guna.UI2.WinForms.Guna2Button();
             this.StableSettingBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SettingsDesc4 = new System.Windows.Forms.Label();
@@ -76,21 +80,21 @@ namespace JiayiLauncher
             this.SettingsTag1 = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
-            this.label3 = new System.Windows.Forms.Label();
-            this.ThemesButton = new Guna.UI2.WinForms.Guna2Button();
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.ThemesPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.BackImageSelectButton = new Guna.UI2.WinForms.Guna2Button();
+            this.BackImageCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.BackToSettings = new Guna.UI2.WinForms.Guna2Button();
+            this.DarkThemeBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.LightThemeBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.AccentColorBtn = new Guna.UI2.WinForms.Guna2Button();
             this.label10 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
-            this.LightThemeBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.DarkThemeBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.BackToSettings = new Guna.UI2.WinForms.Guna2Button();
-            this.BackImageCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.BackImageSelectButton = new Guna.UI2.WinForms.Guna2Button();
             this.SelectImageDialog = new System.Windows.Forms.OpenFileDialog();
+            this.xboxIcon = new Guna.UI2.WinForms.Guna2PictureBox();
             this.BtnPanel.SuspendLayout();
+            this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).BeginInit();
             this.HomePanel.SuspendLayout();
             this.UpdatePanel.SuspendLayout();
@@ -102,6 +106,7 @@ namespace JiayiLauncher
             ((System.ComponentModel.ISupportInitialize)(this.FeedPic1)).BeginInit();
             this.SettingsPanel.SuspendLayout();
             this.ThemesPanel.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.xboxIcon)).BeginInit();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -114,6 +119,7 @@ namespace JiayiLauncher
             // BtnPanel
             // 
             this.BtnPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
+            this.BtnPanel.Controls.Add(this.guna2Panel1);
             this.BtnPanel.Controls.Add(this.CosmeticsBtn);
             this.BtnPanel.Controls.Add(this.UpdatePanelBtn);
             this.BtnPanel.Controls.Add(this.SettingsBtn);
@@ -124,6 +130,28 @@ namespace JiayiLauncher
             this.BtnPanel.ShadowDecoration.Parent = this.BtnPanel;
             this.BtnPanel.Size = new System.Drawing.Size(177, 542);
             this.BtnPanel.TabIndex = 0;
+            // 
+            // guna2Panel1
+            // 
+            this.guna2Panel1.Controls.Add(this.xboxIcon);
+            this.guna2Panel1.Controls.Add(this.xboxGamertag);
+            this.guna2Panel1.Location = new System.Drawing.Point(0, 483);
+            this.guna2Panel1.Name = "guna2Panel1";
+            this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
+            this.guna2Panel1.Size = new System.Drawing.Size(177, 58);
+            this.guna2Panel1.TabIndex = 5;
+            // 
+            // xboxGamertag
+            // 
+            this.xboxGamertag.Font = new System.Drawing.Font("Arial", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xboxGamertag.ForeColor = System.Drawing.Color.White;
+            this.xboxGamertag.Location = new System.Drawing.Point(48, 14);
+            this.xboxGamertag.Name = "xboxGamertag";
+            this.xboxGamertag.Size = new System.Drawing.Size(120, 29);
+            this.xboxGamertag.TabIndex = 11;
+            this.xboxGamertag.Tag = "";
+            this.xboxGamertag.Text = "Gamertag";
+            this.xboxGamertag.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // CosmeticsBtn
             // 
@@ -289,7 +317,7 @@ namespace JiayiLauncher
             this.Version.ForeColor = System.Drawing.Color.White;
             this.Version.Location = new System.Drawing.Point(180, 519);
             this.Version.Name = "Version";
-            this.Version.Size = new System.Drawing.Size(59, 17);
+            this.Version.Size = new System.Drawing.Size(51, 17);
             this.Version.TabIndex = 2;
             this.Version.Text = "Version:";
             this.Version.Click += new System.EventHandler(this.Version_Click);
@@ -297,11 +325,11 @@ namespace JiayiLauncher
             // VersionDisplay
             // 
             this.VersionDisplay.AutoSize = true;
-            this.VersionDisplay.Font = new System.Drawing.Font("Raleway Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VersionDisplay.Font = new System.Drawing.Font("Arial Narrow", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VersionDisplay.ForeColor = System.Drawing.Color.White;
-            this.VersionDisplay.Location = new System.Drawing.Point(230, 519);
+            this.VersionDisplay.Location = new System.Drawing.Point(230, 520);
             this.VersionDisplay.Name = "VersionDisplay";
-            this.VersionDisplay.Size = new System.Drawing.Size(0, 17);
+            this.VersionDisplay.Size = new System.Drawing.Size(0, 16);
             this.VersionDisplay.TabIndex = 3;
             // 
             // MinimizeBtn
@@ -491,7 +519,7 @@ namespace JiayiLauncher
             "1600x900",
             "1280x720"});
             this.ResolutionComboBox.ItemsAppearance.Parent = this.ResolutionComboBox;
-            this.ResolutionComboBox.Location = new System.Drawing.Point(472, 326);
+            this.ResolutionComboBox.Location = new System.Drawing.Point(471, 350);
             this.ResolutionComboBox.Name = "ResolutionComboBox";
             this.ResolutionComboBox.ShadowDecoration.Parent = this.ResolutionComboBox;
             this.ResolutionComboBox.Size = new System.Drawing.Size(198, 36);
@@ -502,7 +530,7 @@ namespace JiayiLauncher
             // 
             this.SettingsDesc3.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsDesc3.ForeColor = System.Drawing.Color.White;
-            this.SettingsDesc3.Location = new System.Drawing.Point(444, 259);
+            this.SettingsDesc3.Location = new System.Drawing.Point(443, 283);
             this.SettingsDesc3.Name = "SettingsDesc3";
             this.SettingsDesc3.Size = new System.Drawing.Size(255, 46);
             this.SettingsDesc3.TabIndex = 7;
@@ -513,7 +541,7 @@ namespace JiayiLauncher
             // 
             this.SettingsTag3.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsTag3.ForeColor = System.Drawing.Color.White;
-            this.SettingsTag3.Location = new System.Drawing.Point(480, 219);
+            this.SettingsTag3.Location = new System.Drawing.Point(479, 243);
             this.SettingsTag3.Name = "SettingsTag3";
             this.SettingsTag3.Size = new System.Drawing.Size(182, 33);
             this.SettingsTag3.TabIndex = 6;
@@ -692,6 +720,37 @@ namespace JiayiLauncher
             this.SettingsPanel.Visible = false;
             this.SettingsPanel.Click += new System.EventHandler(this.SettingsPanel_Click);
             // 
+            // ThemesButton
+            // 
+            this.ThemesButton.Animated = true;
+            this.ThemesButton.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.ThemesButton.CheckedState.Parent = this.ThemesButton;
+            this.ThemesButton.CustomBorderThickness = new System.Windows.Forms.Padding(2);
+            this.ThemesButton.CustomImages.Parent = this.ThemesButton;
+            this.ThemesButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.ThemesButton.Font = new System.Drawing.Font("Raleway Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThemesButton.ForeColor = System.Drawing.Color.White;
+            this.ThemesButton.HoverState.Parent = this.ThemesButton;
+            this.ThemesButton.Location = new System.Drawing.Point(233, 340);
+            this.ThemesButton.Name = "ThemesButton";
+            this.ThemesButton.ShadowDecoration.Parent = this.ThemesButton;
+            this.ThemesButton.Size = new System.Drawing.Size(180, 45);
+            this.ThemesButton.TabIndex = 15;
+            this.ThemesButton.Text = "Open Themes Menu";
+            this.ThemesButton.Click += new System.EventHandler(this.ThemesButton_Click);
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Raleway Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(45, 342);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(182, 40);
+            this.label3.TabIndex = 14;
+            this.label3.Tag = "";
+            this.label3.Text = "Themes";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
             // ExpirementalSettingBtn
             // 
             this.ExpirementalSettingBtn.Animated = true;
@@ -703,7 +762,7 @@ namespace JiayiLauncher
             this.ExpirementalSettingBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExpirementalSettingBtn.ForeColor = System.Drawing.Color.White;
             this.ExpirementalSettingBtn.HoverState.Parent = this.ExpirementalSettingBtn;
-            this.ExpirementalSettingBtn.Location = new System.Drawing.Point(259, 238);
+            this.ExpirementalSettingBtn.Location = new System.Drawing.Point(259, 251);
             this.ExpirementalSettingBtn.Name = "ExpirementalSettingBtn";
             this.ExpirementalSettingBtn.ShadowDecoration.Parent = this.ExpirementalSettingBtn;
             this.ExpirementalSettingBtn.Size = new System.Drawing.Size(180, 45);
@@ -722,7 +781,7 @@ namespace JiayiLauncher
             this.StableSettingBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StableSettingBtn.ForeColor = System.Drawing.Color.White;
             this.StableSettingBtn.HoverState.Parent = this.StableSettingBtn;
-            this.StableSettingBtn.Location = new System.Drawing.Point(259, 176);
+            this.StableSettingBtn.Location = new System.Drawing.Point(259, 182);
             this.StableSettingBtn.Name = "StableSettingBtn";
             this.StableSettingBtn.ShadowDecoration.Parent = this.StableSettingBtn;
             this.StableSettingBtn.Size = new System.Drawing.Size(180, 45);
@@ -734,7 +793,7 @@ namespace JiayiLauncher
             // 
             this.SettingsDesc4.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsDesc4.ForeColor = System.Drawing.Color.White;
-            this.SettingsDesc4.Location = new System.Drawing.Point(249, 69);
+            this.SettingsDesc4.Location = new System.Drawing.Point(249, 75);
             this.SettingsDesc4.Name = "SettingsDesc4";
             this.SettingsDesc4.Size = new System.Drawing.Size(200, 88);
             this.SettingsDesc4.TabIndex = 11;
@@ -840,7 +899,7 @@ namespace JiayiLauncher
             // 
             this.SettingsDesc1.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsDesc1.ForeColor = System.Drawing.Color.White;
-            this.SettingsDesc1.Location = new System.Drawing.Point(471, 63);
+            this.SettingsDesc1.Location = new System.Drawing.Point(471, 62);
             this.SettingsDesc1.Name = "SettingsDesc1";
             this.SettingsDesc1.Size = new System.Drawing.Size(200, 72);
             this.SettingsDesc1.TabIndex = 3;
@@ -870,7 +929,7 @@ namespace JiayiLauncher
             "Medium",
             "Low"});
             this.ProcessPriorityBox.ItemsAppearance.Parent = this.ProcessPriorityBox;
-            this.ProcessPriorityBox.Location = new System.Drawing.Point(472, 147);
+            this.ProcessPriorityBox.Location = new System.Drawing.Point(472, 146);
             this.ProcessPriorityBox.Name = "ProcessPriorityBox";
             this.ProcessPriorityBox.ShadowDecoration.Parent = this.ProcessPriorityBox;
             this.ProcessPriorityBox.Size = new System.Drawing.Size(198, 36);
@@ -881,7 +940,7 @@ namespace JiayiLauncher
             // 
             this.SettingsTag1.Font = new System.Drawing.Font("Raleway Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.SettingsTag1.ForeColor = System.Drawing.Color.White;
-            this.SettingsTag1.Location = new System.Drawing.Point(480, 23);
+            this.SettingsTag1.Location = new System.Drawing.Point(480, 22);
             this.SettingsTag1.Name = "SettingsTag1";
             this.SettingsTag1.Size = new System.Drawing.Size(182, 40);
             this.SettingsTag1.TabIndex = 1;
@@ -900,39 +959,7 @@ namespace JiayiLauncher
             this.NotifyIcon.BalloonTipTitle = "Jiayi Client";
             this.NotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("NotifyIcon.Icon")));
             this.NotifyIcon.Text = "Jiayi Client";
-            this.NotifyIcon.Visible = true;
             this.NotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIcon_MouseDoubleClick);
-            // 
-            // label3
-            // 
-            this.label3.Font = new System.Drawing.Font("Raleway Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(45, 342);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(182, 40);
-            this.label3.TabIndex = 14;
-            this.label3.Tag = "";
-            this.label3.Text = "Themes";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // ThemesButton
-            // 
-            this.ThemesButton.Animated = true;
-            this.ThemesButton.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.ThemesButton.CheckedState.Parent = this.ThemesButton;
-            this.ThemesButton.CustomBorderThickness = new System.Windows.Forms.Padding(2);
-            this.ThemesButton.CustomImages.Parent = this.ThemesButton;
-            this.ThemesButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.ThemesButton.Font = new System.Drawing.Font("Raleway Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ThemesButton.ForeColor = System.Drawing.Color.White;
-            this.ThemesButton.HoverState.Parent = this.ThemesButton;
-            this.ThemesButton.Location = new System.Drawing.Point(233, 340);
-            this.ThemesButton.Name = "ThemesButton";
-            this.ThemesButton.ShadowDecoration.Parent = this.ThemesButton;
-            this.ThemesButton.Size = new System.Drawing.Size(180, 45);
-            this.ThemesButton.TabIndex = 15;
-            this.ThemesButton.Text = "Open Themes Menu";
-            this.ThemesButton.Click += new System.EventHandler(this.ThemesButton_Click);
             // 
             // ThemesPanel
             // 
@@ -952,6 +979,127 @@ namespace JiayiLauncher
             this.ThemesPanel.Size = new System.Drawing.Size(705, 413);
             this.ThemesPanel.TabIndex = 16;
             this.ThemesPanel.Visible = false;
+            // 
+            // BackImageSelectButton
+            // 
+            this.BackImageSelectButton.Animated = true;
+            this.BackImageSelectButton.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.BackImageSelectButton.CheckedState.Parent = this.BackImageSelectButton;
+            this.BackImageSelectButton.CustomBorderThickness = new System.Windows.Forms.Padding(2);
+            this.BackImageSelectButton.CustomImages.Parent = this.BackImageSelectButton;
+            this.BackImageSelectButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BackImageSelectButton.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackImageSelectButton.ForeColor = System.Drawing.Color.White;
+            this.BackImageSelectButton.HoverState.Parent = this.BackImageSelectButton;
+            this.BackImageSelectButton.Location = new System.Drawing.Point(262, 106);
+            this.BackImageSelectButton.Name = "BackImageSelectButton";
+            this.BackImageSelectButton.ShadowDecoration.Parent = this.BackImageSelectButton;
+            this.BackImageSelectButton.Size = new System.Drawing.Size(180, 45);
+            this.BackImageSelectButton.TabIndex = 20;
+            this.BackImageSelectButton.Text = "Select Image";
+            this.BackImageSelectButton.Click += new System.EventHandler(this.BackImageSelectButton_Click);
+            // 
+            // BackImageCheckBox
+            // 
+            this.BackImageCheckBox.Animated = true;
+            this.BackImageCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.BackImageCheckBox.CheckedState.BorderColor = System.Drawing.Color.Transparent;
+            this.BackImageCheckBox.CheckedState.BorderRadius = 0;
+            this.BackImageCheckBox.CheckedState.BorderThickness = 0;
+            this.BackImageCheckBox.CheckedState.FillColor = System.Drawing.Color.Red;
+            this.BackImageCheckBox.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackImageCheckBox.ForeColor = System.Drawing.Color.White;
+            this.BackImageCheckBox.Location = new System.Drawing.Point(256, 61);
+            this.BackImageCheckBox.Name = "BackImageCheckBox";
+            this.BackImageCheckBox.Size = new System.Drawing.Size(193, 38);
+            this.BackImageCheckBox.TabIndex = 19;
+            this.BackImageCheckBox.Text = "Background Image";
+            this.BackImageCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.BackImageCheckBox.UncheckedState.BorderColor = System.Drawing.Color.Transparent;
+            this.BackImageCheckBox.UncheckedState.BorderRadius = 0;
+            this.BackImageCheckBox.UncheckedState.BorderThickness = 0;
+            this.BackImageCheckBox.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BackImageCheckBox.UseVisualStyleBackColor = false;
+            this.BackImageCheckBox.CheckedChanged += new System.EventHandler(this.BackImageCheckBox_CheckedChanged);
+            // 
+            // BackToSettings
+            // 
+            this.BackToSettings.Animated = true;
+            this.BackToSettings.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.BackToSettings.CheckedState.Parent = this.BackToSettings;
+            this.BackToSettings.CustomBorderThickness = new System.Windows.Forms.Padding(2);
+            this.BackToSettings.CustomImages.Parent = this.BackToSettings;
+            this.BackToSettings.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BackToSettings.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackToSettings.ForeColor = System.Drawing.Color.White;
+            this.BackToSettings.HoverState.Parent = this.BackToSettings;
+            this.BackToSettings.Location = new System.Drawing.Point(262, 340);
+            this.BackToSettings.Name = "BackToSettings";
+            this.BackToSettings.ShadowDecoration.Parent = this.BackToSettings;
+            this.BackToSettings.Size = new System.Drawing.Size(180, 45);
+            this.BackToSettings.TabIndex = 18;
+            this.BackToSettings.Text = "Back To Settings";
+            this.BackToSettings.Click += new System.EventHandler(this.BackToSettings_Click);
+            // 
+            // DarkThemeBtn
+            // 
+            this.DarkThemeBtn.Animated = true;
+            this.DarkThemeBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.DarkThemeBtn.CheckedState.Parent = this.DarkThemeBtn;
+            this.DarkThemeBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
+            this.DarkThemeBtn.CustomImages.Parent = this.DarkThemeBtn;
+            this.DarkThemeBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.DarkThemeBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DarkThemeBtn.ForeColor = System.Drawing.Color.White;
+            this.DarkThemeBtn.HoverState.Parent = this.DarkThemeBtn;
+            this.DarkThemeBtn.Location = new System.Drawing.Point(25, 279);
+            this.DarkThemeBtn.Name = "DarkThemeBtn";
+            this.DarkThemeBtn.ShadowDecoration.Parent = this.DarkThemeBtn;
+            this.DarkThemeBtn.Size = new System.Drawing.Size(180, 45);
+            this.DarkThemeBtn.TabIndex = 17;
+            this.DarkThemeBtn.Text = "Dark";
+            this.DarkThemeBtn.Click += new System.EventHandler(this.DarkThemeBtn_Click);
+            // 
+            // LightThemeBtn
+            // 
+            this.LightThemeBtn.Animated = true;
+            this.LightThemeBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.LightThemeBtn.CheckedState.Parent = this.LightThemeBtn;
+            this.LightThemeBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
+            this.LightThemeBtn.CustomImages.Parent = this.LightThemeBtn;
+            this.LightThemeBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.LightThemeBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LightThemeBtn.ForeColor = System.Drawing.Color.White;
+            this.LightThemeBtn.HoverState.Parent = this.LightThemeBtn;
+            this.LightThemeBtn.Location = new System.Drawing.Point(25, 219);
+            this.LightThemeBtn.Name = "LightThemeBtn";
+            this.LightThemeBtn.ShadowDecoration.Parent = this.LightThemeBtn;
+            this.LightThemeBtn.Size = new System.Drawing.Size(180, 45);
+            this.LightThemeBtn.TabIndex = 16;
+            this.LightThemeBtn.Text = "Light";
+            this.LightThemeBtn.Click += new System.EventHandler(this.LightThemeBtn_Click);
+            // 
+            // label5
+            // 
+            this.label5.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.ForeColor = System.Drawing.Color.White;
+            this.label5.Location = new System.Drawing.Point(13, 177);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(202, 33);
+            this.label5.TabIndex = 15;
+            this.label5.Text = "Light/Dark Mode";
+            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(23, 61);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(182, 33);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Accent Color";
+            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // AccentColorBtn
             // 
@@ -984,131 +1132,20 @@ namespace JiayiLauncher
             this.label10.Text = "Themes Menu";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label4
-            // 
-            this.label4.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(23, 61);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(182, 33);
-            this.label4.TabIndex = 13;
-            this.label4.Text = "Accent Color";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(13, 177);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(202, 33);
-            this.label5.TabIndex = 15;
-            this.label5.Text = "Light/Dark Mode";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // LightThemeBtn
-            // 
-            this.LightThemeBtn.Animated = true;
-            this.LightThemeBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.LightThemeBtn.CheckedState.Parent = this.LightThemeBtn;
-            this.LightThemeBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
-            this.LightThemeBtn.CustomImages.Parent = this.LightThemeBtn;
-            this.LightThemeBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.LightThemeBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LightThemeBtn.ForeColor = System.Drawing.Color.White;
-            this.LightThemeBtn.HoverState.Parent = this.LightThemeBtn;
-            this.LightThemeBtn.Location = new System.Drawing.Point(25, 219);
-            this.LightThemeBtn.Name = "LightThemeBtn";
-            this.LightThemeBtn.ShadowDecoration.Parent = this.LightThemeBtn;
-            this.LightThemeBtn.Size = new System.Drawing.Size(180, 45);
-            this.LightThemeBtn.TabIndex = 16;
-            this.LightThemeBtn.Text = "Light";
-            this.LightThemeBtn.Click += new System.EventHandler(this.LightThemeBtn_Click);
-            // 
-            // DarkThemeBtn
-            // 
-            this.DarkThemeBtn.Animated = true;
-            this.DarkThemeBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.DarkThemeBtn.CheckedState.Parent = this.DarkThemeBtn;
-            this.DarkThemeBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
-            this.DarkThemeBtn.CustomImages.Parent = this.DarkThemeBtn;
-            this.DarkThemeBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.DarkThemeBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DarkThemeBtn.ForeColor = System.Drawing.Color.White;
-            this.DarkThemeBtn.HoverState.Parent = this.DarkThemeBtn;
-            this.DarkThemeBtn.Location = new System.Drawing.Point(25, 279);
-            this.DarkThemeBtn.Name = "DarkThemeBtn";
-            this.DarkThemeBtn.ShadowDecoration.Parent = this.DarkThemeBtn;
-            this.DarkThemeBtn.Size = new System.Drawing.Size(180, 45);
-            this.DarkThemeBtn.TabIndex = 17;
-            this.DarkThemeBtn.Text = "Dark";
-            this.DarkThemeBtn.Click += new System.EventHandler(this.DarkThemeBtn_Click);
-            // 
-            // BackToSettings
-            // 
-            this.BackToSettings.Animated = true;
-            this.BackToSettings.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.BackToSettings.CheckedState.Parent = this.BackToSettings;
-            this.BackToSettings.CustomBorderThickness = new System.Windows.Forms.Padding(2);
-            this.BackToSettings.CustomImages.Parent = this.BackToSettings;
-            this.BackToSettings.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.BackToSettings.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackToSettings.ForeColor = System.Drawing.Color.White;
-            this.BackToSettings.HoverState.Parent = this.BackToSettings;
-            this.BackToSettings.Location = new System.Drawing.Point(262, 340);
-            this.BackToSettings.Name = "BackToSettings";
-            this.BackToSettings.ShadowDecoration.Parent = this.BackToSettings;
-            this.BackToSettings.Size = new System.Drawing.Size(180, 45);
-            this.BackToSettings.TabIndex = 18;
-            this.BackToSettings.Text = "Back To Settings";
-            this.BackToSettings.Click += new System.EventHandler(this.BackToSettings_Click);
-            // 
-            // BackImageCheckBox
-            // 
-            this.BackImageCheckBox.Animated = true;
-            this.BackImageCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.BackImageCheckBox.CheckedState.BorderColor = System.Drawing.Color.Transparent;
-            this.BackImageCheckBox.CheckedState.BorderRadius = 0;
-            this.BackImageCheckBox.CheckedState.BorderThickness = 0;
-            this.BackImageCheckBox.CheckedState.FillColor = System.Drawing.Color.Red;
-            this.BackImageCheckBox.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackImageCheckBox.ForeColor = System.Drawing.Color.White;
-            this.BackImageCheckBox.Location = new System.Drawing.Point(256, 61);
-            this.BackImageCheckBox.Name = "BackImageCheckBox";
-            this.BackImageCheckBox.Size = new System.Drawing.Size(193, 38);
-            this.BackImageCheckBox.TabIndex = 19;
-            this.BackImageCheckBox.Text = "Background Image";
-            this.BackImageCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.BackImageCheckBox.UncheckedState.BorderColor = System.Drawing.Color.Transparent;
-            this.BackImageCheckBox.UncheckedState.BorderRadius = 0;
-            this.BackImageCheckBox.UncheckedState.BorderThickness = 0;
-            this.BackImageCheckBox.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.BackImageCheckBox.UseVisualStyleBackColor = false;
-            this.BackImageCheckBox.CheckedChanged += new System.EventHandler(this.BackImageCheckBox_CheckedChanged);
-            // 
-            // BackImageSelectButton
-            // 
-            this.BackImageSelectButton.Animated = true;
-            this.BackImageSelectButton.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.BackImageSelectButton.CheckedState.Parent = this.BackImageSelectButton;
-            this.BackImageSelectButton.CustomBorderThickness = new System.Windows.Forms.Padding(2);
-            this.BackImageSelectButton.CustomImages.Parent = this.BackImageSelectButton;
-            this.BackImageSelectButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.BackImageSelectButton.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BackImageSelectButton.ForeColor = System.Drawing.Color.White;
-            this.BackImageSelectButton.HoverState.Parent = this.BackImageSelectButton;
-            this.BackImageSelectButton.Location = new System.Drawing.Point(262, 106);
-            this.BackImageSelectButton.Name = "BackImageSelectButton";
-            this.BackImageSelectButton.ShadowDecoration.Parent = this.BackImageSelectButton;
-            this.BackImageSelectButton.Size = new System.Drawing.Size(180, 45);
-            this.BackImageSelectButton.TabIndex = 20;
-            this.BackImageSelectButton.Text = "Select Image";
-            this.BackImageSelectButton.Click += new System.EventHandler(this.BackImageSelectButton_Click);
-            // 
             // SelectImageDialog
             // 
             this.SelectImageDialog.Filter = "Image Files|*.png";
             this.SelectImageDialog.Title = "Select Image";
+            // 
+            // xboxIcon
+            // 
+            this.xboxIcon.Location = new System.Drawing.Point(13, 10);
+            this.xboxIcon.Name = "xboxIcon";
+            this.xboxIcon.ShadowDecoration.Parent = this.xboxIcon;
+            this.xboxIcon.Size = new System.Drawing.Size(35, 35);
+            this.xboxIcon.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.xboxIcon.TabIndex = 12;
+            this.xboxIcon.TabStop = false;
             // 
             // Jiayi
             // 
@@ -1117,7 +1154,6 @@ namespace JiayiLauncher
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(900, 540);
-            this.Controls.Add(this.ThemesPanel);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.MinimizeBtn);
             this.Controls.Add(this.VersionDisplay);
@@ -1127,6 +1163,7 @@ namespace JiayiLauncher
             this.Controls.Add(this.UpdatePanel);
             this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.Version);
+            this.Controls.Add(this.ThemesPanel);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -1135,6 +1172,7 @@ namespace JiayiLauncher
             this.Text = "Jiayi";
             this.Load += new System.EventHandler(this.Jiayi_Load);
             this.BtnPanel.ResumeLayout(false);
+            this.guna2Panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.guna2PictureBox1)).EndInit();
             this.HomePanel.ResumeLayout(false);
             this.UpdatePanel.ResumeLayout(false);
@@ -1146,6 +1184,7 @@ namespace JiayiLauncher
             ((System.ComponentModel.ISupportInitialize)(this.FeedPic1)).EndInit();
             this.SettingsPanel.ResumeLayout(false);
             this.ThemesPanel.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.xboxIcon)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -1215,6 +1254,9 @@ namespace JiayiLauncher
         private Guna.UI2.WinForms.Guna2Button BackImageSelectButton;
         private Guna.UI2.WinForms.Guna2CheckBox BackImageCheckBox;
         private System.Windows.Forms.OpenFileDialog SelectImageDialog;
+        private Guna.UI2.WinForms.Guna2Panel guna2Panel1;
+        private System.Windows.Forms.Label xboxGamertag;
+        private Guna.UI2.WinForms.Guna2PictureBox xboxIcon;
     }
 }
 
