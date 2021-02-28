@@ -34,7 +34,7 @@ namespace JiayiLauncher
         public Jiayi()
         {
             InitializeComponent();
-            InitializeDiscord("In Launcher");
+            InitializeDiscord();
             versionFinderForLabel("Get-AppPackage -name Microsoft.MinecraftUWP | select -expandproperty Version", VersionDisplay);
             Directory.CreateDirectory(@"c:\Jiayi");
             XboxInfo();
@@ -83,7 +83,6 @@ namespace JiayiLauncher
             StableSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
             ExpirementalSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
             ThemesButton.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            VersionComboBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
             ResolutionComboBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
             ProcessPriorityBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
             LightThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
@@ -149,7 +148,6 @@ namespace JiayiLauncher
                 WebClient webClient = new WebClient();
                 webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(this.xboxIconCompleted);
                 webClient.DownloadFileAsync(new Uri(this.xboxIconLink), "C:\\jiayi\\icon.png");
-                this.InitializeDiscord(this.xboxName);
             }
         }
 
@@ -165,6 +163,7 @@ namespace JiayiLauncher
             HomeBtn.BackColor = Color.FromArgb(25, 24, 26);
             HomeBtn.CustomBorderColor = Color.FromArgb(25, 24, 26);
             HomeBtn.BorderColor = Color.FromArgb(25, 24, 26);
+            VersionPanel.BackColor = Color.FromArgb(15,15,15);
             HomeBtn.FillColor = Color.FromArgb(25, 24, 26);
             HomeBtn.CheckedState.FillColor = Color.FromArgb(23, 23, 23);
             HomeBtn.CheckedState.BorderColor = Color.FromArgb(34, 35, 32);
@@ -204,6 +203,7 @@ namespace JiayiLauncher
             HomeBtn.CheckedState.FillColor = Color.FromArgb(150,150,150);
             HomeBtn.CheckedState.BorderColor = Color.FromArgb(190, 190, 190);
             HomeBtn.ForeColor = Color.FromArgb(15, 15, 15);
+            VersionPanel.BackColor = Color.FromArgb(232,232,232);
             SettingsBtn.BackColor = Color.FromArgb(232, 232, 232);
             SettingsBtn.CustomBorderColor = Color.FromArgb(232, 232, 232);
             SettingsBtn.BorderColor = Color.FromArgb(232, 232, 232);
@@ -230,7 +230,7 @@ namespace JiayiLauncher
 
         // RPC Functions
 
-        public void InitializeDiscord(string status)
+        public void InitializeDiscord()
         {
             int TimestampStart = 0;
             int TimestampEnd = 0;
@@ -243,7 +243,7 @@ namespace JiayiLauncher
             client.Initialize();
             client.SetPresence(new RichPresence()
             {
-                Details = status,
+                Details = "In Launcher",
 
                 Assets = new Assets()
                 {
@@ -364,6 +364,7 @@ namespace JiayiLauncher
             HomeBtn.Checked = true;
             HomePanel.Visible = true;
             HomePanel.BringToFront();
+            VersionPanel.Visible = false;
 
             SettingsBtn.Checked = false;
             SettingsPanel.Visible = false;
@@ -388,6 +389,7 @@ namespace JiayiLauncher
             SettingsBtn.Checked = true;
             SettingsPanel.Visible = true;
             SettingsPanel.BringToFront();
+            VersionPanel.Visible = false;
 
             UpdatePanelBtn.Checked = false;
             UpdatePanel.Visible = false;
@@ -408,6 +410,7 @@ namespace JiayiLauncher
             HomePanel.Visible = false;
 
             SettingsBtn.Checked = false;
+            VersionPanel.Visible = false;
             SettingsPanel.Visible = false;
 
             UpdatePanelBtn.Checked = true;
@@ -418,7 +421,7 @@ namespace JiayiLauncher
 
             ThemesPanel.Visible = false;
 
-            RPCForBtns("In Launcher");
+            RPCForBtns("Looking At Newsfeed");
 
             TopPanel.Text = ("Updates");
         }
@@ -430,6 +433,7 @@ namespace JiayiLauncher
 
             SettingsBtn.Checked = false;
             SettingsPanel.Visible = false;
+            VersionPanel.Visible = false;
 
             UpdatePanelBtn.Checked = false;
             UpdatePanel.Visible = false;
@@ -458,6 +462,8 @@ namespace JiayiLauncher
 
         private void ExitButton_Click(object sender, EventArgs e)
         {
+            client.Dispose();
+            NotifyIcon.Visible = false;
             this.Close();
         }
 
@@ -512,61 +518,6 @@ namespace JiayiLauncher
 
         //version changer function
 
-        private void VersionComboBox_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            WebClient Downloader = new WebClient();
-            label2.Text = "Downloading Minecraft " + VersionComboBox.SelectedItem.ToString() + "...";
-            
-            if (VersionComboBox.SelectedItem.ToString() == "1.16.40")
-            {
-                if (Directory.Exists(@"c:\Jiayi\Minecraft-1.16.40.2"))
-                {
-                    label2.Text = "This version of Minecraft has already been installed.";
-                    return;
-                }
-                Downloader.DownloadFile(new Uri("https://github.com/xarson/jiayi/releases/download/1.16.40/Minecraft-1.16.40.2.Appx"),
-                    @"c:\Jiayi\Minecraft-1.16.40.2.zip");
-                Directory.CreateDirectory(@"c:\Jiayi\Minecraft-1.16.40.2");
-                ZipFile.ExtractToDirectory(@"c:\Jiayi\Minecraft-1.16.40.2.zip", @"c:\Jiayi\Minecraft-1.16.40.2");
-            }
-            else if (VersionComboBox.SelectedItem.ToString() == "1.16.100")
-            {
-                if (Directory.Exists(@"c:\Jiayi\Minecraft-1.16.100.4"))
-                {
-                    label2.Text = "This version of Minecraft has already been installed.";
-                    return;
-                }
-                Downloader.DownloadFile(new Uri("https://github.com/xarson/jiayi/releases/download/1.16.100/Minecraft-1.16.100.4.Appx"),
-                    @"c:\Jiayi\Minecraft-1.16.100.4.zip");
-                Directory.CreateDirectory(@"c:\Jiayi\Minecraft-1.16.100.4");
-                ZipFile.ExtractToDirectory(@"c:\Jiayi\Minecraft-1.16.100.4.zip", @"c:\Jiayi\Minecraft-1.16.100.4");
-            }
-            else if (VersionComboBox.SelectedItem.ToString() == "1.16.200")
-            {
-                if (Directory.Exists(@"c:\Jiayi\Minecraft-1.16.200.2"))
-                {
-                    label2.Text = "This version of Minecraft has already been installed.";
-                    return;
-                }
-                Downloader.DownloadFile(new Uri("https://github.com/xarson/jiayi/releases/download/1.16.200/Minecraft-1.16.200.2.Appx"),
-                    @"c:\Jiayi\Minecraft-1.16.200.2.zip");
-                Directory.CreateDirectory(@"c:\Jiayi\Minecraft-1.16.200.2");
-                ZipFile.ExtractToDirectory(@"c:\Jiayi\Minecraft-1.16.200.2.zip", @"c:\Jiayi\Minecraft-1.16.200.2");
-            }
-            else if (VersionComboBox.SelectedItem.ToString() == "1.16.201")
-            {
-                if (Directory.Exists(@"c:\Jiayi\Minecraft-1.16.201.2"))
-                {
-                    label2.Text = "This version of Minecraft has already been installed.";
-                    return;
-                }
-                Downloader.DownloadFile(new Uri("https://github.com/xarson/jiayi/releases/download/1.16.201/Minecraft-1.16.201.2.Appx"),
-                    @"c:\Jiayi\Minecraft-1.16.201.2.zip");
-                Directory.CreateDirectory(@"c:\Jiayi\Minecraft-1.16.201.2");
-                ZipFile.ExtractToDirectory(@"c:\Jiayi\Minecraft-1.16.201.2.zip", @"c:\Jiayi\Minecraft-1.16.201.2");
-            }
-            
-        }
 
         // all settings functions
 
@@ -600,28 +551,28 @@ namespace JiayiLauncher
                 StatusText.Visible = false;
 
                 if (HomeBtn.Checked == true)
-                {
-                    RPCForBtns("In Launcher");
-                    timer1.Stop();
-                }
+                   {
+                        RPCForBtns("In Launcher");
+                        timer1.Stop();
+                   }
 
                 else if (SettingsBtn.Checked == true)
-                {
-                    RPCForBtns("Configuring Settings");
-                    timer1.Stop();
-                }
+                   {
+                        RPCForBtns("Configuring Settings");
+                        timer1.Stop();
+                   }
 
                 else if (UpdatePanelBtn.Checked == true)
-                {
-                    RPCForBtns("In Launcher");
-                    timer1.Stop();
-                }
+                   {
+                        RPCForBtns("In Launcher");
+                        timer1.Stop();
+                   }
 
                 else if (CosmeticsBtn.Checked == true)
-                {
-                    RPCForBtns("In Cosmetics Menu");
-                    timer1.Stop();
-                }
+                   {
+                        RPCForBtns("In Cosmetics Menu");
+                        timer1.Stop();
+                   }
             }
 
             else
@@ -656,7 +607,10 @@ namespace JiayiLauncher
 
             if (HideLauncher.Checked == true)
             {
-                NotifyIcon.Visible = true;
+                if(NotifyIcon.Visible == false)
+                    NotifyIcon.Visible = true;
+                else
+                    NotifyIcon.Visible = true;
                 this.Hide();
                 MoreSettings();
             }
@@ -697,7 +651,15 @@ namespace JiayiLauncher
 
         public void MoreSettings()
         {
-            RPCInGame("Playing Minecraft");
+            if(RpcIgnBtn.Checked == true)
+            {
+                RPCInGame("IGN:" + xboxName);
+            }
+            
+            else
+            {
+                RPCInGame("");
+            }
             timer1.Start();
 
             //InjectDLL(Directory.GetCurrentDirectory().ToString() + "/JiayiClient.dll");
@@ -995,10 +957,11 @@ namespace JiayiLauncher
             CloseLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
             HideLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
             KeepOpen.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            Version201Bar.FillColor = Properties.Settings.Default.AccentColor;
+            Install201Btn.BorderColor = Properties.Settings.Default.AccentColor;
             StableSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
             ExpirementalSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
             ThemesButton.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            VersionComboBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
             ResolutionComboBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
             ProcessPriorityBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
             LightThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
@@ -1074,6 +1037,64 @@ namespace JiayiLauncher
                 this.BackgroundImage = null;
                 Properties.Settings.Default.BackImagePath = null;
                 Properties.Settings.Default.Save();
+            }
+        }
+
+        // all version changer shit
+
+        string folderpath = @"C:\jiayi\versions";
+        string file201 = @"C:\jiayi\versions\Minecraft.201.appx";
+
+        private void Launch201Btn_Click(object sender, EventArgs e)
+        {
+            if (VersionDisplay.Text == "1.16.20102.0")
+            {
+                
+                Process.Start("minecraft://");
+            }
+            else if (VersionDisplay.Text == "")
+            {
+                if (Directory.Exists(folderpath))
+                {
+                    if (File.Exists(file201))
+                    {
+                        Process.Start(file201);
+                    }
+                    else
+                    {
+                        Status201.Text = "STATUS: Path found, file was not, perhaps try waiting for installation to finish.";
+                    }
+                }
+                else
+                {
+                    Status201.Text = "STATUS: Unable to locate path";
+                }
+            }
+        }
+
+        private void VersionBtn_Click(object sender, EventArgs e)
+        {
+            VersionPanel.Visible = true;
+            VersionPanel.BringToFront();
+        }
+
+        private void guna2Button1_Click_1(object sender, EventArgs e)
+        {
+            RpcSrverBtn.Checked = false;
+            RpcIgnBtn.Checked = true;
+        }
+
+        private void RpcSrverBtn_Click(object sender, EventArgs e)
+        {
+            RpcSrverBtn.Checked = true;
+            RpcIgnBtn.Checked = false;
+        }
+
+        private void Install201Btn_Click(object sender, EventArgs e)
+        {
+            if (VersionDisplay.Text == "1.16.20102.0")
+            {
+                Status201.Text = "STATUS: Version already installed";
             }
         }
     }
