@@ -17,6 +17,10 @@ using System.Xml;
 using System.Drawing;
 using System.Management.Automation;
 using System.IO.Compression;
+using Windows.Management.Deployment;
+using System.Threading.Tasks;
+using Windows.ApplicationModel;
+using Windows.Management.Core;
 
 namespace JiayiLauncher
 {
@@ -87,6 +91,8 @@ namespace JiayiLauncher
             ProcessPriorityBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
             LightThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
             DarkThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            RpcIgnBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            RpcSrverBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
 
             AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
 
@@ -118,6 +124,15 @@ namespace JiayiLauncher
             }
 
             VersionDisplay.BackColor = Color.Transparent;
+
+            // rpc settings
+            if (Properties.Settings.Default.RpcMode == "Server")
+            {
+                RpcSrverBtn.Checked = true;
+            } else
+            {
+                RpcIgnBtn.Checked = true;
+            }
         }
 
         public void XboxInfo()
@@ -966,14 +981,10 @@ namespace JiayiLauncher
             ProcessPriorityBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
             LightThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
             DarkThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            RpcIgnBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            RpcSrverBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
 
             AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
-
-            // bg image settings
-            if (Properties.Settings.Default.BackImagePath != "") // aka if the user has a background image set
-            {
-
-            }
         }
 
         private void BackToSettings_Click(object sender, EventArgs e)
@@ -1040,34 +1051,57 @@ namespace JiayiLauncher
             }
         }
 
-        // all version changer shit
-
-        string folderpath = @"C:\jiayi\versions";
-        string file201 = @"C:\jiayi\versions\Minecraft.201.appx";
-
+        // launch the version selected
         private void Launch201Btn_Click(object sender, EventArgs e)
         {
-            if (VersionDisplay.Text == "1.16.20102.0")
+            PackageManager manager = new PackageManager();
+            if (VersionComboBox.SelectedItem.ToString() == "1.16.40")
             {
-                
-                Process.Start("minecraft://");
-            }
-            else if (VersionDisplay.Text == "")
-            {
-                if (Directory.Exists(folderpath))
+                if (!Directory.Exists(@"c:\Jiayi\Minecraft-1.16.40.2"))
                 {
-                    if (File.Exists(file201))
+                    Status201.Text = "You don't have this version installed.";
+                } else
+                {
+                    if (VersionDisplay.Text.Contains(VersionComboBox.SelectedItem.ToString()))
                     {
-                        Process.Start(file201);
+                        Status201.Text = "You already have this version installed.";
+                        return;
                     }
-                    else
-                    {
-                        Status201.Text = "STATUS: Path found, file was not, perhaps try waiting for installation to finish.";
-                    }
+                    Status201.Text = "Registering selected version...";
+                    manager.RemovePackageAsync("Microsoft.MinecraftUWP_8wekyb3d8bbwe");
+                    manager.RegisterPackageAsync(new Uri(@"C:\Jiayi\Minecraft-1.16.40.2\AppxManifest.xml"), null, DeploymentOptions.DevelopmentMode);
+                    Status201.Text = "Finished! Please launch Minecraft.";
+                }
+            }
+            else if (VersionComboBox.SelectedItem.ToString() == "1.16.100")
+            {
+                if (!Directory.Exists(@"c:\Jiayi\Minecraft-1.16.100.4"))
+                {
+                    Status201.Text = "You don't have this version installed.";
+                } else
+                {
+
+                }
+            }
+            else if (VersionComboBox.SelectedItem.ToString() == "1.16.200")
+            {
+                if (!Directory.Exists(@"c:\Jiayi\Minecraft-1.16.200.2"))
+                {
+                    Status201.Text = "You don't have this version installed.";
+                } else
+                {
+
+                }
+            }
+            else if (VersionComboBox.SelectedItem.ToString() == "1.16.201")
+            {
+                if (!Directory.Exists(@"c:\Jiayi\Minecraft-1.16.201.2"))
+                {
+                    Status201.Text = "You don't have this version installed.";
                 }
                 else
                 {
-                    Status201.Text = "STATUS: Unable to locate path";
+
                 }
             }
         }
@@ -1082,19 +1116,72 @@ namespace JiayiLauncher
         {
             RpcSrverBtn.Checked = false;
             RpcIgnBtn.Checked = true;
+            Properties.Settings.Default.RpcMode = "IGN";
+            Properties.Settings.Default.Save();
         }
 
         private void RpcSrverBtn_Click(object sender, EventArgs e)
         {
             RpcSrverBtn.Checked = true;
             RpcIgnBtn.Checked = false;
+            Properties.Settings.Default.RpcMode = "Server";
+            Properties.Settings.Default.Save();
         }
 
+        // install version selected
         private void Install201Btn_Click(object sender, EventArgs e)
         {
-            if (VersionDisplay.Text == "1.16.20102.0")
+            // arson why did you delete my version downloader code it was perfect for this button :sob:
+            WebClient Downloader = new WebClient();
+            Status201.Text = "Downloading Minecraft " + VersionComboBox.SelectedItem.ToString() + "...";
+
+            if (VersionComboBox.SelectedItem.ToString() == "1.16.40")
             {
-                Status201.Text = "STATUS: Version already installed";
+                if (Directory.Exists(@"c:\Jiayi\Minecraft-1.16.40.2"))
+                {
+                    Status201.Text = "This version of Minecraft has already been installed.";
+                    return;
+                }
+                Downloader.DownloadFile(new Uri("https://github.com/xarson/jiayi/releases/download/1.16.40/Minecraft-1.16.40.2.Appx"),
+                    @"c:\Jiayi\Minecraft-1.16.40.2.zip");
+                Directory.CreateDirectory(@"c:\Jiayi\Minecraft-1.16.40.2");
+                ZipFile.ExtractToDirectory(@"c:\Jiayi\Minecraft-1.16.40.2.zip", @"c:\Jiayi\Minecraft-1.16.40.2");
+            }
+            else if (VersionComboBox.SelectedItem.ToString() == "1.16.100")
+            {
+                if (Directory.Exists(@"c:\Jiayi\Minecraft-1.16.100.4"))
+                {
+                    Status201.Text = "This version of Minecraft has already been installed.";
+                    return;
+                }
+                Downloader.DownloadFile(new Uri("https://github.com/xarson/jiayi/releases/download/1.16.100/Minecraft-1.16.100.4.Appx"),
+                    @"c:\Jiayi\Minecraft-1.16.100.4.zip");
+                Directory.CreateDirectory(@"c:\Jiayi\Minecraft-1.16.100.4");
+                ZipFile.ExtractToDirectory(@"c:\Jiayi\Minecraft-1.16.100.4.zip", @"c:\Jiayi\Minecraft-1.16.100.4");
+            }
+            else if (VersionComboBox.SelectedItem.ToString() == "1.16.200")
+            {
+                if (Directory.Exists(@"c:\Jiayi\Minecraft-1.16.200.2"))
+                {
+                    Status201.Text = "This version of Minecraft has already been installed.";
+                    return;
+                }
+                Downloader.DownloadFile(new Uri("https://github.com/xarson/jiayi/releases/download/1.16.200/Minecraft-1.16.200.2.Appx"),
+                    @"c:\Jiayi\Minecraft-1.16.200.2.zip");
+                Directory.CreateDirectory(@"c:\Jiayi\Minecraft-1.16.200.2");
+                ZipFile.ExtractToDirectory(@"c:\Jiayi\Minecraft-1.16.200.2.zip", @"c:\Jiayi\Minecraft-1.16.200.2");
+            }
+            else if (VersionComboBox.SelectedItem.ToString() == "1.16.201")
+            {
+                if (Directory.Exists(@"c:\Jiayi\Minecraft-1.16.201.2"))
+                {
+                    Status201.Text = "This version of Minecraft has already been installed.";
+                    return;
+                }
+                Downloader.DownloadFile(new Uri("https://github.com/xarson/jiayi/releases/download/1.16.201/Minecraft-1.16.201.2.Appx"),
+                    @"c:\Jiayi\Minecraft-1.16.201.2.zip");
+                Directory.CreateDirectory(@"c:\Jiayi\Minecraft-1.16.201.2");
+                ZipFile.ExtractToDirectory(@"c:\Jiayi\Minecraft-1.16.201.2.zip", @"c:\Jiayi\Minecraft-1.16.201.2");
             }
         }
     }

@@ -106,5 +106,17 @@ namespace JiayiLauncher.Properties {
                 this["BackImagePath"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("Server")]
+        public string RpcMode {
+            get {
+                return ((string)(this["RpcMode"]));
+            }
+            set {
+                this["RpcMode"] = value;
+            }
+        }
     }
 }

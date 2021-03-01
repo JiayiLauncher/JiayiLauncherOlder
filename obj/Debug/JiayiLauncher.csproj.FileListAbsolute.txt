@@ -37,11 +37,8 @@ C:\Users\Owner\source\repos\JiayiLauncher\bin\Debug\DiscordRPC.dll
 C:\Users\Owner\source\repos\JiayiLauncher\bin\Debug\Guna.UI2.dll
 C:\Users\Owner\source\repos\JiayiLauncher\bin\Debug\Newtonsoft.Json.dll
 C:\Users\Owner\source\repos\JiayiLauncher\bin\Debug\System.Management.Automation.dll
-C:\Users\Owner\source\repos\JiayiLauncher\bin\Debug\Microsoft.Management.Infrastructure.dll
 C:\Users\Owner\source\repos\JiayiLauncher\bin\Debug\DiscordRPC.pdb
 C:\Users\Owner\source\repos\JiayiLauncher\bin\Debug\DiscordRPC.xml
-C:\Users\Owner\source\repos\JiayiLauncher\bin\Debug\Newtonsoft.Json.xml
-C:\Users\Owner\source\repos\JiayiLauncher\bin\Debug\System.Management.Automation.xml
 C:\Users\Owner\source\repos\JiayiLauncher\obj\Debug\JiayiLauncher.csprojAssemblyReference.cache
 C:\Users\Owner\source\repos\JiayiLauncher\obj\Debug\JiayiLauncher.Jiayi.resources
 C:\Users\Owner\source\repos\JiayiLauncher\obj\Debug\JiayiLauncher.Properties.Resources.resources
