@@ -52,16 +52,12 @@ C:\Users\Owner\source\repos\JiayiLauncher\obj\Debug\JiayiLauncher.UpdateForm.res
 C:\Jiayi\Launcher\JiayiLauncher\bin\Debug\JiayiLauncher.exe.config
 C:\Jiayi\Launcher\JiayiLauncher\bin\Debug\JiayiLauncher.exe
 C:\Jiayi\Launcher\JiayiLauncher\bin\Debug\JiayiLauncher.pdb
-C:\Jiayi\Launcher\JiayiLauncher\bin\Debug\DiscordRPC.dll
 C:\Jiayi\Launcher\JiayiLauncher\bin\Debug\Guna.UI2.dll
-C:\Jiayi\Launcher\JiayiLauncher\bin\Debug\Newtonsoft.Json.dll
 C:\Jiayi\Launcher\JiayiLauncher\bin\Debug\System.Management.Automation.dll
-C:\Jiayi\Launcher\JiayiLauncher\bin\Debug\Microsoft.Management.Infrastructure.dll
+C:\Jiayi\Launcher\JiayiLauncher\bin\Debug\Newtonsoft.Json.dll
+C:\Jiayi\Launcher\JiayiLauncher\bin\Debug\DiscordRPC.dll
 C:\Jiayi\Launcher\JiayiLauncher\bin\Debug\DiscordRPC.pdb
 C:\Jiayi\Launcher\JiayiLauncher\bin\Debug\DiscordRPC.xml
-C:\Jiayi\Launcher\JiayiLauncher\bin\Debug\Newtonsoft.Json.xml
-C:\Jiayi\Launcher\JiayiLauncher\bin\Debug\System.Management.Automation.xml
-C:\Jiayi\Launcher\JiayiLauncher\obj\Debug\JiayiLauncher.csprojAssemblyReference.cache
 C:\Jiayi\Launcher\JiayiLauncher\obj\Debug\JiayiLauncher.UpdateForm.resources
 C:\Jiayi\Launcher\JiayiLauncher\obj\Debug\JiayiLauncher.Jiayi.resources
 C:\Jiayi\Launcher\JiayiLauncher\obj\Debug\JiayiLauncher.Properties.Resources.resources
@@ -70,3 +66,4 @@ C:\Jiayi\Launcher\JiayiLauncher\obj\Debug\JiayiLauncher.csproj.CoreCompileInputs
 C:\Jiayi\Launcher\JiayiLauncher\obj\Debug\JiayiLauncher.csproj.CopyComplete
 C:\Jiayi\Launcher\JiayiLauncher\obj\Debug\JiayiLauncher.exe
 C:\Jiayi\Launcher\JiayiLauncher\obj\Debug\JiayiLauncher.pdb
+C:\Jiayi\Launcher\JiayiLauncher\obj\Debug\JiayiLauncher.csprojAssemblyReference.cache
