@@ -40,13 +40,12 @@ namespace JiayiLauncher
             this.LogoLabel = new System.Windows.Forms.Label();
             this.TopPanel = new Guna.UI2.WinForms.Guna2Button();
             this.Version = new System.Windows.Forms.Label();
-            this.VersionDisplay = new System.Windows.Forms.Label();
             this.MinimizeBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ExitBtn = new Guna.UI2.WinForms.Guna2Button();
             this.HomePanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.Status = new System.Windows.Forms.Label();
             this.VersionBtn = new Guna.UI2.WinForms.Guna2Button();
             this.StatusText = new System.Windows.Forms.Label();
-            this.Status = new System.Windows.Forms.Label();
             this.LaunchBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ResolutionComboBox = new Guna.UI2.WinForms.Guna2ComboBox();
             this.SettingsDesc3 = new System.Windows.Forms.Label();
@@ -112,6 +111,7 @@ namespace JiayiLauncher
             this.Launch201Btn = new Guna.UI2.WinForms.Guna2Button();
             this.Install201Btn = new Guna.UI2.WinForms.Guna2Button();
             this.Version201Bar = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.VersionDisplay = new System.Windows.Forms.Label();
             this.BtnPanel.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xboxIcon)).BeginInit();
@@ -131,7 +131,7 @@ namespace JiayiLauncher
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.AnimateWindow = true;
-            this.guna2BorderlessForm1.BorderRadius = 40;
+            this.guna2BorderlessForm1.BorderRadius = 20;
             this.guna2BorderlessForm1.ContainerControl = this;
             this.guna2BorderlessForm1.DragForm = false;
             // 
@@ -351,17 +351,6 @@ namespace JiayiLauncher
             this.Version.Text = "Version:";
             this.Version.Click += new System.EventHandler(this.Version_Click);
             // 
-            // VersionDisplay
-            // 
-            this.VersionDisplay.AutoSize = true;
-            this.VersionDisplay.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VersionDisplay.ForeColor = System.Drawing.Color.White;
-            this.VersionDisplay.Location = new System.Drawing.Point(223, 521);
-            this.VersionDisplay.Name = "VersionDisplay";
-            this.VersionDisplay.Size = new System.Drawing.Size(91, 15);
-            this.VersionDisplay.TabIndex = 3;
-            this.VersionDisplay.Text = "1.16.20102.0";
-            // 
             // MinimizeBtn
             // 
             this.MinimizeBtn.BackColor = System.Drawing.Color.Transparent;
@@ -423,6 +412,18 @@ namespace JiayiLauncher
             this.HomePanel.Size = new System.Drawing.Size(705, 413);
             this.HomePanel.TabIndex = 7;
             // 
+            // Status
+            // 
+            this.Status.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Status.ForeColor = System.Drawing.Color.White;
+            this.Status.Location = new System.Drawing.Point(320, 252);
+            this.Status.Name = "Status";
+            this.Status.Size = new System.Drawing.Size(86, 33);
+            this.Status.TabIndex = 9;
+            this.Status.Text = "Status:";
+            this.Status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.Status.Visible = false;
+            // 
             // VersionBtn
             // 
             this.VersionBtn.BackColor = System.Drawing.Color.Black;
@@ -454,18 +455,6 @@ namespace JiayiLauncher
             this.StatusText.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.StatusText.Visible = false;
             this.StatusText.Click += new System.EventHandler(this.StatusText_Click);
-            // 
-            // Status
-            // 
-            this.Status.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Status.ForeColor = System.Drawing.Color.White;
-            this.Status.Location = new System.Drawing.Point(320, 252);
-            this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(86, 33);
-            this.Status.TabIndex = 9;
-            this.Status.Text = "Status:";
-            this.Status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Status.Visible = false;
             // 
             // LaunchBtn
             // 
@@ -1474,6 +1463,17 @@ namespace JiayiLauncher
             this.Version201Bar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
             this.Version201Bar.Visible = false;
             // 
+            // VersionDisplay
+            // 
+            this.VersionDisplay.AutoSize = true;
+            this.VersionDisplay.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VersionDisplay.ForeColor = System.Drawing.Color.White;
+            this.VersionDisplay.Location = new System.Drawing.Point(223, 521);
+            this.VersionDisplay.Name = "VersionDisplay";
+            this.VersionDisplay.Size = new System.Drawing.Size(91, 15);
+            this.VersionDisplay.TabIndex = 3;
+            this.VersionDisplay.Text = "1.16.20102.0";
+            // 
             // Jiayi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1527,7 +1527,6 @@ namespace JiayiLauncher
         private Guna.UI2.WinForms.Guna2Button SettingsBtn;
         private Guna.UI2.WinForms.Guna2Button HomeBtn;
         private Guna.UI2.WinForms.Guna2Button TopPanel;
-        private System.Windows.Forms.Label VersionDisplay;
         private System.Windows.Forms.Label Version;
         private Guna.UI2.WinForms.Guna2Button MinimizeBtn;
         private Guna.UI2.WinForms.Guna2Button ExitBtn;
@@ -1604,6 +1603,7 @@ namespace JiayiLauncher
         private Guna.UI2.WinForms.Guna2ProgressBar ProgressBar100;
         private System.Windows.Forms.Label label6;
         private Guna.UI2.WinForms.Guna2Button GoBackBtn;
+        private System.Windows.Forms.Label VersionDisplay;
     }
 }
 
