@@ -496,7 +496,7 @@ namespace JiayiLauncher
         private void MinimizeBtn_MouseHover(object sender, EventArgs e)
         {
             MinimizeBtn.Checked = true;
-            MinimizeBtn.Location = new Point(792, 7);
+            MinimizeBtn.Location = new Point(828, 7);
         }
 
         private void ExitBtn_MouseHover(object sender, EventArgs e)
@@ -519,7 +519,7 @@ namespace JiayiLauncher
         private void MinimizeBtn_MouseLeave(object sender, EventArgs e)
         {
             MinimizeBtn.Checked = false;
-            MinimizeBtn.Location = new Point(792, 12);
+            MinimizeBtn.Location = new Point(828, 12);
         }
 
         private void MinimizeBtn_Click(object sender, EventArgs e)
