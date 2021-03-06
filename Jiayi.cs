@@ -42,11 +42,24 @@ namespace JiayiLauncher
             versionFinderForLabel("Get-AppPackage -name Microsoft.MinecraftUWP | select -expandproperty Version", VersionDisplay);
             Directory.CreateDirectory(@"c:\Jiayi");
             XboxInfo();
+
+            
         }
 
         private void Jiayi_Load(object sender, EventArgs e)
         {
             NewsfeedLoader(); // gets data for newsfeed
+
+            // checks beta list
+            Properties.Settings.Default.DiscordId = client.CurrentUser.ID;
+            Properties.Settings.Default.Save();
+            WebClient betaidclient = new WebClient();
+            string betaids = betaidclient.DownloadString("https://raw.githubusercontent.com/xarson/jiayi/master/betaids.txt");
+            if (!betaids.Contains(Properties.Settings.Default.DiscordId.ToString()))
+            {
+                MessageBox.Show("You do not have access to the Jiayi beta.", "Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Close();
+            }
 
             // launch settings
             if (Properties.Settings.Default.AfterLaunch == "Hide")
@@ -96,7 +109,6 @@ namespace JiayiLauncher
             ProcessPriorityBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
             LightThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
             DarkThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            xboxGamertag.ForeColor = Properties.Settings.Default.AccentColor;
             RpcIgnBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
             RpcSrverBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
 
@@ -392,8 +404,8 @@ namespace JiayiLauncher
 
             catch (ArgumentException)
             {
-                string message = "Is Minecraft Bedrock Installed?";
-                string caption = "Error Detected While Finding Version Info";
+                string message = "Error";
+                string caption = "We couldn't detect your Minecraft version. Make sure you have Minecraft installed.";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
                 MessageBox.Show(message, caption, buttons);
             }
@@ -706,8 +718,8 @@ namespace JiayiLauncher
                 }
                 catch (ArgumentException)
                 {
-                    string message = "Trouble Finding Username";
-                    string caption = "Error Detected While Finding User, Try Installing Xbox Companion App";
+                    string message = "Error";
+                    string caption = "We couldn't get your Gamertag. Try installing the Xbox Console Companion app.";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
                     MessageBox.Show(message, caption, buttons);
                 }
@@ -951,7 +963,6 @@ namespace JiayiLauncher
             colorDialog1.ShowDialog();
             Properties.Settings.Default.AccentColor = colorDialog1.Color;
             Properties.Settings.Default.Save();
-            xboxGamertag.ForeColor = Properties.Settings.Default.AccentColor;
             TopPanel.HoverState.CustomBorderColor = Properties.Settings.Default.AccentColor;
             TopPanel.CustomBorderColor = Properties.Settings.Default.AccentColor;
             HomeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
@@ -1199,7 +1210,17 @@ namespace JiayiLauncher
 
         private void VersionPanel_Paint(object sender, PaintEventArgs e)
         {
-            throw new System.NotImplementedException();
+            
+        }
+
+        private void Status201_Click(object sender, EventArgs e)
+        {
+            // fook
+        }
+
+        private void Install40Btn_Click_1(object sender, EventArgs e)
+        {
+
         }
     }
 }

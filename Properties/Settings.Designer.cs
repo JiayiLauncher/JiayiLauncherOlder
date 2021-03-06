@@ -61,7 +61,7 @@ namespace JiayiLauncher.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("Stable")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Experimental")]
         public string Branch {
             get {
                 return ((string)(this["Branch"]));
@@ -116,6 +116,18 @@ namespace JiayiLauncher.Properties {
             }
             set {
                 this["RpcMode"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("0")]
+        public ulong DiscordId {
+            get {
+                return ((ulong)(this["DiscordId"]));
+            }
+            set {
+                this["DiscordId"] = value;
             }
         }
     }
