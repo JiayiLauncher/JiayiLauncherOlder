@@ -1196,5 +1196,10 @@ namespace JiayiLauncher
                 Status100.Text = "STATUS: Version Installer Could Not Be Found!";
             }
         }
+
+        private void VersionPanel_Paint(object sender, PaintEventArgs e)
+        {
+            throw new System.NotImplementedException();
+        }
     }
 }

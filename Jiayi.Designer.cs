@@ -114,15 +114,15 @@ namespace JiayiLauncher
             this.VersionDisplay = new System.Windows.Forms.Label();
             this.BtnPanel.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.xboxIcon)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.xboxIcon)).BeginInit();
             this.HomePanel.SuspendLayout();
             this.UpdatePanel.SuspendLayout();
             this.NewsPanel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FeedPic3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.FeedPic3)).BeginInit();
             this.NewsPanel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FeedPic2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.FeedPic2)).BeginInit();
             this.NewsPanel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.FeedPic1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize) (this.FeedPic1)).BeginInit();
             this.SettingsPanel.SuspendLayout();
             this.ThemesPanel.SuspendLayout();
             this.VersionPanel.SuspendLayout();
@@ -137,7 +137,7 @@ namespace JiayiLauncher
             // 
             // BtnPanel
             // 
-            this.BtnPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
+            this.BtnPanel.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (24)))), ((int) (((byte) (26)))));
             this.BtnPanel.Controls.Add(this.guna2Panel1);
             this.BtnPanel.Controls.Add(this.CosmeticsBtn);
             this.BtnPanel.Controls.Add(this.UpdatePanelBtn);
@@ -172,7 +172,7 @@ namespace JiayiLauncher
             // 
             // xboxGamertag
             // 
-            this.xboxGamertag.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xboxGamertag.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.xboxGamertag.ForeColor = System.Drawing.Color.White;
             this.xboxGamertag.Location = new System.Drawing.Point(46, 11);
             this.xboxGamertag.Name = "xboxGamertag";
@@ -185,21 +185,21 @@ namespace JiayiLauncher
             // CosmeticsBtn
             // 
             this.CosmeticsBtn.Animated = true;
-            this.CosmeticsBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
+            this.CosmeticsBtn.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (24)))), ((int) (((byte) (26)))));
             this.CosmeticsBtn.BorderThickness = 5;
-            this.CosmeticsBtn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(35)))), ((int)(((byte)(32)))));
+            this.CosmeticsBtn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (34)))), ((int) (((byte) (35)))), ((int) (((byte) (32)))));
             this.CosmeticsBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.CosmeticsBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.CosmeticsBtn.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("CosmeticsBtn.CheckedState.Image")));
+            this.CosmeticsBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (23)))), ((int) (((byte) (23)))));
+            this.CosmeticsBtn.CheckedState.Image = ((System.Drawing.Image) (resources.GetObject("CosmeticsBtn.CheckedState.Image")));
             this.CosmeticsBtn.CheckedState.Parent = this.CosmeticsBtn;
-            this.CosmeticsBtn.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
+            this.CosmeticsBtn.CustomBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (24)))), ((int) (((byte) (26)))));
             this.CosmeticsBtn.CustomBorderThickness = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.CosmeticsBtn.CustomImages.Parent = this.CosmeticsBtn;
-            this.CosmeticsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
-            this.CosmeticsBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CosmeticsBtn.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (24)))), ((int) (((byte) (26)))));
+            this.CosmeticsBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.CosmeticsBtn.ForeColor = System.Drawing.Color.White;
             this.CosmeticsBtn.HoverState.Parent = this.CosmeticsBtn;
-            this.CosmeticsBtn.Image = ((System.Drawing.Image)(resources.GetObject("CosmeticsBtn.Image")));
+            this.CosmeticsBtn.Image = ((System.Drawing.Image) (resources.GetObject("CosmeticsBtn.Image")));
             this.CosmeticsBtn.ImageOffset = new System.Drawing.Point(3, 0);
             this.CosmeticsBtn.ImageSize = new System.Drawing.Size(26, 26);
             this.CosmeticsBtn.Location = new System.Drawing.Point(0, 334);
@@ -215,21 +215,21 @@ namespace JiayiLauncher
             // UpdatePanelBtn
             // 
             this.UpdatePanelBtn.Animated = true;
-            this.UpdatePanelBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
+            this.UpdatePanelBtn.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (24)))), ((int) (((byte) (26)))));
             this.UpdatePanelBtn.BorderThickness = 5;
-            this.UpdatePanelBtn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(35)))), ((int)(((byte)(32)))));
+            this.UpdatePanelBtn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (34)))), ((int) (((byte) (35)))), ((int) (((byte) (32)))));
             this.UpdatePanelBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.UpdatePanelBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.UpdatePanelBtn.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("UpdatePanelBtn.CheckedState.Image")));
+            this.UpdatePanelBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (23)))), ((int) (((byte) (23)))));
+            this.UpdatePanelBtn.CheckedState.Image = ((System.Drawing.Image) (resources.GetObject("UpdatePanelBtn.CheckedState.Image")));
             this.UpdatePanelBtn.CheckedState.Parent = this.UpdatePanelBtn;
-            this.UpdatePanelBtn.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
+            this.UpdatePanelBtn.CustomBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (24)))), ((int) (((byte) (26)))));
             this.UpdatePanelBtn.CustomBorderThickness = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.UpdatePanelBtn.CustomImages.Parent = this.UpdatePanelBtn;
-            this.UpdatePanelBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
-            this.UpdatePanelBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UpdatePanelBtn.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (24)))), ((int) (((byte) (26)))));
+            this.UpdatePanelBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.UpdatePanelBtn.ForeColor = System.Drawing.Color.White;
             this.UpdatePanelBtn.HoverState.Parent = this.UpdatePanelBtn;
-            this.UpdatePanelBtn.Image = ((System.Drawing.Image)(resources.GetObject("UpdatePanelBtn.Image")));
+            this.UpdatePanelBtn.Image = ((System.Drawing.Image) (resources.GetObject("UpdatePanelBtn.Image")));
             this.UpdatePanelBtn.ImageOffset = new System.Drawing.Point(-2, 0);
             this.UpdatePanelBtn.ImageSize = new System.Drawing.Size(26, 26);
             this.UpdatePanelBtn.Location = new System.Drawing.Point(0, 272);
@@ -245,21 +245,21 @@ namespace JiayiLauncher
             // SettingsBtn
             // 
             this.SettingsBtn.Animated = true;
-            this.SettingsBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
+            this.SettingsBtn.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (24)))), ((int) (((byte) (26)))));
             this.SettingsBtn.BorderThickness = 5;
-            this.SettingsBtn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(35)))), ((int)(((byte)(32)))));
+            this.SettingsBtn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (34)))), ((int) (((byte) (35)))), ((int) (((byte) (32)))));
             this.SettingsBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.SettingsBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.SettingsBtn.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("SettingsBtn.CheckedState.Image")));
+            this.SettingsBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (23)))), ((int) (((byte) (23)))));
+            this.SettingsBtn.CheckedState.Image = ((System.Drawing.Image) (resources.GetObject("SettingsBtn.CheckedState.Image")));
             this.SettingsBtn.CheckedState.Parent = this.SettingsBtn;
-            this.SettingsBtn.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
+            this.SettingsBtn.CustomBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (24)))), ((int) (((byte) (26)))));
             this.SettingsBtn.CustomBorderThickness = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.SettingsBtn.CustomImages.Parent = this.SettingsBtn;
-            this.SettingsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
-            this.SettingsBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsBtn.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (24)))), ((int) (((byte) (26)))));
+            this.SettingsBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.SettingsBtn.ForeColor = System.Drawing.Color.White;
             this.SettingsBtn.HoverState.Parent = this.SettingsBtn;
-            this.SettingsBtn.Image = ((System.Drawing.Image)(resources.GetObject("SettingsBtn.Image")));
+            this.SettingsBtn.Image = ((System.Drawing.Image) (resources.GetObject("SettingsBtn.Image")));
             this.SettingsBtn.ImageOffset = new System.Drawing.Point(-1, 0);
             this.SettingsBtn.ImageSize = new System.Drawing.Size(26, 26);
             this.SettingsBtn.Location = new System.Drawing.Point(0, 210);
@@ -275,22 +275,22 @@ namespace JiayiLauncher
             // HomeBtn
             // 
             this.HomeBtn.Animated = true;
-            this.HomeBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
+            this.HomeBtn.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (24)))), ((int) (((byte) (26)))));
             this.HomeBtn.BorderThickness = 5;
             this.HomeBtn.Checked = true;
-            this.HomeBtn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(35)))), ((int)(((byte)(32)))));
+            this.HomeBtn.CheckedState.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (34)))), ((int) (((byte) (35)))), ((int) (((byte) (32)))));
             this.HomeBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.HomeBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(23)))), ((int)(((byte)(23)))));
-            this.HomeBtn.CheckedState.Image = ((System.Drawing.Image)(resources.GetObject("HomeBtn.CheckedState.Image")));
+            this.HomeBtn.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (23)))), ((int) (((byte) (23)))));
+            this.HomeBtn.CheckedState.Image = ((System.Drawing.Image) (resources.GetObject("HomeBtn.CheckedState.Image")));
             this.HomeBtn.CheckedState.Parent = this.HomeBtn;
-            this.HomeBtn.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
+            this.HomeBtn.CustomBorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (24)))), ((int) (((byte) (26)))));
             this.HomeBtn.CustomBorderThickness = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.HomeBtn.CustomImages.Parent = this.HomeBtn;
-            this.HomeBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
-            this.HomeBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HomeBtn.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (25)))), ((int) (((byte) (24)))), ((int) (((byte) (26)))));
+            this.HomeBtn.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.HomeBtn.ForeColor = System.Drawing.Color.White;
             this.HomeBtn.HoverState.Parent = this.HomeBtn;
-            this.HomeBtn.Image = ((System.Drawing.Image)(resources.GetObject("HomeBtn.Image")));
+            this.HomeBtn.Image = ((System.Drawing.Image) (resources.GetObject("HomeBtn.Image")));
             this.HomeBtn.ImageOffset = new System.Drawing.Point(-5, -2);
             this.HomeBtn.ImageSize = new System.Drawing.Size(26, 26);
             this.HomeBtn.Location = new System.Drawing.Point(0, 148);
@@ -305,7 +305,7 @@ namespace JiayiLauncher
             // 
             // LogoLabel
             // 
-            this.LogoLabel.Font = new System.Drawing.Font("Raleway SemiBold", 57F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LogoLabel.Font = new System.Drawing.Font("Raleway SemiBold", 57F, ((System.Drawing.FontStyle) ((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.LogoLabel.ForeColor = System.Drawing.Color.White;
             this.LogoLabel.Location = new System.Drawing.Point(16, 13);
             this.LogoLabel.Name = "LogoLabel";
@@ -318,13 +318,13 @@ namespace JiayiLauncher
             // TopPanel
             // 
             this.TopPanel.BackColor = System.Drawing.Color.Transparent;
-            this.TopPanel.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.TopPanel.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (15)))), ((int) (((byte) (15)))), ((int) (((byte) (15)))));
             this.TopPanel.CheckedState.Parent = this.TopPanel;
             this.TopPanel.CustomBorderColor = System.Drawing.Color.Red;
             this.TopPanel.CustomBorderThickness = new System.Windows.Forms.Padding(9, 0, 0, 0);
             this.TopPanel.CustomImages.Parent = this.TopPanel;
             this.TopPanel.FillColor = System.Drawing.Color.Transparent;
-            this.TopPanel.Font = new System.Drawing.Font("Raleway Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TopPanel.Font = new System.Drawing.Font("Raleway Black", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.TopPanel.ForeColor = System.Drawing.Color.White;
             this.TopPanel.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.TopPanel.HoverState.Parent = this.TopPanel;
@@ -342,7 +342,7 @@ namespace JiayiLauncher
             // 
             this.Version.AutoSize = true;
             this.Version.BackColor = System.Drawing.Color.Transparent;
-            this.Version.Font = new System.Drawing.Font("Raleway Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Version.Font = new System.Drawing.Font("Raleway Medium", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.Version.ForeColor = System.Drawing.Color.White;
             this.Version.Location = new System.Drawing.Point(180, 545);
             this.Version.Name = "Version";
@@ -354,11 +354,11 @@ namespace JiayiLauncher
             // MinimizeBtn
             // 
             this.MinimizeBtn.BackColor = System.Drawing.Color.Transparent;
-            this.MinimizeBtn.CheckedState.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MinimizeBtn.CheckedState.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.MinimizeBtn.CheckedState.Parent = this.MinimizeBtn;
             this.MinimizeBtn.CustomImages.Parent = this.MinimizeBtn;
             this.MinimizeBtn.FillColor = System.Drawing.Color.Transparent;
-            this.MinimizeBtn.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MinimizeBtn.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.MinimizeBtn.ForeColor = System.Drawing.Color.White;
             this.MinimizeBtn.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.MinimizeBtn.HoverState.Parent = this.MinimizeBtn;
@@ -379,11 +379,11 @@ namespace JiayiLauncher
             // 
             this.ExitBtn.BackColor = System.Drawing.Color.Transparent;
             this.ExitBtn.CheckedState.FillColor = System.Drawing.Color.Transparent;
-            this.ExitBtn.CheckedState.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.CheckedState.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.ExitBtn.CheckedState.Parent = this.ExitBtn;
             this.ExitBtn.CustomImages.Parent = this.ExitBtn;
             this.ExitBtn.FillColor = System.Drawing.Color.Transparent;
-            this.ExitBtn.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.ExitBtn.ForeColor = System.Drawing.Color.White;
             this.ExitBtn.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.ExitBtn.HoverState.Parent = this.ExitBtn;
@@ -414,7 +414,7 @@ namespace JiayiLauncher
             // 
             // Status
             // 
-            this.Status.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Status.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.Status.ForeColor = System.Drawing.Color.White;
             this.Status.Location = new System.Drawing.Point(343, 248);
             this.Status.Name = "Status";
@@ -427,13 +427,13 @@ namespace JiayiLauncher
             // VersionBtn
             // 
             this.VersionBtn.BackColor = System.Drawing.Color.Black;
-            this.VersionBtn.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(30)))), ((int)(((byte)(125)))), ((int)(((byte)(65)))));
+            this.VersionBtn.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (30)))), ((int) (((byte) (125)))), ((int) (((byte) (65)))));
             this.VersionBtn.BorderRadius = 10;
             this.VersionBtn.BorderThickness = 4;
             this.VersionBtn.CheckedState.Parent = this.VersionBtn;
             this.VersionBtn.CustomImages.Parent = this.VersionBtn;
-            this.VersionBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(155)))), ((int)(((byte)(79)))));
-            this.VersionBtn.Font = new System.Drawing.Font("Raleway", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VersionBtn.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (41)))), ((int) (((byte) (155)))), ((int) (((byte) (79)))));
+            this.VersionBtn.Font = new System.Drawing.Font("Raleway", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.VersionBtn.ForeColor = System.Drawing.Color.White;
             this.VersionBtn.HoverState.Parent = this.VersionBtn;
             this.VersionBtn.Location = new System.Drawing.Point(285, 166);
@@ -446,7 +446,7 @@ namespace JiayiLauncher
             // 
             // StatusText
             // 
-            this.StatusText.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatusText.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.StatusText.ForeColor = System.Drawing.Color.White;
             this.StatusText.Location = new System.Drawing.Point(415, 248);
             this.StatusText.Name = "StatusText";
@@ -463,10 +463,10 @@ namespace JiayiLauncher
             this.LaunchBtn.BorderRadius = 14;
             this.LaunchBtn.CheckedState.Parent = this.LaunchBtn;
             this.LaunchBtn.CustomImages.Parent = this.LaunchBtn;
-            this.LaunchBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(155)))), ((int)(((byte)(79)))));
-            this.LaunchBtn.Font = new System.Drawing.Font("Raleway", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LaunchBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
-            this.LaunchBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(125)))), ((int)(((byte)(57)))));
+            this.LaunchBtn.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (41)))), ((int) (((byte) (155)))), ((int) (((byte) (79)))));
+            this.LaunchBtn.Font = new System.Drawing.Font("Raleway", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.LaunchBtn.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (247)))), ((int) (((byte) (247)))), ((int) (((byte) (247)))));
+            this.LaunchBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (125)))), ((int) (((byte) (57)))));
             this.LaunchBtn.HoverState.Parent = this.LaunchBtn;
             this.LaunchBtn.IndicateFocus = true;
             this.LaunchBtn.Location = new System.Drawing.Point(378, 166);
@@ -487,9 +487,9 @@ namespace JiayiLauncher
             this.ResolutionComboBox.BorderRadius = 15;
             this.ResolutionComboBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.ResolutionComboBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ResolutionComboBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.ResolutionComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ResolutionComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ResolutionComboBox.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.ResolutionComboBox.FocusedColor = System.Drawing.Color.FromArgb(((int) (((byte) (192)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
+            this.ResolutionComboBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (192)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
             this.ResolutionComboBox.FocusedState.FillColor = System.Drawing.Color.DimGray;
             this.ResolutionComboBox.FocusedState.ForeColor = System.Drawing.Color.White;
             this.ResolutionComboBox.FocusedState.Parent = this.ResolutionComboBox;
@@ -497,10 +497,7 @@ namespace JiayiLauncher
             this.ResolutionComboBox.ForeColor = System.Drawing.Color.White;
             this.ResolutionComboBox.HoverState.Parent = this.ResolutionComboBox;
             this.ResolutionComboBox.ItemHeight = 30;
-            this.ResolutionComboBox.Items.AddRange(new object[] {
-            "1920x1080",
-            "1600x900",
-            "1280x720"});
+            this.ResolutionComboBox.Items.AddRange(new object[] {"1920x1080", "1600x900", "1280x720"});
             this.ResolutionComboBox.ItemsAppearance.Parent = this.ResolutionComboBox;
             this.ResolutionComboBox.Location = new System.Drawing.Point(494, 322);
             this.ResolutionComboBox.Name = "ResolutionComboBox";
@@ -511,7 +508,7 @@ namespace JiayiLauncher
             // 
             // SettingsDesc3
             // 
-            this.SettingsDesc3.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsDesc3.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.SettingsDesc3.ForeColor = System.Drawing.Color.White;
             this.SettingsDesc3.Location = new System.Drawing.Point(466, 255);
             this.SettingsDesc3.Name = "SettingsDesc3";
@@ -522,7 +519,7 @@ namespace JiayiLauncher
             // 
             // SettingsTag3
             // 
-            this.SettingsTag3.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsTag3.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.SettingsTag3.ForeColor = System.Drawing.Color.White;
             this.SettingsTag3.Location = new System.Drawing.Point(502, 215);
             this.SettingsTag3.Name = "SettingsTag3";
@@ -547,7 +544,7 @@ namespace JiayiLauncher
             // 
             // NewsPanel3
             // 
-            this.NewsPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.NewsPanel3.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
             this.NewsPanel3.Controls.Add(this.FeedData3);
             this.NewsPanel3.Controls.Add(this.FeedPic3);
             this.NewsPanel3.Location = new System.Drawing.Point(491, 44);
@@ -558,7 +555,7 @@ namespace JiayiLauncher
             // 
             // FeedData3
             // 
-            this.FeedData3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.FeedData3.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
             this.FeedData3.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.FeedData3.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
             this.FeedData3.ForeColor = System.Drawing.Color.White;
@@ -572,7 +569,7 @@ namespace JiayiLauncher
             // 
             // FeedPic3
             // 
-            this.FeedPic3.ErrorImage = ((System.Drawing.Image)(resources.GetObject("FeedPic3.ErrorImage")));
+            this.FeedPic3.ErrorImage = ((System.Drawing.Image) (resources.GetObject("FeedPic3.ErrorImage")));
             this.FeedPic3.Location = new System.Drawing.Point(0, 0);
             this.FeedPic3.Name = "FeedPic3";
             this.FeedPic3.ShadowDecoration.Parent = this.FeedPic3;
@@ -582,7 +579,7 @@ namespace JiayiLauncher
             // 
             // NewsPanel2
             // 
-            this.NewsPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.NewsPanel2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
             this.NewsPanel2.Controls.Add(this.FeedData2);
             this.NewsPanel2.Controls.Add(this.FeedPic2);
             this.NewsPanel2.Location = new System.Drawing.Point(272, 45);
@@ -593,7 +590,7 @@ namespace JiayiLauncher
             // 
             // FeedData2
             // 
-            this.FeedData2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.FeedData2.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
             this.FeedData2.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.FeedData2.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
             this.FeedData2.ForeColor = System.Drawing.Color.White;
@@ -607,7 +604,7 @@ namespace JiayiLauncher
             // 
             // FeedPic2
             // 
-            this.FeedPic2.ErrorImage = ((System.Drawing.Image)(resources.GetObject("FeedPic2.ErrorImage")));
+            this.FeedPic2.ErrorImage = ((System.Drawing.Image) (resources.GetObject("FeedPic2.ErrorImage")));
             this.FeedPic2.Location = new System.Drawing.Point(0, 0);
             this.FeedPic2.Name = "FeedPic2";
             this.FeedPic2.ShadowDecoration.Parent = this.FeedPic2;
@@ -617,7 +614,7 @@ namespace JiayiLauncher
             // 
             // NewsPanel1
             // 
-            this.NewsPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.NewsPanel1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
             this.NewsPanel1.Controls.Add(this.FeedPic1);
             this.NewsPanel1.Controls.Add(this.FeedData1);
             this.NewsPanel1.Location = new System.Drawing.Point(45, 45);
@@ -628,7 +625,7 @@ namespace JiayiLauncher
             // 
             // FeedPic1
             // 
-            this.FeedPic1.ErrorImage = ((System.Drawing.Image)(resources.GetObject("FeedPic1.ErrorImage")));
+            this.FeedPic1.ErrorImage = ((System.Drawing.Image) (resources.GetObject("FeedPic1.ErrorImage")));
             this.FeedPic1.Location = new System.Drawing.Point(0, 0);
             this.FeedPic1.Name = "FeedPic1";
             this.FeedPic1.ShadowDecoration.Parent = this.FeedPic1;
@@ -638,7 +635,7 @@ namespace JiayiLauncher
             // 
             // FeedData1
             // 
-            this.FeedData1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.FeedData1.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
             this.FeedData1.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.FeedData1.Font = new System.Drawing.Font("Segoe UI Semilight", 9.75F);
             this.FeedData1.ForeColor = System.Drawing.Color.White;
@@ -658,11 +655,11 @@ namespace JiayiLauncher
             this.UpdateBtn.CheckedState.Parent = this.UpdateBtn;
             this.UpdateBtn.CustomImages.Parent = this.UpdateBtn;
             this.UpdateBtn.FillColor = System.Drawing.Color.DarkMagenta;
-            this.UpdateBtn.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.UpdateBtn.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.UpdateBtn.Font = new System.Drawing.Font("Arial", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
+            this.UpdateBtn.ForeColor = System.Drawing.Color.FromArgb(((int) (((byte) (247)))), ((int) (((byte) (247)))), ((int) (((byte) (247)))));
             this.UpdateBtn.HoverState.FillColor = System.Drawing.Color.Purple;
             this.UpdateBtn.HoverState.Parent = this.UpdateBtn;
-            this.UpdateBtn.Image = ((System.Drawing.Image)(resources.GetObject("UpdateBtn.Image")));
+            this.UpdateBtn.Image = ((System.Drawing.Image) (resources.GetObject("UpdateBtn.Image")));
             this.UpdateBtn.ImageSize = new System.Drawing.Size(32, 32);
             this.UpdateBtn.IndicateFocus = true;
             this.UpdateBtn.Location = new System.Drawing.Point(203, 321);
@@ -714,8 +711,8 @@ namespace JiayiLauncher
             this.RpcSrverBtn.CheckedState.Parent = this.RpcSrverBtn;
             this.RpcSrverBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.RpcSrverBtn.CustomImages.Parent = this.RpcSrverBtn;
-            this.RpcSrverBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.RpcSrverBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RpcSrverBtn.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.RpcSrverBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.RpcSrverBtn.ForeColor = System.Drawing.Color.White;
             this.RpcSrverBtn.HoverState.Parent = this.RpcSrverBtn;
             this.RpcSrverBtn.Location = new System.Drawing.Point(360, 352);
@@ -733,8 +730,8 @@ namespace JiayiLauncher
             this.RpcIgnBtn.CheckedState.Parent = this.RpcIgnBtn;
             this.RpcIgnBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.RpcIgnBtn.CustomImages.Parent = this.RpcIgnBtn;
-            this.RpcIgnBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.RpcIgnBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RpcIgnBtn.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.RpcIgnBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.RpcIgnBtn.ForeColor = System.Drawing.Color.White;
             this.RpcIgnBtn.HoverState.Parent = this.RpcIgnBtn;
             this.RpcIgnBtn.Location = new System.Drawing.Point(249, 352);
@@ -753,8 +750,8 @@ namespace JiayiLauncher
             this.ExpirementalSettingBtn.CheckedState.Parent = this.ExpirementalSettingBtn;
             this.ExpirementalSettingBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.ExpirementalSettingBtn.CustomImages.Parent = this.ExpirementalSettingBtn;
-            this.ExpirementalSettingBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.ExpirementalSettingBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExpirementalSettingBtn.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.ExpirementalSettingBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.ExpirementalSettingBtn.ForeColor = System.Drawing.Color.White;
             this.ExpirementalSettingBtn.HoverState.Parent = this.ExpirementalSettingBtn;
             this.ExpirementalSettingBtn.Location = new System.Drawing.Point(265, 209);
@@ -767,7 +764,7 @@ namespace JiayiLauncher
             // 
             // label1
             // 
-            this.label1.Font = new System.Drawing.Font("Raleway Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Raleway Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label1.ForeColor = System.Drawing.Color.White;
             this.label1.Location = new System.Drawing.Point(264, 261);
             this.label1.Name = "label1";
@@ -779,7 +776,7 @@ namespace JiayiLauncher
             // 
             // label2
             // 
-            this.label2.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label2.ForeColor = System.Drawing.Color.White;
             this.label2.Location = new System.Drawing.Point(255, 298);
             this.label2.Name = "label2";
@@ -796,8 +793,8 @@ namespace JiayiLauncher
             this.ThemesButton.CheckedState.Parent = this.ThemesButton;
             this.ThemesButton.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.ThemesButton.CustomImages.Parent = this.ThemesButton;
-            this.ThemesButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.ThemesButton.Font = new System.Drawing.Font("Raleway Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThemesButton.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.ThemesButton.Font = new System.Drawing.Font("Raleway Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.ThemesButton.ForeColor = System.Drawing.Color.White;
             this.ThemesButton.HoverState.Parent = this.ThemesButton;
             this.ThemesButton.Location = new System.Drawing.Point(29, 362);
@@ -810,7 +807,7 @@ namespace JiayiLauncher
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Raleway Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Font = new System.Drawing.Font("Raleway Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label3.ForeColor = System.Drawing.Color.White;
             this.label3.Location = new System.Drawing.Point(28, 319);
             this.label3.Name = "label3";
@@ -827,8 +824,8 @@ namespace JiayiLauncher
             this.StableSettingBtn.CheckedState.Parent = this.StableSettingBtn;
             this.StableSettingBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.StableSettingBtn.CustomImages.Parent = this.StableSettingBtn;
-            this.StableSettingBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.StableSettingBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StableSettingBtn.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.StableSettingBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.StableSettingBtn.ForeColor = System.Drawing.Color.White;
             this.StableSettingBtn.HoverState.Parent = this.StableSettingBtn;
             this.StableSettingBtn.Location = new System.Drawing.Point(265, 152);
@@ -841,20 +838,19 @@ namespace JiayiLauncher
             // 
             // SettingsDesc4
             // 
-            this.SettingsDesc4.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsDesc4.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.SettingsDesc4.ForeColor = System.Drawing.Color.White;
             this.SettingsDesc4.Location = new System.Drawing.Point(255, 53);
             this.SettingsDesc4.Name = "SettingsDesc4";
             this.SettingsDesc4.Size = new System.Drawing.Size(200, 88);
             this.SettingsDesc4.TabIndex = 11;
             this.SettingsDesc4.Tag = "";
-            this.SettingsDesc4.Text = "Try out new features before they release by switching to the Experimental branch." +
-    "";
+            this.SettingsDesc4.Text = "Try out new features before they release by switching to the Experimental branch." + "";
             this.SettingsDesc4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SettingsTag4
             // 
-            this.SettingsTag4.Font = new System.Drawing.Font("Raleway Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsTag4.Font = new System.Drawing.Font("Raleway Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.SettingsTag4.ForeColor = System.Drawing.Color.White;
             this.SettingsTag4.Location = new System.Drawing.Point(264, 12);
             this.SettingsTag4.Name = "SettingsTag4";
@@ -871,8 +867,8 @@ namespace JiayiLauncher
             this.KeepOpen.CheckedState.Parent = this.KeepOpen;
             this.KeepOpen.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.KeepOpen.CustomImages.Parent = this.KeepOpen;
-            this.KeepOpen.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.KeepOpen.Font = new System.Drawing.Font("Raleway Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.KeepOpen.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.KeepOpen.Font = new System.Drawing.Font("Raleway Medium", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.KeepOpen.ForeColor = System.Drawing.Color.White;
             this.KeepOpen.HoverState.Parent = this.KeepOpen;
             this.KeepOpen.Location = new System.Drawing.Point(29, 240);
@@ -890,8 +886,8 @@ namespace JiayiLauncher
             this.HideLauncher.CheckedState.Parent = this.HideLauncher;
             this.HideLauncher.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.HideLauncher.CustomImages.Parent = this.HideLauncher;
-            this.HideLauncher.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.HideLauncher.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HideLauncher.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.HideLauncher.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.HideLauncher.ForeColor = System.Drawing.Color.White;
             this.HideLauncher.HoverState.Parent = this.HideLauncher;
             this.HideLauncher.Location = new System.Drawing.Point(29, 182);
@@ -909,8 +905,8 @@ namespace JiayiLauncher
             this.CloseLauncher.CheckedState.Parent = this.CloseLauncher;
             this.CloseLauncher.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.CloseLauncher.CustomImages.Parent = this.CloseLauncher;
-            this.CloseLauncher.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.CloseLauncher.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CloseLauncher.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.CloseLauncher.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.CloseLauncher.ForeColor = System.Drawing.Color.White;
             this.CloseLauncher.HoverState.Parent = this.CloseLauncher;
             this.CloseLauncher.Location = new System.Drawing.Point(29, 123);
@@ -923,7 +919,7 @@ namespace JiayiLauncher
             // 
             // SettingsTag2
             // 
-            this.SettingsTag2.Font = new System.Drawing.Font("Raleway Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsTag2.Font = new System.Drawing.Font("Raleway Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.SettingsTag2.ForeColor = System.Drawing.Color.White;
             this.SettingsTag2.Location = new System.Drawing.Point(28, 11);
             this.SettingsTag2.Name = "SettingsTag2";
@@ -935,7 +931,7 @@ namespace JiayiLauncher
             // 
             // SettingsDesc2
             // 
-            this.SettingsDesc2.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsDesc2.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.SettingsDesc2.ForeColor = System.Drawing.Color.White;
             this.SettingsDesc2.Location = new System.Drawing.Point(19, 48);
             this.SettingsDesc2.Name = "SettingsDesc2";
@@ -947,7 +943,7 @@ namespace JiayiLauncher
             // 
             // SettingsDesc1
             // 
-            this.SettingsDesc1.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsDesc1.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.SettingsDesc1.ForeColor = System.Drawing.Color.White;
             this.SettingsDesc1.Location = new System.Drawing.Point(488, 51);
             this.SettingsDesc1.Name = "SettingsDesc1";
@@ -964,9 +960,9 @@ namespace JiayiLauncher
             this.ProcessPriorityBox.BorderRadius = 15;
             this.ProcessPriorityBox.DrawMode = System.Windows.Forms.DrawMode.OwnerDrawFixed;
             this.ProcessPriorityBox.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ProcessPriorityBox.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.ProcessPriorityBox.FocusedColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.ProcessPriorityBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.ProcessPriorityBox.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.ProcessPriorityBox.FocusedColor = System.Drawing.Color.FromArgb(((int) (((byte) (192)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
+            this.ProcessPriorityBox.FocusedState.BorderColor = System.Drawing.Color.FromArgb(((int) (((byte) (192)))), ((int) (((byte) (0)))), ((int) (((byte) (0)))));
             this.ProcessPriorityBox.FocusedState.FillColor = System.Drawing.Color.DimGray;
             this.ProcessPriorityBox.FocusedState.ForeColor = System.Drawing.Color.White;
             this.ProcessPriorityBox.FocusedState.Parent = this.ProcessPriorityBox;
@@ -974,10 +970,7 @@ namespace JiayiLauncher
             this.ProcessPriorityBox.ForeColor = System.Drawing.Color.White;
             this.ProcessPriorityBox.HoverState.Parent = this.ProcessPriorityBox;
             this.ProcessPriorityBox.ItemHeight = 30;
-            this.ProcessPriorityBox.Items.AddRange(new object[] {
-            "High",
-            "Medium",
-            "Low"});
+            this.ProcessPriorityBox.Items.AddRange(new object[] {"High", "Medium", "Low"});
             this.ProcessPriorityBox.ItemsAppearance.Parent = this.ProcessPriorityBox;
             this.ProcessPriorityBox.Location = new System.Drawing.Point(489, 135);
             this.ProcessPriorityBox.Name = "ProcessPriorityBox";
@@ -988,7 +981,7 @@ namespace JiayiLauncher
             // 
             // SettingsTag1
             // 
-            this.SettingsTag1.Font = new System.Drawing.Font("Raleway Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.SettingsTag1.Font = new System.Drawing.Font("Raleway Black", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.SettingsTag1.ForeColor = System.Drawing.Color.White;
             this.SettingsTag1.Location = new System.Drawing.Point(497, 11);
             this.SettingsTag1.Name = "SettingsTag1";
@@ -1008,7 +1001,7 @@ namespace JiayiLauncher
             // 
             this.NotifyIcon.BalloonTipText = "Double Click To Open Form";
             this.NotifyIcon.BalloonTipTitle = "Jiayi Client";
-            this.NotifyIcon.Icon = ((System.Drawing.Icon)(resources.GetObject("NotifyIcon.Icon")));
+            this.NotifyIcon.Icon = ((System.Drawing.Icon) (resources.GetObject("NotifyIcon.Icon")));
             this.NotifyIcon.Text = "Jiayi Client";
             this.NotifyIcon.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.NotifyIcon_MouseDoubleClick);
             // 
@@ -1038,8 +1031,8 @@ namespace JiayiLauncher
             this.BackImageSelectButton.CheckedState.Parent = this.BackImageSelectButton;
             this.BackImageSelectButton.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.BackImageSelectButton.CustomImages.Parent = this.BackImageSelectButton;
-            this.BackImageSelectButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.BackImageSelectButton.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackImageSelectButton.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.BackImageSelectButton.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.BackImageSelectButton.ForeColor = System.Drawing.Color.White;
             this.BackImageSelectButton.HoverState.Parent = this.BackImageSelectButton;
             this.BackImageSelectButton.Location = new System.Drawing.Point(262, 106);
@@ -1058,7 +1051,7 @@ namespace JiayiLauncher
             this.BackImageCheckBox.CheckedState.BorderRadius = 0;
             this.BackImageCheckBox.CheckedState.BorderThickness = 0;
             this.BackImageCheckBox.CheckedState.FillColor = System.Drawing.Color.Red;
-            this.BackImageCheckBox.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackImageCheckBox.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.BackImageCheckBox.ForeColor = System.Drawing.Color.White;
             this.BackImageCheckBox.Location = new System.Drawing.Point(256, 61);
             this.BackImageCheckBox.Name = "BackImageCheckBox";
@@ -1069,7 +1062,7 @@ namespace JiayiLauncher
             this.BackImageCheckBox.UncheckedState.BorderColor = System.Drawing.Color.Transparent;
             this.BackImageCheckBox.UncheckedState.BorderRadius = 0;
             this.BackImageCheckBox.UncheckedState.BorderThickness = 0;
-            this.BackImageCheckBox.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.BackImageCheckBox.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
             this.BackImageCheckBox.UseVisualStyleBackColor = false;
             this.BackImageCheckBox.CheckedChanged += new System.EventHandler(this.BackImageCheckBox_CheckedChanged);
             // 
@@ -1080,8 +1073,8 @@ namespace JiayiLauncher
             this.BackToSettings.CheckedState.Parent = this.BackToSettings;
             this.BackToSettings.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.BackToSettings.CustomImages.Parent = this.BackToSettings;
-            this.BackToSettings.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.BackToSettings.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BackToSettings.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.BackToSettings.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.BackToSettings.ForeColor = System.Drawing.Color.White;
             this.BackToSettings.HoverState.Parent = this.BackToSettings;
             this.BackToSettings.Location = new System.Drawing.Point(262, 340);
@@ -1099,8 +1092,8 @@ namespace JiayiLauncher
             this.DarkThemeBtn.CheckedState.Parent = this.DarkThemeBtn;
             this.DarkThemeBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.DarkThemeBtn.CustomImages.Parent = this.DarkThemeBtn;
-            this.DarkThemeBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.DarkThemeBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.DarkThemeBtn.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.DarkThemeBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.DarkThemeBtn.ForeColor = System.Drawing.Color.White;
             this.DarkThemeBtn.HoverState.Parent = this.DarkThemeBtn;
             this.DarkThemeBtn.Location = new System.Drawing.Point(25, 279);
@@ -1118,8 +1111,8 @@ namespace JiayiLauncher
             this.LightThemeBtn.CheckedState.Parent = this.LightThemeBtn;
             this.LightThemeBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.LightThemeBtn.CustomImages.Parent = this.LightThemeBtn;
-            this.LightThemeBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.LightThemeBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LightThemeBtn.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.LightThemeBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.LightThemeBtn.ForeColor = System.Drawing.Color.White;
             this.LightThemeBtn.HoverState.Parent = this.LightThemeBtn;
             this.LightThemeBtn.Location = new System.Drawing.Point(25, 219);
@@ -1132,7 +1125,7 @@ namespace JiayiLauncher
             // 
             // label5
             // 
-            this.label5.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label5.ForeColor = System.Drawing.Color.White;
             this.label5.Location = new System.Drawing.Point(13, 177);
             this.label5.Name = "label5";
@@ -1143,7 +1136,7 @@ namespace JiayiLauncher
             // 
             // label4
             // 
-            this.label4.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label4.ForeColor = System.Drawing.Color.White;
             this.label4.Location = new System.Drawing.Point(23, 61);
             this.label4.Name = "label4";
@@ -1161,8 +1154,8 @@ namespace JiayiLauncher
             this.AccentColorBtn.CheckedState.Parent = this.AccentColorBtn;
             this.AccentColorBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.AccentColorBtn.CustomImages.Parent = this.AccentColorBtn;
-            this.AccentColorBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.AccentColorBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AccentColorBtn.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.AccentColorBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.AccentColorBtn.ForeColor = System.Drawing.Color.White;
             this.AccentColorBtn.HoverState.Parent = this.AccentColorBtn;
             this.AccentColorBtn.Location = new System.Drawing.Point(92, 106);
@@ -1174,7 +1167,7 @@ namespace JiayiLauncher
             // 
             // label10
             // 
-            this.label10.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label10.ForeColor = System.Drawing.Color.White;
             this.label10.Location = new System.Drawing.Point(261, 0);
             this.label10.Name = "label10";
@@ -1212,6 +1205,7 @@ namespace JiayiLauncher
             this.VersionPanel.Size = new System.Drawing.Size(739, 421);
             this.VersionPanel.TabIndex = 12;
             this.VersionPanel.Visible = false;
+            this.VersionPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.VersionPanel_Paint);
             // 
             // GoBackBtn
             // 
@@ -1221,8 +1215,8 @@ namespace JiayiLauncher
             this.GoBackBtn.CheckedState.Parent = this.GoBackBtn;
             this.GoBackBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.GoBackBtn.CustomImages.Parent = this.GoBackBtn;
-            this.GoBackBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.GoBackBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoBackBtn.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.GoBackBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.GoBackBtn.ForeColor = System.Drawing.Color.White;
             this.GoBackBtn.HoverState.Parent = this.GoBackBtn;
             this.GoBackBtn.Location = new System.Drawing.Point(579, 357);
@@ -1235,7 +1229,7 @@ namespace JiayiLauncher
             // 
             // label9
             // 
-            this.label9.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(562, 252);
             this.label9.Name = "label9";
@@ -1247,7 +1241,7 @@ namespace JiayiLauncher
             // 
             // Status40
             // 
-            this.Status40.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Status40.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.Status40.ForeColor = System.Drawing.Color.White;
             this.Status40.Location = new System.Drawing.Point(47, 298);
             this.Status40.Name = "Status40";
@@ -1263,8 +1257,8 @@ namespace JiayiLauncher
             this.Launch40Btn.CheckedState.Parent = this.Launch40Btn;
             this.Launch40Btn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.Launch40Btn.CustomImages.Parent = this.Launch40Btn;
-            this.Launch40Btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.Launch40Btn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Launch40Btn.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.Launch40Btn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.Launch40Btn.ForeColor = System.Drawing.Color.White;
             this.Launch40Btn.HoverState.Parent = this.Launch40Btn;
             this.Launch40Btn.Location = new System.Drawing.Point(467, 285);
@@ -1283,8 +1277,8 @@ namespace JiayiLauncher
             this.Install40Btn.CheckedState.Parent = this.Install40Btn;
             this.Install40Btn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.Install40Btn.CustomImages.Parent = this.Install40Btn;
-            this.Install40Btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.Install40Btn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Install40Btn.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.Install40Btn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.Install40Btn.ForeColor = System.Drawing.Color.White;
             this.Install40Btn.HoverState.Parent = this.Install40Btn;
             this.Install40Btn.Location = new System.Drawing.Point(579, 285);
@@ -1297,12 +1291,12 @@ namespace JiayiLauncher
             // ProgressBar40
             // 
             this.ProgressBar40.FillColor = System.Drawing.Color.White;
-            this.ProgressBar40.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProgressBar40.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.ProgressBar40.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.ProgressBar40.Location = new System.Drawing.Point(39, 336);
             this.ProgressBar40.Name = "ProgressBar40";
             this.ProgressBar40.ProgressColor = System.Drawing.Color.Red;
-            this.ProgressBar40.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.ProgressBar40.ProgressColor2 = System.Drawing.Color.FromArgb(((int) (((byte) (255)))), ((int) (((byte) (128)))), ((int) (((byte) (128)))));
             this.ProgressBar40.ShadowDecoration.Parent = this.ProgressBar40;
             this.ProgressBar40.Size = new System.Drawing.Size(643, 10);
             this.ProgressBar40.TabIndex = 27;
@@ -1311,7 +1305,7 @@ namespace JiayiLauncher
             // 
             // label7
             // 
-            this.label7.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label7.ForeColor = System.Drawing.Color.White;
             this.label7.Location = new System.Drawing.Point(567, 136);
             this.label7.Name = "label7";
@@ -1323,7 +1317,7 @@ namespace JiayiLauncher
             // 
             // Status100
             // 
-            this.Status100.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Status100.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.Status100.ForeColor = System.Drawing.Color.White;
             this.Status100.Location = new System.Drawing.Point(52, 182);
             this.Status100.Name = "Status100";
@@ -1339,8 +1333,8 @@ namespace JiayiLauncher
             this.Launch100Btn.CheckedState.Parent = this.Launch100Btn;
             this.Launch100Btn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.Launch100Btn.CustomImages.Parent = this.Launch100Btn;
-            this.Launch100Btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.Launch100Btn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Launch100Btn.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.Launch100Btn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.Launch100Btn.ForeColor = System.Drawing.Color.White;
             this.Launch100Btn.HoverState.Parent = this.Launch100Btn;
             this.Launch100Btn.Location = new System.Drawing.Point(472, 169);
@@ -1359,8 +1353,8 @@ namespace JiayiLauncher
             this.Install100Btn.CheckedState.Parent = this.Install100Btn;
             this.Install100Btn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.Install100Btn.CustomImages.Parent = this.Install100Btn;
-            this.Install100Btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.Install100Btn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Install100Btn.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.Install100Btn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.Install100Btn.ForeColor = System.Drawing.Color.White;
             this.Install100Btn.HoverState.Parent = this.Install100Btn;
             this.Install100Btn.Location = new System.Drawing.Point(584, 169);
@@ -1374,12 +1368,12 @@ namespace JiayiLauncher
             // ProgressBar100
             // 
             this.ProgressBar100.FillColor = System.Drawing.Color.White;
-            this.ProgressBar100.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProgressBar100.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.ProgressBar100.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.ProgressBar100.Location = new System.Drawing.Point(44, 220);
             this.ProgressBar100.Name = "ProgressBar100";
             this.ProgressBar100.ProgressColor = System.Drawing.Color.Red;
-            this.ProgressBar100.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.ProgressBar100.ProgressColor2 = System.Drawing.Color.FromArgb(((int) (((byte) (255)))), ((int) (((byte) (128)))), ((int) (((byte) (128)))));
             this.ProgressBar100.ShadowDecoration.Parent = this.ProgressBar100;
             this.ProgressBar100.Size = new System.Drawing.Size(643, 10);
             this.ProgressBar100.TabIndex = 22;
@@ -1388,7 +1382,7 @@ namespace JiayiLauncher
             // 
             // label6
             // 
-            this.label6.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Font = new System.Drawing.Font("Raleway", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.label6.ForeColor = System.Drawing.Color.White;
             this.label6.Location = new System.Drawing.Point(565, 29);
             this.label6.Name = "label6";
@@ -1400,7 +1394,7 @@ namespace JiayiLauncher
             // 
             // Status201
             // 
-            this.Status201.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Status201.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.Status201.ForeColor = System.Drawing.Color.White;
             this.Status201.Location = new System.Drawing.Point(50, 75);
             this.Status201.Name = "Status201";
@@ -1416,8 +1410,8 @@ namespace JiayiLauncher
             this.Launch201Btn.CheckedState.Parent = this.Launch201Btn;
             this.Launch201Btn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.Launch201Btn.CustomImages.Parent = this.Launch201Btn;
-            this.Launch201Btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.Launch201Btn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Launch201Btn.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.Launch201Btn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.Launch201Btn.ForeColor = System.Drawing.Color.White;
             this.Launch201Btn.HoverState.Parent = this.Launch201Btn;
             this.Launch201Btn.Location = new System.Drawing.Point(470, 62);
@@ -1436,8 +1430,8 @@ namespace JiayiLauncher
             this.Install201Btn.CheckedState.Parent = this.Install201Btn;
             this.Install201Btn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.Install201Btn.CustomImages.Parent = this.Install201Btn;
-            this.Install201Btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.Install201Btn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Install201Btn.FillColor = System.Drawing.Color.FromArgb(((int) (((byte) (23)))), ((int) (((byte) (24)))), ((int) (((byte) (25)))));
+            this.Install201Btn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.Install201Btn.ForeColor = System.Drawing.Color.White;
             this.Install201Btn.HoverState.Parent = this.Install201Btn;
             this.Install201Btn.Location = new System.Drawing.Point(582, 62);
@@ -1451,12 +1445,12 @@ namespace JiayiLauncher
             // Version201Bar
             // 
             this.Version201Bar.FillColor = System.Drawing.Color.White;
-            this.Version201Bar.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Version201Bar.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.Version201Bar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.Version201Bar.Location = new System.Drawing.Point(42, 113);
             this.Version201Bar.Name = "Version201Bar";
             this.Version201Bar.ProgressColor = System.Drawing.Color.Red;
-            this.Version201Bar.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Version201Bar.ProgressColor2 = System.Drawing.Color.FromArgb(((int) (((byte) (255)))), ((int) (((byte) (128)))), ((int) (((byte) (128)))));
             this.Version201Bar.ShadowDecoration.Parent = this.Version201Bar;
             this.Version201Bar.Size = new System.Drawing.Size(643, 10);
             this.Version201Bar.TabIndex = 0;
@@ -1466,7 +1460,7 @@ namespace JiayiLauncher
             // VersionDisplay
             // 
             this.VersionDisplay.AutoSize = true;
-            this.VersionDisplay.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VersionDisplay.Font = new System.Drawing.Font("Arial Rounded MT Bold", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte) (0)));
             this.VersionDisplay.ForeColor = System.Drawing.Color.White;
             this.VersionDisplay.Location = new System.Drawing.Point(223, 547);
             this.VersionDisplay.Name = "VersionDisplay";
@@ -1478,7 +1472,7 @@ namespace JiayiLauncher
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
+            this.BackColor = System.Drawing.Color.FromArgb(((int) (((byte) (15)))), ((int) (((byte) (15)))), ((int) (((byte) (15)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(936, 569);
             this.Controls.Add(this.VersionDisplay);
@@ -1494,28 +1488,27 @@ namespace JiayiLauncher
             this.Controls.Add(this.UpdatePanel);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.Icon = ((System.Drawing.Icon) (resources.GetObject("$this.Icon")));
             this.Name = "Jiayi";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Jiayi";
             this.Load += new System.EventHandler(this.Jiayi_Load);
             this.BtnPanel.ResumeLayout(false);
             this.guna2Panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.xboxIcon)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.xboxIcon)).EndInit();
             this.HomePanel.ResumeLayout(false);
             this.UpdatePanel.ResumeLayout(false);
             this.NewsPanel3.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.FeedPic3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.FeedPic3)).EndInit();
             this.NewsPanel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.FeedPic2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.FeedPic2)).EndInit();
             this.NewsPanel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.FeedPic1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize) (this.FeedPic1)).EndInit();
             this.SettingsPanel.ResumeLayout(false);
             this.ThemesPanel.ResumeLayout(false);
             this.VersionPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         #endregion
