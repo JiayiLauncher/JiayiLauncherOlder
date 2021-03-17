@@ -275,6 +275,86 @@ namespace JiayiLauncher
                 RpcSrverBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
 
                 AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
+            } else if (Properties.Settings.Default.Theme == "Patar")
+            {
+                WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/Webp.net-resizeimage.png"));
+                Stream stream = request.GetResponse().GetResponseStream();
+                Image image = Image.FromStream(stream);
+                BackImageCheckBox.Checked = true;
+                HomePanel.UseTransparentBackground = true;
+                SettingsPanel.UseTransparentBackground = true;
+                ThemesPanel.UseTransparentBackground = true;
+                UpdatePanel.UseTransparentBackground = true;
+                TopPanel.UseTransparentBackground = true;
+                this.BackgroundImage = image;
+
+                DarkTheme();
+
+                Properties.Settings.Default.AccentColor = Color.SteelBlue;
+                Properties.Settings.Default.Save();
+                TopPanel.HoverState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                TopPanel.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                HomeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                SettingsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                UpdatePanelBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                CosmeticsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                CloseLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                HideLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                KeepOpen.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                Version201Bar.FillColor = Properties.Settings.Default.AccentColor;
+                Install201Btn.BorderColor = Properties.Settings.Default.AccentColor;
+                LogoLabel.ForeColor = Properties.Settings.Default.AccentColor;
+                StableSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                ExpirementalSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                ThemesButton.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                ResolutionComboBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
+                ProcessPriorityBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
+                LightThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                DarkThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                RpcIgnBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                RpcSrverBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+
+                AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
+            } else if (Properties.Settings.Default.Theme == "Eim")
+            {
+                WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/unknown.jpeg"));
+                Stream stream = request.GetResponse().GetResponseStream();
+                Image image = Image.FromStream(stream);
+                BackImageCheckBox.Checked = true;
+                HomePanel.UseTransparentBackground = true;
+                SettingsPanel.UseTransparentBackground = true;
+                ThemesPanel.UseTransparentBackground = true;
+                UpdatePanel.UseTransparentBackground = true;
+                TopPanel.UseTransparentBackground = true;
+                this.BackgroundImage = image;
+
+                DarkTheme();
+
+                Properties.Settings.Default.AccentColor = Color.RoyalBlue;
+                Properties.Settings.Default.Save();
+                TopPanel.HoverState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                TopPanel.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                HomeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                SettingsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                UpdatePanelBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                CosmeticsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                CloseLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                HideLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                KeepOpen.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                Version201Bar.FillColor = Properties.Settings.Default.AccentColor;
+                Install201Btn.BorderColor = Properties.Settings.Default.AccentColor;
+                LogoLabel.ForeColor = Properties.Settings.Default.AccentColor;
+                StableSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                ExpirementalSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                ThemesButton.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                ResolutionComboBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
+                ProcessPriorityBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
+                LightThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                DarkThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                RpcIgnBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                RpcSrverBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+
+                AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
             }
         }
 
@@ -1027,14 +1107,18 @@ namespace JiayiLauncher
                 Stream stream3 = request3.GetResponse().GetResponseStream();
                 System.Drawing.Image img3 = System.Drawing.Image.FromStream(stream3);
                 this.FeedPic3.Image = img3;
+
+                // blurb text
+                TitleLabel.Text = webClient.DownloadString("https://raw.githubusercontent.com/xarson/jiayi/master/Feed/BlurbTitle.txt");
+                TextLabel.Text = webClient.DownloadString("https://raw.githubusercontent.com/xarson/jiayi/master/Feed/BlurbText.txt");
             }
 
             catch (ArgumentException)
             {
-                string message = "Make Sure You Are Connected To The Internet!";
-                string caption = "Error Detected in Newsfeed Loader";
+                string message = "Couldn't download newsfeed data. Please check your internet connection.";
+                string caption = "Error";
                 MessageBoxButtons buttons = MessageBoxButtons.OK;
-                MessageBox.Show(message, caption, buttons);
+                MessageBox.Show(message, caption, buttons, MessageBoxIcon.Error);
             }
         }
 
@@ -1494,6 +1578,98 @@ namespace JiayiLauncher
             AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
 
             Properties.Settings.Default.Theme = "Enderman";
+            Properties.Settings.Default.Save();
+
+        }
+
+        private void PatarTheme_Click(object sender, EventArgs e)
+        {
+            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/Webp.net-resizeimage.png"));
+            Stream stream = request.GetResponse().GetResponseStream();
+            Image image = Image.FromStream(stream);
+            BackImageCheckBox.Checked = true;
+            HomePanel.UseTransparentBackground = true;
+            SettingsPanel.UseTransparentBackground = true;
+            ThemesPanel.UseTransparentBackground = true;
+            UpdatePanel.UseTransparentBackground = true;
+            TopPanel.UseTransparentBackground = true;
+            this.BackgroundImage = image;
+
+            DarkTheme();
+
+            Properties.Settings.Default.AccentColor = Color.SteelBlue;
+            Properties.Settings.Default.Save();
+            TopPanel.HoverState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            TopPanel.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            HomeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            SettingsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            UpdatePanelBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            CosmeticsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            CloseLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            HideLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            KeepOpen.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            Version201Bar.FillColor = Properties.Settings.Default.AccentColor;
+            Install201Btn.BorderColor = Properties.Settings.Default.AccentColor;
+            LogoLabel.ForeColor = Properties.Settings.Default.AccentColor;
+            StableSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            ExpirementalSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            ThemesButton.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            ResolutionComboBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
+            ProcessPriorityBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
+            LightThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            DarkThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            RpcIgnBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            RpcSrverBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+
+            AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
+
+            Properties.Settings.Default.Theme = "Patar";
+            Properties.Settings.Default.Save();
+
+        }
+
+        private void EimTheme_Click(object sender, EventArgs e)
+        {
+            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/unknown.jpeg"));
+            Stream stream = request.GetResponse().GetResponseStream();
+            Image image = Image.FromStream(stream);
+            BackImageCheckBox.Checked = true;
+            HomePanel.UseTransparentBackground = true;
+            SettingsPanel.UseTransparentBackground = true;
+            ThemesPanel.UseTransparentBackground = true;
+            UpdatePanel.UseTransparentBackground = true;
+            TopPanel.UseTransparentBackground = true;
+            this.BackgroundImage = image;
+
+            DarkTheme();
+
+            Properties.Settings.Default.AccentColor = Color.RoyalBlue;
+            Properties.Settings.Default.Save();
+            TopPanel.HoverState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            TopPanel.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            HomeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            SettingsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            UpdatePanelBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            CosmeticsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            CloseLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            HideLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            KeepOpen.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            Version201Bar.FillColor = Properties.Settings.Default.AccentColor;
+            Install201Btn.BorderColor = Properties.Settings.Default.AccentColor;
+            LogoLabel.ForeColor = Properties.Settings.Default.AccentColor;
+            StableSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            ExpirementalSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            ThemesButton.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            ResolutionComboBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
+            ProcessPriorityBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
+            LightThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            DarkThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            RpcIgnBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            RpcSrverBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+
+            AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
+
+            Properties.Settings.Default.Theme = "Eim";
             Properties.Settings.Default.Save();
 
         }

@@ -84,6 +84,18 @@ namespace JiayiLauncher
             this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.ThemesPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.ResetButton = new Guna.UI2.WinForms.Guna2Button();
+            this.label11 = new System.Windows.Forms.Label();
+            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
+            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
+            this.EimTheme = new Guna.UI2.WinForms.Guna2Button();
+            this.PatarTheme = new Guna.UI2.WinForms.Guna2Button();
+            this.CloudyTheme = new Guna.UI2.WinForms.Guna2Button();
+            this.EndermanTheme = new Guna.UI2.WinForms.Guna2Button();
+            this.label8 = new System.Windows.Forms.Label();
+            this.Chr7stTheme = new Guna.UI2.WinForms.Guna2Button();
             this.BackImageSelectButton = new Guna.UI2.WinForms.Guna2Button();
             this.BackImageCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
             this.BackToSettings = new Guna.UI2.WinForms.Guna2Button();
@@ -114,18 +126,9 @@ namespace JiayiLauncher
             this.VersionDisplay = new System.Windows.Forms.Label();
             this.CosmeticsPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.Chr7stTheme = new Guna.UI2.WinForms.Guna2Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.EndermanTheme = new Guna.UI2.WinForms.Guna2Button();
-            this.CloudyTheme = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button3 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button4 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button5 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button6 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
-            this.label11 = new System.Windows.Forms.Label();
-            this.ResetButton = new Guna.UI2.WinForms.Guna2Button();
+            this.TitleLabel = new System.Windows.Forms.Label();
+            this.TextLabel = new System.Windows.Forms.Label();
+            this.TextContainer = new Guna.UI2.WinForms.Guna2Button();
             this.BtnPanel.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xboxIcon)).BeginInit();
@@ -146,9 +149,12 @@ namespace JiayiLauncher
             // guna2BorderlessForm1
             // 
             this.guna2BorderlessForm1.AnimateWindow = true;
+            this.guna2BorderlessForm1.AnimationInterval = 300;
             this.guna2BorderlessForm1.BorderRadius = 20;
             this.guna2BorderlessForm1.ContainerControl = this;
+            this.guna2BorderlessForm1.DockForm = false;
             this.guna2BorderlessForm1.DragForm = false;
+            this.guna2BorderlessForm1.ResizeForm = false;
             // 
             // BtnPanel
             // 
@@ -420,6 +426,9 @@ namespace JiayiLauncher
             // 
             // HomePanel
             // 
+            this.HomePanel.Controls.Add(this.TextLabel);
+            this.HomePanel.Controls.Add(this.TitleLabel);
+            this.HomePanel.Controls.Add(this.TextContainer);
             this.HomePanel.Controls.Add(this.Status);
             this.HomePanel.Controls.Add(this.VersionBtn);
             this.HomePanel.Controls.Add(this.StatusText);
@@ -434,9 +443,9 @@ namespace JiayiLauncher
             // 
             this.Status.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Status.ForeColor = System.Drawing.Color.White;
-            this.Status.Location = new System.Drawing.Point(343, 248);
+            this.Status.Location = new System.Drawing.Point(0, 375);
             this.Status.Name = "Status";
-            this.Status.Size = new System.Drawing.Size(86, 33);
+            this.Status.Size = new System.Drawing.Size(739, 34);
             this.Status.TabIndex = 9;
             this.Status.Text = "Status:";
             this.Status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -454,7 +463,7 @@ namespace JiayiLauncher
             this.VersionBtn.Font = new System.Drawing.Font("Raleway", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VersionBtn.ForeColor = System.Drawing.Color.White;
             this.VersionBtn.HoverState.Parent = this.VersionBtn;
-            this.VersionBtn.Location = new System.Drawing.Point(285, 166);
+            this.VersionBtn.Location = new System.Drawing.Point(163, 298);
             this.VersionBtn.Name = "VersionBtn";
             this.VersionBtn.ShadowDecoration.Parent = this.VersionBtn;
             this.VersionBtn.Size = new System.Drawing.Size(82, 74);
@@ -488,7 +497,7 @@ namespace JiayiLauncher
             this.LaunchBtn.HoverState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(125)))), ((int)(((byte)(57)))));
             this.LaunchBtn.HoverState.Parent = this.LaunchBtn;
             this.LaunchBtn.IndicateFocus = true;
-            this.LaunchBtn.Location = new System.Drawing.Point(378, 166);
+            this.LaunchBtn.Location = new System.Drawing.Point(256, 298);
             this.LaunchBtn.Name = "LaunchBtn";
             this.LaunchBtn.ShadowDecoration.Parent = this.LaunchBtn;
             this.LaunchBtn.Size = new System.Drawing.Size(333, 74);
@@ -1040,8 +1049,8 @@ namespace JiayiLauncher
             this.ThemesPanel.Controls.Add(this.guna2Button7);
             this.ThemesPanel.Controls.Add(this.guna2Button6);
             this.ThemesPanel.Controls.Add(this.guna2Button5);
-            this.ThemesPanel.Controls.Add(this.guna2Button4);
-            this.ThemesPanel.Controls.Add(this.guna2Button3);
+            this.ThemesPanel.Controls.Add(this.EimTheme);
+            this.ThemesPanel.Controls.Add(this.PatarTheme);
             this.ThemesPanel.Controls.Add(this.CloudyTheme);
             this.ThemesPanel.Controls.Add(this.EndermanTheme);
             this.ThemesPanel.Controls.Add(this.label8);
@@ -1062,6 +1071,243 @@ namespace JiayiLauncher
             this.ThemesPanel.Size = new System.Drawing.Size(739, 421);
             this.ThemesPanel.TabIndex = 16;
             this.ThemesPanel.Visible = false;
+            // 
+            // ResetButton
+            // 
+            this.ResetButton.Animated = true;
+            this.ResetButton.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.ResetButton.CheckedState.Parent = this.ResetButton;
+            this.ResetButton.CustomBorderThickness = new System.Windows.Forms.Padding(2);
+            this.ResetButton.CustomImages.Parent = this.ResetButton;
+            this.ResetButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.ResetButton.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ResetButton.ForeColor = System.Drawing.Color.White;
+            this.ResetButton.HoverState.Parent = this.ResetButton;
+            this.ResetButton.Location = new System.Drawing.Point(508, 106);
+            this.ResetButton.Name = "ResetButton";
+            this.ResetButton.ShadowDecoration.Parent = this.ResetButton;
+            this.ResetButton.Size = new System.Drawing.Size(180, 45);
+            this.ResetButton.TabIndex = 32;
+            this.ResetButton.Text = "Reset Theme";
+            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
+            // 
+            // label11
+            // 
+            this.label11.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.ForeColor = System.Drawing.Color.White;
+            this.label11.Location = new System.Drawing.Point(497, 61);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(202, 33);
+            this.label11.TabIndex = 31;
+            this.label11.Text = "Reset Theme";
+            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // guna2Button8
+            // 
+            this.guna2Button8.Animated = true;
+            this.guna2Button8.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button8.BorderThickness = 5;
+            this.guna2Button8.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Button8.CheckedState.Parent = this.guna2Button8;
+            this.guna2Button8.CustomBorderColor = System.Drawing.Color.DimGray;
+            this.guna2Button8.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.guna2Button8.CustomImages.Parent = this.guna2Button8;
+            this.guna2Button8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.guna2Button8.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button8.ForeColor = System.Drawing.Color.White;
+            this.guna2Button8.HoverState.Parent = this.guna2Button8;
+            this.guna2Button8.Location = new System.Drawing.Point(672, 241);
+            this.guna2Button8.Name = "guna2Button8";
+            this.guna2Button8.ShadowDecoration.Parent = this.guna2Button8;
+            this.guna2Button8.Size = new System.Drawing.Size(45, 45);
+            this.guna2Button8.TabIndex = 30;
+            this.guna2Button8.Text = "?";
+            this.guna2Button8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // guna2Button7
+            // 
+            this.guna2Button7.Animated = true;
+            this.guna2Button7.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button7.BorderThickness = 5;
+            this.guna2Button7.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Button7.CheckedState.Parent = this.guna2Button7;
+            this.guna2Button7.CustomBorderColor = System.Drawing.Color.DimGray;
+            this.guna2Button7.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.guna2Button7.CustomImages.Parent = this.guna2Button7;
+            this.guna2Button7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.guna2Button7.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button7.ForeColor = System.Drawing.Color.White;
+            this.guna2Button7.HoverState.Parent = this.guna2Button7;
+            this.guna2Button7.Location = new System.Drawing.Point(621, 241);
+            this.guna2Button7.Name = "guna2Button7";
+            this.guna2Button7.ShadowDecoration.Parent = this.guna2Button7;
+            this.guna2Button7.Size = new System.Drawing.Size(45, 45);
+            this.guna2Button7.TabIndex = 29;
+            this.guna2Button7.Text = "?";
+            this.guna2Button7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // guna2Button6
+            // 
+            this.guna2Button6.Animated = true;
+            this.guna2Button6.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button6.BorderThickness = 5;
+            this.guna2Button6.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Button6.CheckedState.Parent = this.guna2Button6;
+            this.guna2Button6.CustomBorderColor = System.Drawing.Color.DimGray;
+            this.guna2Button6.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.guna2Button6.CustomImages.Parent = this.guna2Button6;
+            this.guna2Button6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.guna2Button6.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button6.ForeColor = System.Drawing.Color.White;
+            this.guna2Button6.HoverState.Parent = this.guna2Button6;
+            this.guna2Button6.Location = new System.Drawing.Point(570, 241);
+            this.guna2Button6.Name = "guna2Button6";
+            this.guna2Button6.ShadowDecoration.Parent = this.guna2Button6;
+            this.guna2Button6.Size = new System.Drawing.Size(45, 45);
+            this.guna2Button6.TabIndex = 28;
+            this.guna2Button6.Text = "?";
+            this.guna2Button6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // guna2Button5
+            // 
+            this.guna2Button5.Animated = true;
+            this.guna2Button5.BorderColor = System.Drawing.Color.Transparent;
+            this.guna2Button5.BorderThickness = 5;
+            this.guna2Button5.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.guna2Button5.CheckedState.Parent = this.guna2Button5;
+            this.guna2Button5.CustomBorderColor = System.Drawing.Color.DimGray;
+            this.guna2Button5.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.guna2Button5.CustomImages.Parent = this.guna2Button5;
+            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.guna2Button5.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.guna2Button5.ForeColor = System.Drawing.Color.White;
+            this.guna2Button5.HoverState.Parent = this.guna2Button5;
+            this.guna2Button5.Location = new System.Drawing.Point(519, 241);
+            this.guna2Button5.Name = "guna2Button5";
+            this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
+            this.guna2Button5.Size = new System.Drawing.Size(45, 45);
+            this.guna2Button5.TabIndex = 27;
+            this.guna2Button5.Text = "?";
+            this.guna2Button5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // EimTheme
+            // 
+            this.EimTheme.Animated = true;
+            this.EimTheme.BorderColor = System.Drawing.Color.Transparent;
+            this.EimTheme.BorderThickness = 5;
+            this.EimTheme.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.EimTheme.CheckedState.Parent = this.EimTheme;
+            this.EimTheme.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.EimTheme.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.EimTheme.CustomImages.Parent = this.EimTheme;
+            this.EimTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.EimTheme.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EimTheme.ForeColor = System.Drawing.Color.White;
+            this.EimTheme.HoverState.Parent = this.EimTheme;
+            this.EimTheme.Location = new System.Drawing.Point(468, 241);
+            this.EimTheme.Name = "EimTheme";
+            this.EimTheme.ShadowDecoration.Parent = this.EimTheme;
+            this.EimTheme.Size = new System.Drawing.Size(45, 45);
+            this.EimTheme.TabIndex = 26;
+            this.EimTheme.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.EimTheme.Click += new System.EventHandler(this.EimTheme_Click);
+            // 
+            // PatarTheme
+            // 
+            this.PatarTheme.Animated = true;
+            this.PatarTheme.BorderColor = System.Drawing.Color.Transparent;
+            this.PatarTheme.BorderThickness = 5;
+            this.PatarTheme.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.PatarTheme.CheckedState.Parent = this.PatarTheme;
+            this.PatarTheme.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.PatarTheme.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.PatarTheme.CustomImages.Parent = this.PatarTheme;
+            this.PatarTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.PatarTheme.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PatarTheme.ForeColor = System.Drawing.Color.White;
+            this.PatarTheme.HoverState.Parent = this.PatarTheme;
+            this.PatarTheme.Location = new System.Drawing.Point(417, 241);
+            this.PatarTheme.Name = "PatarTheme";
+            this.PatarTheme.ShadowDecoration.Parent = this.PatarTheme;
+            this.PatarTheme.Size = new System.Drawing.Size(45, 45);
+            this.PatarTheme.TabIndex = 25;
+            this.PatarTheme.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.PatarTheme.Click += new System.EventHandler(this.PatarTheme_Click);
+            // 
+            // CloudyTheme
+            // 
+            this.CloudyTheme.Animated = true;
+            this.CloudyTheme.BorderColor = System.Drawing.Color.Transparent;
+            this.CloudyTheme.BorderThickness = 5;
+            this.CloudyTheme.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.CloudyTheme.CheckedState.Parent = this.CloudyTheme;
+            this.CloudyTheme.CustomBorderColor = System.Drawing.Color.LightSteelBlue;
+            this.CloudyTheme.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.CloudyTheme.CustomImages.Parent = this.CloudyTheme;
+            this.CloudyTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.CloudyTheme.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CloudyTheme.ForeColor = System.Drawing.Color.White;
+            this.CloudyTheme.HoverState.Parent = this.CloudyTheme;
+            this.CloudyTheme.Location = new System.Drawing.Point(366, 241);
+            this.CloudyTheme.Name = "CloudyTheme";
+            this.CloudyTheme.ShadowDecoration.Parent = this.CloudyTheme;
+            this.CloudyTheme.Size = new System.Drawing.Size(45, 45);
+            this.CloudyTheme.TabIndex = 24;
+            this.CloudyTheme.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.CloudyTheme.Click += new System.EventHandler(this.guna2Button2_Click);
+            // 
+            // EndermanTheme
+            // 
+            this.EndermanTheme.Animated = true;
+            this.EndermanTheme.BorderColor = System.Drawing.Color.Transparent;
+            this.EndermanTheme.BorderThickness = 5;
+            this.EndermanTheme.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.EndermanTheme.CheckedState.Parent = this.EndermanTheme;
+            this.EndermanTheme.CustomBorderColor = System.Drawing.Color.BlueViolet;
+            this.EndermanTheme.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.EndermanTheme.CustomImages.Parent = this.EndermanTheme;
+            this.EndermanTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.EndermanTheme.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EndermanTheme.ForeColor = System.Drawing.Color.White;
+            this.EndermanTheme.HoverState.Parent = this.EndermanTheme;
+            this.EndermanTheme.Location = new System.Drawing.Point(315, 241);
+            this.EndermanTheme.Name = "EndermanTheme";
+            this.EndermanTheme.ShadowDecoration.Parent = this.EndermanTheme;
+            this.EndermanTheme.Size = new System.Drawing.Size(45, 45);
+            this.EndermanTheme.TabIndex = 23;
+            this.EndermanTheme.Click += new System.EventHandler(this.EndermanTheme_Click);
+            // 
+            // label8
+            // 
+            this.label8.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(355, 195);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(268, 33);
+            this.label8.TabIndex = 22;
+            this.label8.Text = "Preset Themes";
+            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // Chr7stTheme
+            // 
+            this.Chr7stTheme.Animated = true;
+            this.Chr7stTheme.BorderColor = System.Drawing.Color.Transparent;
+            this.Chr7stTheme.BorderThickness = 5;
+            this.Chr7stTheme.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.Chr7stTheme.CheckedState.Parent = this.Chr7stTheme;
+            this.Chr7stTheme.CustomBorderColor = System.Drawing.Color.DeepSkyBlue;
+            this.Chr7stTheme.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.Chr7stTheme.CustomImages.Parent = this.Chr7stTheme;
+            this.Chr7stTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.Chr7stTheme.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Chr7stTheme.ForeColor = System.Drawing.Color.White;
+            this.Chr7stTheme.HoverState.Parent = this.Chr7stTheme;
+            this.Chr7stTheme.Location = new System.Drawing.Point(264, 241);
+            this.Chr7stTheme.Name = "Chr7stTheme";
+            this.Chr7stTheme.ShadowDecoration.Parent = this.Chr7stTheme;
+            this.Chr7stTheme.Size = new System.Drawing.Size(45, 45);
+            this.Chr7stTheme.TabIndex = 21;
+            this.Chr7stTheme.Click += new System.EventHandler(this.Chr7stTheme_Click);
             // 
             // BackImageSelectButton
             // 
@@ -1500,10 +1746,9 @@ namespace JiayiLauncher
             // 
             // VersionDisplay
             // 
-            this.VersionDisplay.AutoSize = true;
-            this.VersionDisplay.Font = new System.Drawing.Font("Raleway", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VersionDisplay.Font = new System.Drawing.Font("Verdana", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VersionDisplay.ForeColor = System.Drawing.Color.White;
-            this.VersionDisplay.Location = new System.Drawing.Point(233, 545);
+            this.VersionDisplay.Location = new System.Drawing.Point(236, 548);
             this.VersionDisplay.Name = "VersionDisplay";
             this.VersionDisplay.Size = new System.Drawing.Size(77, 17);
             this.VersionDisplay.TabIndex = 3;
@@ -1534,242 +1779,50 @@ namespace JiayiLauncher
             this.label14.Text = "Cosmetics will be available after public release.";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Chr7stTheme
+            // TitleLabel
             // 
-            this.Chr7stTheme.Animated = true;
-            this.Chr7stTheme.BorderColor = System.Drawing.Color.Transparent;
-            this.Chr7stTheme.BorderThickness = 5;
-            this.Chr7stTheme.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.Chr7stTheme.CheckedState.Parent = this.Chr7stTheme;
-            this.Chr7stTheme.CustomBorderColor = System.Drawing.Color.DeepSkyBlue;
-            this.Chr7stTheme.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.Chr7stTheme.CustomImages.Parent = this.Chr7stTheme;
-            this.Chr7stTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.Chr7stTheme.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Chr7stTheme.ForeColor = System.Drawing.Color.White;
-            this.Chr7stTheme.HoverState.Parent = this.Chr7stTheme;
-            this.Chr7stTheme.Location = new System.Drawing.Point(264, 241);
-            this.Chr7stTheme.Name = "Chr7stTheme";
-            this.Chr7stTheme.ShadowDecoration.Parent = this.Chr7stTheme;
-            this.Chr7stTheme.Size = new System.Drawing.Size(45, 45);
-            this.Chr7stTheme.TabIndex = 21;
-            this.Chr7stTheme.Click += new System.EventHandler(this.Chr7stTheme_Click);
+            this.TitleLabel.BackColor = System.Drawing.Color.Transparent;
+            this.TitleLabel.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TitleLabel.ForeColor = System.Drawing.Color.White;
+            this.TitleLabel.Location = new System.Drawing.Point(163, 67);
+            this.TitleLabel.Name = "TitleLabel";
+            this.TitleLabel.Size = new System.Drawing.Size(426, 34);
+            this.TitleLabel.TabIndex = 12;
+            this.TitleLabel.Text = "Loading...";
+            this.TitleLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // label8
+            // TextLabel
             // 
-            this.label8.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(355, 195);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(268, 33);
-            this.label8.TabIndex = 22;
-            this.label8.Text = "Preset Themes";
-            this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.TextLabel.BackColor = System.Drawing.Color.Transparent;
+            this.TextLabel.Font = new System.Drawing.Font("Raleway", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextLabel.ForeColor = System.Drawing.Color.White;
+            this.TextLabel.Location = new System.Drawing.Point(163, 107);
+            this.TextLabel.Name = "TextLabel";
+            this.TextLabel.Size = new System.Drawing.Size(426, 174);
+            this.TextLabel.TabIndex = 13;
+            this.TextLabel.Text = "Loading...";
+            this.TextLabel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // EndermanTheme
+            // TextContainer
             // 
-            this.EndermanTheme.Animated = true;
-            this.EndermanTheme.BorderColor = System.Drawing.Color.Transparent;
-            this.EndermanTheme.BorderThickness = 5;
-            this.EndermanTheme.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.EndermanTheme.CheckedState.Parent = this.EndermanTheme;
-            this.EndermanTheme.CustomBorderColor = System.Drawing.Color.BlueViolet;
-            this.EndermanTheme.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.EndermanTheme.CustomImages.Parent = this.EndermanTheme;
-            this.EndermanTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.EndermanTheme.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.EndermanTheme.ForeColor = System.Drawing.Color.White;
-            this.EndermanTheme.HoverState.Parent = this.EndermanTheme;
-            this.EndermanTheme.Location = new System.Drawing.Point(315, 241);
-            this.EndermanTheme.Name = "EndermanTheme";
-            this.EndermanTheme.ShadowDecoration.Parent = this.EndermanTheme;
-            this.EndermanTheme.Size = new System.Drawing.Size(45, 45);
-            this.EndermanTheme.TabIndex = 23;
-            this.EndermanTheme.Click += new System.EventHandler(this.EndermanTheme_Click);
-            // 
-            // CloudyTheme
-            // 
-            this.CloudyTheme.Animated = true;
-            this.CloudyTheme.BorderColor = System.Drawing.Color.Transparent;
-            this.CloudyTheme.BorderThickness = 5;
-            this.CloudyTheme.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.CloudyTheme.CheckedState.Parent = this.CloudyTheme;
-            this.CloudyTheme.CustomBorderColor = System.Drawing.Color.LightSteelBlue;
-            this.CloudyTheme.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.CloudyTheme.CustomImages.Parent = this.CloudyTheme;
-            this.CloudyTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.CloudyTheme.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.CloudyTheme.ForeColor = System.Drawing.Color.White;
-            this.CloudyTheme.HoverState.Parent = this.CloudyTheme;
-            this.CloudyTheme.Location = new System.Drawing.Point(366, 241);
-            this.CloudyTheme.Name = "CloudyTheme";
-            this.CloudyTheme.ShadowDecoration.Parent = this.CloudyTheme;
-            this.CloudyTheme.Size = new System.Drawing.Size(45, 45);
-            this.CloudyTheme.TabIndex = 24;
-            this.CloudyTheme.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.CloudyTheme.Click += new System.EventHandler(this.guna2Button2_Click);
-            // 
-            // guna2Button3
-            // 
-            this.guna2Button3.Animated = true;
-            this.guna2Button3.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button3.BorderThickness = 5;
-            this.guna2Button3.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button3.CheckedState.Parent = this.guna2Button3;
-            this.guna2Button3.CustomBorderColor = System.Drawing.Color.DimGray;
-            this.guna2Button3.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.guna2Button3.CustomImages.Parent = this.guna2Button3;
-            this.guna2Button3.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.guna2Button3.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button3.ForeColor = System.Drawing.Color.White;
-            this.guna2Button3.HoverState.Parent = this.guna2Button3;
-            this.guna2Button3.Location = new System.Drawing.Point(417, 241);
-            this.guna2Button3.Name = "guna2Button3";
-            this.guna2Button3.ShadowDecoration.Parent = this.guna2Button3;
-            this.guna2Button3.Size = new System.Drawing.Size(45, 45);
-            this.guna2Button3.TabIndex = 25;
-            this.guna2Button3.Text = "?";
-            this.guna2Button3.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // guna2Button4
-            // 
-            this.guna2Button4.Animated = true;
-            this.guna2Button4.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button4.BorderThickness = 5;
-            this.guna2Button4.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button4.CheckedState.Parent = this.guna2Button4;
-            this.guna2Button4.CustomBorderColor = System.Drawing.Color.DimGray;
-            this.guna2Button4.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.guna2Button4.CustomImages.Parent = this.guna2Button4;
-            this.guna2Button4.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.guna2Button4.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button4.ForeColor = System.Drawing.Color.White;
-            this.guna2Button4.HoverState.Parent = this.guna2Button4;
-            this.guna2Button4.Location = new System.Drawing.Point(468, 241);
-            this.guna2Button4.Name = "guna2Button4";
-            this.guna2Button4.ShadowDecoration.Parent = this.guna2Button4;
-            this.guna2Button4.Size = new System.Drawing.Size(45, 45);
-            this.guna2Button4.TabIndex = 26;
-            this.guna2Button4.Text = "?";
-            this.guna2Button4.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // guna2Button5
-            // 
-            this.guna2Button5.Animated = true;
-            this.guna2Button5.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button5.BorderThickness = 5;
-            this.guna2Button5.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button5.CheckedState.Parent = this.guna2Button5;
-            this.guna2Button5.CustomBorderColor = System.Drawing.Color.DimGray;
-            this.guna2Button5.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.guna2Button5.CustomImages.Parent = this.guna2Button5;
-            this.guna2Button5.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.guna2Button5.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button5.ForeColor = System.Drawing.Color.White;
-            this.guna2Button5.HoverState.Parent = this.guna2Button5;
-            this.guna2Button5.Location = new System.Drawing.Point(519, 241);
-            this.guna2Button5.Name = "guna2Button5";
-            this.guna2Button5.ShadowDecoration.Parent = this.guna2Button5;
-            this.guna2Button5.Size = new System.Drawing.Size(45, 45);
-            this.guna2Button5.TabIndex = 27;
-            this.guna2Button5.Text = "?";
-            this.guna2Button5.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // guna2Button6
-            // 
-            this.guna2Button6.Animated = true;
-            this.guna2Button6.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button6.BorderThickness = 5;
-            this.guna2Button6.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button6.CheckedState.Parent = this.guna2Button6;
-            this.guna2Button6.CustomBorderColor = System.Drawing.Color.DimGray;
-            this.guna2Button6.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.guna2Button6.CustomImages.Parent = this.guna2Button6;
-            this.guna2Button6.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.guna2Button6.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button6.ForeColor = System.Drawing.Color.White;
-            this.guna2Button6.HoverState.Parent = this.guna2Button6;
-            this.guna2Button6.Location = new System.Drawing.Point(570, 241);
-            this.guna2Button6.Name = "guna2Button6";
-            this.guna2Button6.ShadowDecoration.Parent = this.guna2Button6;
-            this.guna2Button6.Size = new System.Drawing.Size(45, 45);
-            this.guna2Button6.TabIndex = 28;
-            this.guna2Button6.Text = "?";
-            this.guna2Button6.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // guna2Button7
-            // 
-            this.guna2Button7.Animated = true;
-            this.guna2Button7.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button7.BorderThickness = 5;
-            this.guna2Button7.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button7.CheckedState.Parent = this.guna2Button7;
-            this.guna2Button7.CustomBorderColor = System.Drawing.Color.DimGray;
-            this.guna2Button7.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.guna2Button7.CustomImages.Parent = this.guna2Button7;
-            this.guna2Button7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.guna2Button7.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button7.ForeColor = System.Drawing.Color.White;
-            this.guna2Button7.HoverState.Parent = this.guna2Button7;
-            this.guna2Button7.Location = new System.Drawing.Point(621, 241);
-            this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.ShadowDecoration.Parent = this.guna2Button7;
-            this.guna2Button7.Size = new System.Drawing.Size(45, 45);
-            this.guna2Button7.TabIndex = 29;
-            this.guna2Button7.Text = "?";
-            this.guna2Button7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // guna2Button8
-            // 
-            this.guna2Button8.Animated = true;
-            this.guna2Button8.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button8.BorderThickness = 5;
-            this.guna2Button8.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button8.CheckedState.Parent = this.guna2Button8;
-            this.guna2Button8.CustomBorderColor = System.Drawing.Color.DimGray;
-            this.guna2Button8.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.guna2Button8.CustomImages.Parent = this.guna2Button8;
-            this.guna2Button8.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.guna2Button8.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button8.ForeColor = System.Drawing.Color.White;
-            this.guna2Button8.HoverState.Parent = this.guna2Button8;
-            this.guna2Button8.Location = new System.Drawing.Point(672, 241);
-            this.guna2Button8.Name = "guna2Button8";
-            this.guna2Button8.ShadowDecoration.Parent = this.guna2Button8;
-            this.guna2Button8.Size = new System.Drawing.Size(45, 45);
-            this.guna2Button8.TabIndex = 30;
-            this.guna2Button8.Text = "?";
-            this.guna2Button8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label11
-            // 
-            this.label11.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(497, 61);
-            this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(202, 33);
-            this.label11.TabIndex = 31;
-            this.label11.Text = "Reset Theme";
-            this.label11.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // ResetButton
-            // 
-            this.ResetButton.Animated = true;
-            this.ResetButton.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.ResetButton.CheckedState.Parent = this.ResetButton;
-            this.ResetButton.CustomBorderThickness = new System.Windows.Forms.Padding(2);
-            this.ResetButton.CustomImages.Parent = this.ResetButton;
-            this.ResetButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.ResetButton.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ResetButton.ForeColor = System.Drawing.Color.White;
-            this.ResetButton.HoverState.Parent = this.ResetButton;
-            this.ResetButton.Location = new System.Drawing.Point(508, 106);
-            this.ResetButton.Name = "ResetButton";
-            this.ResetButton.ShadowDecoration.Parent = this.ResetButton;
-            this.ResetButton.Size = new System.Drawing.Size(180, 45);
-            this.ResetButton.TabIndex = 32;
-            this.ResetButton.Text = "Reset Theme";
-            this.ResetButton.Click += new System.EventHandler(this.ResetButton_Click);
+            this.TextContainer.BackColor = System.Drawing.Color.Transparent;
+            this.TextContainer.BorderRadius = 14;
+            this.TextContainer.CheckedState.Parent = this.TextContainer;
+            this.TextContainer.CustomImages.Parent = this.TextContainer;
+            this.TextContainer.FillColor = System.Drawing.Color.Transparent;
+            this.TextContainer.Font = new System.Drawing.Font("Raleway", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextContainer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
+            this.TextContainer.HoverState.FillColor = System.Drawing.Color.Transparent;
+            this.TextContainer.HoverState.Parent = this.TextContainer;
+            this.TextContainer.IndicateFocus = true;
+            this.TextContainer.Location = new System.Drawing.Point(163, 58);
+            this.TextContainer.Name = "TextContainer";
+            this.TextContainer.PressedColor = System.Drawing.Color.Transparent;
+            this.TextContainer.ShadowDecoration.Enabled = true;
+            this.TextContainer.ShadowDecoration.Parent = this.TextContainer;
+            this.TextContainer.Size = new System.Drawing.Size(426, 234);
+            this.TextContainer.TabIndex = 14;
+            this.TextContainer.UseTransparentBackground = true;
             // 
             // Jiayi
             // 
@@ -1912,12 +1965,15 @@ namespace JiayiLauncher
         private Guna.UI2.WinForms.Guna2Button guna2Button7;
         private Guna.UI2.WinForms.Guna2Button guna2Button6;
         private Guna.UI2.WinForms.Guna2Button guna2Button5;
-        private Guna.UI2.WinForms.Guna2Button guna2Button4;
-        private Guna.UI2.WinForms.Guna2Button guna2Button3;
+        private Guna.UI2.WinForms.Guna2Button EimTheme;
+        private Guna.UI2.WinForms.Guna2Button PatarTheme;
         private Guna.UI2.WinForms.Guna2Button CloudyTheme;
         private Guna.UI2.WinForms.Guna2Button EndermanTheme;
         private Guna.UI2.WinForms.Guna2Button ResetButton;
         private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label TextLabel;
+        private System.Windows.Forms.Label TitleLabel;
+        private Guna.UI2.WinForms.Guna2Button TextContainer;
     }
 }
 
