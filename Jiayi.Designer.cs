@@ -377,6 +377,7 @@ namespace JiayiLauncher
             // 
             // MinimizeBtn
             // 
+            this.MinimizeBtn.Animated = true;
             this.MinimizeBtn.BackColor = System.Drawing.Color.Transparent;
             this.MinimizeBtn.CheckedState.Font = new System.Drawing.Font("Segoe UI", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MinimizeBtn.CheckedState.Parent = this.MinimizeBtn;
@@ -401,6 +402,7 @@ namespace JiayiLauncher
             // 
             // ExitBtn
             // 
+            this.ExitBtn.Animated = true;
             this.ExitBtn.BackColor = System.Drawing.Color.Transparent;
             this.ExitBtn.CheckedState.FillColor = System.Drawing.Color.Transparent;
             this.ExitBtn.CheckedState.Font = new System.Drawing.Font("Segoe UI", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));

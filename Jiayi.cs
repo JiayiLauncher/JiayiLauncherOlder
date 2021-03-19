@@ -800,13 +800,13 @@ namespace JiayiLauncher
         // Minimize and Close Btn Functions
         private void MinimizeBtn_MouseHover(object sender, EventArgs e)
         {
-            MinimizeBtn.Checked = true;
-            MinimizeBtn.Location = new Point(828, 7);
+            // MinimizeBtn.Checked = true;
+            // MinimizeBtn.Location = new Point(828, 7); no
         }
 
         private void ExitBtn_MouseHover(object sender, EventArgs e)
         {
-            ExitBtn.Checked = true;
+            // ExitBtn.Checked = true;
         }
 
         private void ExitButton_Click(object sender, EventArgs e)
@@ -818,13 +818,13 @@ namespace JiayiLauncher
 
         private void ExitBtn_MouseLeave(object sender, EventArgs e)
         {
-            ExitBtn.Checked = false;
+            // ExitBtn.Checked = false;
         }
 
         private void MinimizeBtn_MouseLeave(object sender, EventArgs e)
         {
-            MinimizeBtn.Checked = false;
-            MinimizeBtn.Location = new Point(828, 12);
+            // MinimizeBtn.Checked = false;
+            // MinimizeBtn.Location = new Point(828, 12);
         }
 
         private void MinimizeBtn_Click(object sender, EventArgs e)
@@ -860,7 +860,7 @@ namespace JiayiLauncher
             // just gonna leave this here
             //string mcversion = Version.Text.Remove(0, 8);
             //Console.WriteLine(mcversion);
-            StatusText.Text = ("Preparing Injection Process..");
+            StatusText.Text = ("Preparing to launch..");
             Settings();
         }
 
@@ -939,14 +939,14 @@ namespace JiayiLauncher
                 Process[] pname = Process.GetProcessesByName("Minecraft.Windows");
                 if (pname.Length == 0)
                 {
-                    StatusText.Text = ("Preparing Settings");
+                    StatusText.Text = ("Reading settings...");
                     MoreSettings();
 
                 }
 
                 else
                 {
-                    StatusText.Text = ("Finalizing Process Before Closing...");
+                    StatusText.Text = ("Closing launcher...");
                     MoreSettings();
                     Thread.Sleep(500);
 
@@ -968,7 +968,7 @@ namespace JiayiLauncher
 
             if (KeepOpen.Checked == true)
             {
-                StatusText.Text = ("Preparing Settings");
+                StatusText.Text = ("Reading settings...");
                 MoreSettings();
                 Status.Visible = false;
             }
@@ -1358,7 +1358,7 @@ namespace JiayiLauncher
             }
             catch (Exception)
             {
-                Status201.Text = "STATUS: Version Installer Could Not Be Found!";
+                Status201.Text = "STATUS: Failed to open AppX file.";
             }
         }
 
@@ -1389,7 +1389,7 @@ namespace JiayiLauncher
         {
             if (System.IO.File.Exists("C:\\Jiayi\\Versions\\Minecraft-1.16.201.2.Appx"))
             {
-                Status201.Text = "STATUS: Version Installer Already Exists!";
+                Status201.Text = "STATUS: This AppX file already exists.";
             }
             else
             {
@@ -1406,20 +1406,20 @@ namespace JiayiLauncher
         {
             Launch201Btn.Enabled = true;
             Version201Bar.Visible = false;
-            Status201.Text = "STATUS: Succefully Installed";
+            Status201.Text = "STATUS: Successfully installed.";
         }
 
         private void v1_16_201Changed(object sender, DownloadProgressChangedEventArgs e)
         {
             Version201Bar.Value = e.ProgressPercentage;
-            Status201.Text = "STATUS: " + e.ProgressPercentage.ToString() + "%";
+            Status201.Text = "STATUS: Currently at " + e.ProgressPercentage.ToString() + "%.";
         }
 
         private void Install100Btn_Click(object sender, EventArgs e)
         {
             if (System.IO.File.Exists("C:\\Jiayi\\Versions\\Minecraft-1.16.100.4.Appx"))
             {
-                Status100.Text = "STATUS: Version Installer Already Exists!";
+                Status100.Text = "STATUS: This AppX file already exists.";
             }
             else
             {
@@ -1435,21 +1435,21 @@ namespace JiayiLauncher
         private void v1_16_100Completed(object sender, AsyncCompletedEventArgs e)
         {
             ProgressBar100.Visible = false;
-            Status100.Text = "STATUS: Succefully Installed";
+            Status100.Text = "STATUS: Successfully installed.";
             Launch100Btn.Enabled = true;
         }
 
         private void v1_16_100Changed(object sender, DownloadProgressChangedEventArgs e)
         {
             ProgressBar100.Value = e.ProgressPercentage;
-            Status100.Text = "STATUS: " + e.ProgressPercentage.ToString() + "%";
+            Status100.Text = "STATUS: Currently at " + e.ProgressPercentage.ToString() + "%.";
         }
 
         private void Install40Btn_Click(object sender, EventArgs e)
         {
             if (System.IO.File.Exists("C:\\Jiayi\\Versions\\Minecraft-1.16.40.2.Appx"))
             {
-                Status40.Text = "STATUS: Version Installer Already Exists!";
+                Status40.Text = "STATUS: This AppX file already exists.";
             }
             else
             {
@@ -1465,14 +1465,14 @@ namespace JiayiLauncher
         private void v1_16_40Completed(object sender, AsyncCompletedEventArgs e)
         {
             ProgressBar100.Visible = false;
-            Status40.Text = "STATUS: Succefully Installed";
+            Status40.Text = "STATUS: Successfully installed.";
             Launch100Btn.Enabled = true;
         }
 
         private void v1_16_40Changed(object sender, DownloadProgressChangedEventArgs e)
         {
             ProgressBar100.Value = e.ProgressPercentage;
-            Status40.Text = "STATUS: " + e.ProgressPercentage.ToString() + "%";
+            Status40.Text = "STATUS: Currently at " + e.ProgressPercentage.ToString() + "%.";
         }
 
         private void GoBackBtn_Click(object sender, EventArgs e)
@@ -1489,7 +1489,7 @@ namespace JiayiLauncher
             }
             catch (Exception)
             {
-                Status40.Text = "STATUS: Version Installer Could Not Be Found!";
+                Status40.Text = "STATUS: Failed to open AppX file.";
             }
         }
 
@@ -1501,7 +1501,7 @@ namespace JiayiLauncher
             }
             catch (Exception)
             {
-                Status100.Text = "STATUS: Version Installer Could Not Be Found!";
+                Status100.Text = "STATUS: Failed to open AppX file.";
             }
         }
 
@@ -1520,8 +1520,11 @@ namespace JiayiLauncher
 
         }
 
+
+        // themes (below is a pretty good example of how they work)
         private void Chr7stTheme_Click(object sender, EventArgs e)
         {
+            // download image without saving it on the hard drive
             WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/cubemap_0.png"));
             Stream stream = request.GetResponse().GetResponseStream();
             Image image = Image.FromStream(stream);
@@ -1533,8 +1536,10 @@ namespace JiayiLauncher
             TopPanel.UseTransparentBackground = true;
             this.BackgroundImage = image;
 
+            // apply dark or light theme
             DarkTheme();
 
+            // apply custom accent color
             Properties.Settings.Default.AccentColor = Color.DeepSkyBlue;
             Properties.Settings.Default.Save();
             TopPanel.HoverState.CustomBorderColor = Properties.Settings.Default.AccentColor;
@@ -1561,6 +1566,7 @@ namespace JiayiLauncher
 
             AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
 
+            // save theme for next launch
             Properties.Settings.Default.Theme = "Chr7st";
             Properties.Settings.Default.Save();
         }
@@ -1611,6 +1617,7 @@ namespace JiayiLauncher
 
         }
 
+        // im lazy
         private void ResetButton_Click(object sender, EventArgs e)
         {
             Properties.Settings.Default.Theme = "Default";
@@ -1621,6 +1628,7 @@ namespace JiayiLauncher
             MessageBox.Show("Restart Jiayi to apply your changes.", "Themes", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
+        // more themes
         private void EndermanTheme_Click(object sender, EventArgs e)
         {
             WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/0a3cff39ad4952d622cb5682ff743cda.jpg"));
