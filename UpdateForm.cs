@@ -17,19 +17,19 @@ namespace JiayiLauncher
 
         void DeleteOld()
         {
-            StatusText.Text = ("STATUS: Looking For Previous Versions");
+            StatusText.Text = ("STATUS: Finding previous versions...");
             StatusText.Location = new Point(-4, 405);
 
             if (File.Exists(Path.Combine(path, dllfile)))
             {
                 File.Delete(Path.Combine(path, dllfile));
-                StatusText.Text = ("STATUS: Deleting Previous Version");
+                StatusText.Text = ("STATUS: Removing previous version...");
                 StatusText.Location = new Point(-4, 405);
             }
 
             else
             {
-                StatusText.Text = ("STATUS: Unable To Locate Previous Version, Now Installing");
+                StatusText.Text = ("STATUS: No previous versions found.");
                 StatusText.Location = new Point(-4, 405);
             }
         }
@@ -42,20 +42,20 @@ namespace JiayiLauncher
         {
             DeleteOld();
             Thread.Sleep(500);
-            StatusText.Text = ("STATUS: Preparing Installation");
+            StatusText.Text = ("STATUS: Preparing to update...");
             Thread.Sleep(500);
             client = new System.Net.WebClient(); 
             client.DownloadFileCompleted += client_DownloadFileCompleted;
             client.DownloadProgressChanged += client_DownloadProgressChanged;
-            StatusText.Text = ("STATUS: Installation Has Started");
+            StatusText.Text = ("STATUS: Updating Jiayi...");
             Thread.Sleep(500);
 
-            client.DownloadFileAsync(new Uri(""), path);
+            client.DownloadFileAsync(new Uri(""), Path.Combine(path, dllfile));
         }
 
         private void client_DownloadFileCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)
         {
-            StatusText.Text = ("STATUS: Succefully Installed Jiayi");
+            StatusText.Text = ("STATUS: Jiayi has been updated.");
             Thread.Sleep(800);
             this.Close();
         }
@@ -64,21 +64,7 @@ namespace JiayiLauncher
         {
             DownloadProgress.Value = e.ProgressPercentage;
 
-           if (DownloadProgress.Value == 25)
-            {
-                StatusText.Text = ("STATUS: JIAYI: 25%");
-                Thread.Sleep(500);
-                if (DownloadProgress.Value == 50)
-                {
-                    StatusText.Text = ("STATUS: JIAYI: 50%");
-                    Thread.Sleep(500);
-                    if (DownloadProgress.Value == 75)
-                    {
-                        StatusText.Text = ("STATUS: JIAYI: 75%");
-                        Thread.Sleep(500);
-                    }
-                }
-            }
+            StatusText.Text = "STATUS: Currently at " + DownloadProgress.Value.ToString() + "%.";
         }
 
         private void UpdateForm_FormClosed(object sender, FormClosedEventArgs e)

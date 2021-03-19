@@ -34,7 +34,6 @@ namespace JiayiLauncher
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.DownloadProgress = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.label1 = new System.Windows.Forms.Label();
             this.StatusText = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
@@ -62,19 +61,12 @@ namespace JiayiLauncher
             this.DownloadProgress.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.DownloadProgress.Location = new System.Drawing.Point(39, 342);
             this.DownloadProgress.Name = "DownloadProgress";
+            this.DownloadProgress.ProgressColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.DownloadProgress.ProgressColor2 = System.Drawing.Color.Red;
             this.DownloadProgress.ShadowDecoration.Parent = this.DownloadProgress;
             this.DownloadProgress.Size = new System.Drawing.Size(300, 37);
             this.DownloadProgress.TabIndex = 1;
             this.DownloadProgress.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
-            this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
             // 
             // StatusText
             // 
@@ -95,7 +87,6 @@ namespace JiayiLauncher
             this.ClientSize = new System.Drawing.Size(364, 438);
             this.Controls.Add(this.DownloadProgress);
             this.Controls.Add(this.StatusText);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -106,7 +97,6 @@ namespace JiayiLauncher
             this.Load += new System.EventHandler(this.UpdateForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
@@ -116,6 +106,5 @@ namespace JiayiLauncher
         private Guna.UI2.WinForms.Guna2ProgressBar DownloadProgress;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label StatusText;
-        private System.Windows.Forms.Label label1;
     }
 }
