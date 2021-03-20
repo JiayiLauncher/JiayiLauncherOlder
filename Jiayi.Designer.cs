@@ -90,7 +90,7 @@ namespace JiayiLauncher
             this.ResetButton = new Guna.UI2.WinForms.Guna2Button();
             this.label11 = new System.Windows.Forms.Label();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
-            this.guna2Button7 = new Guna.UI2.WinForms.Guna2Button();
+            this.MortyTheme = new Guna.UI2.WinForms.Guna2Button();
             this.RilayeTheme = new Guna.UI2.WinForms.Guna2Button();
             this.PluralTheme = new Guna.UI2.WinForms.Guna2Button();
             this.EimTheme = new Guna.UI2.WinForms.Guna2Button();
@@ -129,6 +129,7 @@ namespace JiayiLauncher
             this.VersionDisplay = new System.Windows.Forms.Label();
             this.CosmeticsPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.label14 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
             this.BtnPanel.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xboxIcon)).BeginInit();
@@ -173,6 +174,7 @@ namespace JiayiLauncher
             // 
             // guna2Panel1
             // 
+            this.guna2Panel1.Controls.Add(this.label12);
             this.guna2Panel1.Controls.Add(this.xboxIcon);
             this.guna2Panel1.Controls.Add(this.xboxGamertag);
             this.guna2Panel1.Location = new System.Drawing.Point(0, 512);
@@ -193,11 +195,11 @@ namespace JiayiLauncher
             // 
             // xboxGamertag
             // 
-            this.xboxGamertag.Font = new System.Drawing.Font("Raleway", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.xboxGamertag.Font = new System.Drawing.Font("Raleway", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.xboxGamertag.ForeColor = System.Drawing.Color.White;
             this.xboxGamertag.Location = new System.Drawing.Point(48, 10);
             this.xboxGamertag.Name = "xboxGamertag";
-            this.xboxGamertag.Size = new System.Drawing.Size(129, 35);
+            this.xboxGamertag.Size = new System.Drawing.Size(129, 18);
             this.xboxGamertag.TabIndex = 11;
             this.xboxGamertag.Tag = "";
             this.xboxGamertag.Text = "Gamertag";
@@ -1093,7 +1095,7 @@ namespace JiayiLauncher
             this.ThemesPanel.Controls.Add(this.ResetButton);
             this.ThemesPanel.Controls.Add(this.label11);
             this.ThemesPanel.Controls.Add(this.guna2Button8);
-            this.ThemesPanel.Controls.Add(this.guna2Button7);
+            this.ThemesPanel.Controls.Add(this.MortyTheme);
             this.ThemesPanel.Controls.Add(this.RilayeTheme);
             this.ThemesPanel.Controls.Add(this.PluralTheme);
             this.ThemesPanel.Controls.Add(this.EimTheme);
@@ -1171,27 +1173,27 @@ namespace JiayiLauncher
             this.guna2Button8.Text = "?";
             this.guna2Button8.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // guna2Button7
+            // MortyTheme
             // 
-            this.guna2Button7.Animated = true;
-            this.guna2Button7.BorderColor = System.Drawing.Color.Transparent;
-            this.guna2Button7.BorderThickness = 5;
-            this.guna2Button7.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.guna2Button7.CheckedState.Parent = this.guna2Button7;
-            this.guna2Button7.CustomBorderColor = System.Drawing.Color.DimGray;
-            this.guna2Button7.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
-            this.guna2Button7.CustomImages.Parent = this.guna2Button7;
-            this.guna2Button7.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.guna2Button7.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.guna2Button7.ForeColor = System.Drawing.Color.White;
-            this.guna2Button7.HoverState.Parent = this.guna2Button7;
-            this.guna2Button7.Location = new System.Drawing.Point(621, 241);
-            this.guna2Button7.Name = "guna2Button7";
-            this.guna2Button7.ShadowDecoration.Parent = this.guna2Button7;
-            this.guna2Button7.Size = new System.Drawing.Size(45, 45);
-            this.guna2Button7.TabIndex = 29;
-            this.guna2Button7.Text = "?";
-            this.guna2Button7.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.MortyTheme.Animated = true;
+            this.MortyTheme.BorderColor = System.Drawing.Color.Transparent;
+            this.MortyTheme.BorderThickness = 5;
+            this.MortyTheme.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.MortyTheme.CheckedState.Parent = this.MortyTheme;
+            this.MortyTheme.CustomBorderColor = System.Drawing.Color.Lime;
+            this.MortyTheme.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
+            this.MortyTheme.CustomImages.Parent = this.MortyTheme;
+            this.MortyTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.MortyTheme.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MortyTheme.ForeColor = System.Drawing.Color.White;
+            this.MortyTheme.HoverState.Parent = this.MortyTheme;
+            this.MortyTheme.Location = new System.Drawing.Point(621, 241);
+            this.MortyTheme.Name = "MortyTheme";
+            this.MortyTheme.ShadowDecoration.Parent = this.MortyTheme;
+            this.MortyTheme.Size = new System.Drawing.Size(45, 45);
+            this.MortyTheme.TabIndex = 29;
+            this.MortyTheme.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.MortyTheme.Click += new System.EventHandler(this.MortyTheme_Click);
             // 
             // RilayeTheme
             // 
@@ -1827,6 +1829,18 @@ namespace JiayiLauncher
             this.label14.Text = "Cosmetics will be available after public release.";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Raleway", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DimGray;
+            this.label12.Location = new System.Drawing.Point(48, 27);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(129, 18);
+            this.label12.TabIndex = 13;
+            this.label12.Tag = "";
+            this.label12.Text = "  DiscordTag";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // Jiayi
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1965,7 +1979,7 @@ namespace JiayiLauncher
         private System.Windows.Forms.Label label8;
         private Guna.UI2.WinForms.Guna2Button Chr7stTheme;
         private Guna.UI2.WinForms.Guna2Button guna2Button8;
-        private Guna.UI2.WinForms.Guna2Button guna2Button7;
+        private Guna.UI2.WinForms.Guna2Button MortyTheme;
         private Guna.UI2.WinForms.Guna2Button RilayeTheme;
         private Guna.UI2.WinForms.Guna2Button PluralTheme;
         private Guna.UI2.WinForms.Guna2Button EimTheme;
@@ -1977,6 +1991,7 @@ namespace JiayiLauncher
         private System.Windows.Forms.Label TextLabel;
         private System.Windows.Forms.Label TitleLabel;
         private Guna.UI2.WinForms.Guna2Button TextContainer;
+        private System.Windows.Forms.Label label12;
     }
 }
 

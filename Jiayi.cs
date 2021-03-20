@@ -51,15 +51,23 @@ namespace JiayiLauncher
             NewsfeedLoader(); // gets data for newsfeed
 
             // checks beta list
-            Properties.Settings.Default.DiscordId = client.CurrentUser.ID;
-            Properties.Settings.Default.Save();
-            WebClient betaidclient = new WebClient();
-            string betaids = betaidclient.DownloadString("https://raw.githubusercontent.com/xarson/jiayi/master/betaids.txt");
-            if (!betaids.Contains(Properties.Settings.Default.DiscordId.ToString()))
+            try
             {
-                MessageBox.Show("You do not have access to the Jiayi beta.", "Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                Properties.Settings.Default.DiscordId = client.CurrentUser.ID;
+                Properties.Settings.Default.Save();
+                WebClient betaidclient = new WebClient();
+                string betaids = betaidclient.DownloadString("https://raw.githubusercontent.com/xarson/jiayi/master/betaids.txt");
+                if (!betaids.Contains(Properties.Settings.Default.DiscordId.ToString()))
+                {
+                    MessageBox.Show("You do not have access to the Jiayi beta.", "Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    Close();
+                }
+            } catch (NullReferenceException)
+            {
+                MessageBox.Show("Failed to authenticate with Discord. Try again in a few minutes.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Close();
             }
+            
 
             // launch settings
             if (Properties.Settings.Default.AfterLaunch == "Hide")
@@ -436,9 +444,50 @@ namespace JiayiLauncher
 
                 AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
 
+            } else if (Properties.Settings.Default.Theme == "Morty")
+            {
+                WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/Mo8rty-Jiyai_-_Final.png"));
+                Stream stream = request.GetResponse().GetResponseStream();
+                Image image = Image.FromStream(stream);
+                BackImageCheckBox.Checked = true;
+                HomePanel.UseTransparentBackground = true;
+                SettingsPanel.UseTransparentBackground = true;
+                ThemesPanel.UseTransparentBackground = true;
+                UpdatePanel.UseTransparentBackground = true;
+                TopPanel.UseTransparentBackground = true;
+                this.BackgroundImage = image;
+
+                DarkTheme();
+
+                Properties.Settings.Default.AccentColor = Color.Lime;
+                Properties.Settings.Default.Save();
+                TopPanel.HoverState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                TopPanel.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                HomeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                SettingsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                UpdatePanelBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                CosmeticsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                CloseLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                HideLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                KeepOpen.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                Version201Bar.FillColor = Properties.Settings.Default.AccentColor;
+                Install201Btn.BorderColor = Properties.Settings.Default.AccentColor;
+                LogoLabel.ForeColor = Properties.Settings.Default.AccentColor;
+                StableSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                ExpirementalSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                ThemesButton.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                ResolutionComboBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
+                ProcessPriorityBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
+                LightThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                DarkThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                RpcIgnBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                RpcSrverBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+
+                AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
             }
 
-           
+            // discord tag
+            label12.Text = "  " + client.CurrentUser.Username + "#" + client.CurrentUser.Discriminator.ToString();
         }
 
         public void XboxInfo()
@@ -1003,25 +1052,25 @@ namespace JiayiLauncher
 
         public void MoreSettings()
         {
-            if (RpcIgnBtn.Checked == true)
-            {
-                try
-                {
-                    RPCInGame("IGN:" + xboxName);
-                }
-                catch (ArgumentException)
-                {
-                    string message = "Error";
-                    string caption = "We couldn't get your Gamertag. Try installing the Xbox Console Companion app.";
-                    MessageBoxButtons buttons = MessageBoxButtons.OK;
-                    MessageBox.Show(message, caption, buttons);
-                }
-            }
+            //if (RpcIgnBtn.Checked == true) rpc in dll now
+            //{
+            //    try
+            //    {
+            //        RPCInGame("IGN:" + xboxName);
+            //    }
+            //    catch (ArgumentException)
+            //    {
+            //        string message = "Error";
+            //        string caption = "We couldn't get your Gamertag. Try installing the Xbox Console Companion app.";
+            //        MessageBoxButtons buttons = MessageBoxButtons.OK;
+            //        MessageBox.Show(message, caption, buttons);
+            //    }
+            //}
 
-            else
-            {
-                RPCInGame("");
-            }
+            //else
+            //{
+            //    RPCInGame("");
+            //}
             timer1.Start();
 
             //InjectDLL(Directory.GetCurrentDirectory().ToString() + "/JiayiClient.dll");
@@ -1861,6 +1910,51 @@ namespace JiayiLauncher
         private void TextureProfiles_Click(object sender, EventArgs e)
         {
             // fuck
+        }
+
+        private void MortyTheme_Click(object sender, EventArgs e)
+        {
+            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/Mo8rty-Jiyai_-_Final.png"));
+            Stream stream = request.GetResponse().GetResponseStream();
+            Image image = Image.FromStream(stream);
+            BackImageCheckBox.Checked = true;
+            HomePanel.UseTransparentBackground = true;
+            SettingsPanel.UseTransparentBackground = true;
+            ThemesPanel.UseTransparentBackground = true;
+            UpdatePanel.UseTransparentBackground = true;
+            TopPanel.UseTransparentBackground = true;
+            this.BackgroundImage = image;
+
+            DarkTheme();
+
+            Properties.Settings.Default.AccentColor = Color.Lime;
+            Properties.Settings.Default.Save();
+            TopPanel.HoverState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            TopPanel.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            HomeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            SettingsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            UpdatePanelBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            CosmeticsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            CloseLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            HideLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            KeepOpen.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            Version201Bar.FillColor = Properties.Settings.Default.AccentColor;
+            Install201Btn.BorderColor = Properties.Settings.Default.AccentColor;
+            LogoLabel.ForeColor = Properties.Settings.Default.AccentColor;
+            StableSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            ExpirementalSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            ThemesButton.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            ResolutionComboBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
+            ProcessPriorityBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
+            LightThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            DarkThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            RpcIgnBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+            RpcSrverBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+
+            AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
+
+            Properties.Settings.Default.Theme = "Morty";
+            Properties.Settings.Default.Save();
         }
     }
 }
