@@ -31,6 +31,7 @@ namespace JiayiLauncher
             this.guna2BorderlessForm1 = new Guna.UI2.WinForms.Guna2BorderlessForm(this.components);
             this.BtnPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.guna2Panel1 = new Guna.UI2.WinForms.Guna2Panel();
+            this.label12 = new System.Windows.Forms.Label();
             this.xboxIcon = new Guna.UI2.WinForms.Guna2PictureBox();
             this.xboxGamertag = new System.Windows.Forms.Label();
             this.CosmeticsBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -129,7 +130,6 @@ namespace JiayiLauncher
             this.VersionDisplay = new System.Windows.Forms.Label();
             this.CosmeticsPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.label12 = new System.Windows.Forms.Label();
             this.BtnPanel.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xboxIcon)).BeginInit();
@@ -182,6 +182,18 @@ namespace JiayiLauncher
             this.guna2Panel1.ShadowDecoration.Parent = this.guna2Panel1;
             this.guna2Panel1.Size = new System.Drawing.Size(177, 58);
             this.guna2Panel1.TabIndex = 5;
+            // 
+            // label12
+            // 
+            this.label12.Font = new System.Drawing.Font("Raleway", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.ForeColor = System.Drawing.Color.DimGray;
+            this.label12.Location = new System.Drawing.Point(48, 27);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(129, 18);
+            this.label12.TabIndex = 13;
+            this.label12.Tag = "";
+            this.label12.Text = "  DiscordTag";
+            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // xboxIcon
             // 
@@ -1828,18 +1840,6 @@ namespace JiayiLauncher
             this.label14.Tag = "";
             this.label14.Text = "Cosmetics will be available after public release.";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label12
-            // 
-            this.label12.Font = new System.Drawing.Font("Raleway", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.ForeColor = System.Drawing.Color.DimGray;
-            this.label12.Location = new System.Drawing.Point(48, 27);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(129, 18);
-            this.label12.TabIndex = 13;
-            this.label12.Tag = "";
-            this.label12.Text = "  DiscordTag";
-            this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // Jiayi
             // 

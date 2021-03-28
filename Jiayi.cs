@@ -488,6 +488,9 @@ namespace JiayiLauncher
 
             // discord tag
             label12.Text = "  " + client.CurrentUser.Username + "#" + client.CurrentUser.Discriminator.ToString();
+
+            // credits scrolling
+            
         }
 
         public void XboxInfo()
@@ -1955,6 +1958,11 @@ namespace JiayiLauncher
 
             Properties.Settings.Default.Theme = "Morty";
             Properties.Settings.Default.Save();
+        }
+
+        private void CreditsTimer_Tick(object sender, EventArgs e)
+        {
+            // NEVER MIND
         }
     }
 }
