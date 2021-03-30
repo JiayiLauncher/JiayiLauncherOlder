@@ -168,6 +168,7 @@ namespace JiayiLauncher
             this.BtnPanel.Controls.Add(this.LogoLabel);
             this.BtnPanel.Location = new System.Drawing.Point(-1, -1);
             this.BtnPanel.Name = "BtnPanel";
+            this.BtnPanel.ShadowDecoration.Enabled = true;
             this.BtnPanel.ShadowDecoration.Parent = this.BtnPanel;
             this.BtnPanel.Size = new System.Drawing.Size(177, 570);
             this.BtnPanel.TabIndex = 0;
@@ -364,7 +365,7 @@ namespace JiayiLauncher
             this.TopPanel.ForeColor = System.Drawing.Color.White;
             this.TopPanel.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.TopPanel.HoverState.Parent = this.TopPanel;
-            this.TopPanel.Location = new System.Drawing.Point(176, -1);
+            this.TopPanel.Location = new System.Drawing.Point(177, 0);
             this.TopPanel.Name = "TopPanel";
             this.TopPanel.PressedColor = System.Drawing.Color.Transparent;
             this.TopPanel.PressedDepth = 0;
@@ -1855,14 +1856,14 @@ namespace JiayiLauncher
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(15)))), ((int)(((byte)(15)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(936, 569);
+            this.Controls.Add(this.MinimizeBtn);
+            this.Controls.Add(this.ExitBtn);
+            this.Controls.Add(this.TopPanel);
+            this.Controls.Add(this.BtnPanel);
             this.Controls.Add(this.CosmeticsPanel);
             this.Controls.Add(this.VersionDisplay);
             this.Controls.Add(this.Version);
-            this.Controls.Add(this.ExitBtn);
-            this.Controls.Add(this.MinimizeBtn);
-            this.Controls.Add(this.BtnPanel);
             this.Controls.Add(this.VersionPanel);
-            this.Controls.Add(this.TopPanel);
             this.Controls.Add(this.HomePanel);
             this.Controls.Add(this.ThemesPanel);
             this.Controls.Add(this.SettingsPanel);

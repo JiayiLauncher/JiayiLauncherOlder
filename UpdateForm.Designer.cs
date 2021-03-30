@@ -70,7 +70,7 @@ namespace JiayiLauncher
             // 
             // StatusText
             // 
-            this.StatusText.Font = new System.Drawing.Font("Raleway", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatusText.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatusText.ForeColor = System.Drawing.SystemColors.ControlLightLight;
             this.StatusText.Location = new System.Drawing.Point(-4, 405);
             this.StatusText.Name = "StatusText";
