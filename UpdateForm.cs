@@ -50,7 +50,7 @@ namespace JiayiLauncher
             StatusText.Text = ("STATUS: Updating Jiayi...");
             Thread.Sleep(500);
 
-            client.DownloadFileAsync(new Uri(""), Path.Combine(path, dllfile));
+            client.DownloadFileAsync(new Uri(""), Path.Combine(path, dllfile)); // this is where the dll download goe
         }
 
         private void client_DownloadFileCompleted(object sender, System.ComponentModel.AsyncCompletedEventArgs e)

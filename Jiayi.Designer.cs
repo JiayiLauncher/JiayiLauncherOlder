@@ -193,11 +193,12 @@ namespace JiayiLauncher
             this.label12.Size = new System.Drawing.Size(129, 18);
             this.label12.TabIndex = 13;
             this.label12.Tag = "";
-            this.label12.Text = "  DiscordTag";
+            this.label12.Text = "  Loading...";
             this.label12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // xboxIcon
             // 
+            this.xboxIcon.Image = ((System.Drawing.Image)(resources.GetObject("xboxIcon.Image")));
             this.xboxIcon.Location = new System.Drawing.Point(11, 10);
             this.xboxIcon.Name = "xboxIcon";
             this.xboxIcon.ShadowDecoration.Parent = this.xboxIcon;
@@ -215,7 +216,7 @@ namespace JiayiLauncher
             this.xboxGamertag.Size = new System.Drawing.Size(129, 18);
             this.xboxGamertag.TabIndex = 11;
             this.xboxGamertag.Tag = "";
-            this.xboxGamertag.Text = "Gamertag";
+            this.xboxGamertag.Text = "Loading...";
             this.xboxGamertag.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // CosmeticsBtn
@@ -398,7 +399,7 @@ namespace JiayiLauncher
             this.MinimizeBtn.CheckedState.Parent = this.MinimizeBtn;
             this.MinimizeBtn.CustomImages.Parent = this.MinimizeBtn;
             this.MinimizeBtn.FillColor = System.Drawing.Color.Transparent;
-            this.MinimizeBtn.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MinimizeBtn.Font = new System.Drawing.Font("Montserrat Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MinimizeBtn.ForeColor = System.Drawing.Color.White;
             this.MinimizeBtn.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.MinimizeBtn.HoverState.Parent = this.MinimizeBtn;
@@ -424,7 +425,7 @@ namespace JiayiLauncher
             this.ExitBtn.CheckedState.Parent = this.ExitBtn;
             this.ExitBtn.CustomImages.Parent = this.ExitBtn;
             this.ExitBtn.FillColor = System.Drawing.Color.Transparent;
-            this.ExitBtn.Font = new System.Drawing.Font("Segoe UI", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ExitBtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExitBtn.ForeColor = System.Drawing.Color.White;
             this.ExitBtn.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.ExitBtn.HoverState.Parent = this.ExitBtn;

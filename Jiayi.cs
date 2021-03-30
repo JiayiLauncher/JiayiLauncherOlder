@@ -487,9 +487,14 @@ namespace JiayiLauncher
             }
 
             // discord tag
-            label12.Text = "  " + client.CurrentUser.Username + "#" + client.CurrentUser.Discriminator.ToString();
+            try
+            {
+                label12.Text = "  " + client.CurrentUser.Username + "#" + client.CurrentUser.Discriminator.ToString();
+            } catch (Exception)
+            {
+                label12.Text = "  Failed";
+            }
 
-            // credits scrolling
             
         }
 
@@ -528,9 +533,17 @@ namespace JiayiLauncher
                 catch (ArgumentException)
                 {
                     if (System.IO.File.Exists(localappdata + "\\Packages\\Microsoft.XboxApp_8wekyb3d8bbwe\\LocalState\\XboxLiveGamer.xml"))
-                        xboxGamertag.Text = "TRY IN A HOUR";
+                    {
+                        xboxGamertag.Text = "Failed";
+                        MessageBox.Show("Xbox info is unavailable at this time. Try again in an hour or so.", "Error", 
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                     else
-                        xboxGamertag.Text = "InstallXboxCompanionApp";
+                    {
+                        xboxGamertag.Text = "Failed";
+                        MessageBox.Show("Couldn't get your Xbox avatar and gamertag. Installing the Xbox App can fix this.", "Error", 
+                            MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
                 }
             }
         }
