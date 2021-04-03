@@ -122,9 +122,9 @@ namespace JiayiLauncher.Properties {
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.DefaultSettingValueAttribute("0")]
-        public ulong DiscordId {
+        public string DiscordId {
             get {
-                return ((ulong)(this["DiscordId"]));
+                return ((string)(this["DiscordId"]));
             }
             set {
                 this["DiscordId"] = value;

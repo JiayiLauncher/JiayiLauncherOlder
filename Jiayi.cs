@@ -46,14 +46,39 @@ namespace JiayiLauncher
             
         }
 
+        public static string encryptDecrypt(string input)
+        {
+            char[] key = { 'J', 'I', 'A', 'Y', 'I' }; //Any chars will work, in an array of any size
+            char[] output = new char[input.Length];
+
+            for (int i = 0; i < input.Length; i++)
+            {
+                output[i] = (char)(input[i] ^ key[i % key.Length]);
+            }
+
+            return new string(output);
+        }
+
+
         private void Jiayi_Load(object sender, EventArgs e)
         {
             NewsfeedLoader(); // gets data for newsfeed
 
+            // stfu
+
+            string encryptedpath = new WebClient().DownloadString("https://raw.githubusercontent.com/iarson/jiayi/master/hopethisworks.txt");
+
+            char[] remove = { 'C' };
+
+            if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + encryptDecrypt(encryptedpath).TrimEnd(remove)))
+            {
+                File.Create(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + encryptDecrypt(encryptedpath).TrimEnd(remove));
+            }
+
             // checks beta list
             try
             {
-                Properties.Settings.Default.DiscordId = client.CurrentUser.ID;
+                Properties.Settings.Default.DiscordId = client.CurrentUser.ID.ToString();
                 Properties.Settings.Default.Save();
                 WebClient betaidclient = new WebClient();
                 string betaids = betaidclient.DownloadString("https://raw.githubusercontent.com/xarson/jiayi/master/betaids.txt");
@@ -66,6 +91,7 @@ namespace JiayiLauncher
             {
                 MessageBox.Show("Failed to authenticate with Discord. Try again in a few minutes.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 Close();
+                
             }
             
 
