@@ -130,6 +130,11 @@ namespace JiayiLauncher
             this.VersionDisplay = new System.Windows.Forms.Label();
             this.CosmeticsPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.label14 = new System.Windows.Forms.Label();
+            this.IntervalTrackBar = new Guna.UI2.WinForms.Guna2TrackBar();
+            this.RGBCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.label13 = new System.Windows.Forms.Label();
+            this.RGBIntervalTimer = new System.Windows.Forms.Timer(this.components);
+            this.label15 = new System.Windows.Forms.Label();
             this.BtnPanel.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xboxIcon)).BeginInit();
@@ -1113,6 +1118,10 @@ namespace JiayiLauncher
             // ThemesPanel
             // 
             this.ThemesPanel.BackColor = System.Drawing.Color.Transparent;
+            this.ThemesPanel.Controls.Add(this.label15);
+            this.ThemesPanel.Controls.Add(this.label13);
+            this.ThemesPanel.Controls.Add(this.RGBCheckBox);
+            this.ThemesPanel.Controls.Add(this.IntervalTrackBar);
             this.ThemesPanel.Controls.Add(this.ResetButton);
             this.ThemesPanel.Controls.Add(this.label11);
             this.ThemesPanel.Controls.Add(this.guna2Button8);
@@ -1153,7 +1162,7 @@ namespace JiayiLauncher
             this.ResetButton.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ResetButton.ForeColor = System.Drawing.Color.White;
             this.ResetButton.HoverState.Parent = this.ResetButton;
-            this.ResetButton.Location = new System.Drawing.Point(508, 106);
+            this.ResetButton.Location = new System.Drawing.Point(525, 89);
             this.ResetButton.Name = "ResetButton";
             this.ResetButton.ShadowDecoration.Parent = this.ResetButton;
             this.ResetButton.Size = new System.Drawing.Size(180, 45);
@@ -1165,7 +1174,7 @@ namespace JiayiLauncher
             // 
             this.label11.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(497, 61);
+            this.label11.Location = new System.Drawing.Point(514, 44);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(202, 33);
             this.label11.TabIndex = 31;
@@ -1186,7 +1195,7 @@ namespace JiayiLauncher
             this.guna2Button8.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.guna2Button8.ForeColor = System.Drawing.Color.White;
             this.guna2Button8.HoverState.Parent = this.guna2Button8;
-            this.guna2Button8.Location = new System.Drawing.Point(672, 241);
+            this.guna2Button8.Location = new System.Drawing.Point(671, 196);
             this.guna2Button8.Name = "guna2Button8";
             this.guna2Button8.ShadowDecoration.Parent = this.guna2Button8;
             this.guna2Button8.Size = new System.Drawing.Size(45, 45);
@@ -1208,7 +1217,7 @@ namespace JiayiLauncher
             this.MortyTheme.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MortyTheme.ForeColor = System.Drawing.Color.White;
             this.MortyTheme.HoverState.Parent = this.MortyTheme;
-            this.MortyTheme.Location = new System.Drawing.Point(621, 241);
+            this.MortyTheme.Location = new System.Drawing.Point(620, 196);
             this.MortyTheme.Name = "MortyTheme";
             this.MortyTheme.ShadowDecoration.Parent = this.MortyTheme;
             this.MortyTheme.Size = new System.Drawing.Size(45, 45);
@@ -1230,7 +1239,7 @@ namespace JiayiLauncher
             this.RilayeTheme.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RilayeTheme.ForeColor = System.Drawing.Color.White;
             this.RilayeTheme.HoverState.Parent = this.RilayeTheme;
-            this.RilayeTheme.Location = new System.Drawing.Point(570, 241);
+            this.RilayeTheme.Location = new System.Drawing.Point(569, 196);
             this.RilayeTheme.Name = "RilayeTheme";
             this.RilayeTheme.ShadowDecoration.Parent = this.RilayeTheme;
             this.RilayeTheme.Size = new System.Drawing.Size(45, 45);
@@ -1252,7 +1261,7 @@ namespace JiayiLauncher
             this.PluralTheme.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PluralTheme.ForeColor = System.Drawing.Color.White;
             this.PluralTheme.HoverState.Parent = this.PluralTheme;
-            this.PluralTheme.Location = new System.Drawing.Point(519, 241);
+            this.PluralTheme.Location = new System.Drawing.Point(518, 196);
             this.PluralTheme.Name = "PluralTheme";
             this.PluralTheme.ShadowDecoration.Parent = this.PluralTheme;
             this.PluralTheme.Size = new System.Drawing.Size(45, 45);
@@ -1274,7 +1283,7 @@ namespace JiayiLauncher
             this.EimTheme.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EimTheme.ForeColor = System.Drawing.Color.White;
             this.EimTheme.HoverState.Parent = this.EimTheme;
-            this.EimTheme.Location = new System.Drawing.Point(468, 241);
+            this.EimTheme.Location = new System.Drawing.Point(467, 196);
             this.EimTheme.Name = "EimTheme";
             this.EimTheme.ShadowDecoration.Parent = this.EimTheme;
             this.EimTheme.Size = new System.Drawing.Size(45, 45);
@@ -1296,7 +1305,7 @@ namespace JiayiLauncher
             this.PatarTheme.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PatarTheme.ForeColor = System.Drawing.Color.White;
             this.PatarTheme.HoverState.Parent = this.PatarTheme;
-            this.PatarTheme.Location = new System.Drawing.Point(417, 241);
+            this.PatarTheme.Location = new System.Drawing.Point(416, 196);
             this.PatarTheme.Name = "PatarTheme";
             this.PatarTheme.ShadowDecoration.Parent = this.PatarTheme;
             this.PatarTheme.Size = new System.Drawing.Size(45, 45);
@@ -1318,7 +1327,7 @@ namespace JiayiLauncher
             this.CloudyTheme.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CloudyTheme.ForeColor = System.Drawing.Color.White;
             this.CloudyTheme.HoverState.Parent = this.CloudyTheme;
-            this.CloudyTheme.Location = new System.Drawing.Point(366, 241);
+            this.CloudyTheme.Location = new System.Drawing.Point(365, 196);
             this.CloudyTheme.Name = "CloudyTheme";
             this.CloudyTheme.ShadowDecoration.Parent = this.CloudyTheme;
             this.CloudyTheme.Size = new System.Drawing.Size(45, 45);
@@ -1340,7 +1349,7 @@ namespace JiayiLauncher
             this.EndermanTheme.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EndermanTheme.ForeColor = System.Drawing.Color.White;
             this.EndermanTheme.HoverState.Parent = this.EndermanTheme;
-            this.EndermanTheme.Location = new System.Drawing.Point(315, 241);
+            this.EndermanTheme.Location = new System.Drawing.Point(314, 196);
             this.EndermanTheme.Name = "EndermanTheme";
             this.EndermanTheme.ShadowDecoration.Parent = this.EndermanTheme;
             this.EndermanTheme.Size = new System.Drawing.Size(45, 45);
@@ -1351,7 +1360,7 @@ namespace JiayiLauncher
             // 
             this.label8.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(356, 195);
+            this.label8.Location = new System.Drawing.Point(355, 150);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(268, 33);
             this.label8.TabIndex = 22;
@@ -1372,7 +1381,7 @@ namespace JiayiLauncher
             this.Chr7stTheme.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Chr7stTheme.ForeColor = System.Drawing.Color.White;
             this.Chr7stTheme.HoverState.Parent = this.Chr7stTheme;
-            this.Chr7stTheme.Location = new System.Drawing.Point(264, 241);
+            this.Chr7stTheme.Location = new System.Drawing.Point(263, 196);
             this.Chr7stTheme.Name = "Chr7stTheme";
             this.Chr7stTheme.ShadowDecoration.Parent = this.Chr7stTheme;
             this.Chr7stTheme.Size = new System.Drawing.Size(45, 45);
@@ -1390,7 +1399,7 @@ namespace JiayiLauncher
             this.BackImageSelectButton.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackImageSelectButton.ForeColor = System.Drawing.Color.White;
             this.BackImageSelectButton.HoverState.Parent = this.BackImageSelectButton;
-            this.BackImageSelectButton.Location = new System.Drawing.Point(262, 106);
+            this.BackImageSelectButton.Location = new System.Drawing.Point(281, 89);
             this.BackImageSelectButton.Name = "BackImageSelectButton";
             this.BackImageSelectButton.ShadowDecoration.Parent = this.BackImageSelectButton;
             this.BackImageSelectButton.Size = new System.Drawing.Size(180, 45);
@@ -1405,14 +1414,14 @@ namespace JiayiLauncher
             this.BackImageCheckBox.CheckedState.BorderColor = System.Drawing.Color.Transparent;
             this.BackImageCheckBox.CheckedState.BorderRadius = 0;
             this.BackImageCheckBox.CheckedState.BorderThickness = 0;
-            this.BackImageCheckBox.CheckedState.FillColor = System.Drawing.Color.Red;
+            this.BackImageCheckBox.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.BackImageCheckBox.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackImageCheckBox.ForeColor = System.Drawing.Color.White;
-            this.BackImageCheckBox.Location = new System.Drawing.Point(256, 61);
+            this.BackImageCheckBox.Location = new System.Drawing.Point(273, 44);
             this.BackImageCheckBox.Name = "BackImageCheckBox";
-            this.BackImageCheckBox.Size = new System.Drawing.Size(193, 38);
+            this.BackImageCheckBox.Size = new System.Drawing.Size(197, 38);
             this.BackImageCheckBox.TabIndex = 19;
-            this.BackImageCheckBox.Text = "Background Image";
+            this.BackImageCheckBox.Text = "Background Image*";
             this.BackImageCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.BackImageCheckBox.UncheckedState.BorderColor = System.Drawing.Color.Transparent;
             this.BackImageCheckBox.UncheckedState.BorderRadius = 0;
@@ -1432,7 +1441,7 @@ namespace JiayiLauncher
             this.BackToSettings.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.BackToSettings.ForeColor = System.Drawing.Color.White;
             this.BackToSettings.HoverState.Parent = this.BackToSettings;
-            this.BackToSettings.Location = new System.Drawing.Point(262, 340);
+            this.BackToSettings.Location = new System.Drawing.Point(38, 332);
             this.BackToSettings.Name = "BackToSettings";
             this.BackToSettings.ShadowDecoration.Parent = this.BackToSettings;
             this.BackToSettings.Size = new System.Drawing.Size(180, 45);
@@ -1451,7 +1460,7 @@ namespace JiayiLauncher
             this.DarkThemeBtn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.DarkThemeBtn.ForeColor = System.Drawing.Color.White;
             this.DarkThemeBtn.HoverState.Parent = this.DarkThemeBtn;
-            this.DarkThemeBtn.Location = new System.Drawing.Point(25, 279);
+            this.DarkThemeBtn.Location = new System.Drawing.Point(38, 252);
             this.DarkThemeBtn.Name = "DarkThemeBtn";
             this.DarkThemeBtn.ShadowDecoration.Parent = this.DarkThemeBtn;
             this.DarkThemeBtn.Size = new System.Drawing.Size(180, 45);
@@ -1470,7 +1479,7 @@ namespace JiayiLauncher
             this.LightThemeBtn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.LightThemeBtn.ForeColor = System.Drawing.Color.White;
             this.LightThemeBtn.HoverState.Parent = this.LightThemeBtn;
-            this.LightThemeBtn.Location = new System.Drawing.Point(25, 219);
+            this.LightThemeBtn.Location = new System.Drawing.Point(38, 192);
             this.LightThemeBtn.Name = "LightThemeBtn";
             this.LightThemeBtn.ShadowDecoration.Parent = this.LightThemeBtn;
             this.LightThemeBtn.Size = new System.Drawing.Size(180, 45);
@@ -1482,7 +1491,7 @@ namespace JiayiLauncher
             // 
             this.label5.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(13, 177);
+            this.label5.Location = new System.Drawing.Point(27, 150);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(202, 33);
             this.label5.TabIndex = 15;
@@ -1493,7 +1502,7 @@ namespace JiayiLauncher
             // 
             this.label4.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(23, 61);
+            this.label4.Location = new System.Drawing.Point(37, 44);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(182, 33);
             this.label4.TabIndex = 13;
@@ -1513,7 +1522,7 @@ namespace JiayiLauncher
             this.AccentColorBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AccentColorBtn.ForeColor = System.Drawing.Color.White;
             this.AccentColorBtn.HoverState.Parent = this.AccentColorBtn;
-            this.AccentColorBtn.Location = new System.Drawing.Point(92, 106);
+            this.AccentColorBtn.Location = new System.Drawing.Point(106, 89);
             this.AccentColorBtn.Name = "AccentColorBtn";
             this.AccentColorBtn.ShadowDecoration.Parent = this.AccentColorBtn;
             this.AccentColorBtn.Size = new System.Drawing.Size(45, 45);
@@ -1847,8 +1856,72 @@ namespace JiayiLauncher
             this.label14.Size = new System.Drawing.Size(703, 398);
             this.label14.TabIndex = 22;
             this.label14.Tag = "";
-            this.label14.Text = "Cosmetics will be available after public release.";
+            this.label14.Text = "This feature is incomplete. Come back after a while.";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // IntervalTrackBar
+            // 
+            this.IntervalTrackBar.Enabled = false;
+            this.IntervalTrackBar.FillColor = System.Drawing.Color.White;
+            this.IntervalTrackBar.HoverState.Parent = this.IntervalTrackBar;
+            this.IntervalTrackBar.IndicateFocus = false;
+            this.IntervalTrackBar.Location = new System.Drawing.Point(535, 369);
+            this.IntervalTrackBar.Minimum = 1;
+            this.IntervalTrackBar.Name = "IntervalTrackBar";
+            this.IntervalTrackBar.Size = new System.Drawing.Size(177, 23);
+            this.IntervalTrackBar.Style = Guna.UI2.WinForms.Enums.TrackBarStyle.Metro;
+            this.IntervalTrackBar.TabIndex = 33;
+            this.IntervalTrackBar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
+            this.IntervalTrackBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.IntervalTrackBar_Scroll);
+            // 
+            // RGBCheckBox
+            // 
+            this.RGBCheckBox.Animated = true;
+            this.RGBCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.RGBCheckBox.CheckedState.BorderColor = System.Drawing.Color.Transparent;
+            this.RGBCheckBox.CheckedState.BorderRadius = 0;
+            this.RGBCheckBox.CheckedState.BorderThickness = 0;
+            this.RGBCheckBox.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.RGBCheckBox.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RGBCheckBox.ForeColor = System.Drawing.Color.White;
+            this.RGBCheckBox.Location = new System.Drawing.Point(586, 268);
+            this.RGBCheckBox.Name = "RGBCheckBox";
+            this.RGBCheckBox.Size = new System.Drawing.Size(79, 33);
+            this.RGBCheckBox.TabIndex = 34;
+            this.RGBCheckBox.Text = "RGB*";
+            this.RGBCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RGBCheckBox.UncheckedState.BorderColor = System.Drawing.Color.Transparent;
+            this.RGBCheckBox.UncheckedState.BorderRadius = 0;
+            this.RGBCheckBox.UncheckedState.BorderThickness = 0;
+            this.RGBCheckBox.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.RGBCheckBox.UseVisualStyleBackColor = false;
+            this.RGBCheckBox.CheckedChanged += new System.EventHandler(this.RGBCheckBox_CheckedChanged);
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(530, 292);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(186, 74);
+            this.label13.TabIndex = 35;
+            this.label13.Text = "Set your desired interval from 1-100 milliseconds. (aka RGB cycle speed)";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // RGBIntervalTimer
+            // 
+            this.RGBIntervalTimer.Tick += new System.EventHandler(this.RGBIntervalTimer_Tick);
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.DimGray;
+            this.label15.Location = new System.Drawing.Point(205, 395);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(332, 23);
+            this.label15.TabIndex = 36;
+            this.label15.Text = "*this setting may affect performance";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Jiayi
             // 
@@ -2001,6 +2074,11 @@ namespace JiayiLauncher
         private System.Windows.Forms.Label TitleLabel;
         private Guna.UI2.WinForms.Guna2Button TextContainer;
         private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label13;
+        private Guna.UI2.WinForms.Guna2CheckBox RGBCheckBox;
+        private Guna.UI2.WinForms.Guna2TrackBar IntervalTrackBar;
+        private System.Windows.Forms.Timer RGBIntervalTimer;
+        private System.Windows.Forms.Label label15;
     }
 }
 

@@ -516,12 +516,14 @@ namespace JiayiLauncher
             try
             {
                 label12.Text = "  " + client.CurrentUser.Username + "#" + client.CurrentUser.Discriminator.ToString();
-            } catch (Exception)
+            } catch (NullReferenceException)
             {
                 label12.Text = "  Failed";
             }
 
-            
+            // rgb settings poggers!
+            RGBCheckBox.Checked = Properties.Settings.Default.RGB;
+            IntervalTrackBar.Value =  Properties.Settings.Default.RGBInterval;
         }
 
         public void XboxInfo()
@@ -1716,6 +1718,8 @@ namespace JiayiLauncher
             Properties.Settings.Default.LightDarkMode = "Dark";
             Properties.Settings.Default.BackImagePath = "";
             Properties.Settings.Default.Save();
+            Properties.Settings.Default.RGB = false;
+            Properties.Settings.Default.RGBInterval = 50;
             MessageBox.Show("Restart Jiayi to apply your changes.", "Themes", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
@@ -2002,6 +2006,119 @@ namespace JiayiLauncher
         private void CreditsTimer_Tick(object sender, EventArgs e)
         {
             // NEVER MIND
+        }
+
+        private void IntervalTrackBar_Scroll(object sender, ScrollEventArgs e)
+        {
+            Properties.Settings.Default.RGBInterval = IntervalTrackBar.Value;
+            Properties.Settings.Default.Save();
+        }
+
+        int red = 255;
+        int green = 0;
+        int blue = 0; // we'll need these
+
+        private void RGBIntervalTimer_Tick(object sender, EventArgs e)
+        {
+            if (!RGBCheckBox.Checked) { // no check?
+                return;
+            }
+            RGBIntervalTimer.Interval = IntervalTrackBar.Value;
+
+            // the fun stuff
+            if (red == 255)
+            {
+                if (blue != 0)
+                {
+                    blue -= 1;
+                } else
+                {
+                    green += 1;
+                }
+            }
+            if (green == 255)
+            {
+                if (red != 0)
+                {
+                    red -= 1;
+                } else
+                {
+                    blue += 1;
+                }
+            }
+            if (blue == 255)
+            {
+                if (green != 0)
+                {
+                    green -= 1;
+                }
+                else
+                {
+                    red += 1;
+                }
+            }
+
+            Color finishedcolor = Color.FromArgb(red, green, blue);
+            TopPanel.HoverState.CustomBorderColor = finishedcolor;
+            TopPanel.CustomBorderColor = finishedcolor;
+            HomeBtn.CheckedState.CustomBorderColor = finishedcolor;
+            SettingsBtn.CheckedState.CustomBorderColor = finishedcolor;
+            UpdatePanelBtn.CheckedState.CustomBorderColor = finishedcolor;
+            CosmeticsBtn.CheckedState.CustomBorderColor = finishedcolor;
+            CloseLauncher.CheckedState.CustomBorderColor = finishedcolor;
+            HideLauncher.CheckedState.CustomBorderColor = finishedcolor;
+            KeepOpen.CheckedState.CustomBorderColor = finishedcolor;
+            Version201Bar.FillColor = finishedcolor;
+            Install201Btn.BorderColor = finishedcolor;
+            LogoLabel.ForeColor = finishedcolor;
+            StableSettingBtn.CheckedState.CustomBorderColor = finishedcolor;
+            ExpirementalSettingBtn.CheckedState.CustomBorderColor = finishedcolor;
+            ThemesButton.CheckedState.CustomBorderColor = finishedcolor;
+            ResolutionComboBox.FocusedState.BorderColor = finishedcolor;
+            ProcessPriorityBox.FocusedState.BorderColor = finishedcolor;
+            LightThemeBtn.CheckedState.CustomBorderColor = finishedcolor;
+            DarkThemeBtn.CheckedState.CustomBorderColor = finishedcolor;
+            RpcIgnBtn.CheckedState.CustomBorderColor = finishedcolor;
+            RpcSrverBtn.CheckedState.CustomBorderColor = finishedcolor;
+
+            AccentColorBtn.FillColor = finishedcolor;
+        }
+
+        private void RGBCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            Properties.Settings.Default.RGB = RGBCheckBox.Checked;
+            Properties.Settings.Default.Save();
+            IntervalTrackBar.Enabled = RGBCheckBox.Checked;
+            if (Properties.Settings.Default.RGB)
+            {
+                RGBIntervalTimer.Start();
+            } else
+            {
+                RGBIntervalTimer.Stop();
+                TopPanel.HoverState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                TopPanel.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                HomeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                SettingsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                UpdatePanelBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                CosmeticsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                CloseLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                HideLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                KeepOpen.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                Version201Bar.FillColor = Properties.Settings.Default.AccentColor;
+                Install201Btn.BorderColor = Properties.Settings.Default.AccentColor;
+                LogoLabel.ForeColor = Properties.Settings.Default.AccentColor;
+                StableSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                ExpirementalSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                ThemesButton.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                ResolutionComboBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
+                ProcessPriorityBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
+                LightThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                DarkThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                RpcIgnBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                RpcSrverBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+
+                AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
+            }
         }
     }
 }

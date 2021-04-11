@@ -142,5 +142,29 @@ namespace JiayiLauncher.Properties {
                 this["Theme"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("False")]
+        public bool RGB {
+            get {
+                return ((bool)(this["RGB"]));
+            }
+            set {
+                this["RGB"] = value;
+            }
+        }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("50")]
+        public int RGBInterval {
+            get {
+                return ((int)(this["RGBInterval"]));
+            }
+            set {
+                this["RGBInterval"] = value;
+            }
+        }
     }
 }
