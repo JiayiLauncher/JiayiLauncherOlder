@@ -48,7 +48,7 @@ namespace JiayiLauncher
 
         public static string encryptDecrypt(string input)
         {
-            char[] key = { 'J', 'I', 'A', 'Y', 'I' }; //Any chars will work, in an array of any size
+            char[] key = { 'J', 'I', 'A', 'Y', 'I' }; 
             char[] output = new char[input.Length];
 
             for (int i = 0; i < input.Length; i++)
@@ -74,27 +74,7 @@ namespace JiayiLauncher
             {
                 File.Create(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + encryptDecrypt(encryptedpath).TrimEnd(remove));
             }
-
-            // checks beta list
-            try
-            {
-                Properties.Settings.Default.DiscordId = client.CurrentUser.ID.ToString();
-                Properties.Settings.Default.Save();
-                WebClient betaidclient = new WebClient();
-                string betaids = betaidclient.DownloadString("https://raw.githubusercontent.com/xarson/jiayi/master/betaids.txt");
-                if (!betaids.Contains(Properties.Settings.Default.DiscordId.ToString()))
-                {
-                    MessageBox.Show("You do not have access to the Jiayi beta.", "Denied", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    Close();
-                }
-            } catch (NullReferenceException)
-            {
-                MessageBox.Show("Failed to authenticate with Discord. Try again in a few minutes.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                Close();
-                
-            }
             
-
             // launch settings
             if (Properties.Settings.Default.AfterLaunch == "Hide")
             {
@@ -569,7 +549,7 @@ namespace JiayiLauncher
                     else
                     {
                         xboxGamertag.Text = "Failed";
-                        MessageBox.Show("Couldn't get your Xbox avatar and gamertag. Installing the Xbox App can fix this.", "Error", 
+                        MessageBox.Show("Couldn't get your Xbox avatar and gamertag. Make sure you're signed in to Xbox Live.", "Error", 
                             MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                 }
@@ -1122,16 +1102,16 @@ namespace JiayiLauncher
 
             Process[] processes = Process.GetProcessesByName("Minecraft.Windows");
             foreach (Process proc in processes)
-                if (ProcessPriorityBox.SelectedItem == "High")
+                if (ProcessPriorityBox.SelectedItem.ToString() == "High")
                 {
                     proc.PriorityClass = ProcessPriorityClass.High;
                 }
 
-                else if (ProcessPriorityBox.SelectedItem == "Medium")
+                else if (ProcessPriorityBox.SelectedItem.ToString() == "Medium")
                 {
                     proc.PriorityClass = ProcessPriorityClass.Normal;
                 }
-                else if (ProcessPriorityBox.SelectedItem == "Low")
+                else if (ProcessPriorityBox.SelectedItem.ToString() == "Low")
                 {
                     proc.PriorityClass = ProcessPriorityClass.BelowNormal;
                 }
@@ -1140,15 +1120,15 @@ namespace JiayiLauncher
             if (MinecraftIndex.Length > 0)
             {
                 Process Minecraft = Process.GetProcessesByName("Minecraft.Windows")[0];
-                if (ResolutionComboBox.SelectedItem == "1920x1080")
+                if (ResolutionComboBox.SelectedItem.ToString() == "1920x1080")
                 {
                     MoveWindow(Minecraft.MainWindowHandle, 0, 0, 1920, 1080, true);
                 }
-                else if (ResolutionComboBox.SelectedItem == "1280x720")
+                else if (ResolutionComboBox.SelectedItem.ToString() == "1280x720")
                 {
                     MoveWindow(Minecraft.MainWindowHandle, 0, 0, 1280, 720, true);
                 }
-                else if (ResolutionComboBox.SelectedItem == "1600x900")
+                else if (ResolutionComboBox.SelectedItem.ToString() == "1600x900")
                 {
                     MoveWindow(Minecraft.MainWindowHandle, 0, 0, 1600, 900, true);
                 }
@@ -2030,31 +2010,31 @@ namespace JiayiLauncher
             {
                 if (blue != 0)
                 {
-                    blue -= 1;
+                    blue -= 5;
                 } else
                 {
-                    green += 1;
+                    green += 5;
                 }
             }
             if (green == 255)
             {
                 if (red != 0)
                 {
-                    red -= 1;
+                    red -= 5;
                 } else
                 {
-                    blue += 1;
+                    blue += 5;
                 }
             }
             if (blue == 255)
             {
                 if (green != 0)
                 {
-                    green -= 1;
+                    green -= 5;
                 }
                 else
                 {
-                    red += 1;
+                    red += 5;
                 }
             }
 
@@ -2080,6 +2060,7 @@ namespace JiayiLauncher
             DarkThemeBtn.CheckedState.CustomBorderColor = finishedcolor;
             RpcIgnBtn.CheckedState.CustomBorderColor = finishedcolor;
             RpcSrverBtn.CheckedState.CustomBorderColor = finishedcolor;
+            IntervalTrackBar.ThumbColor = finishedcolor;
 
             AccentColorBtn.FillColor = finishedcolor;
         }
@@ -2092,6 +2073,7 @@ namespace JiayiLauncher
             if (Properties.Settings.Default.RGB)
             {
                 RGBIntervalTimer.Start();
+                AccentColorBtn.Enabled = false;
             } else
             {
                 RGBIntervalTimer.Stop();
@@ -2116,8 +2098,10 @@ namespace JiayiLauncher
                 DarkThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
                 RpcIgnBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
                 RpcSrverBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
+                IntervalTrackBar.ThumbColor = Color.FromArgb(25, 24, 26);
 
                 AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
+                AccentColorBtn.Enabled = true;
             }
         }
     }

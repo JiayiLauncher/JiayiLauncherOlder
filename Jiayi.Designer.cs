@@ -88,6 +88,10 @@ namespace JiayiLauncher
             this.NotifyIcon = new System.Windows.Forms.NotifyIcon(this.components);
             this.colorDialog1 = new System.Windows.Forms.ColorDialog();
             this.ThemesPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.label15 = new System.Windows.Forms.Label();
+            this.label13 = new System.Windows.Forms.Label();
+            this.RGBCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
+            this.IntervalTrackBar = new Guna.UI2.WinForms.Guna2TrackBar();
             this.ResetButton = new Guna.UI2.WinForms.Guna2Button();
             this.label11 = new System.Windows.Forms.Label();
             this.guna2Button8 = new Guna.UI2.WinForms.Guna2Button();
@@ -130,11 +134,7 @@ namespace JiayiLauncher
             this.VersionDisplay = new System.Windows.Forms.Label();
             this.CosmeticsPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.label14 = new System.Windows.Forms.Label();
-            this.IntervalTrackBar = new Guna.UI2.WinForms.Guna2TrackBar();
-            this.RGBCheckBox = new Guna.UI2.WinForms.Guna2CheckBox();
-            this.label13 = new System.Windows.Forms.Label();
             this.RGBIntervalTimer = new System.Windows.Forms.Timer(this.components);
-            this.label15 = new System.Windows.Forms.Label();
             this.BtnPanel.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xboxIcon)).BeginInit();
@@ -1151,6 +1151,66 @@ namespace JiayiLauncher
             this.ThemesPanel.TabIndex = 16;
             this.ThemesPanel.Visible = false;
             // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label15.ForeColor = System.Drawing.Color.DimGray;
+            this.label15.Location = new System.Drawing.Point(205, 395);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(332, 23);
+            this.label15.TabIndex = 36;
+            this.label15.Text = "*this setting may affect performance";
+            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label13
+            // 
+            this.label13.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(530, 292);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(186, 74);
+            this.label13.TabIndex = 35;
+            this.label13.Text = "Set your desired interval from 1-100 milliseconds. (aka RGB cycle speed)";
+            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // RGBCheckBox
+            // 
+            this.RGBCheckBox.Animated = true;
+            this.RGBCheckBox.BackColor = System.Drawing.Color.Transparent;
+            this.RGBCheckBox.CheckedState.BorderColor = System.Drawing.Color.Transparent;
+            this.RGBCheckBox.CheckedState.BorderRadius = 0;
+            this.RGBCheckBox.CheckedState.BorderThickness = 0;
+            this.RGBCheckBox.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.RGBCheckBox.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RGBCheckBox.ForeColor = System.Drawing.Color.White;
+            this.RGBCheckBox.Location = new System.Drawing.Point(586, 268);
+            this.RGBCheckBox.Name = "RGBCheckBox";
+            this.RGBCheckBox.Size = new System.Drawing.Size(79, 33);
+            this.RGBCheckBox.TabIndex = 34;
+            this.RGBCheckBox.Text = "RGB*";
+            this.RGBCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.RGBCheckBox.UncheckedState.BorderColor = System.Drawing.Color.Transparent;
+            this.RGBCheckBox.UncheckedState.BorderRadius = 0;
+            this.RGBCheckBox.UncheckedState.BorderThickness = 0;
+            this.RGBCheckBox.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.RGBCheckBox.UseVisualStyleBackColor = false;
+            this.RGBCheckBox.CheckedChanged += new System.EventHandler(this.RGBCheckBox_CheckedChanged);
+            // 
+            // IntervalTrackBar
+            // 
+            this.IntervalTrackBar.Enabled = false;
+            this.IntervalTrackBar.FillColor = System.Drawing.Color.White;
+            this.IntervalTrackBar.HoverState.Parent = this.IntervalTrackBar;
+            this.IntervalTrackBar.IndicateFocus = false;
+            this.IntervalTrackBar.Location = new System.Drawing.Point(535, 369);
+            this.IntervalTrackBar.Minimum = 1;
+            this.IntervalTrackBar.Name = "IntervalTrackBar";
+            this.IntervalTrackBar.Size = new System.Drawing.Size(177, 23);
+            this.IntervalTrackBar.Style = Guna.UI2.WinForms.Enums.TrackBarStyle.Metro;
+            this.IntervalTrackBar.TabIndex = 33;
+            this.IntervalTrackBar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
+            this.IntervalTrackBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.IntervalTrackBar_Scroll);
+            // 
             // ResetButton
             // 
             this.ResetButton.Animated = true;
@@ -1859,69 +1919,9 @@ namespace JiayiLauncher
             this.label14.Text = "This feature is incomplete. Come back after a while.";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // IntervalTrackBar
-            // 
-            this.IntervalTrackBar.Enabled = false;
-            this.IntervalTrackBar.FillColor = System.Drawing.Color.White;
-            this.IntervalTrackBar.HoverState.Parent = this.IntervalTrackBar;
-            this.IntervalTrackBar.IndicateFocus = false;
-            this.IntervalTrackBar.Location = new System.Drawing.Point(535, 369);
-            this.IntervalTrackBar.Minimum = 1;
-            this.IntervalTrackBar.Name = "IntervalTrackBar";
-            this.IntervalTrackBar.Size = new System.Drawing.Size(177, 23);
-            this.IntervalTrackBar.Style = Guna.UI2.WinForms.Enums.TrackBarStyle.Metro;
-            this.IntervalTrackBar.TabIndex = 33;
-            this.IntervalTrackBar.ThumbColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
-            this.IntervalTrackBar.Scroll += new System.Windows.Forms.ScrollEventHandler(this.IntervalTrackBar_Scroll);
-            // 
-            // RGBCheckBox
-            // 
-            this.RGBCheckBox.Animated = true;
-            this.RGBCheckBox.BackColor = System.Drawing.Color.Transparent;
-            this.RGBCheckBox.CheckedState.BorderColor = System.Drawing.Color.Transparent;
-            this.RGBCheckBox.CheckedState.BorderRadius = 0;
-            this.RGBCheckBox.CheckedState.BorderThickness = 0;
-            this.RGBCheckBox.CheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.RGBCheckBox.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RGBCheckBox.ForeColor = System.Drawing.Color.White;
-            this.RGBCheckBox.Location = new System.Drawing.Point(586, 268);
-            this.RGBCheckBox.Name = "RGBCheckBox";
-            this.RGBCheckBox.Size = new System.Drawing.Size(79, 33);
-            this.RGBCheckBox.TabIndex = 34;
-            this.RGBCheckBox.Text = "RGB*";
-            this.RGBCheckBox.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.RGBCheckBox.UncheckedState.BorderColor = System.Drawing.Color.Transparent;
-            this.RGBCheckBox.UncheckedState.BorderRadius = 0;
-            this.RGBCheckBox.UncheckedState.BorderThickness = 0;
-            this.RGBCheckBox.UncheckedState.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.RGBCheckBox.UseVisualStyleBackColor = false;
-            this.RGBCheckBox.CheckedChanged += new System.EventHandler(this.RGBCheckBox_CheckedChanged);
-            // 
-            // label13
-            // 
-            this.label13.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(530, 292);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(186, 74);
-            this.label13.TabIndex = 35;
-            this.label13.Text = "Set your desired interval from 1-100 milliseconds. (aka RGB cycle speed)";
-            this.label13.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
             // RGBIntervalTimer
             // 
             this.RGBIntervalTimer.Tick += new System.EventHandler(this.RGBIntervalTimer_Tick);
-            // 
-            // label15
-            // 
-            this.label15.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label15.ForeColor = System.Drawing.Color.DimGray;
-            this.label15.Location = new System.Drawing.Point(205, 395);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(332, 23);
-            this.label15.TabIndex = 36;
-            this.label15.Text = "*this setting may affect performance";
-            this.label15.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Jiayi
             // 
