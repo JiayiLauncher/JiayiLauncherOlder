@@ -843,7 +843,7 @@ namespace JiayiLauncher
 
             RPCForBtns("Looking At Newsfeed");
 
-            TopPanel.Text = ("Updates");
+            TopPanel.Text = ("Newsfeed");
         }
 
         private void CosmeticsBtn_Click(object sender, EventArgs e)
@@ -958,11 +958,10 @@ namespace JiayiLauncher
 
         private void StableSettingBtn_Click(object sender, EventArgs e)
         {
-            StableSettingBtn.Checked = false;
-            ExpirementalSettingBtn.Checked = true;
-            /*Properties.Settings.Default.Branch = "Stable";
+            StableSettingBtn.Checked = true;
+            ExpirementalSettingBtn.Checked = false;
+            Properties.Settings.Default.Branch = "Stable";
             Properties.Settings.Default.Save();
-            */
         }
 
         private void timer1_Tick(object sender, EventArgs e)

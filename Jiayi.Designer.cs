@@ -280,7 +280,7 @@ namespace JiayiLauncher
             this.UpdatePanelBtn.ShadowDecoration.Parent = this.UpdatePanelBtn;
             this.UpdatePanelBtn.Size = new System.Drawing.Size(177, 56);
             this.UpdatePanelBtn.TabIndex = 3;
-            this.UpdatePanelBtn.Text = "Update";
+            this.UpdatePanelBtn.Text = "Newsfeed";
             this.UpdatePanelBtn.TextOffset = new System.Drawing.Point(-1, 0);
             this.UpdatePanelBtn.Click += new System.EventHandler(this.UpdateBtn_Click);
             // 
@@ -509,7 +509,7 @@ namespace JiayiLauncher
             // 
             // Status
             // 
-            this.Status.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Status.Font = new System.Drawing.Font("Montserrat ExtraBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Status.ForeColor = System.Drawing.Color.White;
             this.Status.Location = new System.Drawing.Point(0, 375);
             this.Status.Name = "Status";
@@ -650,7 +650,7 @@ namespace JiayiLauncher
             this.NewsPanel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.NewsPanel3.Controls.Add(this.FeedData3);
             this.NewsPanel3.Controls.Add(this.FeedPic3);
-            this.NewsPanel3.Location = new System.Drawing.Point(491, 44);
+            this.NewsPanel3.Location = new System.Drawing.Point(497, 97);
             this.NewsPanel3.Name = "NewsPanel3";
             this.NewsPanel3.ShadowDecoration.Parent = this.NewsPanel3;
             this.NewsPanel3.Size = new System.Drawing.Size(200, 228);
@@ -660,7 +660,7 @@ namespace JiayiLauncher
             // 
             this.FeedData3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.FeedData3.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.FeedData3.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FeedData3.Font = new System.Drawing.Font("Montserrat ExtraBold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FeedData3.ForeColor = System.Drawing.Color.White;
             this.FeedData3.Location = new System.Drawing.Point(0, 162);
             this.FeedData3.Name = "FeedData3";
@@ -685,7 +685,7 @@ namespace JiayiLauncher
             this.NewsPanel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.NewsPanel2.Controls.Add(this.FeedData2);
             this.NewsPanel2.Controls.Add(this.FeedPic2);
-            this.NewsPanel2.Location = new System.Drawing.Point(272, 45);
+            this.NewsPanel2.Location = new System.Drawing.Point(270, 97);
             this.NewsPanel2.Name = "NewsPanel2";
             this.NewsPanel2.ShadowDecoration.Parent = this.NewsPanel2;
             this.NewsPanel2.Size = new System.Drawing.Size(200, 228);
@@ -695,7 +695,7 @@ namespace JiayiLauncher
             // 
             this.FeedData2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.FeedData2.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.FeedData2.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FeedData2.Font = new System.Drawing.Font("Montserrat ExtraBold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FeedData2.ForeColor = System.Drawing.Color.White;
             this.FeedData2.Location = new System.Drawing.Point(0, 162);
             this.FeedData2.Name = "FeedData2";
@@ -720,7 +720,7 @@ namespace JiayiLauncher
             this.NewsPanel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.NewsPanel1.Controls.Add(this.FeedPic1);
             this.NewsPanel1.Controls.Add(this.FeedData1);
-            this.NewsPanel1.Location = new System.Drawing.Point(45, 45);
+            this.NewsPanel1.Location = new System.Drawing.Point(44, 97);
             this.NewsPanel1.Name = "NewsPanel1";
             this.NewsPanel1.ShadowDecoration.Parent = this.NewsPanel1;
             this.NewsPanel1.Size = new System.Drawing.Size(200, 228);
@@ -740,7 +740,7 @@ namespace JiayiLauncher
             // 
             this.FeedData1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.FeedData1.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.FeedData1.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.FeedData1.Font = new System.Drawing.Font("Montserrat ExtraBold", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.FeedData1.ForeColor = System.Drawing.Color.White;
             this.FeedData1.Location = new System.Drawing.Point(0, 162);
             this.FeedData1.Name = "FeedData1";
@@ -765,13 +765,14 @@ namespace JiayiLauncher
             this.UpdateBtn.Image = ((System.Drawing.Image)(resources.GetObject("UpdateBtn.Image")));
             this.UpdateBtn.ImageSize = new System.Drawing.Size(32, 32);
             this.UpdateBtn.IndicateFocus = true;
-            this.UpdateBtn.Location = new System.Drawing.Point(203, 321);
+            this.UpdateBtn.Location = new System.Drawing.Point(209, 400);
             this.UpdateBtn.Name = "UpdateBtn";
             this.UpdateBtn.ShadowDecoration.Parent = this.UpdateBtn;
             this.UpdateBtn.Size = new System.Drawing.Size(333, 74);
             this.UpdateBtn.TabIndex = 1;
             this.UpdateBtn.Text = "UPDATE";
             this.UpdateBtn.UseTransparentBackground = true;
+            this.UpdateBtn.Visible = false;
             this.UpdateBtn.Click += new System.EventHandler(this.UpdateBtn_Click_1);
             this.UpdateBtn.MouseLeave += new System.EventHandler(this.UpdateBtn_MouseLeave);
             this.UpdateBtn.MouseHover += new System.EventHandler(this.UpdateBtn_MouseHover);
@@ -848,11 +849,11 @@ namespace JiayiLauncher
             // ExpirementalSettingBtn
             // 
             this.ExpirementalSettingBtn.Animated = true;
-            this.ExpirementalSettingBtn.Checked = true;
             this.ExpirementalSettingBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
             this.ExpirementalSettingBtn.CheckedState.Parent = this.ExpirementalSettingBtn;
             this.ExpirementalSettingBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.ExpirementalSettingBtn.CustomImages.Parent = this.ExpirementalSettingBtn;
+            this.ExpirementalSettingBtn.Enabled = false;
             this.ExpirementalSettingBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.ExpirementalSettingBtn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ExpirementalSettingBtn.ForeColor = System.Drawing.Color.White;

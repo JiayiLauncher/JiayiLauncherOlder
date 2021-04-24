@@ -67,3 +67,4 @@ C:\Jiayi\Launcher\JiayiLauncher\obj\Debug\JiayiLauncher.csproj.CopyComplete
 C:\Jiayi\Launcher\JiayiLauncher\obj\Debug\JiayiLauncher.exe
 C:\Jiayi\Launcher\JiayiLauncher\obj\Debug\JiayiLauncher.pdb
 C:\Jiayi\Launcher\JiayiLauncher\obj\Debug\JiayiLauncher.csprojAssemblyReference.cache
+C:\Users\Owner\source\repos\JiayiLauncher\obj\Debug\JiayiLauncher.SplashScreen.resources
