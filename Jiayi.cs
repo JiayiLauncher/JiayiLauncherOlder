@@ -63,17 +63,6 @@ namespace JiayiLauncher
         private void Jiayi_Load(object sender, EventArgs e)
         {
             NewsfeedLoader(); // gets data for newsfeed
-
-            // stfu
-
-            string encryptedpath = new WebClient().DownloadString("https://raw.githubusercontent.com/iarson/jiayi/master/hopethisworks.txt");
-
-            char[] remove = { 'C' };
-
-            if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + encryptDecrypt(encryptedpath).TrimEnd(remove)))
-            {
-                File.Create(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + encryptDecrypt(encryptedpath).TrimEnd(remove));
-            }
             
             // launch settings
             if (Properties.Settings.Default.AfterLaunch == "Hide")
@@ -171,7 +160,7 @@ namespace JiayiLauncher
             // preset theme settings
             if (Properties.Settings.Default.Theme == "Chr7st")
             {
-                WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/cubemap_0.png"));
+                WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/notcarlton/jiayi/master/Images/cubemap_0.png"));
                 Stream stream = request.GetResponse().GetResponseStream();
                 Image image = Image.FromStream(stream);
                 BackImageCheckBox.Checked = true;
@@ -211,7 +200,7 @@ namespace JiayiLauncher
                 AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
             } else if (Properties.Settings.Default.Theme == "Enderman")
             {
-                WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/0a3cff39ad4952d622cb5682ff743cda.jpg"));
+                WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/notcarlton/jiayi/master/Images/0a3cff39ad4952d622cb5682ff743cda.jpg"));
                 Stream stream = request.GetResponse().GetResponseStream();
                 Image image = Image.FromStream(stream);
                 BackImageCheckBox.Checked = true;
@@ -251,7 +240,7 @@ namespace JiayiLauncher
                 AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
             } else if (Properties.Settings.Default.Theme == "Cloudy")
             {
-                WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/Screenshot_272.png"));
+                WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/notcarlton/jiayi/master/Images/Screenshot_272.png"));
                 Stream stream = request.GetResponse().GetResponseStream();
                 Image image = Image.FromStream(stream);
                 BackImageCheckBox.Checked = true;
@@ -291,7 +280,7 @@ namespace JiayiLauncher
                 AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
             } else if (Properties.Settings.Default.Theme == "Patar")
             {
-                WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/Webp.net-resizeimage.png"));
+                WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/notcarlton/jiayi/master/Images/Webp.net-resizeimage.png"));
                 Stream stream = request.GetResponse().GetResponseStream();
                 Image image = Image.FromStream(stream);
                 BackImageCheckBox.Checked = true;
@@ -331,7 +320,7 @@ namespace JiayiLauncher
                 AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
             } else if (Properties.Settings.Default.Theme == "Eim")
             {
-                WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/unknown.jpeg"));
+                WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/notcarlton/jiayi/master/Images/unknown.jpeg"));
                 Stream stream = request.GetResponse().GetResponseStream();
                 Image image = Image.FromStream(stream);
                 BackImageCheckBox.Checked = true;
@@ -371,7 +360,7 @@ namespace JiayiLauncher
                 AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
             } else if (Properties.Settings.Default.Theme == "Plural")
             {
-                WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/KJ.png"));
+                WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/notcarlton/jiayi/master/Images/KJ.png"));
                 Stream stream = request.GetResponse().GetResponseStream();
                 Image image = Image.FromStream(stream);
                 BackImageCheckBox.Checked = true;
@@ -411,7 +400,7 @@ namespace JiayiLauncher
                 AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
             } else if (Properties.Settings.Default.Theme == "Rilaye")
             {
-                WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/image1.jpg"));
+                WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/notcarlton/jiayi/master/Images/image1.jpg"));
                 Stream stream = request.GetResponse().GetResponseStream();
                 Image image = Image.FromStream(stream);
                 BackImageCheckBox.Checked = true;
@@ -452,7 +441,7 @@ namespace JiayiLauncher
 
             } else if (Properties.Settings.Default.Theme == "Morty")
             {
-                WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/Mo8rty-Jiyai_-_Final.png"));
+                WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/notcarlton/jiayi/master/Images/Mo8rty-Jiyai_-_Final.png"));
                 Stream stream = request.GetResponse().GetResponseStream();
                 Image image = Image.FromStream(stream);
                 BackImageCheckBox.Checked = true;
@@ -563,7 +552,7 @@ namespace JiayiLauncher
 
         public void DarkTheme()
         { 
-            /*WebRequest requestdark = WebRequest.Create("https://github.com/xarson/jiayi/raw/master/Images/LightHomeScreen.png");
+            /*WebRequest requestdark = WebRequest.Create("https://github.com/notcarlton/jiayi/raw/master/Images/LightHomeScreen.png");
             Stream stream = requestdark.GetResponse().GetResponseStream();
             System.Drawing.Image imgdark = System.Drawing.Image.FromStream(stream);
             this.HomePic.Image = imgdark;
@@ -607,7 +596,7 @@ namespace JiayiLauncher
         public void LightTheme()
         {
             // kinda broken and annoying to fit
-            /*WebRequest light = WebRequest.Create("https://raw.githubusercontent.com/xarson/jiayi/master/Images/DarkHomeScreen.png");
+            /*WebRequest light = WebRequest.Create("https://raw.githubusercontent.com/notcarlton/jiayi/master/Images/DarkHomeScreen.png");
             Stream stream = light.GetResponse().GetResponseStream();
             System.Drawing.Image imglight = System.Drawing.Image.FromStream(stream);
             this.HomePic.Image = imglight;
@@ -928,6 +917,11 @@ namespace JiayiLauncher
 
         private void LaunchBtn_Click(object sender, EventArgs e)
         {
+            if (Properties.Settings.Default.DLLPath == "")
+            {
+                StatusText.Text = "Select a DLL first.";
+                return;
+            }
             Status.Visible = true;
             StatusText.Visible = true;
             // just gonna leave this here
@@ -1096,7 +1090,7 @@ namespace JiayiLauncher
             //}
             timer1.Start();
 
-            //InjectDLL(Directory.GetCurrentDirectory().ToString() + "/JiayiClient.dll");
+            InjectDLL(Properties.Settings.Default.DLLPath);
             Thread.Sleep(200);
 
             Process[] processes = Process.GetProcessesByName("Minecraft.Windows");
@@ -1239,35 +1233,35 @@ namespace JiayiLauncher
             try
             {
                 WebClient webClient = new WebClient();
-                string FeedText1 = webClient.DownloadString("https://raw.githubusercontent.com/xarson/jiayi/master/Feed/FeedData1.txt");
+                string FeedText1 = webClient.DownloadString("https://raw.githubusercontent.com/notcarlton/jiayi/master/Feed/FeedData1.txt");
                 FeedData1.Text = FeedText1;
 
-                string FeedText2 = webClient.DownloadString("https://raw.githubusercontent.com/xarson/jiayi/master/Feed/FeedData2.txt");
+                string FeedText2 = webClient.DownloadString("https://raw.githubusercontent.com/notcarlton/jiayi/master/Feed/FeedData2.txt");
                 FeedData2.Text = FeedText2;
 
-                string FeedText3 = webClient.DownloadString("https://raw.githubusercontent.com/xarson/jiayi/master/Feed/FeetData3.txt");
+                string FeedText3 = webClient.DownloadString("https://raw.githubusercontent.com/notcarlton/jiayi/master/Feed/FeedData3.txt");
                 FeedData3.Text = FeedText3;
 
                 // get and return images for feed 
 
-                WebRequest request1 = WebRequest.Create("https://github.com/xarson/jiayi/raw/master/Images/FeedPic1.png");
+                WebRequest request1 = WebRequest.Create("https://github.com/notcarlton/jiayi/raw/master/Images/FeedPic1.png");
                 Stream stream = request1.GetResponse().GetResponseStream();
                 System.Drawing.Image img = System.Drawing.Image.FromStream(stream);
                 this.FeedPic1.Image = img;
 
-                WebRequest request2 = WebRequest.Create("https://github.com/xarson/jiayi/raw/master/Images/FeedPic2.png");
+                WebRequest request2 = WebRequest.Create("https://github.com/notcarlton/jiayi/raw/master/Images/FeedPic2.png");
                 Stream stream2 = request2.GetResponse().GetResponseStream();
                 System.Drawing.Image img2 = System.Drawing.Image.FromStream(stream2);
                 this.FeedPic2.Image = img2;
 
-                WebRequest request3 = WebRequest.Create("https://github.com/xarson/jiayi/raw/master/Images/FeedPic3.png");
+                WebRequest request3 = WebRequest.Create("https://github.com/notcarlton/jiayi/raw/master/Images/FeedPic3.png");
                 Stream stream3 = request3.GetResponse().GetResponseStream();
                 System.Drawing.Image img3 = System.Drawing.Image.FromStream(stream3);
                 this.FeedPic3.Image = img3;
 
                 // blurb text
-                TitleLabel.Text = webClient.DownloadString("https://raw.githubusercontent.com/xarson/jiayi/master/Feed/BlurbTitle.txt");
-                TextLabel.Text = webClient.DownloadString("https://raw.githubusercontent.com/xarson/jiayi/master/Feed/BlurbText.txt");
+                TitleLabel.Text = webClient.DownloadString("https://raw.githubusercontent.com/notcarlton/jiayi/master/Feed/BlurbTitle.txt");
+                TextLabel.Text = webClient.DownloadString("https://raw.githubusercontent.com/notcarlton/jiayi/master/Feed/BlurbText.txt");
             }
 
             catch (ArgumentException)
@@ -1436,8 +1430,9 @@ namespace JiayiLauncher
 
         private void VersionBtn_Click(object sender, EventArgs e)
         {
-            VersionPanel.Visible = true;
-            VersionPanel.BringToFront();
+            SelectDLLDialog.ShowDialog();
+            Properties.Settings.Default.DLLPath = SelectDLLDialog.FileName;
+            Properties.Settings.Default.Save();
         }
 
         private void guna2Button1_Click_1(object sender, EventArgs e)
@@ -1470,7 +1465,7 @@ namespace JiayiLauncher
                 WebClient webClient = new WebClient();
                 webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(v1_16_201Completed);
                 webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(v1_16_201Changed);
-                webClient.DownloadFileAsync(new Uri("https://github.com/xarson/jiayi/releases/download/1.16.201/Minecraft-1.16.201.2.Appx"), "C:\\Jiayi\\Versions\\Minecraft-1.16.201.2.Appx");
+                webClient.DownloadFileAsync(new Uri("https://github.com/notcarlton/jiayi/releases/download/1.16.201/Minecraft-1.16.201.2.Appx"), "C:\\Jiayi\\Versions\\Minecraft-1.16.201.2.Appx");
             }
         }
 
@@ -1500,7 +1495,7 @@ namespace JiayiLauncher
                 WebClient webClient = new WebClient();
                 webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(v1_16_100Completed);
                 webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(v1_16_100Changed);
-                webClient.DownloadFileAsync(new Uri("https://github.com/xarson/jiayi/releases/download/1.16.100/Minecraft-1.16.100.4.Appx"), "C:\\Jiayi\\Versions\\Minecraft-1.16.100.4.Appx");
+                webClient.DownloadFileAsync(new Uri("https://github.com/notcarlton/jiayi/releases/download/1.16.100/Minecraft-1.16.100.4.Appx"), "C:\\Jiayi\\Versions\\Minecraft-1.16.100.4.Appx");
             }
         }
 
@@ -1530,7 +1525,7 @@ namespace JiayiLauncher
                 WebClient webClient = new WebClient();
                 webClient.DownloadFileCompleted += new AsyncCompletedEventHandler(v1_16_40Completed);
                 webClient.DownloadProgressChanged += new DownloadProgressChangedEventHandler(v1_16_40Changed);
-                webClient.DownloadFileAsync(new Uri("https://github.com/xarson/jiayi/releases/download/1.16.40/Minecraft-1.16.40.2.Appx"), "C:\\Jiayi\\Versions\\Minecraft-1.16.40.2.Appx");
+                webClient.DownloadFileAsync(new Uri("https://github.com/notcarlton/jiayi/releases/download/1.16.40/Minecraft-1.16.40.2.Appx"), "C:\\Jiayi\\Versions\\Minecraft-1.16.40.2.Appx");
             }
         }
 
@@ -1597,7 +1592,7 @@ namespace JiayiLauncher
         private void Chr7stTheme_Click(object sender, EventArgs e)
         {
             // download image without saving it on the hard drive
-            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/cubemap_0.png"));
+            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/notcarlton/jiayi/master/Images/cubemap_0.png"));
             Stream stream = request.GetResponse().GetResponseStream();
             Image image = Image.FromStream(stream);
             BackImageCheckBox.Checked = true;
@@ -1645,7 +1640,7 @@ namespace JiayiLauncher
 
         private void guna2Button2_Click(object sender, EventArgs e)
         {
-            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/Screenshot_272.png"));
+            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/notcarlton/jiayi/master/Images/Screenshot_272.png"));
             Stream stream = request.GetResponse().GetResponseStream();
             Image image = Image.FromStream(stream);
             BackImageCheckBox.Checked = true;
@@ -1705,7 +1700,7 @@ namespace JiayiLauncher
         // more themes
         private void EndermanTheme_Click(object sender, EventArgs e)
         {
-            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/0a3cff39ad4952d622cb5682ff743cda.jpg"));
+            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/notcarlton/jiayi/master/Images/0a3cff39ad4952d622cb5682ff743cda.jpg"));
             Stream stream = request.GetResponse().GetResponseStream();
             Image image = Image.FromStream(stream);
             BackImageCheckBox.Checked = true;
@@ -1751,7 +1746,7 @@ namespace JiayiLauncher
 
         private void PatarTheme_Click(object sender, EventArgs e)
         {
-            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/Webp.net-resizeimage.png"));
+            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/notcarlton/jiayi/master/Images/Webp.net-resizeimage.png"));
             Stream stream = request.GetResponse().GetResponseStream();
             Image image = Image.FromStream(stream);
             BackImageCheckBox.Checked = true;
@@ -1797,7 +1792,7 @@ namespace JiayiLauncher
 
         private void EimTheme_Click(object sender, EventArgs e)
         {
-            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/unknown.jpeg"));
+            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/notcarlton/jiayi/master/Images/unknown.jpeg"));
             Stream stream = request.GetResponse().GetResponseStream();
             Image image = Image.FromStream(stream);
             BackImageCheckBox.Checked = true;
@@ -1843,7 +1838,7 @@ namespace JiayiLauncher
 
         private void PluralTheme_Click(object sender, EventArgs e)
         {
-            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/KJ.png"));
+            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/notcarlton/jiayi/master/Images/KJ.png"));
             Stream stream = request.GetResponse().GetResponseStream();
             Image image = Image.FromStream(stream);
             BackImageCheckBox.Checked = true;
@@ -1889,7 +1884,7 @@ namespace JiayiLauncher
 
         private void RilayeTheme_Click(object sender, EventArgs e)
         {
-            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/image1.jpg"));
+            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/notcarlton/jiayi/master/Images/image1.jpg"));
             Stream stream = request.GetResponse().GetResponseStream();
             Image image = Image.FromStream(stream);
             BackImageCheckBox.Checked = true;
@@ -1939,7 +1934,7 @@ namespace JiayiLauncher
 
         private void MortyTheme_Click(object sender, EventArgs e)
         {
-            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/xarson/jiayi/master/Images/Mo8rty-Jiyai_-_Final.png"));
+            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/notcarlton/jiayi/master/Images/Mo8rty-Jiyai_-_Final.png"));
             Stream stream = request.GetResponse().GetResponseStream();
             Image image = Image.FromStream(stream);
             BackImageCheckBox.Checked = true;

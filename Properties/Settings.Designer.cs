@@ -166,5 +166,17 @@ namespace JiayiLauncher.Properties {
                 this["RGBInterval"] = value;
             }
         }
+        
+        [global::System.Configuration.UserScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.DefaultSettingValueAttribute("")]
+        public string DLLPath {
+            get {
+                return ((string)(this["DLLPath"]));
+            }
+            set {
+                this["DLLPath"] = value;
+            }
+        }
     }
 }

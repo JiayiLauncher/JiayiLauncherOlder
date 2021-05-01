@@ -114,27 +114,28 @@ namespace JiayiLauncher
             this.AccentColorBtn = new Guna.UI2.WinForms.Guna2Button();
             this.label10 = new System.Windows.Forms.Label();
             this.SelectImageDialog = new System.Windows.Forms.OpenFileDialog();
-            this.VersionPanel = new Guna.UI2.WinForms.Guna2Panel();
-            this.GoBackBtn = new Guna.UI2.WinForms.Guna2Button();
-            this.label9 = new System.Windows.Forms.Label();
-            this.Status40 = new System.Windows.Forms.Label();
-            this.Launch40Btn = new Guna.UI2.WinForms.Guna2Button();
-            this.Install40Btn = new Guna.UI2.WinForms.Guna2Button();
-            this.ProgressBar40 = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.label7 = new System.Windows.Forms.Label();
-            this.Status100 = new System.Windows.Forms.Label();
-            this.Launch100Btn = new Guna.UI2.WinForms.Guna2Button();
-            this.Install100Btn = new Guna.UI2.WinForms.Guna2Button();
-            this.ProgressBar100 = new Guna.UI2.WinForms.Guna2ProgressBar();
-            this.label6 = new System.Windows.Forms.Label();
-            this.Status201 = new System.Windows.Forms.Label();
-            this.Launch201Btn = new Guna.UI2.WinForms.Guna2Button();
-            this.Install201Btn = new Guna.UI2.WinForms.Guna2Button();
-            this.Version201Bar = new Guna.UI2.WinForms.Guna2ProgressBar();
             this.VersionDisplay = new System.Windows.Forms.Label();
             this.CosmeticsPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.label14 = new System.Windows.Forms.Label();
             this.RGBIntervalTimer = new System.Windows.Forms.Timer(this.components);
+            this.Version201Bar = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.Install201Btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Launch201Btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Status201 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.ProgressBar100 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.Install100Btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Launch100Btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Status100 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.ProgressBar40 = new Guna.UI2.WinForms.Guna2ProgressBar();
+            this.Install40Btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Launch40Btn = new Guna.UI2.WinForms.Guna2Button();
+            this.Status40 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.GoBackBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.VersionPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.SelectDLLDialog = new System.Windows.Forms.OpenFileDialog();
             this.BtnPanel.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xboxIcon)).BeginInit();
@@ -148,8 +149,8 @@ namespace JiayiLauncher
             ((System.ComponentModel.ISupportInitialize)(this.FeedPic1)).BeginInit();
             this.SettingsPanel.SuspendLayout();
             this.ThemesPanel.SuspendLayout();
-            this.VersionPanel.SuspendLayout();
             this.CosmeticsPanel.SuspendLayout();
+            this.VersionPanel.SuspendLayout();
             this.SuspendLayout();
             // 
             // guna2BorderlessForm1
@@ -528,7 +529,7 @@ namespace JiayiLauncher
             this.VersionBtn.CheckedState.Parent = this.VersionBtn;
             this.VersionBtn.CustomImages.Parent = this.VersionBtn;
             this.VersionBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(41)))), ((int)(((byte)(155)))), ((int)(((byte)(79)))));
-            this.VersionBtn.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VersionBtn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.VersionBtn.ForeColor = System.Drawing.Color.White;
             this.VersionBtn.HoverState.Parent = this.VersionBtn;
             this.VersionBtn.Location = new System.Drawing.Point(163, 298);
@@ -536,7 +537,7 @@ namespace JiayiLauncher
             this.VersionBtn.ShadowDecoration.Parent = this.VersionBtn;
             this.VersionBtn.Size = new System.Drawing.Size(82, 74);
             this.VersionBtn.TabIndex = 11;
-            this.VersionBtn.Text = "Version Changer";
+            this.VersionBtn.Text = "Select DLL";
             this.VersionBtn.UseTransparentBackground = true;
             this.VersionBtn.Click += new System.EventHandler(this.VersionBtn_Click);
             // 
@@ -1606,249 +1607,59 @@ namespace JiayiLauncher
             this.SelectImageDialog.Filter = "Image Files|*.png";
             this.SelectImageDialog.Title = "Select Image";
             // 
-            // VersionPanel
+            // VersionDisplay
             // 
-            this.VersionPanel.BackColor = System.Drawing.Color.Transparent;
-            this.VersionPanel.Controls.Add(this.GoBackBtn);
-            this.VersionPanel.Controls.Add(this.label9);
-            this.VersionPanel.Controls.Add(this.Status40);
-            this.VersionPanel.Controls.Add(this.Launch40Btn);
-            this.VersionPanel.Controls.Add(this.Install40Btn);
-            this.VersionPanel.Controls.Add(this.ProgressBar40);
-            this.VersionPanel.Controls.Add(this.label7);
-            this.VersionPanel.Controls.Add(this.Status100);
-            this.VersionPanel.Controls.Add(this.Launch100Btn);
-            this.VersionPanel.Controls.Add(this.Install100Btn);
-            this.VersionPanel.Controls.Add(this.ProgressBar100);
-            this.VersionPanel.Controls.Add(this.label6);
-            this.VersionPanel.Controls.Add(this.Status201);
-            this.VersionPanel.Controls.Add(this.Launch201Btn);
-            this.VersionPanel.Controls.Add(this.Install201Btn);
-            this.VersionPanel.Controls.Add(this.Version201Bar);
-            this.VersionPanel.Location = new System.Drawing.Point(185, 121);
-            this.VersionPanel.Name = "VersionPanel";
-            this.VersionPanel.ShadowDecoration.Parent = this.VersionPanel;
-            this.VersionPanel.Size = new System.Drawing.Size(739, 421);
-            this.VersionPanel.TabIndex = 12;
-            this.VersionPanel.Visible = false;
-            this.VersionPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.VersionPanel_Paint);
+            this.VersionDisplay.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.VersionDisplay.ForeColor = System.Drawing.Color.White;
+            this.VersionDisplay.Location = new System.Drawing.Point(236, 545);
+            this.VersionDisplay.Name = "VersionDisplay";
+            this.VersionDisplay.Size = new System.Drawing.Size(112, 22);
+            this.VersionDisplay.TabIndex = 3;
+            this.VersionDisplay.Text = "1.16.20102.0";
             // 
-            // GoBackBtn
+            // CosmeticsPanel
             // 
-            this.GoBackBtn.Animated = true;
-            this.GoBackBtn.BorderThickness = 3;
-            this.GoBackBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.GoBackBtn.CheckedState.Parent = this.GoBackBtn;
-            this.GoBackBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
-            this.GoBackBtn.CustomImages.Parent = this.GoBackBtn;
-            this.GoBackBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.GoBackBtn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.GoBackBtn.ForeColor = System.Drawing.Color.White;
-            this.GoBackBtn.HoverState.Parent = this.GoBackBtn;
-            this.GoBackBtn.Location = new System.Drawing.Point(579, 357);
-            this.GoBackBtn.Name = "GoBackBtn";
-            this.GoBackBtn.ShadowDecoration.Parent = this.GoBackBtn;
-            this.GoBackBtn.Size = new System.Drawing.Size(106, 44);
-            this.GoBackBtn.TabIndex = 32;
-            this.GoBackBtn.Text = "Go Back";
-            this.GoBackBtn.Click += new System.EventHandler(this.GoBackBtn_Click);
+            this.CosmeticsPanel.BackColor = System.Drawing.Color.Transparent;
+            this.CosmeticsPanel.Controls.Add(this.label14);
+            this.CosmeticsPanel.Location = new System.Drawing.Point(930, 303);
+            this.CosmeticsPanel.Name = "CosmeticsPanel";
+            this.CosmeticsPanel.ShadowDecoration.Parent = this.CosmeticsPanel;
+            this.CosmeticsPanel.Size = new System.Drawing.Size(739, 421);
+            this.CosmeticsPanel.TabIndex = 33;
+            this.CosmeticsPanel.UseTransparentBackground = true;
+            this.CosmeticsPanel.Visible = false;
             // 
-            // label9
+            // label14
             // 
-            this.label9.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(562, 252);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(120, 30);
-            this.label9.TabIndex = 31;
-            this.label9.Tag = "";
-            this.label9.Text = "1.16.40";
-            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label14.BackColor = System.Drawing.Color.Transparent;
+            this.label14.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.ForeColor = System.Drawing.Color.Gray;
+            this.label14.Location = new System.Drawing.Point(18, 11);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(703, 398);
+            this.label14.TabIndex = 22;
+            this.label14.Tag = "";
+            this.label14.Text = "cosmetics never came out LMAO";
+            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // Status40
+            // RGBIntervalTimer
             // 
-            this.Status40.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Status40.ForeColor = System.Drawing.Color.White;
-            this.Status40.Location = new System.Drawing.Point(47, 298);
-            this.Status40.Name = "Status40";
-            this.Status40.Size = new System.Drawing.Size(413, 23);
-            this.Status40.TabIndex = 30;
-            this.Status40.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.RGBIntervalTimer.Tick += new System.EventHandler(this.RGBIntervalTimer_Tick);
             // 
-            // Launch40Btn
+            // Version201Bar
             // 
-            this.Launch40Btn.Animated = true;
-            this.Launch40Btn.BorderThickness = 3;
-            this.Launch40Btn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.Launch40Btn.CheckedState.Parent = this.Launch40Btn;
-            this.Launch40Btn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
-            this.Launch40Btn.CustomImages.Parent = this.Launch40Btn;
-            this.Launch40Btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.Launch40Btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Launch40Btn.ForeColor = System.Drawing.Color.White;
-            this.Launch40Btn.HoverState.Parent = this.Launch40Btn;
-            this.Launch40Btn.Location = new System.Drawing.Point(467, 285);
-            this.Launch40Btn.Name = "Launch40Btn";
-            this.Launch40Btn.ShadowDecoration.Parent = this.Launch40Btn;
-            this.Launch40Btn.Size = new System.Drawing.Size(106, 44);
-            this.Launch40Btn.TabIndex = 29;
-            this.Launch40Btn.Text = "Launch";
-            this.Launch40Btn.Click += new System.EventHandler(this.Launch40Btn_Click);
-            // 
-            // Install40Btn
-            // 
-            this.Install40Btn.Animated = true;
-            this.Install40Btn.BorderThickness = 3;
-            this.Install40Btn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.Install40Btn.CheckedState.Parent = this.Install40Btn;
-            this.Install40Btn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
-            this.Install40Btn.CustomImages.Parent = this.Install40Btn;
-            this.Install40Btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.Install40Btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Install40Btn.ForeColor = System.Drawing.Color.White;
-            this.Install40Btn.HoverState.Parent = this.Install40Btn;
-            this.Install40Btn.Location = new System.Drawing.Point(579, 285);
-            this.Install40Btn.Name = "Install40Btn";
-            this.Install40Btn.ShadowDecoration.Parent = this.Install40Btn;
-            this.Install40Btn.Size = new System.Drawing.Size(106, 44);
-            this.Install40Btn.TabIndex = 28;
-            this.Install40Btn.Text = "Install";
-            this.Install40Btn.Click += new System.EventHandler(this.Install40Btn_Click_1);
-            // 
-            // ProgressBar40
-            // 
-            this.ProgressBar40.FillColor = System.Drawing.Color.White;
-            this.ProgressBar40.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProgressBar40.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.ProgressBar40.Location = new System.Drawing.Point(39, 336);
-            this.ProgressBar40.Name = "ProgressBar40";
-            this.ProgressBar40.ProgressColor = System.Drawing.Color.Red;
-            this.ProgressBar40.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.ProgressBar40.ShadowDecoration.Parent = this.ProgressBar40;
-            this.ProgressBar40.Size = new System.Drawing.Size(643, 10);
-            this.ProgressBar40.TabIndex = 27;
-            this.ProgressBar40.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.ProgressBar40.Visible = false;
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(567, 136);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(120, 30);
-            this.label7.TabIndex = 26;
-            this.label7.Tag = "";
-            this.label7.Text = "1.16.100";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // Status100
-            // 
-            this.Status100.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Status100.ForeColor = System.Drawing.Color.White;
-            this.Status100.Location = new System.Drawing.Point(52, 182);
-            this.Status100.Name = "Status100";
-            this.Status100.Size = new System.Drawing.Size(413, 23);
-            this.Status100.TabIndex = 25;
-            this.Status100.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // Launch100Btn
-            // 
-            this.Launch100Btn.Animated = true;
-            this.Launch100Btn.BorderThickness = 3;
-            this.Launch100Btn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.Launch100Btn.CheckedState.Parent = this.Launch100Btn;
-            this.Launch100Btn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
-            this.Launch100Btn.CustomImages.Parent = this.Launch100Btn;
-            this.Launch100Btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.Launch100Btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Launch100Btn.ForeColor = System.Drawing.Color.White;
-            this.Launch100Btn.HoverState.Parent = this.Launch100Btn;
-            this.Launch100Btn.Location = new System.Drawing.Point(472, 169);
-            this.Launch100Btn.Name = "Launch100Btn";
-            this.Launch100Btn.ShadowDecoration.Parent = this.Launch100Btn;
-            this.Launch100Btn.Size = new System.Drawing.Size(106, 44);
-            this.Launch100Btn.TabIndex = 24;
-            this.Launch100Btn.Text = "Launch";
-            this.Launch100Btn.Click += new System.EventHandler(this.Launch100Btn_Click);
-            // 
-            // Install100Btn
-            // 
-            this.Install100Btn.Animated = true;
-            this.Install100Btn.BorderThickness = 3;
-            this.Install100Btn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.Install100Btn.CheckedState.Parent = this.Install100Btn;
-            this.Install100Btn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
-            this.Install100Btn.CustomImages.Parent = this.Install100Btn;
-            this.Install100Btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.Install100Btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Install100Btn.ForeColor = System.Drawing.Color.White;
-            this.Install100Btn.HoverState.Parent = this.Install100Btn;
-            this.Install100Btn.Location = new System.Drawing.Point(584, 169);
-            this.Install100Btn.Name = "Install100Btn";
-            this.Install100Btn.ShadowDecoration.Parent = this.Install100Btn;
-            this.Install100Btn.Size = new System.Drawing.Size(106, 44);
-            this.Install100Btn.TabIndex = 23;
-            this.Install100Btn.Text = "Install";
-            this.Install100Btn.Click += new System.EventHandler(this.Install100Btn_Click);
-            // 
-            // ProgressBar100
-            // 
-            this.ProgressBar100.FillColor = System.Drawing.Color.White;
-            this.ProgressBar100.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ProgressBar100.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.ProgressBar100.Location = new System.Drawing.Point(44, 220);
-            this.ProgressBar100.Name = "ProgressBar100";
-            this.ProgressBar100.ProgressColor = System.Drawing.Color.Red;
-            this.ProgressBar100.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.ProgressBar100.ShadowDecoration.Parent = this.ProgressBar100;
-            this.ProgressBar100.Size = new System.Drawing.Size(643, 10);
-            this.ProgressBar100.TabIndex = 22;
-            this.ProgressBar100.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.ProgressBar100.Visible = false;
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(565, 29);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(120, 30);
-            this.label6.TabIndex = 21;
-            this.label6.Tag = "";
-            this.label6.Text = "1.16.201";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            // 
-            // Status201
-            // 
-            this.Status201.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Status201.ForeColor = System.Drawing.Color.White;
-            this.Status201.Location = new System.Drawing.Point(50, 75);
-            this.Status201.Name = "Status201";
-            this.Status201.Size = new System.Drawing.Size(413, 23);
-            this.Status201.TabIndex = 20;
-            this.Status201.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.Status201.Click += new System.EventHandler(this.Status201_Click);
-            // 
-            // Launch201Btn
-            // 
-            this.Launch201Btn.Animated = true;
-            this.Launch201Btn.BorderThickness = 3;
-            this.Launch201Btn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.Launch201Btn.CheckedState.Parent = this.Launch201Btn;
-            this.Launch201Btn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
-            this.Launch201Btn.CustomImages.Parent = this.Launch201Btn;
-            this.Launch201Btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.Launch201Btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Launch201Btn.ForeColor = System.Drawing.Color.White;
-            this.Launch201Btn.HoverState.Parent = this.Launch201Btn;
-            this.Launch201Btn.Location = new System.Drawing.Point(470, 62);
-            this.Launch201Btn.Name = "Launch201Btn";
-            this.Launch201Btn.ShadowDecoration.Parent = this.Launch201Btn;
-            this.Launch201Btn.Size = new System.Drawing.Size(106, 44);
-            this.Launch201Btn.TabIndex = 19;
-            this.Launch201Btn.Text = "Launch";
-            this.Launch201Btn.Click += new System.EventHandler(this.Launch201Btn_Click);
+            this.Version201Bar.FillColor = System.Drawing.Color.White;
+            this.Version201Bar.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Version201Bar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.Version201Bar.Location = new System.Drawing.Point(42, 113);
+            this.Version201Bar.Name = "Version201Bar";
+            this.Version201Bar.ProgressColor = System.Drawing.Color.Red;
+            this.Version201Bar.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.Version201Bar.ShadowDecoration.Parent = this.Version201Bar;
+            this.Version201Bar.Size = new System.Drawing.Size(643, 10);
+            this.Version201Bar.TabIndex = 0;
+            this.Version201Bar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.Version201Bar.Visible = false;
             // 
             // Install201Btn
             // 
@@ -1870,59 +1681,254 @@ namespace JiayiLauncher
             this.Install201Btn.Text = "Install";
             this.Install201Btn.Click += new System.EventHandler(this.Install201Btn_Click);
             // 
-            // Version201Bar
+            // Launch201Btn
             // 
-            this.Version201Bar.FillColor = System.Drawing.Color.White;
-            this.Version201Bar.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Version201Bar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
-            this.Version201Bar.Location = new System.Drawing.Point(42, 113);
-            this.Version201Bar.Name = "Version201Bar";
-            this.Version201Bar.ProgressColor = System.Drawing.Color.Red;
-            this.Version201Bar.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
-            this.Version201Bar.ShadowDecoration.Parent = this.Version201Bar;
-            this.Version201Bar.Size = new System.Drawing.Size(643, 10);
-            this.Version201Bar.TabIndex = 0;
-            this.Version201Bar.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
-            this.Version201Bar.Visible = false;
+            this.Launch201Btn.Animated = true;
+            this.Launch201Btn.BorderThickness = 3;
+            this.Launch201Btn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.Launch201Btn.CheckedState.Parent = this.Launch201Btn;
+            this.Launch201Btn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
+            this.Launch201Btn.CustomImages.Parent = this.Launch201Btn;
+            this.Launch201Btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.Launch201Btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Launch201Btn.ForeColor = System.Drawing.Color.White;
+            this.Launch201Btn.HoverState.Parent = this.Launch201Btn;
+            this.Launch201Btn.Location = new System.Drawing.Point(470, 62);
+            this.Launch201Btn.Name = "Launch201Btn";
+            this.Launch201Btn.ShadowDecoration.Parent = this.Launch201Btn;
+            this.Launch201Btn.Size = new System.Drawing.Size(106, 44);
+            this.Launch201Btn.TabIndex = 19;
+            this.Launch201Btn.Text = "Launch";
+            this.Launch201Btn.Click += new System.EventHandler(this.Launch201Btn_Click);
             // 
-            // VersionDisplay
+            // Status201
             // 
-            this.VersionDisplay.Font = new System.Drawing.Font("Montserrat", 8.999999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.VersionDisplay.ForeColor = System.Drawing.Color.White;
-            this.VersionDisplay.Location = new System.Drawing.Point(236, 545);
-            this.VersionDisplay.Name = "VersionDisplay";
-            this.VersionDisplay.Size = new System.Drawing.Size(112, 22);
-            this.VersionDisplay.TabIndex = 3;
-            this.VersionDisplay.Text = "1.16.20102.0";
+            this.Status201.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Status201.ForeColor = System.Drawing.Color.White;
+            this.Status201.Location = new System.Drawing.Point(50, 75);
+            this.Status201.Name = "Status201";
+            this.Status201.Size = new System.Drawing.Size(413, 23);
+            this.Status201.TabIndex = 20;
+            this.Status201.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.Status201.Click += new System.EventHandler(this.Status201_Click);
             // 
-            // CosmeticsPanel
+            // label6
             // 
-            this.CosmeticsPanel.BackColor = System.Drawing.Color.Transparent;
-            this.CosmeticsPanel.Controls.Add(this.label14);
-            this.CosmeticsPanel.Location = new System.Drawing.Point(185, 121);
-            this.CosmeticsPanel.Name = "CosmeticsPanel";
-            this.CosmeticsPanel.ShadowDecoration.Parent = this.CosmeticsPanel;
-            this.CosmeticsPanel.Size = new System.Drawing.Size(739, 421);
-            this.CosmeticsPanel.TabIndex = 33;
-            this.CosmeticsPanel.UseTransparentBackground = true;
-            this.CosmeticsPanel.Visible = false;
+            this.label6.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(565, 29);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(120, 30);
+            this.label6.TabIndex = 21;
+            this.label6.Tag = "";
+            this.label6.Text = "1.16.201";
+            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
-            // label14
+            // ProgressBar100
             // 
-            this.label14.BackColor = System.Drawing.Color.Transparent;
-            this.label14.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.ForeColor = System.Drawing.Color.Gray;
-            this.label14.Location = new System.Drawing.Point(18, 11);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(703, 398);
-            this.label14.TabIndex = 22;
-            this.label14.Tag = "";
-            this.label14.Text = "This feature is incomplete. Come back after a while.";
-            this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.ProgressBar100.FillColor = System.Drawing.Color.White;
+            this.ProgressBar100.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProgressBar100.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.ProgressBar100.Location = new System.Drawing.Point(44, 220);
+            this.ProgressBar100.Name = "ProgressBar100";
+            this.ProgressBar100.ProgressColor = System.Drawing.Color.Red;
+            this.ProgressBar100.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.ProgressBar100.ShadowDecoration.Parent = this.ProgressBar100;
+            this.ProgressBar100.Size = new System.Drawing.Size(643, 10);
+            this.ProgressBar100.TabIndex = 22;
+            this.ProgressBar100.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.ProgressBar100.Visible = false;
             // 
-            // RGBIntervalTimer
+            // Install100Btn
             // 
-            this.RGBIntervalTimer.Tick += new System.EventHandler(this.RGBIntervalTimer_Tick);
+            this.Install100Btn.Animated = true;
+            this.Install100Btn.BorderThickness = 3;
+            this.Install100Btn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.Install100Btn.CheckedState.Parent = this.Install100Btn;
+            this.Install100Btn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
+            this.Install100Btn.CustomImages.Parent = this.Install100Btn;
+            this.Install100Btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.Install100Btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Install100Btn.ForeColor = System.Drawing.Color.White;
+            this.Install100Btn.HoverState.Parent = this.Install100Btn;
+            this.Install100Btn.Location = new System.Drawing.Point(584, 169);
+            this.Install100Btn.Name = "Install100Btn";
+            this.Install100Btn.ShadowDecoration.Parent = this.Install100Btn;
+            this.Install100Btn.Size = new System.Drawing.Size(106, 44);
+            this.Install100Btn.TabIndex = 23;
+            this.Install100Btn.Text = "Install";
+            this.Install100Btn.Click += new System.EventHandler(this.Install100Btn_Click);
+            // 
+            // Launch100Btn
+            // 
+            this.Launch100Btn.Animated = true;
+            this.Launch100Btn.BorderThickness = 3;
+            this.Launch100Btn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.Launch100Btn.CheckedState.Parent = this.Launch100Btn;
+            this.Launch100Btn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
+            this.Launch100Btn.CustomImages.Parent = this.Launch100Btn;
+            this.Launch100Btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.Launch100Btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Launch100Btn.ForeColor = System.Drawing.Color.White;
+            this.Launch100Btn.HoverState.Parent = this.Launch100Btn;
+            this.Launch100Btn.Location = new System.Drawing.Point(472, 169);
+            this.Launch100Btn.Name = "Launch100Btn";
+            this.Launch100Btn.ShadowDecoration.Parent = this.Launch100Btn;
+            this.Launch100Btn.Size = new System.Drawing.Size(106, 44);
+            this.Launch100Btn.TabIndex = 24;
+            this.Launch100Btn.Text = "Launch";
+            this.Launch100Btn.Click += new System.EventHandler(this.Launch100Btn_Click);
+            // 
+            // Status100
+            // 
+            this.Status100.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Status100.ForeColor = System.Drawing.Color.White;
+            this.Status100.Location = new System.Drawing.Point(52, 182);
+            this.Status100.Name = "Status100";
+            this.Status100.Size = new System.Drawing.Size(413, 23);
+            this.Status100.TabIndex = 25;
+            this.Status100.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label7
+            // 
+            this.label7.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(567, 136);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(120, 30);
+            this.label7.TabIndex = 26;
+            this.label7.Tag = "";
+            this.label7.Text = "1.16.100";
+            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // ProgressBar40
+            // 
+            this.ProgressBar40.FillColor = System.Drawing.Color.White;
+            this.ProgressBar40.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProgressBar40.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
+            this.ProgressBar40.Location = new System.Drawing.Point(39, 336);
+            this.ProgressBar40.Name = "ProgressBar40";
+            this.ProgressBar40.ProgressColor = System.Drawing.Color.Red;
+            this.ProgressBar40.ProgressColor2 = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.ProgressBar40.ShadowDecoration.Parent = this.ProgressBar40;
+            this.ProgressBar40.Size = new System.Drawing.Size(643, 10);
+            this.ProgressBar40.TabIndex = 27;
+            this.ProgressBar40.TextRenderingHint = System.Drawing.Text.TextRenderingHint.SystemDefault;
+            this.ProgressBar40.Visible = false;
+            // 
+            // Install40Btn
+            // 
+            this.Install40Btn.Animated = true;
+            this.Install40Btn.BorderThickness = 3;
+            this.Install40Btn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.Install40Btn.CheckedState.Parent = this.Install40Btn;
+            this.Install40Btn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
+            this.Install40Btn.CustomImages.Parent = this.Install40Btn;
+            this.Install40Btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.Install40Btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Install40Btn.ForeColor = System.Drawing.Color.White;
+            this.Install40Btn.HoverState.Parent = this.Install40Btn;
+            this.Install40Btn.Location = new System.Drawing.Point(579, 285);
+            this.Install40Btn.Name = "Install40Btn";
+            this.Install40Btn.ShadowDecoration.Parent = this.Install40Btn;
+            this.Install40Btn.Size = new System.Drawing.Size(106, 44);
+            this.Install40Btn.TabIndex = 28;
+            this.Install40Btn.Text = "Install";
+            this.Install40Btn.Click += new System.EventHandler(this.Install40Btn_Click_1);
+            // 
+            // Launch40Btn
+            // 
+            this.Launch40Btn.Animated = true;
+            this.Launch40Btn.BorderThickness = 3;
+            this.Launch40Btn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.Launch40Btn.CheckedState.Parent = this.Launch40Btn;
+            this.Launch40Btn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
+            this.Launch40Btn.CustomImages.Parent = this.Launch40Btn;
+            this.Launch40Btn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.Launch40Btn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Launch40Btn.ForeColor = System.Drawing.Color.White;
+            this.Launch40Btn.HoverState.Parent = this.Launch40Btn;
+            this.Launch40Btn.Location = new System.Drawing.Point(467, 285);
+            this.Launch40Btn.Name = "Launch40Btn";
+            this.Launch40Btn.ShadowDecoration.Parent = this.Launch40Btn;
+            this.Launch40Btn.Size = new System.Drawing.Size(106, 44);
+            this.Launch40Btn.TabIndex = 29;
+            this.Launch40Btn.Text = "Launch";
+            this.Launch40Btn.Click += new System.EventHandler(this.Launch40Btn_Click);
+            // 
+            // Status40
+            // 
+            this.Status40.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Status40.ForeColor = System.Drawing.Color.White;
+            this.Status40.Location = new System.Drawing.Point(47, 298);
+            this.Status40.Name = "Status40";
+            this.Status40.Size = new System.Drawing.Size(413, 23);
+            this.Status40.TabIndex = 30;
+            this.Status40.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
+            // label9
+            // 
+            this.label9.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(562, 252);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(120, 30);
+            this.label9.TabIndex = 31;
+            this.label9.Tag = "";
+            this.label9.Text = "1.16.40";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // GoBackBtn
+            // 
+            this.GoBackBtn.Animated = true;
+            this.GoBackBtn.BorderThickness = 3;
+            this.GoBackBtn.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.GoBackBtn.CheckedState.Parent = this.GoBackBtn;
+            this.GoBackBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
+            this.GoBackBtn.CustomImages.Parent = this.GoBackBtn;
+            this.GoBackBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.GoBackBtn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.GoBackBtn.ForeColor = System.Drawing.Color.White;
+            this.GoBackBtn.HoverState.Parent = this.GoBackBtn;
+            this.GoBackBtn.Location = new System.Drawing.Point(579, 357);
+            this.GoBackBtn.Name = "GoBackBtn";
+            this.GoBackBtn.ShadowDecoration.Parent = this.GoBackBtn;
+            this.GoBackBtn.Size = new System.Drawing.Size(106, 44);
+            this.GoBackBtn.TabIndex = 32;
+            this.GoBackBtn.Text = "Go Back";
+            this.GoBackBtn.Click += new System.EventHandler(this.GoBackBtn_Click);
+            // 
+            // VersionPanel
+            // 
+            this.VersionPanel.BackColor = System.Drawing.Color.Transparent;
+            this.VersionPanel.Controls.Add(this.GoBackBtn);
+            this.VersionPanel.Controls.Add(this.label9);
+            this.VersionPanel.Controls.Add(this.Status40);
+            this.VersionPanel.Controls.Add(this.Launch40Btn);
+            this.VersionPanel.Controls.Add(this.Install40Btn);
+            this.VersionPanel.Controls.Add(this.ProgressBar40);
+            this.VersionPanel.Controls.Add(this.label7);
+            this.VersionPanel.Controls.Add(this.Status100);
+            this.VersionPanel.Controls.Add(this.Launch100Btn);
+            this.VersionPanel.Controls.Add(this.Install100Btn);
+            this.VersionPanel.Controls.Add(this.ProgressBar100);
+            this.VersionPanel.Controls.Add(this.label6);
+            this.VersionPanel.Controls.Add(this.Status201);
+            this.VersionPanel.Controls.Add(this.Launch201Btn);
+            this.VersionPanel.Controls.Add(this.Install201Btn);
+            this.VersionPanel.Controls.Add(this.Version201Bar);
+            this.VersionPanel.Location = new System.Drawing.Point(930, 210);
+            this.VersionPanel.Name = "VersionPanel";
+            this.VersionPanel.ShadowDecoration.Parent = this.VersionPanel;
+            this.VersionPanel.Size = new System.Drawing.Size(739, 421);
+            this.VersionPanel.TabIndex = 12;
+            this.VersionPanel.Visible = false;
+            this.VersionPanel.Paint += new System.Windows.Forms.PaintEventHandler(this.VersionPanel_Paint);
+            // 
+            // SelectDLLDialog
+            // 
+            this.SelectDLLDialog.Filter = "DLL files|*.dll";
+            this.SelectDLLDialog.Title = "Select DLL";
             // 
             // Jiayi
             // 
@@ -1964,8 +1970,8 @@ namespace JiayiLauncher
             ((System.ComponentModel.ISupportInitialize)(this.FeedPic1)).EndInit();
             this.SettingsPanel.ResumeLayout(false);
             this.ThemesPanel.ResumeLayout(false);
-            this.VersionPanel.ResumeLayout(false);
             this.CosmeticsPanel.ResumeLayout(false);
+            this.VersionPanel.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -2034,28 +2040,11 @@ namespace JiayiLauncher
         private System.Windows.Forms.Label xboxGamertag;
         private Guna.UI2.WinForms.Guna2PictureBox xboxIcon;
         private Guna.UI2.WinForms.Guna2Button VersionBtn;
-        private Guna.UI2.WinForms.Guna2Panel VersionPanel;
-        private Guna.UI2.WinForms.Guna2ProgressBar Version201Bar;
-        private Guna.UI2.WinForms.Guna2Button Install201Btn;
-        private Guna.UI2.WinForms.Guna2Button Launch201Btn;
-        private System.Windows.Forms.Label Status201;
         private Guna.UI2.WinForms.Guna2Button RpcSrverBtn;
         private Guna.UI2.WinForms.Guna2Button RpcIgnBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label LogoLabel;
-        private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.Label Status40;
-        private Guna.UI2.WinForms.Guna2Button Launch40Btn;
-        private Guna.UI2.WinForms.Guna2Button Install40Btn;
-        private Guna.UI2.WinForms.Guna2ProgressBar ProgressBar40;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label Status100;
-        private Guna.UI2.WinForms.Guna2Button Launch100Btn;
-        private Guna.UI2.WinForms.Guna2Button Install100Btn;
-        private Guna.UI2.WinForms.Guna2ProgressBar ProgressBar100;
-        private System.Windows.Forms.Label label6;
-        private Guna.UI2.WinForms.Guna2Button GoBackBtn;
         private System.Windows.Forms.Label VersionDisplay;
         private Guna.UI2.WinForms.Guna2Panel CosmeticsPanel;
         private System.Windows.Forms.Label label14;
@@ -2080,6 +2069,24 @@ namespace JiayiLauncher
         private Guna.UI2.WinForms.Guna2TrackBar IntervalTrackBar;
         private System.Windows.Forms.Timer RGBIntervalTimer;
         private System.Windows.Forms.Label label15;
+        private Guna.UI2.WinForms.Guna2Panel VersionPanel;
+        private Guna.UI2.WinForms.Guna2Button GoBackBtn;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label Status40;
+        private Guna.UI2.WinForms.Guna2Button Launch40Btn;
+        private Guna.UI2.WinForms.Guna2Button Install40Btn;
+        private Guna.UI2.WinForms.Guna2ProgressBar ProgressBar40;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label Status100;
+        private Guna.UI2.WinForms.Guna2Button Launch100Btn;
+        private Guna.UI2.WinForms.Guna2Button Install100Btn;
+        private Guna.UI2.WinForms.Guna2ProgressBar ProgressBar100;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label Status201;
+        private Guna.UI2.WinForms.Guna2Button Launch201Btn;
+        private Guna.UI2.WinForms.Guna2Button Install201Btn;
+        private Guna.UI2.WinForms.Guna2ProgressBar Version201Bar;
+        private System.Windows.Forms.OpenFileDialog SelectDLLDialog;
     }
 }
 

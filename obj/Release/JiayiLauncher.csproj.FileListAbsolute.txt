@@ -61,7 +61,6 @@ C:\Users\Owner\source\repos\JiayiLauncher\bin\Release\Newtonsoft.Json.dll
 C:\Users\Owner\source\repos\JiayiLauncher\bin\Release\DiscordRPC.dll
 C:\Users\Owner\source\repos\JiayiLauncher\bin\Release\DiscordRPC.pdb
 C:\Users\Owner\source\repos\JiayiLauncher\bin\Release\DiscordRPC.xml
-C:\Users\Owner\source\repos\JiayiLauncher\obj\Release\JiayiLauncher.csprojAssemblyReference.cache
 C:\Users\Owner\source\repos\JiayiLauncher\obj\Release\JiayiLauncher.SplashScreen.resources
 C:\Users\Owner\source\repos\JiayiLauncher\obj\Release\JiayiLauncher.UpdateForm.resources
 C:\Users\Owner\source\repos\JiayiLauncher\obj\Release\JiayiLauncher.Jiayi.resources
