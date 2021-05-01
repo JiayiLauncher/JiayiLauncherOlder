@@ -1089,7 +1089,7 @@ namespace JiayiLauncher
             //    RPCInGame("");
             //}
             timer1.Start();
-
+            Thread.Sleep(10000);
             InjectDLL(Properties.Settings.Default.DLLPath);
             Thread.Sleep(200);
 
@@ -1187,7 +1187,7 @@ namespace JiayiLauncher
                 UIntPtr bytesWritten;
                 WriteProcessMemory(procHandle, allocMemAddress, Encoding.Default.GetBytes(DLLPath), (uint)((DLLPath.Length + 1) * Marshal.SizeOf(typeof(char))), out bytesWritten);
                 CreateRemoteThread(procHandle, IntPtr.Zero, 0, loadLibraryAddr, allocMemAddress, 0, IntPtr.Zero);
-
+                Console.WriteLine("injected");
             }
         }
 

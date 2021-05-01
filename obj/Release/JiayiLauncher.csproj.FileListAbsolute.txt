@@ -70,3 +70,4 @@ C:\Users\Owner\source\repos\JiayiLauncher\obj\Release\JiayiLauncher.csproj.CoreC
 C:\Users\Owner\source\repos\JiayiLauncher\obj\Release\JiayiLauncher.csproj.CopyComplete
 C:\Users\Owner\source\repos\JiayiLauncher\obj\Release\JiayiLauncher.exe
 C:\Users\Owner\source\repos\JiayiLauncher\obj\Release\JiayiLauncher.pdb
+C:\Users\Owner\source\repos\JiayiLauncher\obj\Release\JiayiLauncher.csprojAssemblyReference.cache
