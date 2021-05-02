@@ -1621,7 +1621,7 @@ namespace JiayiLauncher
             // 
             this.CosmeticsPanel.BackColor = System.Drawing.Color.Transparent;
             this.CosmeticsPanel.Controls.Add(this.label14);
-            this.CosmeticsPanel.Location = new System.Drawing.Point(930, 303);
+            this.CosmeticsPanel.Location = new System.Drawing.Point(185, 121);
             this.CosmeticsPanel.Name = "CosmeticsPanel";
             this.CosmeticsPanel.ShadowDecoration.Parent = this.CosmeticsPanel;
             this.CosmeticsPanel.Size = new System.Drawing.Size(739, 421);

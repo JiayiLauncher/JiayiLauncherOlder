@@ -715,9 +715,9 @@ namespace JiayiLauncher
                 {
 
                     LargeImageKey = "logonewdiscord",
-                    LargeImageText = "Jiayi Launcher",
+                    LargeImageText = "Jiayi Client",
                     SmallImageKey = "minecraft",
-                    SmallImageText = "Minecraft Bedrock Edition"
+                    SmallImageText = "Minecraft: Bedrock Edition"
                 },
                 Timestamps = new Timestamps()
                 {
@@ -1069,28 +1069,28 @@ namespace JiayiLauncher
 
         public void MoreSettings()
         {
-            //if (RpcIgnBtn.Checked == true) rpc in dll now
-            //{
-            //    try
-            //    {
-            //        RPCInGame("IGN:" + xboxName);
-            //    }
-            //    catch (ArgumentException)
-            //    {
-            //        string message = "Error";
-            //        string caption = "We couldn't get your Gamertag. Try installing the Xbox Console Companion app.";
-            //        MessageBoxButtons buttons = MessageBoxButtons.OK;
-            //        MessageBox.Show(message, caption, buttons);
-            //    }
-            //}
+            if (RpcIgnBtn.Checked == true)
+            {
+                try
+                {
+                    RPCInGame("Playing as " + xboxName);
+                }
+                catch (ArgumentException)
+                {
+                    string message = "Error";
+                    string caption = "We couldn't get your Gamertag. Try installing the Xbox Console Companion app.";
+                    MessageBoxButtons buttons = MessageBoxButtons.OK;
+                    MessageBox.Show(message, caption, buttons);
+                }
+            }
 
-            //else
-            //{
-            //    RPCInGame("");
-            //}
+            else
+            {
+                RPCInGame("");
+            }
             timer1.Start();
-            Thread.Sleep(10000);
-            InjectDLL(Properties.Settings.Default.DLLPath);
+            Thread.Sleep(2000);
+            InjectDLL(SelectDLLDialog.FileName);
             Thread.Sleep(200);
 
             Process[] processes = Process.GetProcessesByName("Minecraft.Windows");
@@ -1174,7 +1174,7 @@ namespace JiayiLauncher
             Process[] targetProcessIndex = Process.GetProcessesByName("Minecraft.Windows");
             if (targetProcessIndex.Length > 0)
             {
-                applyAppPackages(DLLPath);
+                // applyAppPackages(DLLPath);
 
                 Process targetProcess = Process.GetProcessesByName("Minecraft.Windows")[0];
 

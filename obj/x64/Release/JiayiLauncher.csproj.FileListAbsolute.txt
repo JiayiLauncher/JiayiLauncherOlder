@@ -1,0 +1,17 @@
+C:\Users\Owner\source\repos\JiayiLauncher\bin\x64\Release\JiayiLauncher.exe.config
+C:\Users\Owner\source\repos\JiayiLauncher\bin\x64\Release\JiayiLauncher.exe
+C:\Users\Owner\source\repos\JiayiLauncher\bin\x64\Release\Guna.UI2.dll
+C:\Users\Owner\source\repos\JiayiLauncher\bin\x64\Release\System.Management.Automation.dll
+C:\Users\Owner\source\repos\JiayiLauncher\bin\x64\Release\Newtonsoft.Json.dll
+C:\Users\Owner\source\repos\JiayiLauncher\bin\x64\Release\DiscordRPC.dll
+C:\Users\Owner\source\repos\JiayiLauncher\bin\x64\Release\DiscordRPC.pdb
+C:\Users\Owner\source\repos\JiayiLauncher\bin\x64\Release\DiscordRPC.xml
+C:\Users\Owner\source\repos\JiayiLauncher\obj\x64\Release\JiayiLauncher.csprojAssemblyReference.cache
+C:\Users\Owner\source\repos\JiayiLauncher\obj\x64\Release\JiayiLauncher.SplashScreen.resources
+C:\Users\Owner\source\repos\JiayiLauncher\obj\x64\Release\JiayiLauncher.UpdateForm.resources
+C:\Users\Owner\source\repos\JiayiLauncher\obj\x64\Release\JiayiLauncher.Jiayi.resources
+C:\Users\Owner\source\repos\JiayiLauncher\obj\x64\Release\JiayiLauncher.Properties.Resources.resources
+C:\Users\Owner\source\repos\JiayiLauncher\obj\x64\Release\JiayiLauncher.csproj.GenerateResource.cache
+C:\Users\Owner\source\repos\JiayiLauncher\obj\x64\Release\JiayiLauncher.csproj.CoreCompileInputs.cache
+C:\Users\Owner\source\repos\JiayiLauncher\obj\x64\Release\JiayiLauncher.csproj.CopyComplete
+C:\Users\Owner\source\repos\JiayiLauncher\obj\x64\Release\JiayiLauncher.exe
