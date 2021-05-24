@@ -919,15 +919,14 @@ namespace JiayiLauncher
         {
             if (Properties.Settings.Default.DLLPath == "")
             {
-                StatusText.Text = "Select a DLL first.";
+                Status.Text = "Select a DLL first.";
                 return;
             }
             Status.Visible = true;
-            StatusText.Visible = true;
             // just gonna leave this here
             //string mcversion = Version.Text.Remove(0, 8);
             //Console.WriteLine(mcversion);
-            StatusText.Text = ("Preparing to launch..");
+            Status.Text = ("Preparing to launch..");
             Settings();
         }
 
@@ -1005,14 +1004,14 @@ namespace JiayiLauncher
                 Process[] pname = Process.GetProcessesByName("Minecraft.Windows");
                 if (pname.Length == 0)
                 {
-                    StatusText.Text = ("Reading settings...");
+                    Status.Text = ("Reading settings...");
                     MoreSettings();
 
                 }
 
                 else
                 {
-                    StatusText.Text = ("Closing launcher...");
+                    Status.Text = ("Closing launcher...");
                     MoreSettings();
                     Thread.Sleep(500);
 
@@ -1034,7 +1033,7 @@ namespace JiayiLauncher
 
             if (KeepOpen.Checked == true)
             {
-                StatusText.Text = ("Reading settings...");
+                Status.Text = ("Reading settings...");
                 MoreSettings();
                 Status.Visible = false;
             }
@@ -1089,7 +1088,7 @@ namespace JiayiLauncher
                 RPCInGame("");
             }
             timer1.Start();
-            Thread.Sleep(2000);
+            Thread.Sleep(TimeSpan.FromSeconds(30));
             InjectDLL(SelectDLLDialog.FileName);
             Thread.Sleep(200);
 
@@ -1172,9 +1171,9 @@ namespace JiayiLauncher
         public static void InjectDLL(string DLLPath)
         {
             Process[] targetProcessIndex = Process.GetProcessesByName("Minecraft.Windows");
-            if (targetProcessIndex.Length > 0)
+            if (targetProcessIndex.Length != 0)
             {
-                // applyAppPackages(DLLPath);
+                applyAppPackages(DLLPath);
 
                 Process targetProcess = Process.GetProcessesByName("Minecraft.Windows")[0];
 
@@ -1433,6 +1432,8 @@ namespace JiayiLauncher
             SelectDLLDialog.ShowDialog();
             Properties.Settings.Default.DLLPath = SelectDLLDialog.FileName;
             Properties.Settings.Default.Save();
+            Status.Visible = true;
+            Status.Text = "Selected DLL. You can now launch Minecraft.";
         }
 
         private void guna2Button1_Click_1(object sender, EventArgs e)

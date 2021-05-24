@@ -238,6 +238,7 @@ namespace JiayiLauncher
             this.CosmeticsBtn.CustomBorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
             this.CosmeticsBtn.CustomBorderThickness = new System.Windows.Forms.Padding(7, 0, 0, 0);
             this.CosmeticsBtn.CustomImages.Parent = this.CosmeticsBtn;
+            this.CosmeticsBtn.Enabled = false;
             this.CosmeticsBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
             this.CosmeticsBtn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CosmeticsBtn.ForeColor = System.Drawing.Color.White;
@@ -494,7 +495,7 @@ namespace JiayiLauncher
             this.TextContainer.CheckedState.Parent = this.TextContainer;
             this.TextContainer.CustomImages.Parent = this.TextContainer;
             this.TextContainer.FillColor = System.Drawing.Color.Transparent;
-            this.TextContainer.Font = new System.Drawing.Font("Raleway", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.TextContainer.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.TextContainer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(247)))), ((int)(((byte)(247)))), ((int)(((byte)(247)))));
             this.TextContainer.HoverState.FillColor = System.Drawing.Color.Transparent;
             this.TextContainer.HoverState.Parent = this.TextContainer;
@@ -543,7 +544,7 @@ namespace JiayiLauncher
             // 
             // StatusText
             // 
-            this.StatusText.Font = new System.Drawing.Font("Raleway", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StatusText.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.StatusText.ForeColor = System.Drawing.Color.White;
             this.StatusText.Location = new System.Drawing.Point(415, 248);
             this.StatusText.Name = "StatusText";
@@ -1276,7 +1277,7 @@ namespace JiayiLauncher
             this.MortyTheme.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.MortyTheme.CustomImages.Parent = this.MortyTheme;
             this.MortyTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.MortyTheme.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MortyTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.MortyTheme.ForeColor = System.Drawing.Color.White;
             this.MortyTheme.HoverState.Parent = this.MortyTheme;
             this.MortyTheme.Location = new System.Drawing.Point(620, 196);
@@ -1298,7 +1299,7 @@ namespace JiayiLauncher
             this.RilayeTheme.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.RilayeTheme.CustomImages.Parent = this.RilayeTheme;
             this.RilayeTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.RilayeTheme.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RilayeTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RilayeTheme.ForeColor = System.Drawing.Color.White;
             this.RilayeTheme.HoverState.Parent = this.RilayeTheme;
             this.RilayeTheme.Location = new System.Drawing.Point(569, 196);
@@ -1320,7 +1321,7 @@ namespace JiayiLauncher
             this.PluralTheme.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.PluralTheme.CustomImages.Parent = this.PluralTheme;
             this.PluralTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.PluralTheme.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PluralTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PluralTheme.ForeColor = System.Drawing.Color.White;
             this.PluralTheme.HoverState.Parent = this.PluralTheme;
             this.PluralTheme.Location = new System.Drawing.Point(518, 196);
@@ -1342,7 +1343,7 @@ namespace JiayiLauncher
             this.EimTheme.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.EimTheme.CustomImages.Parent = this.EimTheme;
             this.EimTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.EimTheme.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EimTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EimTheme.ForeColor = System.Drawing.Color.White;
             this.EimTheme.HoverState.Parent = this.EimTheme;
             this.EimTheme.Location = new System.Drawing.Point(467, 196);
@@ -1364,7 +1365,7 @@ namespace JiayiLauncher
             this.PatarTheme.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.PatarTheme.CustomImages.Parent = this.PatarTheme;
             this.PatarTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.PatarTheme.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PatarTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PatarTheme.ForeColor = System.Drawing.Color.White;
             this.PatarTheme.HoverState.Parent = this.PatarTheme;
             this.PatarTheme.Location = new System.Drawing.Point(416, 196);
@@ -1386,7 +1387,7 @@ namespace JiayiLauncher
             this.CloudyTheme.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.CloudyTheme.CustomImages.Parent = this.CloudyTheme;
             this.CloudyTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.CloudyTheme.Font = new System.Drawing.Font("Raleway", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.CloudyTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CloudyTheme.ForeColor = System.Drawing.Color.White;
             this.CloudyTheme.HoverState.Parent = this.CloudyTheme;
             this.CloudyTheme.Location = new System.Drawing.Point(365, 196);
@@ -1408,7 +1409,7 @@ namespace JiayiLauncher
             this.EndermanTheme.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.EndermanTheme.CustomImages.Parent = this.EndermanTheme;
             this.EndermanTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.EndermanTheme.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EndermanTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.EndermanTheme.ForeColor = System.Drawing.Color.White;
             this.EndermanTheme.HoverState.Parent = this.EndermanTheme;
             this.EndermanTheme.Location = new System.Drawing.Point(314, 196);
@@ -1440,7 +1441,7 @@ namespace JiayiLauncher
             this.Chr7stTheme.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.Chr7stTheme.CustomImages.Parent = this.Chr7stTheme;
             this.Chr7stTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.Chr7stTheme.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Chr7stTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Chr7stTheme.ForeColor = System.Drawing.Color.White;
             this.Chr7stTheme.HoverState.Parent = this.Chr7stTheme;
             this.Chr7stTheme.Location = new System.Drawing.Point(263, 196);
@@ -1581,7 +1582,7 @@ namespace JiayiLauncher
             this.AccentColorBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.AccentColorBtn.CustomImages.Parent = this.AccentColorBtn;
             this.AccentColorBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.AccentColorBtn.Font = new System.Drawing.Font("Raleway Medium", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AccentColorBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.AccentColorBtn.ForeColor = System.Drawing.Color.White;
             this.AccentColorBtn.HoverState.Parent = this.AccentColorBtn;
             this.AccentColorBtn.Location = new System.Drawing.Point(106, 89);
@@ -1649,7 +1650,7 @@ namespace JiayiLauncher
             // Version201Bar
             // 
             this.Version201Bar.FillColor = System.Drawing.Color.White;
-            this.Version201Bar.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Version201Bar.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Version201Bar.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.Version201Bar.Location = new System.Drawing.Point(42, 113);
             this.Version201Bar.Name = "Version201Bar";
@@ -1703,7 +1704,7 @@ namespace JiayiLauncher
             // 
             // Status201
             // 
-            this.Status201.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Status201.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Status201.ForeColor = System.Drawing.Color.White;
             this.Status201.Location = new System.Drawing.Point(50, 75);
             this.Status201.Name = "Status201";
@@ -1727,7 +1728,7 @@ namespace JiayiLauncher
             // ProgressBar100
             // 
             this.ProgressBar100.FillColor = System.Drawing.Color.White;
-            this.ProgressBar100.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProgressBar100.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProgressBar100.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.ProgressBar100.Location = new System.Drawing.Point(44, 220);
             this.ProgressBar100.Name = "ProgressBar100";
@@ -1781,7 +1782,7 @@ namespace JiayiLauncher
             // 
             // Status100
             // 
-            this.Status100.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Status100.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Status100.ForeColor = System.Drawing.Color.White;
             this.Status100.Location = new System.Drawing.Point(52, 182);
             this.Status100.Name = "Status100";
@@ -1804,7 +1805,7 @@ namespace JiayiLauncher
             // ProgressBar40
             // 
             this.ProgressBar40.FillColor = System.Drawing.Color.White;
-            this.ProgressBar40.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ProgressBar40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ProgressBar40.GradientMode = System.Drawing.Drawing2D.LinearGradientMode.Horizontal;
             this.ProgressBar40.Location = new System.Drawing.Point(39, 336);
             this.ProgressBar40.Name = "ProgressBar40";
@@ -1858,7 +1859,7 @@ namespace JiayiLauncher
             // 
             // Status40
             // 
-            this.Status40.Font = new System.Drawing.Font("Raleway", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Status40.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Status40.ForeColor = System.Drawing.Color.White;
             this.Status40.Location = new System.Drawing.Point(47, 298);
             this.Status40.Name = "Status40";

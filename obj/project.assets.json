@@ -1046,20 +1046,20 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Owner\\.nuget\\packages\\": {}
+    "C:\\Users\\LOUIS\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Owner\\source\\repos\\JiayiLauncher\\JiayiLauncher.csproj",
+      "projectUniqueName": "C:\\Users\\LOUIS\\Source\\Repos\\JiayiClient\\JiayiLauncher.csproj",
       "projectName": "JiayiLauncher",
-      "projectPath": "C:\\Users\\Owner\\source\\repos\\JiayiLauncher\\JiayiLauncher.csproj",
-      "packagesPath": "C:\\Users\\Owner\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Owner\\source\\repos\\JiayiLauncher\\obj\\",
+      "projectPath": "C:\\Users\\LOUIS\\Source\\Repos\\JiayiClient\\JiayiLauncher.csproj",
+      "packagesPath": "C:\\Users\\LOUIS\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\LOUIS\\Source\\Repos\\JiayiClient\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [
-        "C:\\Users\\Owner\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\LOUIS\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
