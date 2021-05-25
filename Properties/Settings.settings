@@ -12,7 +12,7 @@
       <Value Profile="(Default)">Medium</Value>
     </Setting>
     <Setting Name="Branch" Type="System.String" Scope="User">
-      <Value Profile="(Default)">Experimental</Value>
+      <Value Profile="(Default)">Stable</Value>
     </Setting>
     <Setting Name="AccentColor" Type="System.Drawing.Color" Scope="User">
       <Value Profile="(Default)">Red</Value>

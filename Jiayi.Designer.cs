@@ -511,15 +511,14 @@ namespace JiayiLauncher
             // 
             // Status
             // 
-            this.Status.Font = new System.Drawing.Font("Montserrat ExtraBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Status.ForeColor = System.Drawing.Color.White;
+            this.Status.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Status.ForeColor = System.Drawing.Color.DimGray;
             this.Status.Location = new System.Drawing.Point(0, 375);
             this.Status.Name = "Status";
             this.Status.Size = new System.Drawing.Size(739, 34);
             this.Status.TabIndex = 9;
-            this.Status.Text = "Status:";
+            this.Status.Text = "Clicking \"LAUNCH\" will open Minecraft and inject your selected DLL.";
             this.Status.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.Status.Visible = false;
             // 
             // VersionBtn
             // 
@@ -817,6 +816,7 @@ namespace JiayiLauncher
             this.RpcSrverBtn.CheckedState.Parent = this.RpcSrverBtn;
             this.RpcSrverBtn.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.RpcSrverBtn.CustomImages.Parent = this.RpcSrverBtn;
+            this.RpcSrverBtn.Enabled = false;
             this.RpcSrverBtn.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
             this.RpcSrverBtn.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RpcSrverBtn.ForeColor = System.Drawing.Color.White;
@@ -900,27 +900,27 @@ namespace JiayiLauncher
             this.ThemesButton.CustomBorderThickness = new System.Windows.Forms.Padding(2);
             this.ThemesButton.CustomImages.Parent = this.ThemesButton;
             this.ThemesButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.ThemesButton.Font = new System.Drawing.Font("Montserrat", 9.749999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ThemesButton.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ThemesButton.ForeColor = System.Drawing.Color.White;
             this.ThemesButton.HoverState.Parent = this.ThemesButton;
-            this.ThemesButton.Location = new System.Drawing.Point(29, 362);
+            this.ThemesButton.Location = new System.Drawing.Point(29, 354);
             this.ThemesButton.Name = "ThemesButton";
             this.ThemesButton.ShadowDecoration.Parent = this.ThemesButton;
             this.ThemesButton.Size = new System.Drawing.Size(180, 45);
             this.ThemesButton.TabIndex = 15;
-            this.ThemesButton.Text = "Open Themes Menu";
+            this.ThemesButton.Text = "Customize";
             this.ThemesButton.Click += new System.EventHandler(this.ThemesButton_Click);
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(28, 319);
+            this.label3.Location = new System.Drawing.Point(28, 309);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(182, 40);
             this.label3.TabIndex = 14;
             this.label3.Tag = "";
-            this.label3.Text = "Themes";
+            this.label3.Text = "Appearance";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // StableSettingBtn
@@ -1273,11 +1273,11 @@ namespace JiayiLauncher
             this.MortyTheme.BorderThickness = 5;
             this.MortyTheme.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
             this.MortyTheme.CheckedState.Parent = this.MortyTheme;
-            this.MortyTheme.CustomBorderColor = System.Drawing.Color.Lime;
+            this.MortyTheme.CustomBorderColor = System.Drawing.Color.DimGray;
             this.MortyTheme.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.MortyTheme.CustomImages.Parent = this.MortyTheme;
             this.MortyTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.MortyTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.MortyTheme.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold);
             this.MortyTheme.ForeColor = System.Drawing.Color.White;
             this.MortyTheme.HoverState.Parent = this.MortyTheme;
             this.MortyTheme.Location = new System.Drawing.Point(620, 196);
@@ -1285,6 +1285,7 @@ namespace JiayiLauncher
             this.MortyTheme.ShadowDecoration.Parent = this.MortyTheme;
             this.MortyTheme.Size = new System.Drawing.Size(45, 45);
             this.MortyTheme.TabIndex = 29;
+            this.MortyTheme.Text = "?";
             this.MortyTheme.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.MortyTheme.Click += new System.EventHandler(this.MortyTheme_Click);
             // 
@@ -1302,7 +1303,7 @@ namespace JiayiLauncher
             this.RilayeTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.RilayeTheme.ForeColor = System.Drawing.Color.White;
             this.RilayeTheme.HoverState.Parent = this.RilayeTheme;
-            this.RilayeTheme.Location = new System.Drawing.Point(569, 196);
+            this.RilayeTheme.Location = new System.Drawing.Point(416, 196);
             this.RilayeTheme.Name = "RilayeTheme";
             this.RilayeTheme.ShadowDecoration.Parent = this.RilayeTheme;
             this.RilayeTheme.Size = new System.Drawing.Size(45, 45);
@@ -1324,7 +1325,7 @@ namespace JiayiLauncher
             this.PluralTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.PluralTheme.ForeColor = System.Drawing.Color.White;
             this.PluralTheme.HoverState.Parent = this.PluralTheme;
-            this.PluralTheme.Location = new System.Drawing.Point(518, 196);
+            this.PluralTheme.Location = new System.Drawing.Point(365, 196);
             this.PluralTheme.Name = "PluralTheme";
             this.PluralTheme.ShadowDecoration.Parent = this.PluralTheme;
             this.PluralTheme.Size = new System.Drawing.Size(45, 45);
@@ -1339,18 +1340,19 @@ namespace JiayiLauncher
             this.EimTheme.BorderThickness = 5;
             this.EimTheme.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
             this.EimTheme.CheckedState.Parent = this.EimTheme;
-            this.EimTheme.CustomBorderColor = System.Drawing.Color.RoyalBlue;
+            this.EimTheme.CustomBorderColor = System.Drawing.Color.DimGray;
             this.EimTheme.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.EimTheme.CustomImages.Parent = this.EimTheme;
             this.EimTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.EimTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EimTheme.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold);
             this.EimTheme.ForeColor = System.Drawing.Color.White;
             this.EimTheme.HoverState.Parent = this.EimTheme;
-            this.EimTheme.Location = new System.Drawing.Point(467, 196);
+            this.EimTheme.Location = new System.Drawing.Point(569, 196);
             this.EimTheme.Name = "EimTheme";
             this.EimTheme.ShadowDecoration.Parent = this.EimTheme;
             this.EimTheme.Size = new System.Drawing.Size(45, 45);
             this.EimTheme.TabIndex = 26;
+            this.EimTheme.Text = "?";
             this.EimTheme.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.EimTheme.Click += new System.EventHandler(this.EimTheme_Click);
             // 
@@ -1361,18 +1363,19 @@ namespace JiayiLauncher
             this.PatarTheme.BorderThickness = 5;
             this.PatarTheme.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
             this.PatarTheme.CheckedState.Parent = this.PatarTheme;
-            this.PatarTheme.CustomBorderColor = System.Drawing.Color.SteelBlue;
+            this.PatarTheme.CustomBorderColor = System.Drawing.Color.DimGray;
             this.PatarTheme.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.PatarTheme.CustomImages.Parent = this.PatarTheme;
             this.PatarTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.PatarTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.PatarTheme.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold);
             this.PatarTheme.ForeColor = System.Drawing.Color.White;
             this.PatarTheme.HoverState.Parent = this.PatarTheme;
-            this.PatarTheme.Location = new System.Drawing.Point(416, 196);
+            this.PatarTheme.Location = new System.Drawing.Point(518, 196);
             this.PatarTheme.Name = "PatarTheme";
             this.PatarTheme.ShadowDecoration.Parent = this.PatarTheme;
             this.PatarTheme.Size = new System.Drawing.Size(45, 45);
             this.PatarTheme.TabIndex = 25;
+            this.PatarTheme.Text = "?";
             this.PatarTheme.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.PatarTheme.Click += new System.EventHandler(this.PatarTheme_Click);
             // 
@@ -1390,7 +1393,7 @@ namespace JiayiLauncher
             this.CloudyTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CloudyTheme.ForeColor = System.Drawing.Color.White;
             this.CloudyTheme.HoverState.Parent = this.CloudyTheme;
-            this.CloudyTheme.Location = new System.Drawing.Point(365, 196);
+            this.CloudyTheme.Location = new System.Drawing.Point(314, 196);
             this.CloudyTheme.Name = "CloudyTheme";
             this.CloudyTheme.ShadowDecoration.Parent = this.CloudyTheme;
             this.CloudyTheme.Size = new System.Drawing.Size(45, 45);
@@ -1405,18 +1408,19 @@ namespace JiayiLauncher
             this.EndermanTheme.BorderThickness = 5;
             this.EndermanTheme.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
             this.EndermanTheme.CheckedState.Parent = this.EndermanTheme;
-            this.EndermanTheme.CustomBorderColor = System.Drawing.Color.BlueViolet;
+            this.EndermanTheme.CustomBorderColor = System.Drawing.Color.DimGray;
             this.EndermanTheme.CustomBorderThickness = new System.Windows.Forms.Padding(0, 0, 0, 5);
             this.EndermanTheme.CustomImages.Parent = this.EndermanTheme;
             this.EndermanTheme.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.EndermanTheme.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.EndermanTheme.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold);
             this.EndermanTheme.ForeColor = System.Drawing.Color.White;
             this.EndermanTheme.HoverState.Parent = this.EndermanTheme;
-            this.EndermanTheme.Location = new System.Drawing.Point(314, 196);
+            this.EndermanTheme.Location = new System.Drawing.Point(467, 196);
             this.EndermanTheme.Name = "EndermanTheme";
             this.EndermanTheme.ShadowDecoration.Parent = this.EndermanTheme;
             this.EndermanTheme.Size = new System.Drawing.Size(45, 45);
             this.EndermanTheme.TabIndex = 23;
+            this.EndermanTheme.Text = "?";
             this.EndermanTheme.Click += new System.EventHandler(this.EndermanTheme_Click);
             // 
             // label8
@@ -1427,7 +1431,7 @@ namespace JiayiLauncher
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(268, 33);
             this.label8.TabIndex = 22;
-            this.label8.Text = "Preset Themes";
+            this.label8.Text = "Themes";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // Chr7stTheme
@@ -1600,7 +1604,7 @@ namespace JiayiLauncher
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(182, 33);
             this.label10.TabIndex = 6;
-            this.label10.Text = "Themes Menu";
+            this.label10.Text = "Appearance";
             this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // SelectImageDialog

@@ -150,7 +150,8 @@ namespace JiayiLauncher
             // rpc settings
             if (Properties.Settings.Default.RpcMode == "Server")
             {
-                RpcSrverBtn.Checked = true;
+                //RpcSrverBtn.Checked = true;
+                RpcIgnBtn.Checked = true;
             }
             else
             {
@@ -783,7 +784,9 @@ namespace JiayiLauncher
 
             ThemesPanel.Visible = false;
 
-            RPCForBtns("In Launcher");
+            Process[] MinecraftIndex = Process.GetProcessesByName("Minecraft.Windows");
+            if (MinecraftIndex.Length == 0)
+                RPCForBtns("In Launcher");
 
             TopPanel.Text = ("Home");
         }
@@ -806,7 +809,9 @@ namespace JiayiLauncher
 
             ThemesPanel.Visible = false;
 
-            RPCForBtns("Configuring Settings");
+            Process[] MinecraftIndex = Process.GetProcessesByName("Minecraft.Windows");
+            if (MinecraftIndex.Length == 0)
+                RPCForBtns("Configuring Settings");
 
             SettingsPanel.Visible = true;
             TopPanel.Text = ("Settings");
@@ -830,7 +835,9 @@ namespace JiayiLauncher
 
             ThemesPanel.Visible = false;
 
-            RPCForBtns("Looking At Newsfeed");
+            Process[] MinecraftIndex = Process.GetProcessesByName("Minecraft.Windows");
+            if (MinecraftIndex.Length == 0)
+                RPCForBtns("Looking At Newsfeed");
 
             TopPanel.Text = ("Newsfeed");
         }
@@ -853,7 +860,9 @@ namespace JiayiLauncher
 
             ThemesPanel.Visible = false;
 
-            RPCForBtns("In Cosmetics Menu");
+            Process[] MinecraftIndex = Process.GetProcessesByName("Minecraft.Windows");
+            if (MinecraftIndex.Length == 0)
+                RPCForBtns("In Cosmetics Menu");
 
             TopPanel.Text = ("Cosmetics");
         }
@@ -926,7 +935,8 @@ namespace JiayiLauncher
             // just gonna leave this here
             //string mcversion = Version.Text.Remove(0, 8);
             //Console.WriteLine(mcversion);
-            Status.Text = ("Preparing to launch..");
+            Status.ForeColor = Color.White;
+            Status.Text = ("Launching Minecraft...");
             Settings();
         }
 
@@ -959,40 +969,41 @@ namespace JiayiLauncher
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            Process[] pname = Process.GetProcessesByName("Minecraft.Windows");
-            if (pname.Length == 0)
-            {
-                Status.Visible = false;
-                StatusText.Visible = false;
+            //Process[] pname = Process.GetProcessesByName("Minecraft.Windows");
+            //if (pname.Length == 0)
+            //{
+            //    Status.Visible = false;
+            //    StatusText.Visible = false;
 
-                if (HomeBtn.Checked == true)
-                {
-                    RPCForBtns("In Launcher");
-                    timer1.Stop();
-                }
+            //    if (HomeBtn.Checked == true)
+            //    {
+            //        RPCForBtns("In Launcher");
+            //        timer1.Stop();
+            //    }
 
-                else if (SettingsBtn.Checked == true)
-                {
-                    RPCForBtns("Configuring Settings");
-                    timer1.Stop();
-                }
+            //    else if (SettingsBtn.Checked == true)
+            //    {
+            //        RPCForBtns("Configuring Settings");
+            //        timer1.Stop();
+            //    }
 
-                else if (UpdatePanelBtn.Checked == true)
-                {
-                    RPCForBtns("In Launcher");
-                    timer1.Stop();
-                }
+            //    else if (UpdatePanelBtn.Checked == true)
+            //    {
+            //        RPCForBtns("In Launcher");
+            //        timer1.Stop();
+            //    }
 
-                else if (CosmeticsBtn.Checked == true)
-                {
-                    RPCForBtns("In Cosmetics Menu");
-                    timer1.Stop();
-                }
-            }
+            //    else if (CosmeticsBtn.Checked == true)
+            //    {
+            //        RPCForBtns("In Cosmetics Menu");
+            //        timer1.Stop();
+            //    }
+            //}
 
-            else
-            {
-            }
+            //else
+            //{
+
+            //}
 
         }
 
@@ -1022,20 +1033,21 @@ namespace JiayiLauncher
 
             if (HideLauncher.Checked == true)
             {
+                MoreSettings();
                 if (NotifyIcon.Visible == false)
                     NotifyIcon.Visible = true;
                 else
                     NotifyIcon.Visible = true;
-                Status.Visible = false;
+                Status.Text = "Finished launching! We're putting Jiayi in the system tray.";
+                Thread.Sleep(TimeSpan.FromSeconds(5));
                 this.Hide();
-                MoreSettings();
             }
 
             if (KeepOpen.Checked == true)
             {
                 Status.Text = ("Reading settings...");
                 MoreSettings();
-                Status.Visible = false;
+                Status.Text = "Finished launching! Your selected DLL was injected with no problems.";
             }
         }
 
@@ -1089,7 +1101,7 @@ namespace JiayiLauncher
             }
             timer1.Start();
             Thread.Sleep(TimeSpan.FromSeconds(30));
-            InjectDLL(SelectDLLDialog.FileName);
+            InjectDLL(Properties.Settings.Default.DLLPath);
             Thread.Sleep(200);
 
             Process[] processes = Process.GetProcessesByName("Minecraft.Windows");
@@ -1701,140 +1713,17 @@ namespace JiayiLauncher
         // more themes
         private void EndermanTheme_Click(object sender, EventArgs e)
         {
-            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/notcarlton/jiayi/master/Images/0a3cff39ad4952d622cb5682ff743cda.jpg"));
-            Stream stream = request.GetResponse().GetResponseStream();
-            Image image = Image.FromStream(stream);
-            BackImageCheckBox.Checked = true;
-            HomePanel.UseTransparentBackground = true;
-            SettingsPanel.UseTransparentBackground = true;
-            ThemesPanel.UseTransparentBackground = true;
-            UpdatePanel.UseTransparentBackground = true;
-            TopPanel.UseTransparentBackground = true;
-            this.BackgroundImage = image;
-
-            DarkTheme();
-
-            Properties.Settings.Default.AccentColor = Color.BlueViolet;
-            Properties.Settings.Default.Save();
-            TopPanel.HoverState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            TopPanel.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            HomeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            SettingsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            UpdatePanelBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            CosmeticsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            CloseLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            HideLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            KeepOpen.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            Version201Bar.FillColor = Properties.Settings.Default.AccentColor;
-            Install201Btn.BorderColor = Properties.Settings.Default.AccentColor;
-            LogoLabel.ForeColor = Properties.Settings.Default.AccentColor;
-            StableSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            ExpirementalSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            ThemesButton.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            ResolutionComboBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
-            ProcessPriorityBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
-            LightThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            DarkThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            RpcIgnBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            RpcSrverBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-
-            AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
-
-            Properties.Settings.Default.Theme = "Enderman";
-            Properties.Settings.Default.Save();
-
+            
         }
 
         private void PatarTheme_Click(object sender, EventArgs e)
         {
-            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/notcarlton/jiayi/master/Images/Webp.net-resizeimage.png"));
-            Stream stream = request.GetResponse().GetResponseStream();
-            Image image = Image.FromStream(stream);
-            BackImageCheckBox.Checked = true;
-            HomePanel.UseTransparentBackground = true;
-            SettingsPanel.UseTransparentBackground = true;
-            ThemesPanel.UseTransparentBackground = true;
-            UpdatePanel.UseTransparentBackground = true;
-            TopPanel.UseTransparentBackground = true;
-            this.BackgroundImage = image;
-
-            DarkTheme();
-
-            Properties.Settings.Default.AccentColor = Color.SteelBlue;
-            Properties.Settings.Default.Save();
-            TopPanel.HoverState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            TopPanel.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            HomeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            SettingsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            UpdatePanelBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            CosmeticsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            CloseLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            HideLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            KeepOpen.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            Version201Bar.FillColor = Properties.Settings.Default.AccentColor;
-            Install201Btn.BorderColor = Properties.Settings.Default.AccentColor;
-            LogoLabel.ForeColor = Properties.Settings.Default.AccentColor;
-            StableSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            ExpirementalSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            ThemesButton.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            ResolutionComboBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
-            ProcessPriorityBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
-            LightThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            DarkThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            RpcIgnBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            RpcSrverBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-
-            AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
-
-            Properties.Settings.Default.Theme = "Patar";
-            Properties.Settings.Default.Save();
-
+            
         }
 
         private void EimTheme_Click(object sender, EventArgs e)
         {
-            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/notcarlton/jiayi/master/Images/unknown.jpeg"));
-            Stream stream = request.GetResponse().GetResponseStream();
-            Image image = Image.FromStream(stream);
-            BackImageCheckBox.Checked = true;
-            HomePanel.UseTransparentBackground = true;
-            SettingsPanel.UseTransparentBackground = true;
-            ThemesPanel.UseTransparentBackground = true;
-            UpdatePanel.UseTransparentBackground = true;
-            TopPanel.UseTransparentBackground = true;
-            this.BackgroundImage = image;
-
-            DarkTheme();
-
-            Properties.Settings.Default.AccentColor = Color.RoyalBlue;
-            Properties.Settings.Default.Save();
-            TopPanel.HoverState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            TopPanel.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            HomeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            SettingsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            UpdatePanelBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            CosmeticsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            CloseLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            HideLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            KeepOpen.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            Version201Bar.FillColor = Properties.Settings.Default.AccentColor;
-            Install201Btn.BorderColor = Properties.Settings.Default.AccentColor;
-            LogoLabel.ForeColor = Properties.Settings.Default.AccentColor;
-            StableSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            ExpirementalSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            ThemesButton.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            ResolutionComboBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
-            ProcessPriorityBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
-            LightThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            DarkThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            RpcIgnBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            RpcSrverBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-
-            AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
-
-            Properties.Settings.Default.Theme = "Eim";
-            Properties.Settings.Default.Save();
-
+            
         }
 
         private void PluralTheme_Click(object sender, EventArgs e)
@@ -1935,47 +1824,7 @@ namespace JiayiLauncher
 
         private void MortyTheme_Click(object sender, EventArgs e)
         {
-            WebRequest request = WebRequest.Create(new Uri("https://raw.githubusercontent.com/notcarlton/jiayi/master/Images/Mo8rty-Jiyai_-_Final.png"));
-            Stream stream = request.GetResponse().GetResponseStream();
-            Image image = Image.FromStream(stream);
-            BackImageCheckBox.Checked = true;
-            HomePanel.UseTransparentBackground = true;
-            SettingsPanel.UseTransparentBackground = true;
-            ThemesPanel.UseTransparentBackground = true;
-            UpdatePanel.UseTransparentBackground = true;
-            TopPanel.UseTransparentBackground = true;
-            this.BackgroundImage = image;
-
-            DarkTheme();
-
-            Properties.Settings.Default.AccentColor = Color.Lime;
-            Properties.Settings.Default.Save();
-            TopPanel.HoverState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            TopPanel.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            HomeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            SettingsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            UpdatePanelBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            CosmeticsBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            CloseLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            HideLauncher.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            KeepOpen.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            Version201Bar.FillColor = Properties.Settings.Default.AccentColor;
-            Install201Btn.BorderColor = Properties.Settings.Default.AccentColor;
-            LogoLabel.ForeColor = Properties.Settings.Default.AccentColor;
-            StableSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            ExpirementalSettingBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            ThemesButton.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            ResolutionComboBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
-            ProcessPriorityBox.FocusedState.BorderColor = Properties.Settings.Default.AccentColor;
-            LightThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            DarkThemeBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            RpcIgnBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-            RpcSrverBtn.CheckedState.CustomBorderColor = Properties.Settings.Default.AccentColor;
-
-            AccentColorBtn.FillColor = Properties.Settings.Default.AccentColor;
-
-            Properties.Settings.Default.Theme = "Morty";
-            Properties.Settings.Default.Save();
+            
         }
 
         private void CreditsTimer_Tick(object sender, EventArgs e)
