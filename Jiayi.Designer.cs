@@ -66,6 +66,7 @@ namespace JiayiLauncher
             this.FeedData1 = new System.Windows.Forms.RichTextBox();
             this.UpdateBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SettingsPanel = new Guna.UI2.WinForms.Guna2Panel();
+            this.RestartButton = new Guna.UI2.WinForms.Guna2Button();
             this.RpcSrverBtn = new Guna.UI2.WinForms.Guna2Button();
             this.RpcIgnBtn = new Guna.UI2.WinForms.Guna2Button();
             this.ExpirementalSettingBtn = new Guna.UI2.WinForms.Guna2Button();
@@ -136,7 +137,6 @@ namespace JiayiLauncher
             this.GoBackBtn = new Guna.UI2.WinForms.Guna2Button();
             this.VersionPanel = new Guna.UI2.WinForms.Guna2Panel();
             this.SelectDLLDialog = new System.Windows.Forms.OpenFileDialog();
-            this.RestartButton = new Guna.UI2.WinForms.Guna2Button();
             this.BtnPanel.SuspendLayout();
             this.guna2Panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.xboxIcon)).BeginInit();
@@ -825,6 +825,25 @@ namespace JiayiLauncher
             this.SettingsPanel.Visible = false;
             this.SettingsPanel.Click += new System.EventHandler(this.SettingsPanel_Click);
             // 
+            // RestartButton
+            // 
+            this.RestartButton.Animated = true;
+            this.RestartButton.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
+            this.RestartButton.CheckedState.Parent = this.RestartButton;
+            this.RestartButton.CustomBorderThickness = new System.Windows.Forms.Padding(2);
+            this.RestartButton.CustomImages.Parent = this.RestartButton;
+            this.RestartButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
+            this.RestartButton.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.RestartButton.ForeColor = System.Drawing.Color.White;
+            this.RestartButton.HoverState.Parent = this.RestartButton;
+            this.RestartButton.Location = new System.Drawing.Point(497, 354);
+            this.RestartButton.Name = "RestartButton";
+            this.RestartButton.ShadowDecoration.Parent = this.RestartButton;
+            this.RestartButton.Size = new System.Drawing.Size(180, 45);
+            this.RestartButton.TabIndex = 20;
+            this.RestartButton.Text = "Restart Jiayi";
+            this.RestartButton.Click += new System.EventHandler(this.RestartButton_Click);
+            // 
             // RpcSrverBtn
             // 
             this.RpcSrverBtn.Animated = true;
@@ -1122,7 +1141,7 @@ namespace JiayiLauncher
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
+            this.timer1.Interval = 5000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // NotifyIcon
@@ -1947,25 +1966,6 @@ namespace JiayiLauncher
             // 
             this.SelectDLLDialog.Filter = "DLL files|*.dll";
             this.SelectDLLDialog.Title = "Select DLL";
-            // 
-            // RestartButton
-            // 
-            this.RestartButton.Animated = true;
-            this.RestartButton.CheckedState.CustomBorderColor = System.Drawing.Color.Red;
-            this.RestartButton.CheckedState.Parent = this.RestartButton;
-            this.RestartButton.CustomBorderThickness = new System.Windows.Forms.Padding(2);
-            this.RestartButton.CustomImages.Parent = this.RestartButton;
-            this.RestartButton.FillColor = System.Drawing.Color.FromArgb(((int)(((byte)(23)))), ((int)(((byte)(24)))), ((int)(((byte)(25)))));
-            this.RestartButton.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RestartButton.ForeColor = System.Drawing.Color.White;
-            this.RestartButton.HoverState.Parent = this.RestartButton;
-            this.RestartButton.Location = new System.Drawing.Point(497, 354);
-            this.RestartButton.Name = "RestartButton";
-            this.RestartButton.ShadowDecoration.Parent = this.RestartButton;
-            this.RestartButton.Size = new System.Drawing.Size(180, 45);
-            this.RestartButton.TabIndex = 20;
-            this.RestartButton.Text = "Restart Jiayi";
-            this.RestartButton.Click += new System.EventHandler(this.RestartButton_Click);
             // 
             // Jiayi
             // 

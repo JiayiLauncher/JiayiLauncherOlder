@@ -28,7 +28,6 @@ namespace JiayiLauncher
     public partial class Jiayi : Form
     {
         public DiscordRpcClient client;
-        string discordTime = "";
         private string xboxName;
         private string xboxIconLink;
 
@@ -701,12 +700,6 @@ namespace JiayiLauncher
 
         public void InitializeDiscord()
         {
-            int TimestampStart = 0;
-            int TimestampEnd = 0;
-            dynamic DateTimestampEnd = null;
-
-            if (discordTime != "" && Int32.TryParse(discordTime, out TimestampEnd))
-                DateTimestampEnd = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(TimestampEnd);
 
             client = new DiscordRpcClient("812363424071548970");
             client.Initialize();
@@ -722,8 +715,8 @@ namespace JiayiLauncher
                 },
                 Timestamps = new Timestamps()
                 {
-                    Start = discordTime != "" && Int32.TryParse(discordTime, out TimestampStart) ? new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(TimestampStart) : DateTime.UtcNow,
-                    End = DateTimestampEnd
+                    //Start = discordTime != "" && Int32.TryParse(discordTime, out TimestampStart) ? new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(TimestampStart) : DateTime.UtcNow,
+                    //End = DateTimestampEnd
                 }
 
             });
@@ -731,12 +724,6 @@ namespace JiayiLauncher
 
         public void RPCForBtns(string status)  // made seperate rpc so that it doesnt initiate a new rpc client
         {
-            int TimestampStart = 0;
-            int TimestampEnd = 0;
-            dynamic DateTimestampEnd = null;
-
-            if (discordTime != "" && Int32.TryParse(discordTime, out TimestampEnd))
-                DateTimestampEnd = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(TimestampEnd);
 
             client.SetPresence(new RichPresence()
             {
@@ -750,8 +737,8 @@ namespace JiayiLauncher
                 },
                 Timestamps = new Timestamps()
                 {
-                    Start = discordTime != "" && Int32.TryParse(discordTime, out TimestampStart) ? new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(TimestampStart) : DateTime.UtcNow,
-                    End = DateTimestampEnd
+                    //Start = discordTime != "" && Int32.TryParse(discordTime, out TimestampStart) ? new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(TimestampStart) : DateTime.UtcNow,
+                    //End = DateTimestampEnd
                 }
 
             });
@@ -759,12 +746,6 @@ namespace JiayiLauncher
 
         public void RPCInGame(string status)  // made seperate rpc so that it doesnt initiate a new rpc client
         {
-            int TimestampStart = 0;
-            int TimestampEnd = 0;
-            dynamic DateTimestampEnd = null;
-
-            if (discordTime != "" && Int32.TryParse(discordTime, out TimestampEnd))
-                DateTimestampEnd = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(TimestampEnd);
 
             client.SetPresence(new RichPresence()
             {
@@ -781,8 +762,7 @@ namespace JiayiLauncher
                 },
                 Timestamps = new Timestamps()
                 {
-                    Start = discordTime != "" && Int32.TryParse(discordTime, out TimestampStart) ? new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(TimestampStart) : DateTime.UtcNow,
-                    End = DateTimestampEnd
+
                 }
 
             });
@@ -1033,41 +1013,52 @@ namespace JiayiLauncher
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            //Process[] pname = Process.GetProcessesByName("Minecraft.Windows");
-            //if (pname.Length == 0)
-            //{
-            //    Status.Visible = false;
-            //    StatusText.Visible = false;
+            Process[] pname = Process.GetProcessesByName("Minecraft.Windows");
+            if (pname.Length == 0)
+            {
+                if (HomeBtn.Checked == true)
+                {
+                    RPCForBtns("In Launcher");
+                    timer1.Stop();
+                }
 
-            //    if (HomeBtn.Checked == true)
-            //    {
-            //        RPCForBtns("In Launcher");
-            //        timer1.Stop();
-            //    }
+                else if (SettingsBtn.Checked == true)
+                {
+                    RPCForBtns("Configuring Settings");
+                    timer1.Stop();
+                }
 
-            //    else if (SettingsBtn.Checked == true)
-            //    {
-            //        RPCForBtns("Configuring Settings");
-            //        timer1.Stop();
-            //    }
+                else if (UpdatePanelBtn.Checked == true)
+                {
+                    RPCForBtns("In Launcher");
+                    timer1.Stop();
+                }
 
-            //    else if (UpdatePanelBtn.Checked == true)
-            //    {
-            //        RPCForBtns("In Launcher");
-            //        timer1.Stop();
-            //    }
-
-            //    else if (CosmeticsBtn.Checked == true)
-            //    {
-            //        RPCForBtns("In Cosmetics Menu");
-            //        timer1.Stop();
-            //    }
-            //}
-
-            //else
-            //{
-
-            //}
+                else if (CosmeticsBtn.Checked == true)
+                {
+                    RPCForBtns("In Cosmetics Menu");
+                    timer1.Stop();
+                }
+            }
+            else
+            {
+                if (Properties.Settings.Default.RpcMode == "Server")
+                {
+                    string ServerText = File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\RoamingState\OnixClient\Launcher\server.txt");
+                    if (ServerText == "")
+                    {
+                        RPCInGame("In the menus");
+                    }
+                    else if (ServerText.Contains("In a World, "))
+                    {
+                        RPCInGame("In a world: " + ServerText.Remove(0, 12));
+                    }
+                    else
+                    {
+                        RPCInGame("Playing on " + ServerText);
+                    }
+                }
+            }
 
         }
 
@@ -1164,23 +1155,16 @@ namespace JiayiLauncher
 
             else
             {
-                try
-                {
-                    string ServerText = File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\RoamingState\OnixClient\Launcher\server.txt");
-                    if (ServerText == "")
-                    {
-                        RPCInGame("In the menus");
-                    } else
-                    {
-                        RPCInGame("Playing " + ServerText);
-                    } // better
-                }
-                catch
+                if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\RoamingState\OnixClient\Launcher\server.txt"))
                 {
                     string message = "Error";
                     string caption = "Your selected DLL doesn't support server RPC.";
                     MessageBoxButtons buttons = MessageBoxButtons.OK;
                     MessageBox.Show(message, caption, buttons);
+                    RpcSrverBtn.Checked = false;
+                    RpcIgnBtn.Checked = true;
+                    Properties.Settings.Default.RpcMode = "IGN";
+                    Properties.Settings.Default.Save();
                 }
             }
             timer1.Start();
