@@ -50,7 +50,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ApplicationIcon>jiayi_4.ico</ApplicationIcon>
+    <ApplicationIcon>jiayi %2811%29.ico</ApplicationIcon>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -152,6 +152,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="jiayi %2811%29.ico" />
     <Content Include="jiayi_4.ico" />
   </ItemGroup>
   <ItemGroup>
