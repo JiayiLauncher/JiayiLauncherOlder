@@ -1096,7 +1096,6 @@ namespace JiayiLauncher
             // 
             // ProcessPriorityBox
             // 
-            this.ProcessPriorityBox.Animated = true;
             this.ProcessPriorityBox.BackColor = System.Drawing.Color.Transparent;
             this.ProcessPriorityBox.BorderColor = System.Drawing.Color.FromArgb(((int)(((byte)(25)))), ((int)(((byte)(24)))), ((int)(((byte)(26)))));
             this.ProcessPriorityBox.BorderThickness = 0;
@@ -1675,7 +1674,7 @@ namespace JiayiLauncher
             this.label14.Size = new System.Drawing.Size(703, 398);
             this.label14.TabIndex = 22;
             this.label14.Tag = "";
-            this.label14.Text = "cosmetics never came out LMAO";
+            this.label14.Text = "How did you get here?";
             this.label14.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.label14.Click += new System.EventHandler(this.label14_Click);
             // 

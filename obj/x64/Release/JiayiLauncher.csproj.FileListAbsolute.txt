@@ -17,11 +17,6 @@ C:\Users\Owner\source\repos\JiayiLauncher\obj\x64\Release\JiayiLauncher.csproj.C
 C:\Users\Owner\source\repos\JiayiLauncher\obj\x64\Release\JiayiLauncher.exe
 C:\Users\LOUIS\Source\Repos\JiayiClient\bin\x64\Release\JiayiLauncher.exe.config
 C:\Users\LOUIS\Source\Repos\JiayiClient\bin\x64\Release\JiayiLauncher.exe
-C:\Users\LOUIS\Source\Repos\JiayiClient\bin\x64\Release\Guna.UI2.dll
-C:\Users\LOUIS\Source\Repos\JiayiClient\bin\x64\Release\System.Management.Automation.dll
-C:\Users\LOUIS\Source\Repos\JiayiClient\bin\x64\Release\Newtonsoft.Json.dll
-C:\Users\LOUIS\Source\Repos\JiayiClient\bin\x64\Release\DiscordRPC.dll
-C:\Users\LOUIS\Source\Repos\JiayiClient\bin\x64\Release\DiscordRPC.pdb
 C:\Users\LOUIS\Source\Repos\JiayiClient\bin\x64\Release\DiscordRPC.xml
 C:\Users\LOUIS\Source\Repos\JiayiClient\obj\x64\Release\JiayiLauncher.SplashScreen.resources
 C:\Users\LOUIS\Source\Repos\JiayiClient\obj\x64\Release\JiayiLauncher.UpdateForm.resources
@@ -31,3 +26,8 @@ C:\Users\LOUIS\Source\Repos\JiayiClient\obj\x64\Release\JiayiLauncher.csproj.Gen
 C:\Users\LOUIS\Source\Repos\JiayiClient\obj\x64\Release\JiayiLauncher.csproj.CoreCompileInputs.cache
 C:\Users\LOUIS\Source\Repos\JiayiClient\obj\x64\Release\JiayiLauncher.csproj.CopyComplete
 C:\Users\LOUIS\Source\Repos\JiayiClient\obj\x64\Release\JiayiLauncher.exe
+C:\Users\LOUIS\source\repos\JiayiClient\bin\x64\Release\Guna.UI2.dll
+C:\Users\LOUIS\source\repos\JiayiClient\bin\x64\Release\System.Management.Automation.dll
+C:\Users\LOUIS\source\repos\JiayiClient\bin\x64\Release\Newtonsoft.Json.dll
+C:\Users\LOUIS\source\repos\JiayiClient\bin\x64\Release\DiscordRPC.dll
+C:\Users\LOUIS\source\repos\JiayiClient\bin\x64\Release\DiscordRPC.pdb

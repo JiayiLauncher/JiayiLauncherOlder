@@ -1051,11 +1051,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\LOUIS\\Source\\Repos\\JiayiClient\\JiayiLauncher.csproj",
+      "projectUniqueName": "C:\\Users\\LOUIS\\source\\repos\\JiayiClient\\JiayiLauncher.csproj",
       "projectName": "JiayiLauncher",
-      "projectPath": "C:\\Users\\LOUIS\\Source\\Repos\\JiayiClient\\JiayiLauncher.csproj",
+      "projectPath": "C:\\Users\\LOUIS\\source\\repos\\JiayiClient\\JiayiLauncher.csproj",
       "packagesPath": "C:\\Users\\LOUIS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\LOUIS\\Source\\Repos\\JiayiClient\\obj\\",
+      "outputPath": "C:\\Users\\LOUIS\\source\\repos\\JiayiClient\\obj\\",
       "projectStyle": "PackageReference",
       "skipContentFileWrite": true,
       "configFilePaths": [

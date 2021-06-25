@@ -28,6 +28,7 @@ namespace JiayiLauncher
     public partial class Jiayi : Form
     {
         public DiscordRpcClient client;
+        string discordTime = "";
         private string xboxName;
         private string xboxIconLink;
 
@@ -164,8 +165,7 @@ namespace JiayiLauncher
             // rpc settings
             if (Properties.Settings.Default.RpcMode == "Server")
             {
-                //RpcSrverBtn.Checked = true;
-                RpcIgnBtn.Checked = true;
+                RpcSrverBtn.Checked = true;
             }
             else
             {
@@ -700,12 +700,18 @@ namespace JiayiLauncher
 
         public void InitializeDiscord()
         {
+            int TimestampStart = 0;
+            int TimestampEnd = 0;
+            dynamic DateTimestampEnd = null;
 
-            client = new DiscordRpcClient("812363424071548970");
+            if (discordTime != "" && Int32.TryParse(discordTime, out TimestampEnd))
+                DateTimestampEnd = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(TimestampEnd);
+
+            client = new DiscordRpcClient("858033874264260658");
             client.Initialize();
             client.SetPresence(new RichPresence()
             {
-                Details = "In Launcher",
+                Details = "Ready to play",
 
                 Assets = new Assets()
                 {
@@ -715,15 +721,22 @@ namespace JiayiLauncher
                 },
                 Timestamps = new Timestamps()
                 {
-                    //Start = discordTime != "" && Int32.TryParse(discordTime, out TimestampStart) ? new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(TimestampStart) : DateTime.UtcNow,
-                    //End = DateTimestampEnd
-                }
+                    Start = discordTime != "" && Int32.TryParse(discordTime, out TimestampStart) ? new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(TimestampStart) : DateTime.UtcNow,
+                    End = DateTimestampEnd
+                },
+                
 
             });
         }
 
         public void RPCForBtns(string status)  // made seperate rpc so that it doesnt initiate a new rpc client
         {
+            int TimestampStart = 0;
+            int TimestampEnd = 0;
+            dynamic DateTimestampEnd = null;
+
+            if (discordTime != "" && Int32.TryParse(discordTime, out TimestampEnd))
+                DateTimestampEnd = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(TimestampEnd);
 
             client.SetPresence(new RichPresence()
             {
@@ -737,32 +750,76 @@ namespace JiayiLauncher
                 },
                 Timestamps = new Timestamps()
                 {
-                    //Start = discordTime != "" && Int32.TryParse(discordTime, out TimestampStart) ? new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(TimestampStart) : DateTime.UtcNow,
-                    //End = DateTimestampEnd
+                    Start = discordTime != "" && Int32.TryParse(discordTime, out TimestampStart) ? new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(TimestampStart) : DateTime.UtcNow,
+                    End = DateTimestampEnd
                 }
 
             });
         }
 
-        public void RPCInGame(string status)  // made seperate rpc so that it doesnt initiate a new rpc client
+        public void RPCInGame(string server)  // made seperate rpc so that it doesnt initiate a new rpc client
         {
+            int TimestampStart = 0;
+            int TimestampEnd = 0;
+            dynamic DateTimestampEnd = null;
+
+            if (discordTime != "" && Int32.TryParse(discordTime, out TimestampEnd))
+                DateTimestampEnd = new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(TimestampEnd);
+
+            string smallimage = "minecraft";
+            if (!server.Contains("In a world:") || server != "In the menus")
+            {
+                if (server.Contains("The Hive"))
+                {
+                    smallimage = "hive";
+                }
+                else if (server.Contains("Mineville"))
+                {
+                    smallimage = "mineville";
+                }
+                else if (server.Contains("CubeCraft"))
+                {
+                    smallimage = "cubecraft";
+                }
+                else if (server.Contains("Mineplex"))
+                {
+                    smallimage = "mineplex";
+                }
+                else if (server.Contains("Galaxite"))
+                {
+                    smallimage = "galaxite";
+                }
+                else if (server.Contains("Lifeboat"))
+                {
+                    smallimage = "lifeboat";
+                }
+                else if (server.Contains("NetherGames"))
+                {
+                    smallimage = "nethergames";
+                }
+                else if (server.Contains("HyperLands"))
+                {
+                    smallimage = "hyperlands";
+                }
+            }
 
             client.SetPresence(new RichPresence()
             {
-                Details = status,
+                Details = server,
                 State = "on " + VersionDisplay.Text,
 
                 Assets = new Assets()
                 {
 
                     LargeImageKey = "logonewdiscord",
-                    LargeImageText = "Jiayi Client",
-                    SmallImageKey = "minecraft",
+                    LargeImageText = "Jiayi Launcher",
+                    SmallImageKey = smallimage,
                     SmallImageText = "Minecraft: Bedrock Edition"
                 },
                 Timestamps = new Timestamps()
                 {
-
+                    Start = discordTime != "" && Int32.TryParse(discordTime, out TimestampStart) ? new DateTime(1970, 1, 1, 0, 0, 0, 0, DateTimeKind.Utc).AddSeconds(TimestampStart) : DateTime.UtcNow,
+                    End = DateTimestampEnd
                 }
 
             });
@@ -825,7 +882,7 @@ namespace JiayiLauncher
 
             Process[] MinecraftIndex = Process.GetProcessesByName("Minecraft.Windows");
             if (MinecraftIndex.Length == 0)
-                RPCForBtns("In Launcher");
+                RPCForBtns("Ready to play");
 
             TopPanel.Text = (" Home");
             TopPanel.Image = HomeBtn.CheckedState.Image;
@@ -851,7 +908,7 @@ namespace JiayiLauncher
 
             Process[] MinecraftIndex = Process.GetProcessesByName("Minecraft.Windows");
             if (MinecraftIndex.Length == 0)
-                RPCForBtns("Configuring Settings");
+                RPCForBtns("Configuring settings");
 
             SettingsPanel.Visible = true;
             TopPanel.Text = (" Settings");
@@ -878,7 +935,7 @@ namespace JiayiLauncher
 
             Process[] MinecraftIndex = Process.GetProcessesByName("Minecraft.Windows");
             if (MinecraftIndex.Length == 0)
-                RPCForBtns("Looking At Newsfeed");
+                RPCForBtns("Looking at newsfeed");
 
             TopPanel.Text = (" Newsfeed");
             TopPanel.Image = UpdatePanelBtn.CheckedState.Image;
@@ -1011,6 +1068,8 @@ namespace JiayiLauncher
             Properties.Settings.Default.Save();
         }
 
+        string PreviousText = File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\RoamingState\OnixClient\Launcher\server.txt");
+
         private void timer1_Tick(object sender, EventArgs e)
         {
             Process[] pname = Process.GetProcessesByName("Minecraft.Windows");
@@ -1018,25 +1077,25 @@ namespace JiayiLauncher
             {
                 if (HomeBtn.Checked == true)
                 {
-                    RPCForBtns("In Launcher");
+                    RPCForBtns("Ready to play");
                     timer1.Stop();
                 }
 
                 else if (SettingsBtn.Checked == true)
                 {
-                    RPCForBtns("Configuring Settings");
+                    RPCForBtns("Configuring settings");
                     timer1.Stop();
                 }
 
                 else if (UpdatePanelBtn.Checked == true)
                 {
-                    RPCForBtns("In Launcher");
+                    RPCForBtns("Looking at newsfeed");
                     timer1.Stop();
                 }
 
                 else if (CosmeticsBtn.Checked == true)
                 {
-                    RPCForBtns("In Cosmetics Menu");
+                    RPCForBtns("How did you get here?");
                     timer1.Stop();
                 }
             }
@@ -1045,17 +1104,57 @@ namespace JiayiLauncher
                 if (Properties.Settings.Default.RpcMode == "Server")
                 {
                     string ServerText = File.ReadAllText(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\RoamingState\OnixClient\Launcher\server.txt");
-                    if (ServerText == "")
+                    if (ServerText != PreviousText)
                     {
-                        RPCInGame("In the menus");
-                    }
-                    else if (ServerText.Contains("In a World, "))
-                    {
-                        RPCInGame("In a world: " + ServerText.Remove(0, 12));
-                    }
-                    else
-                    {
-                        RPCInGame("Playing on " + ServerText);
+                        PreviousText = ServerText;
+                        if (ServerText == "")
+                        {
+
+                            RPCInGame("In the menus");
+                        }
+                        else if (ServerText.Contains("In a World, "))
+                        {
+                            RPCInGame("In a world: " + ServerText.Remove(0, 12));
+                        }
+                        else
+                        {
+                            if (ServerText == "geo.hivebedrock.network" || ServerText == "fr.hivebedrock.network" || ServerText == "ca.hivebedrock.network" || ServerText == "sg.hivebedrock.network" || ServerText == "jp.hivebedrock.network")
+                            {
+                                RPCInGame("Playing on The Hive");
+                            }
+                            else if (ServerText == "play.inpvp.net")
+                            {
+                                RPCInGame("Playing on Mineville");
+                            }
+                            else if (ServerText == "mco.cubecraft.net")
+                            {
+                                RPCInGame("Playing on CubeCraft");
+                            }
+                            else if (ServerText == "mco.mineplex.com")
+                            {
+                                RPCInGame("Playing on Mineplex");
+                            }
+                            else if (ServerText == "play.galaxite.net")
+                            {
+                                RPCInGame("Playing on Galaxite");
+                            }
+                            else if (ServerText == "mco.lbsg.net")
+                            {
+                                RPCInGame("Playing on Lifeboat");
+                            }
+                            else if (ServerText == "play.nethergames.org")
+                            {
+                                RPCInGame("Playing on NetherGames");
+                            }
+                            else if (ServerText == "play.hyperlandsmc.net")
+                            {
+                                RPCInGame("Playing on HyperLands");
+                            }
+                            else
+                            {
+                                RPCInGame("Playing on " + ServerText);
+                            }
+                        }
                     }
                 }
             }
@@ -1155,17 +1254,12 @@ namespace JiayiLauncher
 
             else
             {
+                Directory.CreateDirectory(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\RoamingState\OnixClient\Launcher");
                 if (!File.Exists(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\RoamingState\OnixClient\Launcher\server.txt"))
                 {
-                    string message = "Error";
-                    string caption = "Your selected DLL doesn't support server RPC.";
-                    MessageBoxButtons buttons = MessageBoxButtons.OK;
-                    MessageBox.Show(message, caption, buttons);
-                    RpcSrverBtn.Checked = false;
-                    RpcIgnBtn.Checked = true;
-                    Properties.Settings.Default.RpcMode = "IGN";
-                    Properties.Settings.Default.Save();
+                    File.Create(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData) + @"\Packages\Microsoft.MinecraftUWP_8wekyb3d8bbwe\RoamingState\OnixClient\Launcher\server.txt");
                 }
+                RPCInGame("In the menus");
             }
             timer1.Start();
             Thread.Sleep(TimeSpan.FromSeconds(30));

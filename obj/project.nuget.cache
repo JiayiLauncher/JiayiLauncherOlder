@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "D8pNPXPud+e0EBv3IdU9D3hUbslI6DxQ8Mx7M8jJ0AkuS9Q9/ns6rWlNT8FKnpA0tM1Z62wvHfL5jzsdlb/ZUQ==",
+  "dgSpecHash": "QeQSRnk70MB7E5SDLLlG6pJPgEM4/jPMEhemHgSM289pvxLZbiOfFgSkHNeAEmZwvRonrf3RwUvQcOBFCnpfWw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\LOUIS\\Source\\Repos\\JiayiClient\\JiayiLauncher.csproj",
+  "projectFilePath": "C:\\Users\\LOUIS\\source\\repos\\JiayiClient\\JiayiLauncher.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\LOUIS\\.nuget\\packages\\guna.ui2.winforms\\2.0.1.4\\guna.ui2.winforms.2.0.1.4.nupkg.sha512",
     "C:\\Users\\LOUIS\\.nuget\\packages\\microsoft.powershell.5.referenceassemblies\\1.1.0\\microsoft.powershell.5.referenceassemblies.1.1.0.nupkg.sha512",
